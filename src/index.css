@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
 @layer base {
     body {
-      @apply bg-black text-white font-jetbrains font-semibold font-semibold;
+      @apply font-[Raleway] bg-black text-white font-jetbrains font-semibold font-semibold;
+    }
+    li {
+      @apply px-4;
+      @apply cursor-pointer
     }
   }
