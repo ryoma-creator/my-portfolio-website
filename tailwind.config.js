@@ -9,6 +9,7 @@ module.exports = {
       },
       fontFamily: {
         jetbrains: ['JetBrains Mono', 'monospace'], // 'jetbrains' という名前でフォントを定義
+        signature: ['Dancing Script', 'cursive'],
       },
     },
   },

@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-      @apply font-[Raleway] bg-black text-white font-jetbrains font-semibold font-semibold;
+      @apply font-[Raleway] bg-black text-white font-jetbrains font-semibold;
     }
     li {
       @apply px-4;
