@@ -5,14 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
-    body {
-      @apply font-[Raleway] bg-black text-white font-jetbrains ;
-    }
-    li {
-      @apply px-4;
-      @apply cursor-pointer
-    }
-    .home-text {
-      @apply text-4xl md:text-5xl lg:text-7xl font-bold;
-    }
+  body {
+    @apply font-[Raleway] bg-black text-white font-jetbrains;
   }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+  .responsive-text-size {
+    @apply text-responsive-sm md:text-responsive-md lg:text-responsive-lg;
+  }
+  .responsive-title-size {
+    @apply text-responsive-title-sm md:text-responsive-title-md lg:text-responsive-title-lg font-bold;
+  }
+}
