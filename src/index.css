@@ -19,7 +19,10 @@
     @apply text-responsive-title-sm md:text-responsive-title-md lg:text-responsive-title-lg font-bold;
   }
   .common-container-layout {
-    @apply responsive-text-size  w-full h-screen flex flex-col justify-center;
+    @apply responsive-text-size max-w-[1000px] mx-auto w-[90%] h-screen flex flex-col justify-center;
+  }
+  .common-border-b{
+    @apply inline border-b-4 border-green;
   }
 }
 

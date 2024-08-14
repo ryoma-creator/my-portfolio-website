@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div name='about' className='max-w-[1000px]'>
+    <div name='about' className='common-container-layout'>
         <div className='common-container-layout'>
             <div className='grid grid-cols-2 gap-8'>
                 <div className='sm:text-right pb-8 pl-4'>
@@ -12,16 +12,14 @@ const About = () => {
                 </div>
                     <div></div>
                 </div>
-                <div className='grid grid-cols-2 gap-8'>
-                    <div>
-                        <p className='responsive-title-size sm:text-right'>
-                            Hi.I'm Ryoma,nice to meet you.Please take a look around.
-                        </p>
+                <div className='grid sm:grid-cols-2 gap-8 px-4'>
+                    <div className='responsive-title-size sm:text-right'>
+                        <p>Hi.I'm Ryoma,nice to meet you.Please take a look around.</p>
                     </div>
                     <div>
-                        <p>
-                           I'm currently building this portfolio site to become a junior developer. I enjoy creating user-friendly interfaces and am passionate about learning new technologies.
-                        </p>
+                        <p>I'm currently building this portfolio site to become a junior developer. 
+                        I enjoy creating user-friendly interfaces and am passionate 
+                        about learning new technologies.</p>
                     </div>
                 </div>
             </div>

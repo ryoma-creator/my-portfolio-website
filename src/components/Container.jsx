@@ -1,6 +1,6 @@
 
 const Container = ({ children }) => (
-    <div className="max-w-[1000px] ">
+    <div className="common-container-layout">
         {children}
     </div>
 );

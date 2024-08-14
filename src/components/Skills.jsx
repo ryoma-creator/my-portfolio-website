@@ -20,9 +20,9 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div name='Skills' className='w-full h-screen'>
+    <div name='Skills' className='common-container-layout'>
         {/* Container */}
-        <div className='common-container-layout max-w-[1000px] h-full mx-auto'>
+        <div className='common-container-layout  h-full mx-auto pl-4'>
             <div>
                 <p className='responsive-title-size common-border-b'>Skills</p>
                 <p className='py-4'>I've learned HTML, CSS, JavaScript, and React. I’m also skilled in Git, Tailwind CSS, and various front-end libraries with Ai.</p>
@@ -32,7 +32,7 @@ const Skills = () => {
 
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-16 mx-auto' src={skill.src} alt="skill.alt" />
-                  <p className='my-4'>HTML{skill.name}</p>
+                  <p className='my-4'>{skill.name}</p>
                 </div>
           ))}
             </div>
