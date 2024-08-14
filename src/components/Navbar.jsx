@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
-import Logo from '../assets/logo1.png'
+// import Logo from '../assets/logo1.png'
 
 const socialLinks = [
   { name: 'Linkedin', icon: FaLinkedin, color: 'bg-blue-600', url: '/' },
@@ -45,7 +45,7 @@ const Navbar = () => {
         </ul>        
 
         {/* Social Icons */}
-        <div className='flex fixed flex-col top-[35%] left-0'>
+        <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
             <ul>
               {socialLinks.map(({ name, icon: Icon, color, url })=>(
                   <li key={name} className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${color}`}>
