@@ -18,4 +18,8 @@
   .responsive-title-size {
     @apply text-responsive-title-sm md:text-responsive-title-md lg:text-responsive-title-lg font-bold;
   }
+  .common-container-layout {
+    @apply responsive-text-size  w-full h-screen flex flex-col justify-center;
+  }
 }
+

@@ -19,6 +19,7 @@ module.exports = {
         'responsive-title-md': ['2.5rem', '3rem'], // text-5xl
         'responsive-title-lg': ['2.75rem', '3.5rem'], // text-6xl
       },
+
     },
   },
   plugins: [],

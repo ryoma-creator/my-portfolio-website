@@ -1,7 +1,8 @@
 import React from 'react';
-import Container from "./components/Container";
 import Navbar from "./components/Navbar";
+import Container from './components/Container';
 import Home from "./components/Home";
+import About from './components/About';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Navbar/>
       <Container>
         <Home />
+        <About />
       </Container>
     </div>
   );
