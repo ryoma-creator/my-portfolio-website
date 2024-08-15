@@ -20,9 +20,9 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div name='Skills' className='common-container-layout'>
+    <div name='Skills' className=''>
         {/* Container */}
-        <div className='common-container-layout  h-full mx-auto pl-4'>
+        <div className=''>
             <div>
                 <p className='responsive-title-size common-border-b'>Skills</p>
                 <p className='py-4'>I've learned HTML, CSS, JavaScript, and React. I’m also skilled in Git, Tailwind CSS, and various front-end libraries with Ai.</p>

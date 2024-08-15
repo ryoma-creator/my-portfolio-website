@@ -2,8 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div name='about' className='common-container-layout'>
-        <div className='common-container-layout'>
+    <div name='about' className=''>
+        <div className=''>
             <div className='grid grid-cols-2 gap-8'>
                 <div className='sm:text-right pb-8 pl-4'>
                      <p className='responsive-title-size inline border-b-4 border-green'>

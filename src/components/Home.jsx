@@ -3,10 +3,10 @@ import {HiArrowNarrowRight} from 'react-icons/hi'
 
 const Home = () => {
   return (
-    <div class='home' className='common-container-layout'>
+    <div class='home' className=''>
 
         {/* container */}
-        <div className='mx-auto px-8'>
+        <div className=''>
             <p>Junior Front End Developer</p>
             <h1 className= 'responsive-title-size'>Hello I'm</h1>
             <h2 className='text-green responsive-title-size'>Ryoma Taguchi</h2>

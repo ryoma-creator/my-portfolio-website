@@ -10,11 +10,11 @@ function App() {
   return (
     <div>
       <Navbar/>
- 
+      <Container className='bg-black text-green'>
         <Home />
         <About />
         <Skills />
-
+      </Container>
     </div>
   );
 }

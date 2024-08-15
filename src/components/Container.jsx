@@ -1,7 +1,9 @@
 
-const Container = ({ children }) => (
-    <div className="common-container-layout">
-        {children}
+const Container = ({ children, className }) => (
+    <div className={`w-full h-screen ${className}`}>
+        <div className="common-layout">
+            {children}
+        </div>
     </div>
 );
 
