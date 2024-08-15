@@ -32,19 +32,15 @@
   .common-shadow {
     @apply shadow-md shadow-[#040c16] hover:scale-110 duration-500;
   }
+
   .content-div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* 画像が要素のサイズに合わせて大きくなったり小さくなったり */
-    background-position: center;
-    height: 250px;
+    @apply bg-no-repeat bg-cover bg-center h-64;
   }
+  
   .content-div:hover {
-    background-image: linear-gradient(
-        to right,
-        rgba(112, 157, 255, 0.8),
-        hsla(242, 74%, 61%, 0.8)
-    )!important;
+    @apply bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500;
   }
+  
+
 }
 
