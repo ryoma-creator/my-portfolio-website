@@ -16,7 +16,7 @@
     @apply text-responsive-sm md:text-responsive-md lg:text-responsive-lg;
   }
   .responsive-title-size {
-    @apply text-responsive-title-sm md:text-responsive-title-md lg:text-responsive-title-lg font-bold;
+    @apply text-responsive-title-sm md:text-responsive-title-md lg:text-responsive-title-lg font-bold ;
   }
  
   .common-screen-size{
@@ -26,6 +26,11 @@
   .common-layout {
     @apply max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full;
   }
+
+  .common-button-layout {
+    @apply border-green border-2 flex items-center hover:bg-[#80E080] hover:border-[#80E080] hover:text-white duration-300;
+  }
+
   .common-border-b{
     @apply inline border-b-4 border-green;
   }
@@ -38,9 +43,11 @@
   }
   
   .content-div:hover {
-    @apply bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500;
-  }
-  
+    background-image: linear-gradient(to right, #3b82f6, #6366f1, #8b5cf6) !important;
+}
+/* Importantでないと表示できないため、ここだけ別の書き方が必要であった.
+    @applyでは、!importantを使用できないため。
+ */
 
 }
 
