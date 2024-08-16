@@ -20,7 +20,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div name='Skills' className='common-screen-size'>
+    <div className='skills common-screen-size'>
         {/* Container */}
         <div className='common-layout'>
           {/* <div className='w-full'>

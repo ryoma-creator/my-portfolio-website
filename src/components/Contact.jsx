@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div name='contact' className='common-screen-size h-full p-4 mt-10'>
+    <div className='contact common-screen-size h-full p-4 mt-10'>
         <div className='common-layout'>
         <form 
             method='POST' 

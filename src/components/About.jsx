@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div name='about' className='common-screen-size'>
+    <div className='about common-screen-size'>
         <div className='common-layout'>
             <div className='grid grid-cols-2 gap-8'>
                 <div className='sm:text-right pb-8 pl-4'>

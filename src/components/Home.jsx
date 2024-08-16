@@ -3,7 +3,7 @@ import {HiArrowNarrowRight} from 'react-icons/hi'
 
 const Home = () => {
   return (
-    <div class='home' className='common-screen-size'>
+    <div className='home common-screen-size'>
 
         {/* container */}
         <div className='common-layout'>

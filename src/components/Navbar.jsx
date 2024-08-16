@@ -12,6 +12,14 @@ const socialLinks = [
   { name: 'Resume', icon: BsFillPersonLinesFill, color: 'bg-[#565f69]', url: '/' },
 ];
 
+  const links = [
+    { name: 'Home', to: 'home' },
+    { name: 'About', to: 'about' },
+    { name: 'Skills', to: 'skills' },
+    { name: 'Work', to: 'work' },
+    { name: 'Contact', to: 'contact' }
+  ];
+
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
@@ -24,23 +32,17 @@ const Navbar = () => {
         </div>
         {/* menu */}
         <ul className='hidden md:flex'>
-          <li>
-              <Link 
-                activeClass="active" 
-                to="test1" 
-                spy={true} 
-                smooth={true} 
-                offset={50} 
-                duration={500} 
-                onSetActive={handleSetActive}
+          {links.map((link) => (
+            <li key={link.to}>
+              <Link
+                to={link.to}
+                smooth={true}
+                duration={500}
               >
-                Home
+                {link.name}
               </Link>
-          </li>
-          <li>About</li>
-          <li>SKills</li>
-          <li>Work</li>
-          <li>Contact</li>
+            </li>
+          ))}
         </ul>
 
         {/* Hamburger */}

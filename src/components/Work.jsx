@@ -32,7 +32,7 @@ const Portfolio = [
 
 const Work = () => {
   return (
-    <div name='work' className='w-full md:h-screen'>
+    <div className='work w-full md:h-screen'>
         <div className='common-screen-size common-layout'>
             <div className='pb-8'>
                 <p className='common-border-b responsive-title-size '>
