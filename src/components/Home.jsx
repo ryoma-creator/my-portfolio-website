@@ -15,7 +15,7 @@ const Home = () => {
                 Let's create something great together!
             </p>
             <div>
-                <button className='group text-green border-green border-2 px-6 py-2 my-2 flex items-center hover:bg-[#80E080] hover:border-[#80E080] hover:text-white duration-300 rounded-full'>
+                <button className='group common-button-layout text-green px-6 py-2 my-2 rounded-full'>
                     View Work
                     <span className='group-hover:rotate-90 duration-300'>
                        <HiArrowNarrowRight className='ml-2'/>

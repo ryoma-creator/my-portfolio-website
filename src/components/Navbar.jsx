@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
+import {Link} from 'react-scroll'
 // import Logo from '../assets/logo1.png'
 
 const socialLinks = [
@@ -23,7 +24,19 @@ const Navbar = () => {
         </div>
         {/* menu */}
         <ul className='hidden md:flex'>
-          <li>Home</li>
+          <li>
+              <Link 
+                activeClass="active" 
+                to="test1" 
+                spy={true} 
+                smooth={true} 
+                offset={50} 
+                duration={500} 
+                onSetActive={handleSetActive}
+              >
+                Home
+              </Link>
+          </li>
           <li>About</li>
           <li>SKills</li>
           <li>Work</li>
