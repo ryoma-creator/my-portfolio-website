@@ -3,6 +3,7 @@ import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import {Link} from 'react-scroll'
+import Home from './Home'
 // import Logo from '../assets/logo1.png'
 
 const socialLinks = [
@@ -20,9 +21,12 @@ const socialLinks = [
     { name: 'Contact', to: 'contact' }
   ];
 
+
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
+    const [navActive, setActive] = useState('Home')
+    const handleNavActive = (name) => setActive(name)
     
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 bg-black'> 
@@ -35,6 +39,9 @@ const Navbar = () => {
           {links.map((link) => (
             <li key={link.to}>
               <Link
+                className = {`hover:border-b-2 border-green hover:text-green duration-100
+                           ${navActive === link.name ? 'border-b-2 border-green text-green' : ''}`}
+                onClick={() => handleNavActive(link.name)}
                 to={link.to}
                 smooth={true}
                 duration={500}
@@ -52,11 +59,20 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         <ul className={!nav ? 'hidden' :'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-          <li className='py-6 text-4xl'>Home</li>
-          <li className='py-6 text-4xl'>About</li>
-          <li className='py-6 text-4xl'>SKills</li>
-          <li className='py-6 text-4xl'>Work</li>
-          <li className='py-6 text-4xl'>Contact</li>
+        {links.map((link) => (
+            <li 
+                className='py-6 text-4xl'
+                key={link.to}>
+              <Link
+                onClick={handleClick}
+                to={link.to}
+                smooth={true}
+                duration={500}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>        
 
         {/* Social Icons */}
