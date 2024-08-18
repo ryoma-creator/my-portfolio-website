@@ -63,12 +63,18 @@ const Navbar = () => {
         <ul className='uppercase'>
         {links.map((link, index) => (
             <li  
-                className={`p-4 text-3xl ${
-                  index !== links.length -1 ? 'border-b border-gray-100' : ''
-                }`}
+                className={`p-4 text-3xl 
+                 hover:text-green duration-100
+                ${index !== links.length -1 ? 'border-b border-gray-100' : ''}`}
+                // "Added conditional logic to exclude the underline from the last index (CONTACT) only."
                 key={link.to}>
+                {/* ${navActive === link.name ? 'border-b-2 border-green text-green' : ''} */}
+                {/* handleNavActive(link.name) */}
+                {/* text-greenを残してもいいけど今のLayoutだと残さない方がいい。念のため残しておく */}
               <Link
-                onClick={handleClick}
+                onClick={() => {
+                  handleClick()
+                }}
                 to={link.to}
                 smooth={true}
                 duration={500}
