@@ -58,10 +58,14 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu */}
-        <ul className={!nav ? 'hidden' :'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-        {links.map((link) => (
-            <li 
-                className='py-6 text-4xl'
+        <div className={!nav ? 'hidden' :'absolute w-[60%] top-0 left-0 h-screen bg-black border-r border-r-gray-900  flex flex-col justify-center items-center'}>
+          <h1 className=''></h1>
+        <ul className='uppercase'>
+        {links.map((link, index) => (
+            <li  
+                className={`p-4 text-3xl ${
+                  index !== links.length -1 ? 'border-b border-gray-100' : ''
+                }`}
                 key={link.to}>
               <Link
                 onClick={handleClick}
@@ -74,7 +78,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>        
-
+        </div>
         {/* Social Icons */}
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
             <ul>

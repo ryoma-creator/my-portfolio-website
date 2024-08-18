@@ -16,8 +16,8 @@ module.exports = {
         'responsive-md': ['1.25rem', '2rem'],    // text-5xl
         'responsive-lg': ['1.5rem', '2.5rem'], // text-6xl
         'responsive-title-sm': ['2.25rem', '2.5rem'],  // text-4xl
-        'responsive-title-md': ['2.5rem', '3rem'], // text-5xl
-        'responsive-title-lg': ['2.75rem', '3.5rem'], // text-6xl
+        'responsive-title-md': ['3rem', '3rem'], // text-5xl
+        'responsive-title-lg': ['4.5rem', '3.5rem'], // text-6xl
       },
 
     },

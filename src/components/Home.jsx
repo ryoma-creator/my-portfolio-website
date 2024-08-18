@@ -10,7 +10,7 @@ const Home = () => {
             <p>Junior Front End Developer</p>
             <h1 className= 'responsive-title-size'>Hello I'm</h1>
             <h2 className='text-green responsive-title-size'>Ryoma Taguchi</h2>
-            <p className='text-[#8892b0] py-4 max-w-[700px]'>
+            <p className='text-[#8892b0] py-4 max-w-[500px]'>
                 I love crafting user-friendly interfaces and am currently honing my React skills. 
                 Let's create something great together!
             </p>

@@ -23,12 +23,6 @@ const Skills = () => {
     <div className='skills common-screen-size'>
         {/* Container */}
         <div className='common-layout'>
-          {/* <div className='w-full'>
-            A
-            <div className=''>
-            b
-            </div>
-          </div> */}
             <div>
                 <p className='responsive-title-size common-border-b'>Skills</p>
                 <p className='py-4'>I've learned HTML, CSS, JavaScript, and React. I’m also skilled in Git, Tailwind CSS, and various front-end libraries with Ai.</p>

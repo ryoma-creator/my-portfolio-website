@@ -20,11 +20,11 @@
   }
  
   .common-screen-size{
-    @apply w-full h-screen;
+    @apply w-full h-screen ;
   }
 
   .common-layout {
-    @apply max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full;
+    @apply max-w-[500px] md:max-w-[650px] lg:max-w-[800px] mx-auto px-8 flex flex-col justify-center h-full;
   }
 
   .common-button-layout {
