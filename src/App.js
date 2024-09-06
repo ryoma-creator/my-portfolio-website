@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div>
+    <div className='bg-[#000000]'>
       <Navbar/>
         <Home />
         <About />
