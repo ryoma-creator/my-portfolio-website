@@ -594,6 +594,9 @@ video {
 .z-50 {
   z-index: 50;
 }
+.z-40 {
+  z-index: 40;
+}
 .m-2 {
   margin: 0.5rem;
 }
@@ -871,6 +874,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 .p-1 {
   padding: 0.25rem;
@@ -1177,6 +1184,9 @@ video {
 /* Importantでないと表示できないため、ここだけ別の書き方が必要であった.
     @applyでは、!importantを使用できないため。
  */
+.\*\:h-full > * {
+  height: 100%;
+}
 .file\:border-0::file-selector-button {
   border-width: 0px;
 }
