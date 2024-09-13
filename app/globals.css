@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap'); */
+
+@layer base {
+  /* .font-primary {
+    font-family: var(--font-jetBrainsMono);
+  } */
+  /* .bg-primary {
+    background-color: #1c1c22
+  } */
+  /*🔺原因は不明だが、tailwind.config,jsだけでなく、
+  globals.css上にも、customで作ったものを@layser base上で
+  提示しないと、表示されなくたった。➡️ tailwind.configで、正しくネストされてない部分があった。
+  ➡️6時間以上失った。➡️以前、extendのプロパティがthemeの中で正しくネストされていませんでした。正しい構文では、extendはthemeオブジェクト内に配置する必要があります。
+  ➡️最終的に疲れ果てている時は、Aiに聞いた後、コピペで試すしかない。肉眼で見るのが難しいので*/
+  
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
+  
+}
+
+  /* li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+  .responsive-text-size {
+    @apply text-responsive-sm md:text-responsive-md lg:text-responsive-lg;
+  }
+  .responsive-title-size {
+    @apply text-responsive-title-sm md:text-responsive-title-md lg:text-responsive-title-lg font-bold ;
+  }
+ 
+  .common-screen-size{
+    @apply w-full h-screen ;
+  }
+
+  .common-layout {
+    @apply max-w-[500px] md:max-w-[650px] lg:max-w-[800px] mx-auto px-8 flex flex-col justify-center h-full;
+  }
+
+  .common-button-layout {
+    @apply border-green border-2 flex items-center hover:bg-[#80E080] hover:border-[#80E080] hover:text-white duration-300;
+  }
+
+  .common-border-b{
+    @apply inline border-b-4 border-green;
+  }
+  .common-shadow {
+    @apply shadow-md shadow-[#040c16] hover:scale-110 duration-500;
+  }
+
+  .content-div {
+    @apply bg-no-repeat bg-cover bg-center h-64;
+  }
+
+  .content-div:hover {
+    background-image: linear-gradient(to right, #3b82f6, #6366f1, #8b5cf6) !important;
+} 
+}  */
+/* Importantでないと表示できないため、ここだけ別の書き方が必要であった.
+    @applyでは、!importantを使用できないため。
+ */
