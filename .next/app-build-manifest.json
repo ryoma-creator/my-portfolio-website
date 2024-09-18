@@ -16,20 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/services/page.js"
     ],
-    "/resume/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/resume/page.js"
-    ],
     "/work/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/work/page.js"
     ],
-    "/contact/page": [
+    "/resume/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
+      "static/chunks/app/resume/page.js"
     ]
   }
 }

@@ -22,18 +22,6 @@ const stairAnimation = {
 // 終了位置は、1つ目のanimationのexitの右のやつと、2つ目のanimationのanimate。
 
 
-// const stairAnimation2 = {
-//     initial: {
-//         right: '0%',
-//     },
-//     animate: {
-//         right: '100%',
-//     },
-//     exit: {
-//         right: ['100%', '0%'],
-//     },
-// }
-
 // ２回Animationは発動する
 // exitが最初に発動　左が開始、右が終了位置
 // ％はどれくらいの％で表示するか
@@ -85,20 +73,7 @@ const Stairs = () => {
             }}
             className='h-full w-full bg-white relative'
         />
-
-        {/* <motion.div
-            key={index}
-            variants={stairAnimation2}
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            transition={{
-                duration: 0.4,
-                ease: 'easeInOut',
-                delay: reverseIndex2(index) * 0.1,
-            }}
-            className='h-full w-full bg-white relative'
-        /> */}
+        
         </>
         );
     })}
