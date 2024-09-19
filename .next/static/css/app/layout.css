@@ -690,6 +690,15 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-\[44px\] {
+  height: 44px;
+}
+.h-\[48px\] {
+  height: 48px;
+}
+.h-\[56px\] {
+  height: 56px;
+}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -885,6 +894,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-transparent {
+  background-color: transparent;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -939,6 +951,10 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -998,6 +1014,10 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1015,6 +1035,9 @@ video {
 }
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+.tracking-\[2px\] {
+  letter-spacing: 2px;
 }
 .text-\[\#8892b0\] {
   --tw-text-opacity: 1;
@@ -1076,6 +1099,9 @@ video {
 }
 .outline {
   outline-style: solid;
+}
+.ring-offset-white {
+  --tw-ring-offset-color: #fff;
 }
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -1225,9 +1251,17 @@ video {
 .hover\:bg-primary\/90:hover {
   background-color: rgb(28 28 34 / 0.9);
 }
+.hover\:bg-accent-hover:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 225 135 / var(--tw-bg-opacity));
+}
 .hover\:text-accent:hover {
   --tw-text-opacity: 1;
   color: rgb(0 255 153 / var(--tw-text-opacity));
+}
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(28 28 34 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
