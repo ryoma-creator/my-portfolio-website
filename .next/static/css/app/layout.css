@@ -1485,9 +1485,21 @@ video {
     display: none;
   }
 
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
   .xl\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .xl\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .xl\:pb-24 {
+    padding-bottom: 6rem;
   }
 }
 .\[\&\>span\]\:line-clamp-1>span {
