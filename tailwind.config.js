@@ -60,11 +60,17 @@ module.exports = {
 		  sm: 'calc(var(--radius) - 4px)',
 		},
 		boxShadow: {
-			'neumorphism': '-5px -5px 10px rgba(255, 255, 255, 0.8), 5px 5px 10px rgba(0, 0, 0, 0.25)',
-			'neumorphism-hover': '-1px -1px 5px rgba(255, 255, 255, 0.6), 1px 1px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 1), inset 2px 2px 4px rgba(0, 0, 0, 0.3)',
-		  },
+			'neumorphism': 'theme("colors.accent.DEFAULT / 20%") -5px -5px 10px, theme("colors.accent.DEFAULT / 25%") 5px 5px 10px',
+			'neumorphism-hover': 'theme("colors.accent.DEFAULT / 15%") -1px -1px 5px, theme("colors.accent.DEFAULT / 30%") 1px 1px 5px, inset theme("colors.accent.DEFAULT / 25%") -2px -2px 5px, inset theme("colors.accent.DEFAULT / 30%") 2px 2px 4px',
+      },
+	  textShadow: {
+		'neumorphism': ' theme("colors.accent.DEFAULT / 15%") 3px 3px 3px',
+  	  },
 	  },
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),  
+		require("tailwindcss-textshadow"),  
+	  ],
   };
   

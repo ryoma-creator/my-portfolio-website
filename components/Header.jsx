@@ -13,7 +13,8 @@ const Header = () => {
          <Link
             href='/'
          >
-            <h1 className='text-4xl font-semibold'>
+            <h1 className='text-4xl font-semibold 
+            text-shadow-neumorphism'>
                 Ryoma<span className='text-accent'>.</span>
             </h1>
          </Link>

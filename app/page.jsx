@@ -1,12 +1,15 @@
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 
+// components
+import Social from '@/components/Social';
+
 export default function HomePage() {
   return (
     <>
       <section className='h-full'>
         {/* no need mx-auto since you use container */}
-        <div className='container h-full'>
+        <div className='container h-full text-shadow-neumorphism'>
           <div className='flex flex-col xl:flex-row items-center justify-between
           xl:pt-8 xl:pb-24'>
             {/* text */}
@@ -20,7 +23,7 @@ export default function HomePage() {
                 Eager to blend analytical thinking with creative coding in impactful projects.
               </p>
               {/* btn and socials */}
-              <div>
+              <div className='flex flex-col xl:flex-row items-center gap-8'>
                 <Button
                   variant='outline'
                   size='lg'
@@ -29,6 +32,9 @@ export default function HomePage() {
                   <span>Donwload CV</span>
                   <FiDownload className='text-xl'/>
                 </Button>
+                <div className='mb-8 xl:mb-0'>
+                  <Social />
+                </div>
               </div>
             </div>
             {/* photo */}
