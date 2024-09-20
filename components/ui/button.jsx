@@ -9,9 +9,13 @@ import { cn } from "@/lib/utils"
 // cva()関数の第一引数には、共通のcssを記載(position等)
 // 基本、関数へ引数を渡し、選択したいものを選ぶ。
 
+// tailwind.config → neumorphism shadow-neumorphism-hover
 const buttonVariants = cva(
+
   `inline-flex items-center justify-center whitespace-nowrap rounded-full
-  text-base ont-semibold ring-offset-white transition-colors`,
+  text-base font-semibold ring-offset-white transition-colors
+  shadow-neumorphism hover:shadow-neumorphism-hover
+  `,
   {
     variants: {
       //variantの部分が個別のbuttonの名称となる。

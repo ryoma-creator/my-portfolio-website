@@ -59,6 +59,10 @@ module.exports = {
 		  md: 'calc(var(--radius) - 2px)',
 		  sm: 'calc(var(--radius) - 4px)',
 		},
+		boxShadow: {
+			'neumorphism': '-5px -5px 10px rgba(255, 255, 255, 0.8), 5px 5px 10px rgba(0, 0, 0, 0.25)',
+			'neumorphism-hover': '-1px -1px 5px rgba(255, 255, 255, 0.6), 1px 1px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 1), inset 2px 2px 4px rgba(0, 0, 0, 0.3)',
+		  },
 	  },
 	},
 	plugins: [require("tailwindcss-animate")],
