@@ -1530,6 +1530,10 @@ video {
   .lg\:flex {
     display: flex;
   }
+
+  .lg\:w-\[498px\] {
+    width: 498px;
+  }
 }
 @media (min-width: 1200px) {
 
