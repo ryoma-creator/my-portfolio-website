@@ -3,6 +3,7 @@ import { FiDownload } from 'react-icons/fi';
 
 // components
 import Social from '@/components/Social';
+import Photo from '@/components/Photo';
 
 export default function HomePage() {
   return (
@@ -33,7 +34,12 @@ export default function HomePage() {
                   <FiDownload className='text-xl'/>
                 </Button>
                 <div className='mb-8 xl:mb-0'>
-                  <Social />
+                  <Social 
+                    containerStyles='flex gap-6' 
+                    iconStyles='w-9 h-9 border border-accent rounded-full
+                    flex items-center justify-center 
+                    hover:bg-accent hover:transition-all duration-500'
+                  />
                 </div>
               </div>
             </div>

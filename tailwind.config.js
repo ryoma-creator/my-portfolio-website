@@ -64,7 +64,7 @@ module.exports = {
 			'neumorphism-hover': 'theme("colors.accent.DEFAULT / 15%") -1px -1px 5px, theme("colors.accent.DEFAULT / 30%") 1px 1px 5px, inset theme("colors.accent.DEFAULT / 25%") -2px -2px 5px, inset theme("colors.accent.DEFAULT / 30%") 2px 2px 4px',
       },
 	  textShadow: {
-		'neumorphism': ' theme("colors.accent.DEFAULT / 15%") 3px 3px 3px',
+		'neumorphism': ' theme("colors.accent.hover / 15%") 3px 3px 3px',
   	  },
 	  },
 	},
