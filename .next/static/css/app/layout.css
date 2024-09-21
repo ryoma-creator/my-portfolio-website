@@ -1339,6 +1339,9 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.hover\:text-shadow-neumorphism:hover {
+  text-shadow:  rgb(0 225 135 / 15%) 3px 3px 3px;
+}
 .focus\:bg-accent:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(0 255 153 / var(--tw-bg-opacity));

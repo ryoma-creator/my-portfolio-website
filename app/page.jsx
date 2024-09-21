@@ -27,11 +27,11 @@ export default function HomePage() {
               <ReactTyped 
                 strings={[
                     'THANK YOU FOR COMING!',
-                    'This is my Portfolio Website!',
-                    'PLEASE TAKE A LOOK AT!', 
-                    'LETS WORK TOGETHER!', 
-                    'ILL DO MY BEST FOR YOU AND ME CAREER!',
-                    'FEEL FREE TO CONTACT TO ME!',
+                    'Welcome to my Portfolio Website!',
+                    'Please take a look!', 
+                    'Lets work together!', 
+                    'Ill do my best for you and my career!',
+                    'Feel free to contact me!',
                 ]}
                 typeSpeed={75} 
                 backSpeed={30} 
