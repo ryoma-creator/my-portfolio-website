@@ -44,7 +44,9 @@ export default function HomePage() {
               </div>
             </div>
             {/* photo */}
-            <div>photo</div>
+            <div>
+                <Photo />
+            </div>
           </div>
         </div>
       </section>
