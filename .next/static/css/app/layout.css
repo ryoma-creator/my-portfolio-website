@@ -730,6 +730,21 @@ video {
 .h-\[298px\] {
   height: 298px;
 }
+.h-\[300px\] {
+  height: 300px;
+}
+.h-\[288px\] {
+  height: 288px;
+}
+.h-\[258px\] {
+  height: 258px;
+}
+.h-\[278px\] {
+  height: 278px;
+}
+.h-\[248px\] {
+  height: 248px;
+}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -771,6 +786,24 @@ video {
 }
 .w-\[298px\] {
   width: 298px;
+}
+.w-\[300\] {
+  width: 300;
+}
+.w-\[600\] {
+  width: 600;
+}
+.w-\[288px\] {
+  width: 288px;
+}
+.w-\[258px\] {
+  width: 258px;
+}
+.w-\[278px\] {
+  width: 278px;
+}
+.w-\[248px\] {
+  width: 248px;
 }
 .min-w-\[8rem\] {
   min-width: 8rem;
@@ -1138,6 +1171,11 @@ video {
   --tw-shadow-colored: -1px -1px 5px var(--tw-shadow-color), 1px 1px 5px var(--tw-shadow-color), inset -2px -2px 5px var(--tw-shadow-color), inset 2px 2px 4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-\[\#040c16\] {
   --tw-shadow-color: #040c16;
   --tw-shadow: var(--tw-shadow-colored);
@@ -1151,6 +1189,9 @@ video {
 }
 .ring-offset-white {
   --tw-ring-offset-color: #fff;
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -1534,6 +1575,10 @@ video {
   .lg\:w-\[498px\] {
     width: 498px;
   }
+
+  .lg\:w-\[458px\] {
+    width: 458px;
+  }
 }
 @media (min-width: 1200px) {
 
@@ -1555,6 +1600,22 @@ video {
 
   .xl\:h-\[898px\] {
     height: 898px;
+  }
+
+  .xl\:h-\[506px\] {
+    height: 506px;
+  }
+
+  .xl\:h-\[458px\] {
+    height: 458px;
+  }
+
+  .xl\:w-\[506px\] {
+    width: 506px;
+  }
+
+  .xl\:w-\[498px\] {
+    width: 498px;
   }
 
   .xl\:flex-row {
