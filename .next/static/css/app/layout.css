@@ -619,6 +619,9 @@ video {
 .z-50 {
   z-index: 50;
 }
+.z-\[-1\] {
+  z-index: -1;
+}
 .order-1 {
   order: 1;
 }
@@ -742,6 +745,9 @@ video {
 .min-h-\[80px\] {
   min-height: 80px;
 }
+.min-h-full {
+  min-height: 100%;
+}
 .w-12 {
   width: 3rem;
 }
@@ -769,8 +775,8 @@ video {
 .w-\[298px\] {
   width: 298px;
 }
-.w-\[300\] {
-  width: 300;
+.w-\[300px\] {
+  width: 300px;
 }
 .w-\[60\%\] {
   width: 60%;
@@ -781,20 +787,29 @@ video {
 .w-screen {
   width: 100vw;
 }
-.w-\[300px\] {
-  width: 300px;
-}
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
 .min-w-\[var\(--radix-select-trigger-width\)\] {
   min-width: var(--radix-select-trigger-width);
 }
+.min-w-full {
+  min-width: 100%;
+}
+.max-w-\[100px\] {
+  max-width: 100px;
+}
+.max-w-\[150px\] {
+  max-width: 150px;
+}
 .max-w-\[500px\] {
   max-width: 500px;
 }
 .max-w-\[600px\] {
   max-width: 600px;
+}
+.max-w-\[80vw\] {
+  max-width: 80vw;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -820,6 +835,9 @@ video {
 }
 .flex-col-reverse {
   flex-direction: column-reverse;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .items-center {
   align-items: center;
@@ -949,6 +967,9 @@ video {
 .object-contain {
   object-fit: contain;
 }
+.object-cover {
+  object-fit: cover;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -1069,6 +1090,9 @@ video {
 .font-bold {
   font-weight: 700;
 }
+.font-extrabold {
+  font-weight: 800;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -1080,6 +1104,9 @@ video {
 }
 .capitalize {
   text-transform: capitalize;
+}
+.leading-snug {
+  line-height: 1.375;
 }
 .tracking-\[2px\] {
   letter-spacing: 2px;
@@ -1307,6 +1334,10 @@ video {
 }
 .hover\:ml-\[-10px\]:hover {
   margin-left: -10px;
+}
+.hover\:translate-y-\[-5px\]:hover {
+  --tw-translate-y: -5px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
@@ -1588,8 +1619,16 @@ video {
     width: 506px;
   }
 
+  .xl\:max-w-none {
+    max-width: none;
+  }
+
   .xl\:flex-row {
     flex-direction: row;
+  }
+
+  .xl\:justify-start {
+    justify-content: flex-start;
   }
 
   .xl\:py-12 {
@@ -1607,6 +1646,11 @@ video {
 
   .xl\:text-left {
     text-align: left;
+  }
+
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 .\[\&\>span\]\:line-clamp-1>span {

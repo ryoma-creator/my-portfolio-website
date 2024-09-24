@@ -9,6 +9,7 @@ import Social from '@/components/Social';
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 
+
 export default function HomePage() {
   return (
     <>
@@ -54,7 +55,7 @@ export default function HomePage() {
                     containerStyles='flex gap-6' 
                     iconStyles='w-9 h-9 border border-accent rounded-full
                     flex items-center justify-center 
-                    hover:bg-accent hover:transition-all duration-500'
+                    hover:bg-accent hover:transition-all duration-500 hover:translate-y-[-5px]'
                   />
                 </div>
               </div>
@@ -63,9 +64,9 @@ export default function HomePage() {
             <div className='order-1 xl:order-none'>
                 <Photo />
             </div>
-            <Stats/>
           </div>
         </div>
+        <Stats/>
       </section>
     </>
   );
