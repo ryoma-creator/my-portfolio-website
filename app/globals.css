@@ -32,6 +32,15 @@
   
 }
 
+.text-outline {
+  -webkit-text-stroke: 1px white;
+}
+
+.text-outline-hover {
+  -webkit-text-stroke: 1px #00ff99;
+}
+
+
   /* li {
     @apply px-4;
     @apply cursor-pointer;
