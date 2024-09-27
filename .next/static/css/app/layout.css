@@ -679,6 +679,9 @@ video {
 .mt-32 {
   margin-top: 8rem;
 }
+.mb-12 {
+  margin-bottom: 3rem;
+}
 .inline {
   display: inline;
 }
@@ -744,6 +747,15 @@ video {
 }
 .h-\[70px\] {
   height: 70px;
+}
+.h-\[50\%\] {
+  height: 50%;
+}
+.h-\[520px\] {
+  height: 520px;
+}
+.h-\[52px\] {
+  height: 52px;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -984,6 +996,24 @@ video {
 }
 .bg-white\/5 {
   background-color: rgb(255 255 255 / 0.05);
+}
+.bg-primary\/20 {
+  background-color: rgb(28 28 34 / 0.2);
+}
+.bg-primary\/80 {
+  background-color: rgb(28 28 34 / 0.8);
+}
+.bg-primary\/50 {
+  background-color: rgb(28 28 34 / 0.5);
+}
+.bg-primary\/70 {
+  background-color: rgb(28 28 34 / 0.7);
+}
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
+}
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
 }
 .object-contain {
   object-fit: contain;
@@ -1676,6 +1706,14 @@ video {
 
   .xl\:w-\[506px\] {
     width: 506px;
+  }
+
+  .xl\:w-\[30\%\] {
+    width: 30%;
+  }
+
+  .xl\:w-\[70\%\] {
+    width: 70%;
   }
 
   .xl\:max-w-none {
