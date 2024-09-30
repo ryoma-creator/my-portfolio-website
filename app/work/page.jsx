@@ -172,8 +172,23 @@ const Work = () => {
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
-                return <SwiperSlide key={index}>slide</SwiperSlide>
-              })}
+                return (
+                <SwiperSlide key={index} className='w-full'>
+                  <div className='h-[460px] relative group flex justify-center
+                  items-center bg-pink-50/20'>
+                    {/* overlay */}
+                    <div className='absolute top-0 right-0 left-0 w-full h-full bg-black/50 z-10'></div>
+                    {/* image */}
+                    <div className='relative w-full h-full'>
+                      <Image 
+                        src={project.image}
+                        fill
+                        className='object-cover'
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              )})}
             </Swiper>
           </div>
         </div>
