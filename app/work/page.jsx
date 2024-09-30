@@ -19,6 +19,8 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 
+import WorkSliderBtns from '@/components/WorkSliderBtns';
+
 const projects = [
   {num: '01',
   category: 'frontend',
@@ -82,8 +84,8 @@ const Work = () => {
 
   return (
     <motion.section
-      initial={{ opacity:0 }}
-      animate={{ opacity:100 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
     >
       <div className='container'>
@@ -103,10 +105,10 @@ const Work = () => {
               <h2 className='text-[42px] font-bold leading-none text-white
               group-hover:text-accent transition-all duration-500 capitalize'
               >
-                {project.category} project
+                {project.category} Project 
               </h2>
               {/* project description */}
-              <p className='text-white/60'>{project.description}</p>
+              <p className='text-white/60 '>{project.description}</p>
               <ul className='flex gap-4'>
                 {project.stack.map((item, index) => {
                   return <li key={index} className='text-xl text-accent'>
@@ -167,7 +169,7 @@ const Work = () => {
           <div className='w-full xl:w-[50%]'>
             <Swiper
               spaceBetween={30}
-              slidePerView={1}
+              slidesPerView={1}
               className='xl: h-[520px] mb-12'
               onSlideChange={handleSlideChange}
             >
@@ -189,6 +191,15 @@ const Work = () => {
                   </div>
                 </SwiperSlide>
               )})}
+
+              {/* slider buttons */}
+              <WorkSliderBtns 
+                containerStyles='z-20 flex gap-2 absolute xl:right-0 bottom-[calc(50%_-_22px)]
+                xl:bottom-0 w-full justify-between xl:w-max xl:justify-none'
+                btnStyles='bg-accent hover:bg-accent-hover w-[44px] h-[44px] flex justify-center
+                items-center text-[22px] text-primary'
+                 />
+
             </Swiper>
           </div>
         </div>
@@ -199,3 +210,17 @@ const Work = () => {
 };
 
 export default Work;
+
+// bottom-[calc(50%_-_22px)
+// - means go up to top in this case.
+// parent's height
+// |
+// |
+// | 50%
+// |------------ （center）
+// |  ↑
+// |  22px
+// |   
+// |  [button]
+// |
+// |

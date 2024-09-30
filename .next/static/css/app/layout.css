@@ -610,6 +610,21 @@ video {
 .top-\[35\%\] {
   top: 35%;
 }
+.bottom-\[calc\(50\%_-_22px\)\] {
+  bottom: calc(50% - 22px);
+}
+.bottom-\[calc\(50\%\)\] {
+  bottom: calc(50%);
+}
+.top-\[calc\(50\%_\+_22px\)\] {
+  top: calc(50% + 22px);
+}
+.top-\[calc\(50\%\+22px\)\] {
+  top: calc(50% + 22px);
+}
+.top-\[calc\(50\%_-_22px\)\] {
+  top: calc(50% - 22px);
+}
 .z-10 {
   z-index: 10;
 }
@@ -621,6 +636,9 @@ video {
 }
 .z-\[-1\] {
   z-index: -1;
+}
+.z-20 {
+  z-index: 20;
 }
 .order-1 {
   order: 1;
@@ -811,6 +829,9 @@ video {
 .w-screen {
   width: 100vw;
 }
+.w-\[44px\] {
+  width: 44px;
+}
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
@@ -883,6 +904,12 @@ video {
 }
 .gap-\[30px\] {
   gap: 30px;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-5 {
+  gap: 1.25rem;
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1144,6 +1171,12 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-\[22px\] {
+  font-size: 22px;
+}
+.text-\[420px\] {
+  font-size: 420px;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1210,6 +1243,9 @@ video {
 }
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
+}
+.text-white\/20 {
+  color: rgb(255 255 255 / 0.2);
 }
 .underline {
   text-decoration-line: underline;
@@ -1663,6 +1699,18 @@ video {
 }
 @media (min-width: 1200px) {
 
+  .xl\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .xl\:right-0 {
+    right: 0px;
+  }
+
+  .xl\:z-20 {
+    z-index: 20;
+  }
+
   .xl\:order-none {
     order: 0;
   }
@@ -1701,6 +1749,10 @@ video {
 
   .xl\:w-\[506px\] {
     width: 506px;
+  }
+
+  .xl\:w-max {
+    width: max-content;
   }
 
   .xl\:max-w-none {
