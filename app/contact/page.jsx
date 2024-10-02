@@ -9,6 +9,7 @@ import {
   SelectContent,
   SelectGroup,
   SelectLabel,
+  SelectItem,
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
@@ -68,9 +69,22 @@ const Contact = () => {
               {/* select */}
               <Select>
                 <SelectTrigger>
-                  <SelectValue placeholder='Select a service' />
+                  <SelectValue placeholder='Reason for Contact' />
                 </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    {/* <SelectLabel>Reason for Contact</SelectLabel> */}
+                    <SelectItem value='job-opportunity'>Job Opportunity</SelectItem>
+                    <SelectItem value='general-inquiry'>General Inquiry</SelectItem>
+                    <SelectItem value='other'>Other</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
               </Select>
+              {/* textarea */}
+              <Textarea 
+                className='h-[200px]' 
+                placeholder='Type your message here.'
+              />
             </form>
           </div>
           {/* info */}
