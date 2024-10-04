@@ -46,7 +46,7 @@ const Contact = () => {
       }}
       className=''
     >
-      <div className='container'>
+      <div className='container flex flex-col'>
           {/* contact me */}
           <motion.div 
             initial={{ opacity: 0, y: '-100vh' }}
@@ -55,7 +55,7 @@ const Contact = () => {
               y: 0,
               transition: { delay: 3, duration: 2, ease: 'easeIn'},
             }}
-           className='order-0 hidden xl:block text-6xl font-bold text-center
+           className='order-last xl:order-first text-6xl font-bold text-center
            mb-12 capitalize w-full py-[40px]
           '>
             contact <span className='text-accent'>me</span>
