@@ -55,18 +55,18 @@ const Contact = () => {
               y: 0,
               transition: { delay: 3, duration: 2, ease: 'easeIn'},
             }}
-           className='order-0 text-6xl font-bold text-center
-           mb-12 capitalize w-full
+           className='order-0 hidden xl:block text-6xl font-bold text-center
+           mb-12 capitalize w-full py-[40px]
           '>
             contact <span className='text-accent'>me</span>
           </motion.div>
 
-        <div className='flex flex-col xl:flex-row gap-[30px]'>
+        <div className='flex flex-col xl:flex-row gap-[30px] sm:mb-10'>
           {/* form */}
           <div className='xl:w-[54%] xl:h-[50%] order-2  xl:mb-0'>
             <motion.form 
             className='flex flex-col px-10 bg-[#27272c] bg-opacity-50 rounded-xl
-            h-[600px] justify-center py-[60px]'
+            xl:h-[600px] justify-center py-[60px]'
             initial={{ opacity: 0 , y: '100vw'}}
             animate={{
               opacity: 1,
@@ -74,7 +74,7 @@ const Contact = () => {
               transition: { delay: 2, duration: 2, ease: 'easeIn'},
             }}            
             >
-              <div className='flex-grow flex flex-col gap-10 '>
+              <div className='xl:flex-grow flex flex-col gap-10 '>
                 {/* input */}
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                   <Input type='firstname' placeholder='Firstname' />
@@ -103,7 +103,7 @@ const Contact = () => {
                 />
               </div>
               {/* button */}
-              <div className='grid place-items-center'>
+              <div className='grid place-items-center mt-[40px]'>
                 <Button className='w-[400px]' size='md' variant='default'>
                   Send message
                 </Button>
@@ -111,31 +111,33 @@ const Contact = () => {
             </motion.form>
           </div>
           {/* info */}
-          <div className='flex-1 flex items-center xl:justify-end order-1
-           mb-8 xl:mb-0 p-10 h-[600px]'>
+          <div className='flex-1 flex xl:justify-end order-1
+           mb-8 xl:mb-0 px-10 h-[600px] sm:py-10'>
             
             <div className='flex flex-col gap-10'>
-              <motion.h3 
-                className='text-4xl text-accent'
-                initial={{ opacity: 0, }}
-                animate={{
-                  opacity: 1,
-                  transition: { delay: 0.5, duration: 3, ease: 'easeIn'},
-                }}
-              >
-                  Let's work together
-              </motion.h3>
-              <motion.p
-                className='text-base'
-                initial={{ opacity: 0, }}
-                animate={{
-                  opacity: 1,
-                  transition: { delay: 1.2, duration: 3, ease: 'easeIn'}, 
-                }}              
-              >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima illo aperiam necessitatibus 
-                nam quia inventore 
-              </motion.p>
+
+                <motion.h3 
+                  className='text-4xl text-accent'
+                  initial={{ opacity: 0, }}
+                  animate={{
+                    opacity: 1,
+                    transition: { delay: 0.5, duration: 3, ease: 'easeIn'},
+                  }}
+                >
+                    Let's work together
+                </motion.h3>
+                <motion.p
+                  className='text-base'
+                  initial={{ opacity: 0, }}
+                  animate={{
+                    opacity: 1,
+                    transition: { delay: 1.2, duration: 3, ease: 'easeIn'}, 
+                  }}              
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima illo aperiam necessitatibus 
+                  nam quia inventore 
+                </motion.p>
+
               <motion.ul 
                 className='flex flex-col gap-10'
                 initial={{ opacity: 0, }}
