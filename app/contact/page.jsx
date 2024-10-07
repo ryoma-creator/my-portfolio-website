@@ -35,6 +35,9 @@ const info = [
 ];
 
 import { motion } from 'framer-motion';
+import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
+import GsapAnimatedList from '@/components/scroll/GsapAnimatedList';
+
 
 const Contact = () => {
   return (
@@ -116,17 +119,37 @@ const Contact = () => {
             
             <div className='flex flex-col gap-10'>
 
-                <motion.h3 
-                  className='text-4xl text-accent'
-                  initial={{ opacity: 0, }}
-                  animate={{
-                    opacity: 1,
-                    transition: { delay: 0.5, duration: 3, ease: 'easeIn'},
-                  }}
-                >
-                    Let's work together
-                </motion.h3>
-                <motion.p
+
+<GsapAnimatedText 
+  text="Let's work together" 
+  variant="slideFromRight" 
+  duration={1.5} 
+  stagger={0.05}
+  scrollTrigger={true}
+  className="text-4xl text-accent"
+/>
+
+{/* <motion.h3 
+  className='text-4xl text-accent'
+  initial={{ opacity: 0 }}
+  animate={{
+    opacity: 1,
+    transition: { delay: 0.5, duration: 3, ease: 'easeIn' },
+  }}
+>
+  Let's work together
+</motion.h3> */}
+
+<GsapAnimatedText 
+  text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima illo aperiam necessitatibus 
+  nam quia inventore" 
+  variant="slideFromRight" 
+  duration={1.5} 
+  stagger={0.05}
+  scrollTrigger={true}
+  className="text-base"
+/>
+                {/* <motion.p
                   className='text-base'
                   initial={{ opacity: 0, }}
                   animate={{
@@ -136,16 +159,9 @@ const Contact = () => {
                 >
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima illo aperiam necessitatibus 
                   nam quia inventore 
-                </motion.p>
+                </motion.p> */}
 
-              <motion.ul 
-                className='flex flex-col gap-10'
-                initial={{ opacity: 0, }}
-                animate={{
-                  opacity: 1,
-                  transition: { delay: 1.5, duration: 2, ease: 'easeIn'}, 
-                }}                   
-              >
+<GsapAnimatedList>
                 {info.map((item, index) => {
                   return (
                     <li key={index} className='flex items-center gap-6'>
@@ -161,7 +177,7 @@ const Contact = () => {
                     </li>
                   )
                 })}
-              </motion.ul>
+</GsapAnimatedList>
             </div>
           </div>
         </div>

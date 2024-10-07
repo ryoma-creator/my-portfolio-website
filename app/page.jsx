@@ -8,6 +8,7 @@ import { ReactTyped } from 'react-typed';
 import Social from '@/components/Social';
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
+import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 
 
 export default function HomePage() {
@@ -20,10 +21,33 @@ export default function HomePage() {
           xl:pt-8 xl:pb-24'>
             {/* text */}
             <div className='text-center xl:text-left'>
-              <span className='text-xl'>Front End Developer</span>
-              <h1 className='h1 mb-6'>
-                Hello I'm <br /> <span className='text-accent'>Ryoma Taguchi</span>
-              </h1>
+              <GsapAnimatedText 
+                text="Front End Developer" 
+                variant="fadeIn" 
+                duration={1.5} 
+                stagger={0.05}
+                scrollTrigger={true}
+                className="text-xl"
+              />
+              <div className='h1 mb-6'>
+              <GsapAnimatedText 
+                text="Hello I'm" 
+                variant="default" 
+                duration={1.5} 
+                stagger={0.05}
+                scrollTrigger={true}
+                className=""
+              />
+              <br />
+              <GsapAnimatedText 
+                text="Ryoma Taguchi" 
+                variant="default" 
+                duration={2} 
+                stagger={0.05}
+                scrollTrigger={true}
+                className="text-accent"
+              />
+              </div>
               <div className='max-w-[500px] mb-9 text-white/80'>
               <ReactTyped 
                 strings={[

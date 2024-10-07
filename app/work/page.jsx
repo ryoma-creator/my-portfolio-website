@@ -28,7 +28,7 @@ const projects = [
   description:
     `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nisi corrupti aspernatur ipsa illo minima totam, 
     vitae rerum libero esse expedita consequuntur incidunt veritatis nostrum doloremque hic fuga molestias quasi.`,
-  stack: [{ name: 'React (JSX)' }, { name: 'Css 3' }, { name: 'JavaScript (ES6+)' }],
+  stack: ['React', 'CSS', 'JavaScript'],
   image: '/assets/work/Todo-List-App.png',
   live: '',
   github:'',
@@ -39,7 +39,7 @@ const projects = [
   description:
     `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nisi corrupti aspernatur ipsa illo minima totam, 
     vitae rerum libero esse expedita consequuntur incidunt veritatis nostrum doloremque hic fuga molestias quasi.`,
-  stack: [{ name: 'React (JSX)' }, { name: 'Tailwind CSS' }, { name: 'JavaScript (ES6+)' }],
+  stack: ['React', 'Tailwind', 'JavaScript', 'API'],
   image: '/assets/work/wetherapp.png',
   live: '',
   github:'',
@@ -50,7 +50,7 @@ const projects = [
   description:
     `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nisi corrupti aspernatur ipsa illo minima totam, 
     vitae rerum libero esse expedita consequuntur incidunt veritatis nostrum doloremque hic fuga molestias quasi.`,
-  stack: [{ name: 'React (JSX)' }, { name: 'Tailwind CSS' }, { name: 'JavaScript (ES6+)'}, { name: 'Framer Motion' }],
+  stack: ['React', 'Tailwind', 'JavaScript', 'API', 'Framer Motion'],
   image: '/assets/work/E-commerce-png.png',
   live: '',
   github:'',
@@ -61,12 +61,14 @@ const projects = [
   description:
     `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nisi corrupti aspernatur ipsa illo minima totam, 
     vitae rerum libero esse expedita consequuntur incidunt veritatis nostrum doloremque hic fuga molestias quasi.`,
-  stack: [{ name: 'React (JSX)' }, { name: 'Tailwind CSS' }, { name: 'JavaScript (ES6+)'}, { name: 'Framer Motion'},{ name: 'Next.js' }],
+  stack: ['React', 'Tailwind', 'JavaScript', 'API', 'Framer Motion', 'Next.js'],
   image: '/assets/work/portfoliowebsite.png',
   live: '',
   github:'',
   }, 
 ];
+
+import TechStackIcons from '@/components/TechStackIcons';
 
 
 const Work = () => {
@@ -109,15 +111,11 @@ const Work = () => {
               </h2>
               {/* project description */}
               <p className='text-white/60 '>{project.description}</p>
-              <ul className='flex gap-4'>
-                {project.stack.map((item, index) => {
-                  return <li key={index} className='text-xl text-accent'>
-                            {item.name}
-                            {/* remove the last comma */}
-                            {index !== project.stack.length - 1 && ','}
-                         </li>;
-                })}
-              </ul>
+              {/* Tech Stack Icons */}
+              <div className='flex flex-col px-10 bg-[#27272c] bg-opacity-50 rounded-xl
+                     xl:h-[600px] justify-center py-2'>
+                <TechStackIcons stack={project.stack} />
+              </div>
               {/* border */}
               <div className='border border-white/20'></div>
               {/* button */}
