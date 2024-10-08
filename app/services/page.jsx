@@ -4,12 +4,23 @@ import AnimatedText from '@/components/scroll/AnimatedText'
 import PageTurnAnimation from '@/components/scroll/PageTurnAnimation';
 import Storytelling from '@/components/scroll/Storytelling';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
+import PageTurn from '@/components/scroll/PageTurn';
 
 export default function ServicesPage() {
   return (
     
     <div className="bg-black">
      <div className='w-full h-[800px]'>
+     <PageTurn>
+      <div className="h-screen flex items-center justify-center">
+      <AnimatedText 
+          text="Welcome to my website" 
+          variant="slideFromRight" 
+          scrollTrigger={true}
+        />
+      </div>
+    </PageTurn>
+
      <GsapAnimatedText 
         text="Hello, World!" 
         variant="fadeIn" 

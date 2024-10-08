@@ -9,6 +9,7 @@ import Social from '@/components/Social';
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
+import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
 
 export default function HomePage() {
@@ -19,11 +20,12 @@ export default function HomePage() {
         <div className='container h-full text-shadow-neumorphism'>
           <div className='flex flex-col xl:flex-row items-center justify-between
           xl:pt-8 xl:pb-24'>
+            
             {/* text */}
             <div className='text-center xl:text-left'>
               <GsapAnimatedText 
                 text="Front End Developer" 
-                variant="fadeIn" 
+                variant="perspectiveTilt" 
                 duration={1.5} 
                 stagger={0.05}
                 scrollTrigger={true}
@@ -32,7 +34,7 @@ export default function HomePage() {
               <div className='h1 mb-6'>
               <GsapAnimatedText 
                 text="Hello I'm" 
-                variant="default" 
+                variant="blurIn" 
                 duration={1.5} 
                 stagger={0.05}
                 scrollTrigger={true}
@@ -41,7 +43,7 @@ export default function HomePage() {
               <br />
               <GsapAnimatedText 
                 text="Ryoma Taguchi" 
-                variant="default" 
+                variant="letterShuffle" 
                 duration={2} 
                 stagger={0.05}
                 scrollTrigger={true}
@@ -66,31 +68,53 @@ export default function HomePage() {
               </div>
               {/* btn and socials */}
               <div className='flex flex-col xl:flex-row items-center gap-8'>
-                <Button
-                  variant='outline'
-                  size='lg'
-                  className=''
+                <GsapAnimatedElement
+                  variant="scaleUp"
+                  duration={0.5}
+                  delay={1.5}
                 >
-                  <span>Donwload CV</span>
-                  <FiDownload className='text-xl'/>
-                </Button>
-                <div className='mb-8 xl:mb-0'>
+                  <Button
+                    variant='outline'
+                    size='lg'
+                    className=''
+                  >
+                    <span>Download CV</span>
+                    <FiDownload className='text-xl'/>
+                  </Button>
+                </GsapAnimatedElement>
+                <GsapAnimatedElement
+                  variant="stagger"
+                  duration={0.5}
+                  delay={1.7}
+                  className='mb-8 xl:mb-0'
+                >
                   <Social 
                     containerStyles='flex gap-6' 
                     iconStyles='w-9 h-9 border border-accent rounded-full
                     flex items-center justify-center 
                     hover:bg-accent hover:transition-all duration-500 hover:translate-y-[-5px]'
                   />
-                </div>
+                </GsapAnimatedElement>
               </div>
             </div>
             {/* photo */}
-            <div className='order-1 xl:order-none'>
-                <Photo />
-            </div>
+            <GsapAnimatedElement
+              variant="fadeIn"
+              duration={1}
+              delay={0.5}
+              className='order-1 xl:order-none'
+            >
+              <Photo />
+            </GsapAnimatedElement>
           </div>
         </div>
-        <Stats/>
+        <GsapAnimatedElement
+          variant="blurIn"
+          duration={1}
+          delay={2}
+        >
+          <Stats/>
+        </GsapAnimatedElement>
       </section>
     </>
   );
