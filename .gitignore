@@ -1,0 +1,21 @@
+/public/AboutMeVideo/
+/public/videos/
+*.mp4
+*.mov
+node_modules
+
+# .gitignoreファイルに以下を追加
+cat << EOF >> .gitignore
+node_modules/
+.next/
+build/
+dist/
+*.log
+*.mp4
+*.zip
+*.tar.gz
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+EOF.next
+*.pack.gz

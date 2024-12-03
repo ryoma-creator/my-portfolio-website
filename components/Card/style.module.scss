@@ -1,0 +1,77 @@
+.cardContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 30px;
+    @media (min-width: 1280px) {
+      justify-content: flex-start; // xlサイズ以上で左寄せ
+      padding-left: 0; // 必要に応じて左の余白を調整
+    }
+    .card{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: -55%;
+      height: 600px;
+      width: 1200px;
+      border-radius: 25px;
+      padding:50px;
+      transform-origin: top;
+      background-color: var(--primary); // または tailwindの bg-primary に相当する値
+      // または
+      @apply bg-primary;
+      h2{
+        text-align: center;
+        margin: 0px;
+        font-size: 28px;
+      }
+      .body{
+        display: flex;
+        height: 100%;
+        margin-top: 50px;
+        gap: 50px;
+  
+        .description{
+          width: 50%; // 文字部分の幅
+          position: relative;
+          top: 0%;
+          p{
+            font-size: 16px;
+            &::first-letter{
+              font-size: 48px;
+              font-family: 'Title';
+            }
+          // 🔺これは段落の最初の文字（capital letter）のスタイルを指定します。
+          // 例：「As」の「A」だけが大きくなります。
+          }
+          span{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            a{
+              font-size: 12px;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+  
+        .imageContainer{
+          position: relative;
+          width: 50%; // 画像部分の幅
+          height: 100%;
+          border-radius: 25px;
+          overflow: hidden;
+          .inner{
+            width: 100%;
+            height: 100%;
+          }
+          img{
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
