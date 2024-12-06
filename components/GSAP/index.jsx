@@ -4,9 +4,9 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from '@/app/services/page.module.scss';
-import Picture1 from '@/public/medias/pexels-lisettkruusimae-13076223.jpg';
-import Picture2 from '@/public/medias/pexels-nati-87264186-12531220.jpg';
-import Picture3 from '@/public/medias/pexels-ron-lach-10536285.jpg';
+// import Picture1 from '@/public/medias/pexels-lisettkruusimae-13076223.jpg';
+// import Picture2 from '@/public/medias/pexels-nati-87264186-12531220.jpg';
+// import Picture3 from '@/public/medias/pexels-ron-lach-10536285.jpg';
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger) 
@@ -14,7 +14,8 @@ const word = "with gsap";
 
 export default function Index() {
     const container = useRef(null);
-    const images = [Picture1, Picture2, Picture3];
+    const images = [];
+    // const images = [Picture1, Picture2, Picture3];
     const lettersRef = useRef([])
     const imagesRef = useRef([])
     const title1 = useRef(null);
@@ -29,8 +30,8 @@ export default function Index() {
                 },
             })
             .to(title1.current, {y: -50}, 0)
-            .to(imagesRef.current[1], {y: -150}, 0)
-            .to(imagesRef.current[2], {y: -255}, 0)
+            // .to(imagesRef.current[1], {y: -150}, 0)
+            // .to(imagesRef.current[2], {y: -255}, 0)
             lettersRef.current.forEach((letter, i) => {
                 tl.to(letter, {
                     top: Math.floor(Math.random() * -75) - 25,

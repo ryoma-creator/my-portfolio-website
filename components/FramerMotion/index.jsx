@@ -1,9 +1,9 @@
 'use client';
 import { useRef } from "react";
 import styles from '@/app/services/page.module.scss';
-import Picture1 from '@/public/medias/pexels-lisettkruusimae-13076223.jpg';
-import Picture2 from '@/public/medias/pexels-nati-87264186-12531220.jpg';
-import Picture3 from '@/public/medias/pexels-ron-lach-10536285.jpg';
+// import Picture1 from '@/public/medias/pexels-lisettkruusimae-13076223.jpg';
+// import Picture2 from '@/public/medias/pexels-nati-87264186-12531220.jpg';
+// import Picture3 from '@/public/medias/pexels-ron-lach-10536285.jpg';
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
@@ -22,18 +22,18 @@ export default function Index() {
     const lg = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, -950]);
 
     const images = [
-        {
-            src: Picture1,
-            y: 0
-        },
-        {
-            src: Picture2,
-            y: lg
-        },
-        {
-            src: Picture3,
-            y: md
-        }
+        // {
+        //     src: Picture1,
+        //     y: 0
+        // },
+        // {
+        //     src: Picture2,
+        //     y: lg
+        // },
+        // {
+        //     src: Picture3,
+        //     y: md
+        // }
     ];
 
     return (
