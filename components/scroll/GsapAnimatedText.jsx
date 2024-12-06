@@ -2,9 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const GsapAnimatedText = ({ 
   text, 
@@ -137,27 +135,31 @@ const GsapAnimatedText = ({
   };
 
   useEffect(() => {
-    const chars = textRef.current.children;
-    
-    const animation = gsap.fromTo(chars, 
-      variants[variant].initial,
-      {
-        ...variants[variant].animate,
-        duration,
-        stagger: { each: stagger },
-        ease,
-        scrollTrigger: scrollTrigger ? {
-          trigger: textRef.current,
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none reverse'
-        } : null
-      }
-    );
+    if (typeof window !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      const chars = textRef.current.children;
+      
+      const animation = gsap.fromTo(chars, 
+        variants[variant].initial,
+        {
+          ...variants[variant].animate,
+          duration,
+          stagger: { each: stagger },
+          ease,
+          scrollTrigger: scrollTrigger ? {
+            trigger: textRef.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          } : null
+        }
+      );
 
-    return () => {
-      if (animation) animation.kill();
-    };
+      return () => {
+        if (animation) animation.kill();
+      };
+    }
   }, [variant, duration, stagger, ease, scrollTrigger]);
 
   return (

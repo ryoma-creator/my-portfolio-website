@@ -2,9 +2,9 @@
 
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const GsapAnimatedElement = ({ 
   children,
@@ -110,28 +110,32 @@ const GsapAnimatedElement = ({
   };
 
   useEffect(() => {
-    const element = elementRef.current;
-    
-    const animation = gsap.fromTo(element, 
-      variants[variant].initial,
-      {
-        ...variants[variant].animate,
-        duration,
-        delay,
-        stagger: { each: stagger },
-        ease,
-        scrollTrigger: scrollTrigger ? {
-          trigger: element,
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none reverse'
-        } : null
-      }
-    );
+    // ブラウザ環境でのみ実行
+    if (typeof window !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      const element = elementRef.current;
+      const animation = gsap.fromTo(element, 
+        variants[variant].initial,
+        {
+          ...variants[variant].animate,
+          duration,
+          delay,
+          stagger: { each: stagger },
+          ease,
+          scrollTrigger: scrollTrigger ? {
+            trigger: element,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          } : null
+        }
+      );
 
-    return () => {
-      if (animation) animation.kill();
-    };
+      return () => {
+        if (animation) animation.kill();
+      };
+    }
   }, [variant, duration, delay, stagger, ease, scrollTrigger]);
 
   return (
@@ -140,5 +144,6 @@ const GsapAnimatedElement = ({
     </div>
   );
 };
+
 
 export default GsapAnimatedElement;
