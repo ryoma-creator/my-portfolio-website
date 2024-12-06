@@ -304,7 +304,7 @@ const skills = {
 
 
 
-export default function resume() {
+export default function Resume() {
   // ローカルストレージから保存された値を取得、なければ 'learningJourney' をデフォルト値として使用
   const [activeTab, setActiveTab] = useState('learningJourney');
   const [mounted, setMounted] = useState(false);
@@ -326,11 +326,14 @@ export default function resume() {
 
 
   // マウント状態を管理
+  // localStorage周りの処理をuseEffectの中に移動
   useEffect(() => {
-    setMounted(true);
-    const savedTab = localStorage.getItem('activeResumeTab');
-    if (savedTab) {
-      setActiveTab(savedTab);
+    if (typeof window !== 'undefined') {  // クライアントサイドかどうかチェック
+      setMounted(true);
+      const savedTab = localStorage.getItem('activeResumeTab');
+      if (savedTab) {
+        setActiveTab(savedTab);
+      }
     }
   }, []);
 
