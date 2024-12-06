@@ -1,13 +1,13 @@
 'use client';
 
 import { useRef } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 // Import your images here
-import Picture1 from '@/public/medias/pexels-lisettkruusimae-13076223.jpg';
-import Picture2 from '@/public/medias/pexels-nati-87264186-12531220.jpg';
-import Picture3 from '@/public/medias/pexels-ron-lach-10536285.jpg';
+// import Picture1 from '@/public/medias/pexels-lisettkruusimae-13076223.jpg';
+// import Picture2 from '@/public/medias/pexels-nati-87264186-12531220.jpg';
+// import Picture3 from '@/public/medias/pexels-ron-lach-10536285.jpg';
 
 const word = "with framer-motion";
 
@@ -23,9 +23,9 @@ export default function ParallaxScroll() {
     const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
     const images = [
-        { src: Picture1, y: 0 },
-        { src: Picture2, y: lg },
-        { src: Picture3, y: md }
+        // { src: Picture1, y: 0 },
+        // { src: Picture2, y: lg },
+        // { src: Picture3, y: md }
     ];
 
     return (
@@ -61,13 +61,13 @@ export default function ParallaxScroll() {
                             'left-[27.5vw] top-[40vh] h-[25vh] w-[20vh] z-30'
                         }`}
                     >
-                        <Image 
+                        {/* <Image 
                             src={src}
                             alt={`image ${i + 1}`}
                             fill
                             style={{objectFit: 'cover'}}
                             placeholder="blur"
-                        />
+                        /> */}
                     </motion.div>
                 ))}
             </div>

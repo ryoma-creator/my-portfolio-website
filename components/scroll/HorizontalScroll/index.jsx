@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Picture1 from '@/public/medias/1month.jpg';
-import Picture2 from '@/public/medias/2month.jpg';
-import Picture3 from '@/public/medias/3month.jpg';
-import Picture4 from '@/public/medias/4month.jpg';
-import Picture5 from '@/public/medias/5month.jpg';
+import Picture1 from '@/public/medias/1month.png';
+import Picture2 from '@/public/medias/2month.png';
+import Picture3 from '@/public/medias/3month.png';
+import Picture4 from '@/public/medias/4month.png';
+import Picture5 from '@/public/medias/5month.png';
 // import Picture6 from '@/public/medias/6month.jpg';
 // import Picture7 from '@/public/medias/7month.jpg';
 
