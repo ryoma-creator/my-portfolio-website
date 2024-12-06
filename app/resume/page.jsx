@@ -68,7 +68,8 @@ import AchievementList from '@/components/AchievementList';
 // 
 // import { projects } from '@/components/Card/data'
 // About Me section / Animated Testimonials
-import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
+
+// import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 
 
 // Cardのdata.jsxデータをtestimonialsの形式に変換
@@ -349,16 +350,22 @@ export default function Resume() {
     }
 
   // 🔻ScrollAreaが機能しなくなる。。。❌
-  // useEffect( () => {
-  //   const lenis = new Lenis()
-
-  //   function raf(time) {
-  //     lenis.raf(time)
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const lenis = new Lenis()
+  
+  //     function raf(time) {
+  //       lenis.raf(time)
+  //       requestAnimationFrame(raf)
+  //     }
+  
   //     requestAnimationFrame(raf)
+  
+  //     return () => {
+  //       lenis.destroy()
+  //     }
   //   }
-
-  //   requestAnimationFrame(raf)
-  // })
+  // }, [])
 
   return (
   <>
