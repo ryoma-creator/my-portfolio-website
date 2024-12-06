@@ -58,7 +58,7 @@ import SkillTabs from '@/components/SkillTabs';
 import { skillsData } from '@/components/SkillTabs/skillsData';
 
 // FocusCards component
-import { FocusCards } from "@/components/ui/focus-cards";
+// import { FocusCards } from "@/components/ui/focus-cards";
 
 // Achivement cards component
 import AchievementList from '@/components/AchievementList';
@@ -69,7 +69,7 @@ import AchievementList from '@/components/AchievementList';
 // import { projects } from '@/components/Card/data'
 // About Me section / Animated Testimonials
 
-// import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
+import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 
 
 // Cardのdata.jsxデータをtestimonialsの形式に変換
