@@ -54,11 +54,13 @@ import Award from '@/components/LottieIcon/Award';
 
 // Skill Tabs Component
 import SkillTabs from '@/components/SkillTabs';
+// 🔺
+
 // import { SkillTabs } from '@/components/SkillTabs/index';
 import { skillsData } from '@/components/SkillTabs/skillsData';
 
 // FocusCards component
-// import { FocusCards } from "@/components/ui/focus-cards";
+import { FocusCards } from "@/components/ui/focus-cards";
 
 // Achivement cards component
 import AchievementList from '@/components/AchievementList';
