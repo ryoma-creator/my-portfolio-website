@@ -71,7 +71,8 @@ import AchievementList from '@/components/AchievementList';
 // import { projects } from '@/components/Card/data'
 // About Me section / Animated Testimonials
 
-import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
+// import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
+import { AnimatedTestimonials } from '@/components/ui/animated-testimonials-wrapper';
 
 
 // Cardのdata.jsxデータをtestimonialsの形式に変換
