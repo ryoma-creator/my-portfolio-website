@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import { AnimatedTestimonials } from '@/components/ui/animated-testimonials-wrapper'
 
 
-export const AnimatedTestimonials = ({
+
+export const AnimatedTestimonialsBase = ({
   testimonials,
   autoplay = false
 }) => {
