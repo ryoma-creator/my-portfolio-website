@@ -63,8 +63,8 @@ import { skillsData } from '@/components/SkillTabs/skillsData';
 import { FocusCards } from "@/components/ui/focus-cards";
 
 // Achivement cards component
-// import AchievementList from '@/components/AchievementList';
-// 🔺
+import AchievementList from '@/components/AchievementList';
+
 
 // ----------testimonials
 // 
