@@ -6,10 +6,13 @@ module.exports = {
     domains: ['example.com'],
   },
   webpack: (config, { dev }) => {
-    // 既存のエイリアス設定を保持
+    // Keep existing alias configuration
     config.resolve.alias['@'] = path.resolve(__dirname);
     
-    // 開発時のパフォーマンス設定を追加
+    // Add extension resolution
+    config.resolve.extensions = ['.js', '.jsx', ...config.resolve.extensions];
+    
+    // Keep development performance settings
     if (dev) {
       config.watchOptions = {
         poll: 1000,
