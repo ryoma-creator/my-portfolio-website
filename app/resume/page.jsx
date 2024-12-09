@@ -2,7 +2,7 @@
 // to prevent error for deployment
 import dynamic from 'next/dynamic'
 const Card = dynamic(() => import('@/components/Card'), { ssr: false }) // Replaced with dynamic import
-const ScrollVideoPlayerFramer = dynamic(() => import('@/components/ScrollVideoPlayerFramer'), { ssr: false }) // Replaced with dynamic import
+// const ScrollVideoPlayerFramer = dynamic(() => import('@/components/ScrollVideoPlayerFramer'), { ssr: false }) // Replaced with dynamic import
 const GsapAnimatedElement = dynamic(() => import('@/components/scroll/GsapAnimatedElement'), { ssr: false }) // Replaced with dynamic import
 const GsapAnimatedText = dynamic(() => import('@/components/scroll/GsapAnimatedText'), { ssr: false }) // Replaced with dynamic import
 const Tabs = dynamic(() => import('@/components/ui/tabs').then(mod => mod.Tabs), { ssr: false }) // Replaced with dynamic import
