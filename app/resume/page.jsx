@@ -73,6 +73,7 @@ import AchievementList from '@/components/AchievementList';
 
 // import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials-wrapper';
+// Remove .jsx from the end
 
 
 // Cardのdata.jsxデータをtestimonialsの形式に変換
