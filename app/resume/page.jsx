@@ -72,8 +72,8 @@ import AchievementList from '@/components/AchievementList';
 // About Me section / Animated Testimonials
 
 // import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
-import { AnimatedTestimonials } from '@/components/ui/animated-testimonials-wrapper';
-// Remove .jsx from the end
+import { AnimatedTestimonials } from '@/components/ui/animated-testimonials-wrapper.jsx';
+
 
 
 // Cardのdata.jsxデータをtestimonialsの形式に変換
