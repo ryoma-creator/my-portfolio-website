@@ -12,6 +12,8 @@ import {
 import { PinContainer } from '@/components/ui/3d-pin';
 import { skillsData } from './skillsData';
 
+import dynamic from 'next/dynamic'
+
 const BackgroundGradientCard = ({ children, onHover, skillColor = "#00ccb1", backgroundImage, isHovered }) => {
   const variants = {
     initial: { backgroundPosition: "0 50%" },

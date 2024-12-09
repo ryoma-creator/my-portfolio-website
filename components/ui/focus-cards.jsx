@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
+import dynamic from 'next/dynamic'
+
 const Card = React.memo(({
   item,
   index,

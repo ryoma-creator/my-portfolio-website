@@ -4,6 +4,8 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+import dynamic from 'next/dynamic'
+
 const GsapAnimatedText = ({ 
   text, 
   variant = 'default', 

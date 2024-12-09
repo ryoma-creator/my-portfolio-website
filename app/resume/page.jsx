@@ -1,80 +1,47 @@
 'use client';
-import styles from '@/components/Card/style.module.scss'
-import { projects } from '@/components/Card/data';
-import Card from '@/components/Card';
+// to prevent error for deployment
+import dynamic from 'next/dynamic'
+const Card = dynamic(() => import('@/components/Card'), { ssr: false }) // Replaced with dynamic import
+const ScrollVideoPlayerFramer = dynamic(() => import('@/components/ScrollVideoPlayerFramer'), { ssr: false }) // Replaced with dynamic import
+const GsapAnimatedElement = dynamic(() => import('@/components/scroll/GsapAnimatedElement'), { ssr: false }) // Replaced with dynamic import
+const GsapAnimatedText = dynamic(() => import('@/components/scroll/GsapAnimatedText'), { ssr: false }) // Replaced with dynamic import
+const Tabs = dynamic(() => import('@/components/ui/tabs').then(mod => mod.Tabs), { ssr: false }) // Replaced with dynamic import
+const TabsContent = dynamic(() => import('@/components/ui/tabs').then(mod => mod.TabsContent), { ssr: false }) // Replaced with dynamic import
+const TabsList = dynamic(() => import('@/components/ui/tabs').then(mod => mod.TabsList), { ssr: false }) // Replaced with dynamic import
+const TabsTrigger = dynamic(() => import('@/components/ui/tabs').then(mod => mod.TabsTrigger), { ssr: false }) // Replaced with dynamic import
+const Tooltip = dynamic(() => import('@/components/ui/tooltip').then(mod => mod.Tooltip), { ssr: false }) // Replaced with dynamic import
+const TooltipContent = dynamic(() => import('@/components/ui/tooltip').then(mod => mod.TooltipContent), { ssr: false }) // Replaced with dynamic import
+const TooltipProvider = dynamic(() => import('@/components/ui/tooltip').then(mod => mod.TooltipProvider), { ssr: false }) // Replaced with dynamic import
+const TooltipTrigger = dynamic(() => import('@/components/ui/tooltip').then(mod => mod.TooltipTrigger), { ssr: false }) // Replaced with dynamic import
+const ScrollArea = dynamic(() => import('@/components/ui/scroll-area').then(mod => mod.ScrollArea), { ssr: false }) // Replaced with dynamic import
+const ScrollBar = dynamic(() => import('@/components/ui/scroll-area').then(mod => mod.ScrollBar), { ssr: false }) // Replaced with dynamic import
+import { motion } from 'framer-motion';
+import { achievements } from '@/components/scroll/HorizontalScrollText/achievements';
+const Award = dynamic(() => import('@/components/LottieIcon/Award'), { ssr: false }) // Replaced with dynamic import
+const SkillTabs = dynamic(() => import('@/components/SkillTabs'), { ssr: false }) // Replaced with dynamic import
+import { skillsData } from '@/components/SkillTabs/skillsData';
+const FocusCards = dynamic(() => import('@/components/ui/focus-cards').then(mod => mod.FocusCards), { ssr: false }) // Replaced with dynamic import
+const AchievementList = dynamic(() => import('@/components/AchievementList').then(mod => mod.default), { ssr: false }) // Replaced with dynamic import
+const AnimatedTestimonials = dynamic(() => import('@/components/ui/animated-testimonials').then(mod => mod.AnimatedTestimonials), { ssr: false }) // Replaced with dynamic import
+import {
+FaHtml5,
+FaCss3,
+FaJs,
+FaReact,
+FaNodeJs,
+} from 'react-icons/fa';
+import {
+SiTailwindcss,
+SiNextdotjs,
+SiFramer,
+SiTypescript,
+SiPostman
+} from 'react-icons/si';
 import { useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import Lenis from '@studio-freight/lenis'
-import ScrollVideoPlayerFramer from '@/components/ScrollVideoPlayerFramer';
-
-import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
-
-import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
-
-
-import {
-   FaHtml5,
-   FaCss3,
-   FaJs, 
-   FaReact,
-   FaNodeJs,
-  } from 'react-icons/fa';
-
-import { 
-  SiTailwindcss, 
-  SiNextdotjs, 
-  SiFramer,
-  SiTypescript, 
-  SiPostman 
-} from 'react-icons/si';
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
-import { motion } from 'framer-motion';
-
-// import AboutMe from '@/services/AboutMe';
-
-
-// import styles from '@/app/resume/page.module.scss';
-
-
-// import HorizontalScrollText from '@/components/scroll/HorizontalScrollText';
-import { achievements } from '@/components/scroll/HorizontalScrollText/achievements';
-
-// Lottie Award Icon
-import Award from '@/components/LottieIcon/Award';
-
-// Skill Tabs Component
-import SkillTabs from '@/components/SkillTabs';
-// 🔺
-
-// import { SkillTabs } from '@/components/SkillTabs/index';
-import { skillsData } from '@/components/SkillTabs/skillsData';
-
-// FocusCards component
-import { FocusCards } from "@/components/ui/focus-cards";
-
-// Achivement cards component
-import AchievementList from '@/components/AchievementList';
-
-
-// ----------testimonials
-// 
-// import { projects } from '@/components/Card/data'
-// About Me section / Animated Testimonials
-
-// import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
-import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
-
-
+import styles from '@/components/Card/style.module.scss'
+import { projects } from '@/components/Card/data';
 
 // Cardのdata.jsxデータをtestimonialsの形式に変換
 const testimonials = projects.map(project => {

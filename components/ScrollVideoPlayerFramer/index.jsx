@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { useScroll } from 'framer-motion';
 
+import dynamic from 'next/dynamic'
+
 const ScrollVideoPlayerFramer = () => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);

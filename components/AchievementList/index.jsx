@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Award, ChevronDown, ChevronUp } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import Image from "next/image";
+import dynamic from 'next/dynamic'
 
 // メインのAchievementListコンポーネント
 export default function AchievementList({ achievements }) {

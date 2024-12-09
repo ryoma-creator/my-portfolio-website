@@ -5,6 +5,8 @@ import OverlayCopy from './OverlayCopy'
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText'
 import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement'
 
+import dynamic from 'next/dynamic'
+
 const IMAGE_PADDING = 12 // px
 
 const ScrollSection = ({ imageUrl, videoUrl, heading, subheading, children, bg = 'bg-primary' }) => {

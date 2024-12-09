@@ -3,6 +3,8 @@ import React from 'react';
 import Lottie from 'lottie-react';
 import awardAnimation from '/public/lottie/award.json';  // 直接import
 
+import dynamic from 'next/dynamic'
+
 const Award = () => {
   return (
     <Lottie 

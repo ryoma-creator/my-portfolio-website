@@ -2,6 +2,8 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+import dynamic from 'next/dynamic'
+
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
