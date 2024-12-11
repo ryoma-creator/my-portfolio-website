@@ -13,11 +13,14 @@ import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
 import { EvervaultCard } from '@/components/ui/evervault-card';
 
+import Storytelling from '@/components/storytelling/Storytelling';
+
 export default function HomePage() {
   return (
     <>
 
     <EvervaultCard/>
+    <Storytelling/>
 
       <section className='h-full'>
         {/* no need mx-auto since you use container */}
