@@ -3,7 +3,6 @@ const path = require('path');
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['ryoma-t-portfolio.vercel.app'],
     unoptimized: true, 
   },
   webpack: (config, { dev }) => {
