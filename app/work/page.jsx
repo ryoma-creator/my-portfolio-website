@@ -372,7 +372,6 @@ firstContent={
     <div className="mt-6 pt-4 border-t border-white/10">
       <div className="text-center">
         <span className="text-emerald-400 text-sm flex items-center justify-center gap-2">
-          <Award className="w-4 h-4" />
           Project Focus
         </span>
       </div>
@@ -384,8 +383,12 @@ firstContent={
 }
 
   secondContent={
-    <div className="w-full h-full bg-[#2a2a2a] p-4 overflow-auto">
-               <img src={project.image} alt={project.title} />
+    <div className="w-full h-[600px] bg-[#2a2a2a] overflow-auto">
+                   <img 
+      src={project.image} 
+      alt={project.title} 
+      className="w-full h-full object-cover" // object-coverを追加して画像がコンテナに合うように
+    />
     </div>
   }
   className="w-full h-full"
