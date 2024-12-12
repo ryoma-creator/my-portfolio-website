@@ -38,47 +38,154 @@ import { achievements } from '@/components/scroll/HorizontalScrollText/achieveme
 // custom compare component
 import { CustomCompare } from '@/components/CustomCompare/index'
 
+import Award from '@/components/LottieIcon/Award';
+
 const projects = [
-  {num: '01',
-  category: 'frontend',
-  title: 'my Todo-list app',
-  description:
-    `dddddddddddddddddd`,
-  stack: ['React', 'CSS', 'JavaScript'],
-  image: '/assets/work/Todo-List-App.png',
-  live: '',
-  github:'',
+  {
+    num: '01',
+    category: 'frontend',
+    title: 'my Todo-list app',
+    period: 'March 2024',
+    developmentTime: '10 days (10+ hours/day)',
+    description: 'CRUD application with drag & drop functionality',
+    stack: ['React', 'CSS', 'JavaScript'],
+    achievements: [
+      'Implemented drag and drop functionality for task reordering',
+      'Created responsive layout using Flexbox and Grid',
+      'Built custom hooks for state management',
+      'Integrated local storage for data persistence',
+    ],
+    learningObjectives: [
+      'State Management with React Hooks',
+      'DOM Manipulation',
+      'Event Handling',
+      'Local Storage Integration'
+    ],
+    highlight: 'Focus on building reusable components and implementing modern React patterns',
+    image: '/assets/work/Todo-List-App.png',
+    live: '',
+    github: '',
   },
-  {num: '02',
-  category: 'frontend',
-  title: 'my weather app',
-  description:
-    `aaaaaaaaaaaaaaaaaaa`,
-  stack: ['React', 'Tailwind', 'JavaScript', 'API'],
-  image: '/assets/work/wetherapp.png',
-  live: '',
-  github:'',
+  {
+    num: '02',
+    category: 'frontend',
+    title: 'my weather app',
+    period: 'April 2024',
+    developmentTime: '7 days (10+ hours/day)',
+    description: 'Real-time weather application with API integration',
+    stack: ['React', 'Tailwind', 'JavaScript', 'API'],
+    achievements: [
+      'Integrated OpenWeather API for real-time data',
+      'Implemented geolocation features',
+      'Created responsive weather cards with Tailwind',
+      'Built error handling for API requests'
+    ],
+    learningObjectives: [
+      'API Integration',
+      'Async/Await',
+      'Error Handling',
+      'Tailwind CSS'
+    ],
+    highlight: 'Mastered API integration and error handling in React applications',
+    image: '/assets/work/wetherapp.png',
+    live: '',
+    github: '',
   },
-  {num: '03',
-  category: 'frontend',
-  title: 'e-commerce website',
-  description:
-    `cccccccccccccc`,
-  stack: ['React', 'Tailwind', 'JavaScript', 'API', 'Framer Motion'],
-  image: '/assets/work/E-commerce-png.png',
-  live: '',
-  github:'',
-  }, 
-  {num: '04',
-  category: 'frontend',
-  title: 'portfolio website',
-  description:
-    `bbbbbbbbbbbbbbbbb`,
-  stack: ['React', 'Tailwind', 'JavaScript', 'API', 'Framer Motion', 'Next.js'],
-  image: '/assets/work/portfoliowebsite.png',
-  live: '',
-  github:'',
-  }, 
+  // E-commerce website
+  {
+    num: '03',
+    category: 'frontend',
+    title: 'e-commerce website',
+    period: 'May 2024',
+    developmentTime: '14 days (10+ hours/day)',
+    description: 'Full-featured e-commerce platform with cart functionality',
+    stack: ['React', 'Tailwind', 'JavaScript', 'API', 'Framer Motion'],
+    achievements: [
+      'Built shopping cart with complex state management',
+      'Implemented smooth animations with Framer Motion',
+      'Created responsive product grid layout',
+      'Integrated mock API for product data'
+    ],
+    learningObjectives: [
+      'Complex State Management',
+      'Animation Libraries',
+      'E-commerce Flow',
+      'Performance Optimization'
+    ],
+    highlight: 'Created a complete e-commerce solution with modern UI/UX principles',
+    image: '/assets/work/E-commerce-png.png',
+    live: '',
+    github: '',
+  },
+  // Portfolio website
+  {
+    num: '04',
+    category: 'frontend',
+    title: 'portfolio website',
+    period: 'June 2024',
+    developmentTime: '21 days (10+ hours/day)',
+    description: 'Professional portfolio with advanced animations',
+    stack: ['React', 'Tailwind', 'JavaScript', 'API', 'Framer Motion', 'Next.js'],
+    achievements: [
+      'Implemented complex scroll animations',
+      'Built custom React components',
+      'Created responsive layouts with Tailwind',
+      'Optimized performance with Next.js'
+    ],
+    learningObjectives: [
+      'Next.js Framework',
+      'Advanced Animations',
+      'SEO Optimization',
+      'Performance Tuning'
+    ],
+    highlight: 'Showcased advanced frontend skills with modern web technologies',
+    image: '/assets/work/portfoliowebsite.png',
+    live: '',
+    github: '',
+  },
+  {
+    num: '05',
+    category: 'frontend',
+    title: 'Interactive Storytelling Portfolio',
+    period: 'July-August 2024',
+    developmentTime: '2 months (10+ hours/day)',
+    description: 'Advanced scroll-based storytelling experience with complex animations',
+    stack: [
+      'Next.js',
+      'Framer Motion',
+      'GSAP',
+      'Tailwind CSS',
+      'React',
+      'JavaScript'
+    ],
+    achievements: [
+      'Implemented complex scroll-triggered animations',
+      'Created custom mask animations for video content',
+      'Built responsive layouts with dynamic content',
+      'Developed smooth transitions between sections'
+    ],
+    learningObjectives: [
+      'Advanced Animation Techniques',
+      'Scroll-based Interactions',
+      'Performance Optimization',
+      'Creative UI/UX Design'
+    ],
+    highlight: 'Pushed boundaries in web animation and storytelling, creating an immersive user experience that showcases technical growth',
+    image: '/assets/work/storytelling-portfolio.png',
+    live: '',
+    github: '',
+    challenges: [
+      'Complex animation synchronization',
+      'Performance optimization with multiple animations',
+      'Cross-browser compatibility'
+    ],
+    libraries: [
+      'Framer Motion',
+      'GSAP',
+      'Lottie Files',
+      'Scroll Magic'
+    ]
+  }
 ];
 
 const Work = () => {
@@ -211,18 +318,71 @@ const Work = () => {
             >{projects.map((project, index) => {
               return (
                 <SwiperSlide key={index} className='w-full'>
-                  <div className='h-[460px] relative group flex justify-center items-center'>
+                  <div className='h-[600px] relative group flex justify-center items-center'>
                   <CustomCompare
-  firstContent={
-    <div className="w-full h-full bg-[#1a1a1a] p-4 overflow-auto">
-      <h3 className="text-white text-xl mb-4">未完了のタスク</h3>
-      <ul className="text-white/60">
-        <li>✖️ 洗濯物を干す</li>
-        <li>✖️ 掃除機をかける</li>
-        <li>✖️ 買い物に行く</li>
-      </ul>
+
+firstContent={
+  <div className="w-full h-full bg-[#27272c] p-6 overflow-y-auto">
+    {/* Development Period & Time */}
+    <div className="mb-4">
+      <span className="text-emerald-500 text-sm">{project.period}</span>
+      <p className="text-white/60 text-sm">{project.developmentTime}</p>
     </div>
-  }
+    
+    {/* Learning Objectives */}
+    <div className="mb-6">
+      <h4 className="text-white text-lg mb-2">Learning Focus</h4>
+      <div className="flex flex-wrap gap-2">
+        {project.learningObjectives.map((objective, index) => (
+          <span
+            key={index}
+            className="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full"
+          >
+            {objective}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* Achievements */}
+    <div className="space-y-4">
+      {project.achievements.map((achievement, i) => (
+        <div key={i} className="flex items-start gap-3">
+          <div className="mt-1.5">
+            <svg
+              className="w-4 h-4 text-emerald-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <p className="text-white/60 text-sm">{achievement}</p>
+        </div>
+      ))}
+    </div>
+
+    {/* Key Highlight */}
+    <div className="mt-6 pt-4 border-t border-white/10">
+      <div className="text-center">
+        <span className="text-emerald-400 text-sm flex items-center justify-center gap-2">
+          <Award className="w-4 h-4" />
+          Project Focus
+        </span>
+      </div>
+      <p className="mt-2 text-center text-white/70 text-sm italic">
+        {project.highlight}
+      </p>
+    </div>
+  </div>
+}
+
   secondContent={
     <div className="w-full h-full bg-[#2a2a2a] p-4 overflow-auto">
                <img src={project.image} alt={project.title} />

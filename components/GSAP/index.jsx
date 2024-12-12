@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import styles from '@/app/services/page.module.scss';
+import styles from '@/components/storytelling/storytelling.module.scss';
 // import Picture1 from '@/public/medias/pexels-lisettkruusimae-13076223.jpg';
 // import Picture2 from '@/public/medias/pexels-nati-87264186-12531220.jpg';
 // import Picture3 from '@/public/medias/pexels-ron-lach-10536285.jpg';

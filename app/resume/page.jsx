@@ -380,6 +380,7 @@ export default function Resume() {
     <div className='min-h-[70vh] w-full'>
 
       {/* learningJourney */}
+      {/* Technical Evolution Path */}
       <TabsContent value='learningJourney' className='w-full'>
         <div className='flex flex-col gap-[30px] text-center xl:text-left'>
 

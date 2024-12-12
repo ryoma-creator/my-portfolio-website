@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Award, ChevronDown, ChevronUp } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import Image from "next/image";
-import dynamic from 'next/dynamic'
+
 
 // メインのAchievementListコンポーネント
 export default function AchievementList({ achievements }) {
@@ -77,7 +77,7 @@ export default function AchievementList({ achievements }) {
   );
 }
 
-// AchievementCardコンポーネント
+// AchievementCardコンポーネント→hideの上部の部分
 const AchievementCard = React.memo(({
   achievement,
   index,

@@ -20,7 +20,7 @@ export default function HomePage() {
     <>
 
     <EvervaultCard/>
-    <Storytelling/>
+    {/* <Storytelling/> */}
 
       <section className='h-full'>
         {/* no need mx-auto since you use container */}

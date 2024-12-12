@@ -9,7 +9,7 @@ import GSAP from '@/components/GSAP';
 import FramerMotion from '@/components/FramerMotion';
 import Lenis from '@studio-freight/lenis'
 import { useEffect, useRef } from 'react';
-import styles from '@/app/services/page.module.scss';
+import styles from '@/components/storytelling/storytelling.module.scss';
 import MaskScrollAnimation from '@/components/MaskScrollAnimation';
 import MaskedEntryAnimation from '@/components/AboutMe/MaskedEntryAnimation';
 import ZoomParallax from '@/components/ZoomParallax';
