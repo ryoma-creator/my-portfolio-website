@@ -25,14 +25,14 @@ const Photo = () => {
             className='w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]
              mix-blend-lighten absolute'>
                 <Image 
-                    src='/assets/Leonardo Wilhelm DiCaprio.png'
+                    src="https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368954/pexels-lum3n-44775-406014_obbkzk.jpg"
                     priority
                     quality={75}
                     fill
-                    alt='Profile Picture'
+                    alt='Home Picture'
                     className='object-contain'
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                 />
+                />
             </motion.div>
             {/* quality={75}〜quality={85}程度でも十分な品質が得られ、読み込み速度が改善される可能性があります。 */}
             {/* sizeを追加 */}

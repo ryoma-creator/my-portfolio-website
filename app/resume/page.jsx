@@ -522,7 +522,7 @@ export default function Resume() {
 
             </TabsContent>
 
-            {/* infomation*/}
+            {/* about me*/}
             <TabsContent 
               value='about' 
               className='w-full text-center xl:text-left h-[130vh]'
@@ -541,6 +541,7 @@ export default function Resume() {
                 </div>
               </GsapAnimatedElement>
                 
+              {/* Testimonoalsというのをpropsとして渡しているが、これは関数で、下のデータは、実際にはCardから来ている。 */}
                       <div className='w-full'>
                         <AnimatedTestimonials 
                           testimonials={testimonials} 

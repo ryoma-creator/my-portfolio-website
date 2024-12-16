@@ -3,16 +3,13 @@ const path = require('path');
 module.exports = {
   reactStrictMode: true,
   images: {
-    unoptimized: true, 
+    unoptimized: true,
+    domains: ['res.cloudinary.com'], // この行を追加
   },
   webpack: (config, { dev }) => {
-    // Keep existing alias configuration
     config.resolve.alias['@'] = path.resolve(__dirname);
-    
-    // Add extension resolution
     config.resolve.extensions = ['.js', '.jsx', ...config.resolve.extensions];
     
-    // Keep development performance settings
     if (dev) {
       config.watchOptions = {
         poll: 1000,
