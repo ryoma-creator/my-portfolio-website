@@ -3,10 +3,10 @@ const path = require('path');
 module.exports = {
   reactStrictMode: true,
   images: {
-    unoptimized: true,
-    domains: ['res.cloudinary.com'], // この行を追加
+    domains: ['res.cloudinary.com'], // unoptimized: trueを削除
   },
   webpack: (config, { dev }) => {
+    // 残りの設定は同じ
     config.resolve.alias['@'] = path.resolve(__dirname);
     config.resolve.extensions = ['.js', '.jsx', ...config.resolve.extensions];
     

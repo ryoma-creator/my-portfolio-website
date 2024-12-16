@@ -11,15 +11,15 @@ import Stats from '@/components/Stats';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
-import { EvervaultCard } from '@/components/ui/evervault-card';
+// import { EvervaultCard } from '@/components/ui/evervault-card';
 
-import Storytelling from '@/components/storytelling/Storytelling';
+// import Storytelling from '@/components/storytelling/Storytelling';
 
 export default function HomePage() {
   return (
     <>
 
-    <EvervaultCard/>
+    {/* <EvervaultCard/> */}
     {/* <Storytelling/> */}
 
       <section className='h-full'>

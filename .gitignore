@@ -19,3 +19,4 @@ yarn.lock
 pnpm-lock.yaml
 EOF.next
 *.pack.gz
+.vercel

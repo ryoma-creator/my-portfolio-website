@@ -1,20 +1,19 @@
 'use client';
-'use client';
 
-import Card from '@/components/Card';
+// import Card from '@/components/Card';
 import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
-import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
+// import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Tooltip, 
-  TooltipContent, 
-  TooltipProvider, 
-  TooltipTrigger 
-} from '@/components/ui/tooltip';
+// import { 
+//   Tooltip, 
+//   TooltipContent, 
+//   TooltipProvider, 
+//   TooltipTrigger 
+// } from '@/components/ui/tooltip';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
 import { achievements } from '@/components/scroll/HorizontalScrollText/achievements';
-import Award from '@/components/LottieIcon/Award';
+// import Award from '@/components/LottieIcon/Award';
 import SkillTabs from '@/components/SkillTabs';
 import { skillsData } from '@/components/SkillTabs/skillsData';
 import { FocusCards } from '@/components/ui/focus-cards';
@@ -36,8 +35,8 @@ import {
 } from 'react-icons/si';
 import { useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import Lenis from '@studio-freight/lenis';
-import styles from '@/components/Card/style.module.scss';
+// import Lenis from '@studio-freight/lenis';
+// import styles from '@/components/Card/style.module.scss';
 import { projects } from '@/components/Card/data';
 
 // Cardのdata.jsxデータをtestimonialsの形式に変換
@@ -446,7 +445,7 @@ export default function Resume() {
           
             </TabsContent>
 
-
+                  
             {/* education */}
             <TabsContent value='education' className='w-full'>
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
