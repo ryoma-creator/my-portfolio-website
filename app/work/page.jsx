@@ -27,7 +27,7 @@ import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 
 // compare
-import { Compare } from "@/components/ui/compare";
+// import { Compare } from "@/components/ui/compare";
 
 // Achivement cards component
 import AchievementList from '@/components/AchievementList';
@@ -38,7 +38,7 @@ import { achievements } from '@/components/scroll/HorizontalScrollText/achieveme
 // custom compare component
 import { CustomCompare } from '@/components/CustomCompare/index'
 
-import Award from '@/components/LottieIcon/Award';
+// import Award from '@/components/LottieIcon/Award';
 
 const projects = [
   {
