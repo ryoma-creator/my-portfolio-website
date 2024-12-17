@@ -62,7 +62,7 @@ const projects = [
       'Local Storage Integration'
     ],
     highlight: 'Focus on building reusable components and implementing modern React patterns',
-    image: '/assets/work/Todo-List-App.png',
+    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/Todo-List-App-2_iht9e2.png',
     live: '',
     github: '',
   },
@@ -87,11 +87,10 @@ const projects = [
       'Tailwind CSS'
     ],
     highlight: 'Mastered API integration and error handling in React applications',
-    image: '/assets/work/wetherapp.png',
+    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368949/wetherapp_kaw7ik.png',
     live: '',
     github: '',
   },
-  // E-commerce website
   {
     num: '03',
     category: 'frontend',
@@ -113,11 +112,10 @@ const projects = [
       'Performance Optimization'
     ],
     highlight: 'Created a complete e-commerce solution with modern UI/UX principles',
-    image: '/assets/work/E-commerce-png.png',
+    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368950/E-commerce-png_udvuqa.png',
     live: '',
     github: '',
   },
-  // Portfolio website
   {
     num: '04',
     category: 'frontend',
@@ -139,7 +137,7 @@ const projects = [
       'Performance Tuning'
     ],
     highlight: 'Showcased advanced frontend skills with modern web technologies',
-    image: '/assets/work/portfoliowebsite.png',
+    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368949/portfoliowebsite_eiuwcq.png',
     live: '',
     github: '',
   },
@@ -171,7 +169,7 @@ const projects = [
       'Creative UI/UX Design'
     ],
     highlight: 'Pushed boundaries in web animation and storytelling, creating an immersive user experience that showcases technical growth',
-    image: '/assets/work/storytelling-portfolio.png',
+    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734441510/coming-soon_whp8x6.jpg',
     live: '',
     github: '',
     challenges: [
@@ -186,7 +184,7 @@ const projects = [
       'Scroll Magic'
     ]
   }
-];
+ ];
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
