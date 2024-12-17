@@ -3,7 +3,7 @@ export const achievements = [
   {
     period: "March 2024",
     title: "Web Development Foundations",
-    background: "/assets/about/ready.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734419452/ready_xlobf3.jpg",
     achievements: [
       "Established robust version control practices with Git",
       "Developed responsive layouts using CSS Flexbox",
@@ -16,7 +16,7 @@ export const achievements = [
   {
     period: "April 2024",
     title: "JavaScript & DOM Expertise",
-    background: "/assets/about/march.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734419454/march_g0f1gh.jpg",
     achievements: [
       "Developed interactive Rock-Paper-Scissors game",
       "Implemented complex DOM manipulation patterns",
@@ -29,7 +29,7 @@ export const achievements = [
   {
     period: "May 2024",
     title: "React Development Mastery",
-    background: "/assets/about/may.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg",
     achievements: [
       "Built dynamic applications with React Hooks",
       "Implemented complex state management patterns",
@@ -42,7 +42,7 @@ export const achievements = [
   {
     period: "June 2024",
     title: "Advanced React Architecture",
-    background: "/assets/about/june.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734419337/storybook_mcygbx.jpg",
     achievements: [
       "Developed comprehensive CV Builder application",
       "Implemented advanced component composition",
@@ -55,7 +55,7 @@ export const achievements = [
   {
     period: "July 2024",
     title: "Full-Stack React Development",
-    background: "/assets/about/july.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734419563/uparrow_s4upbg.jpg",
     achievements: [
       "Built feature-rich Todo application with CRUD",
       "Implemented drag-and-drop functionality",
@@ -68,7 +68,7 @@ export const achievements = [
   {
     period: "August 2024",
     title: "Modern UI Engineering",
-    background: "/assets/about/august.idea.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416132/accenture_yvo1ec.jpg",
     achievements: [
       "Mastered Tailwind CSS for scalable styling",
       "Built custom component library system",
@@ -81,7 +81,7 @@ export const achievements = [
   {
     period: "September 2024",
     title: "Next.js & TypeScript Integration",
-    background: "/assets/about/september.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368947/IA_xcpdqf.jpg",
     achievements: [
       "Migrated applications to Next.js framework",
       "Implemented TypeScript for type safety",
@@ -94,7 +94,7 @@ export const achievements = [
   {
     period: "October 2024",
     title: "Advanced UI Animation",
-    background: "/assets/about/october.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/gitc_ex573k.jpg",
     achievements: [
       "Implemented complex GSAP animations",
       "Created sophisticated scroll animations",
@@ -107,7 +107,7 @@ export const achievements = [
   {
     period: "October 2024",
     title: "Advanced Animation Integration & Motion Architecture",
-    background: "/assets/about/october.vision.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/IPC_gtotjt.webp",
     achievements: [
       "Mastered complex scroll-based animations using GSAP and Framer Motion",
       "Created custom animation components with reusable animation logic",
@@ -120,20 +120,7 @@ export const achievements = [
   {
     period: "Current Focus",
     title: "Professional Development",
-    background: "/assets/about/coming-soon.jpg",
-    achievements: [
-      "Exploring advanced React patterns",
-      "Building scalable application architectures",
-      "Implementing modern development practices",
-      "Optimizing performance and user experience",
-      "Expanding full-stack capabilities"
-    ],
-    highlight: "Focusing on scalable architecture and professional development practices"
-  },
-  {
-    period: "Current Focus",
-    title: "Professional Development",
-    background: "/assets/about/future.jpg",
+    background: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734419456/coming-soon_uwc74q.jpg",
     achievements: [
       "Exploring advanced React patterns",
       "Building scalable application architectures",
@@ -143,8 +130,7 @@ export const achievements = [
     ],
     highlight: "Focusing on scalable architecture and professional development practices"
   }
-];
-
+ ];
 
 "Pursued an unprecedented vision of storytelling from ground zero - extensively researching, integrating components, and pushing technical boundaries until breakthrough, while learning crucial lessons about sustainable development through moments of burnout"
 
