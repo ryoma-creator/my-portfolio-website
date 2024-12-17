@@ -30,10 +30,10 @@ import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 // import { Compare } from "@/components/ui/compare";
 
 // Achivement cards component
-import AchievementList from '@/components/AchievementList';
+// import AchievementList from '@/components/AchievementList';
 
 // import HorizontalScrollText from '@/components/scroll/HorizontalScrollText';
-import { achievements } from '@/components/scroll/HorizontalScrollText/achievements';
+// import { achievements } from '@/components/scroll/HorizontalScrollText/achievements';
 
 // custom compare component
 import { CustomCompare } from '@/components/CustomCompare/index'
