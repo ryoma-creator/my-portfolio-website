@@ -5,6 +5,9 @@ export const AnimatedTestimonials = dynamic(
   { ssr: false }
 )
 
+
+
+
 // When you use dynamic with ssr: false, you're telling Next.js:
 // "Hey, don't try to load this component on the server - wait until we're in the browser!"
 

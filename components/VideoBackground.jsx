@@ -4,10 +4,11 @@ import React, { useState, useEffect } from 'react';
 
 const getRandomVideo = () => {
   const videos = [
-    '/videos/video1.mp4',
-    '/videos/video2.mp4',
-    '/videos/video3.mp4',
-    '/videos/video4.mp4',
+    'https://res.cloudinary.com/dnm2fyhwt/video/upload/v1733368963/video1_jsbnsu.mp4',
+    'https://res.cloudinary.com/dnm2fyhwt/video/upload/v1733368980/video2_vv4ze7.mp4',
+    'https://res.cloudinary.com/dnm2fyhwt/video/upload/v1733368984/video3_uummrz.mp4',
+    'https://res.cloudinary.com/dnm2fyhwt/video/upload/v1733368973/video4_odcqzo.mp4',
+    'https://res.cloudinary.com/dnm2fyhwt/video/upload/v1733368965/vecteezy_general-mathematics-equation-math-formula-text-background_21256861_tlz5k7.mp4'
   ];
   return videos[Math.floor(Math.random() * videos.length)];
 };

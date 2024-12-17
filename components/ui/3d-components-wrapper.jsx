@@ -24,3 +24,7 @@ export const DynamicCard = dynamic(
 
 // Dynamic Import: Like a waiter who brings food from kitchen to customers
 // Bridges the gap between preparation and interaction
+
+
+
+// any browser-specific code will need a wrapper for deployment
