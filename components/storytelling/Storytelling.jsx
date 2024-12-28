@@ -23,7 +23,7 @@ import FloatingScrollArrow from '@/components/FloatingScrollArrow';
 import ScrollVideoPlayerFramer from '@/components/ScrollVideoPlayerFramer';
 import ResumeContent from '@/app/resume/ResumeContent';
 import Contact from '@/app/contact/page';
-import Footer from '@/components/Footer';
+import Footer from '@/components/sections/Footer';
 
 export default function Storytelling() {
   const container = useRef(null);

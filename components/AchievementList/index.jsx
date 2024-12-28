@@ -78,6 +78,7 @@ export default function AchievementList({ achievements }) {
 }
 
 // AchievementCardコンポーネント→hideの上部の部分
+// 一番必要な部分🔻
 const AchievementCard = React.memo(({
   achievement,
   index,

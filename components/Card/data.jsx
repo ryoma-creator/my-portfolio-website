@@ -1,10 +1,9 @@
-export const projects = 
-[
+export const projects = [
   {
     "title": "Determination to Become an IT Engineer",
     "description": "In February 2024, I made a resolute decision to become an IT engineer and immediately resigned from my company. Since then, up to the present day, I have been dedicating full-time effort from morning to night, repeatedly experiencing failures while continuously evolving and improving. This 'About Me' section is designed to genuinely help you understand who I am.\n\nSpecifically, I want to share with you the interests I've maintained and the time I've invested from my childhood to the present moment.",
     "skills": ["Determination", "Beginning", "Continuous Learning"],
-    "src": "/assets/about/childhood.jpg",
+    "src": "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368947/IA_xcpdqf.jpg",
     "link": "#roots",
     "color": "#1c1c22"
   },
@@ -12,7 +11,7 @@ export const projects =
     "title": "The Origin of Creativity - Childhood",
     "description": "From a young age, I was immersed in anime culture, drawing, and crafting with anime toys. Sharing creations with friends taught me the joy of collaborating and creating together. This experience laid the foundation for my current passion for UI/UX design and building things.",
     "skills": ["Creativity", "Early Interests", "Crafting"],
-    "src": "/assets/about/childhood.jpg",
+    "src": "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368946/august.idea_mm0s0v.jpg",
     "link": "#roots",
     "color": "#1c1c22"
   },
@@ -20,7 +19,7 @@ export const projects =
     "title": "Challenges and Growth During Student Years",
     "description": "As a university student, I sought greater challenges and decided to transfer to a second university, aiming for a school with Japan's top professor in legal philosophy. I succeeded in transferring after just six months of intensive preparation, using techniques like research, analysis, and studying brain science and habits of top athletes.",
     "skills": ["Logical Thinking", "Mental Strength Techniques", "Learning Methodology"],
-    "src": "/assets/about/childhood.jpg",
+    "src": "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368943/law_wputac.jpg",
     "link": "#education",
     "color": "#1c1c22"
   },
@@ -28,15 +27,15 @@ export const projects =
     "title": "Study Abroad in Denmark - Expanding Global Perspectives",
     "description": "Inspired by my research, I studied abroad in Denmark, an environment rich in diversity, like a 'mini-world.' I learned the importance of diversity and collaboration, which helped me develop the ability to work flexibly with people from different cultures. This experience broadened my perspective and is something I deeply cherish.",
     "skills": ["English Proficiency", "Cultural Awareness", "Multicultural Collaboration"],
-    "src": "/assets/about/childhood.jpg",
+    "src": "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg",
     "link": "#international",
     "color": "#1c1c22"
   },
   {
     "title": "Career Challenge - Working in a Global Company",
-    "description": "After graduating, I chose to work at a foreign company instead of a domestic one, to leverage my experiences and expand my global outlook. I’m grateful to the companies that helped me grow. It was a tough experience living alone abroad, where unexpected challenges were the norm, but it taught me how to survive and thrive in a foreign environment.",
+    "description": "After graduating, I chose to work at a foreign company instead of a domestic one, to leverage my experiences and expand my global outlook. I'm grateful to the companies that helped me grow. It was a tough experience living alone abroad, where unexpected challenges were the norm, but it taught me how to survive and thrive in a foreign environment.",
     "skills": ["Business English", "Cross-Cultural Adaptability", "Problem-Solving", "Global Business", "IT Skills"],
-    "src": "/assets/about/childhood.jpg",
+    "src": "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416132/accenture_yvo1ec.jpg",
     "link": "#professional",
     "color": "#1c1c22"
   },
@@ -44,19 +43,11 @@ export const projects =
     "title": "Current Endeavors and Future Aspirations",
     "description": "Currently, I am pursuing a career shift to become an engineer, mastering a universal skill set beyond just English. I have committed to full-time learning, focusing on modern development technologies like React and Next.js, completing five portfolio projects. Through self-study and hands-on project development, I have honed my frontend development skills.",
     "skills": ["Frontend Development", "React/Next.js", "Self-Management", "Portfolio Building", "Project Development"],
-    "src": "/assets/about/childhood.jpg",
-    "link": "#technology",
-    "color": "#1c1c22"
-  },
-  {
-    "title": "Vision for the Future",
-    "description": "Lastly, thank you for reading this far. My goal is to provide comfortable user experiences worldwide through technology. I aim to collaborate in a global team, creating products that reflect diverse perspectives. Beyond just technical skills, I strive to grow as a person, developing versatile abilities that are valued in any country. I hope to have the chance to connect with you in the future.",
-    "skills": ["Frontend Development", "React/Next.js", "Self-Management", "Portfolio Building", "Project Development"],
-    "src": "/assets/about/childhood.jpg",
+    "src": "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/gitc_ex573k.jpg",
     "link": "#technology",
     "color": "#1c1c22"
   }
-]
+];
 
 
 // [

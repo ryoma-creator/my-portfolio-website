@@ -39,18 +39,32 @@ import { useEffect, useRef, useState } from 'react';
 // import styles from '@/components/Card/style.module.scss';
 import { projects } from '@/components/Card/data';
 
+
+import AnimatedAbout from '@/components/AnimatedAbout';
+
+import AboutMe from '@/components/AboutMe/AboutMe';
+
+
 // Cardのdata.jsxデータをtestimonialsの形式に変換
-const testimonials = projects.map(project => {
-  // titleを'-'で分割
-  const titleParts = project.title.split('-');
+// const testimonials = projects.map(project => {
+//   // titleを'-'で分割
+//   const titleParts = project.title.split('-');
   
-  return {
-    quote: project.description,
-    name: titleParts[0]?.trim() || project.title, // '-'がない場合はtitle全体を使用
-    designation: titleParts[1]?.trim() || '', // '-'がない場合は空文字を使用
-    src: project.src
-  }
-});
+//   return {
+//     quote: project.description,
+//     name: titleParts[0]?.trim() || project.title, // '-'がない場合はtitle全体を使用
+//     designation: titleParts[1]?.trim() || '', // '-'がない場合は空文字を使用
+//     src: project.src
+//   }
+// });
+
+const testimonials = projects.map(project => ({
+  quote: project.description,
+  name: project.title.split('-')[0]?.trim() || project.title,
+  designation: project.title.split('-')[1]?.trim() || '',
+  src: project.src
+}));
+
 // ----------testimonials
 
 
@@ -542,6 +556,8 @@ export default function Resume() {
                 
               {/* Testimonoalsというのをpropsとして渡しているが、これは関数で、下のデータは、実際にはCardから来ている。 */}
                       <div className='w-full'>
+                        {/* <AboutMe /> */}
+                      {/* <AnimatedAbout testimonials={testimonials}  /> */}
                         <AnimatedTestimonials 
                           testimonials={testimonials} 
                         />

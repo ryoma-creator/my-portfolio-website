@@ -11,7 +11,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary h-[50vh] relative flex flex-col justify-end pb-8">
+    <footer className="bg-gray-800/50 backdrop-blur-sm border-gray-700 h-[50vh] relative flex flex-col justify-end pb-8">
       <motion.button
         onClick={scrollToTop}
         whileHover={{ scale: 1.1 }}

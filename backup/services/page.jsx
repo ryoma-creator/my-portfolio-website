@@ -21,7 +21,7 @@ import FloatingScrollArrow from '@/components/FloatingScrollArrow';
 import ScrollVideoPlayerFramer from '@/components/ScrollVideoPlayerFramer';
 import ResumeContent from '../resume/ResumeContent';
 import Contact from '../contact/page';
-import Footer from '@/components/Footer';
+import Footer from '@/components/sections/Footer';
 
 export default function ServicesPage() {
   const container = useRef(null);
