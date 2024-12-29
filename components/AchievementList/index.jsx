@@ -19,7 +19,7 @@ export default function AchievementList({ achievements }) {
   return (
     <div className="w-full max-w-[900px] space-y-6">
       {/* Overall Summary Section */}
-      <div className="p-6 bg-[#27272c] rounded-lg border border-white/10">
+      {/* <div className="p-6 bg-[#27272c] rounded-lg border border-white/10">
         <h2 className="text-2xl font-bold text-white mb-4">Technical Evolution Path</h2>
         <p className="text-white/80 mb-4">
           A dedicated journey into web development, evolving from fundamentals 
@@ -52,7 +52,7 @@ export default function AchievementList({ achievements }) {
             </>
           )}
         </button>
-      </div>
+      </div> */}
 
       {/* Monthly Progress Section */}
       {showOverall && (
@@ -107,7 +107,10 @@ const AchievementCard = React.memo(({
       className={cn(
         'w-[360px] flex-shrink-0 rounded-lg bg-[#27272c]',
         'transition-all duration-300 ease-out relative overflow-hidden',
-        hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
+            // blur effect
+        hovered !== null && hovered !== index && 
+        "scale-[0.98]"
+        // "blur-sm scale-[0.98]"
       )}
     >
       {/* 背景画像 */}

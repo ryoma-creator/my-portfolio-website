@@ -1,25 +1,27 @@
-// components/sections/contact/Contact.jsx
 'use client'
 
+import { useState } from 'react';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Calendar, Mail } from 'lucide-react';
 
 export default function Contact() {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   return (
     <section className="py-20 bg-transparent">
       <div className="max-w-6xl mx-auto px-4">
         {/* Contact Header */}
         <div className="text-center mb-16">
           <GsapAnimatedText 
-            text="Let's Work Together"
+            text="Let's Innovate"
             variant="perspectiveTilt"
             duration={1.5}
             scrollTrigger={true}
             className="text-5xl md:text-7xl font-bold mb-6 text-white"
           />
           <GsapAnimatedText 
-            text="Ready to bring value to your global team"
+            text="Choose your preferred way to connect"
             variant="blurIn"
             duration={1.5}
             delay={0.3}
@@ -29,59 +31,65 @@ export default function Contact() {
         </div>
 
         {/* Contact Options */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <Card className="bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 transition-all">
-            <CardContent className="p-6 text-center">
-              <Mail className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Email</h3>
-              <a 
-                href="mailto:your.email@example.com"
-                className="text-accent hover:underline"
-              >
-                your.email@example.com
-              </a>
-            </CardContent>
-          </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {/* Technical Discussion Option */}
+          <a
+            href="https://calendly.com/ryoma-t-engineer/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`block transition-all duration-300 ${
+              hoveredCard === 'meeting' 
+                ? 'transform scale-105' 
+                : ''
+            }`}
+            onMouseEnter={() => setHoveredCard('meeting')}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
+            <Card className="bg-gray-800/50 backdrop-blur-sm hover:bg-accent/90 transition-all h-full">
+              <CardContent className="p-8 text-center">
+                <Calendar className="w-12 h-12 mx-auto mb-6 text-accent" />
+                <h3 className="text-2xl font-bold mb-4">Technical Discussion</h3>
+                <p className="text-gray-300 mb-4">30 min engineering chat</p>
+                <p className="text-sm text-gray-400">
+                  Quick discussion via Google Meet
+                  <br />
+                  No installation needed
+                </p>
+              </CardContent>
+            </Card>
+          </a>
 
-          <Card className="bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 transition-all">
-            <CardContent className="p-6 text-center">
-              <Linkedin className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">LinkedIn</h3>
-              <a 
-                href="https://linkedin.com/in/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                View Profile
-              </a>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 transition-all">
-            <CardContent className="p-6 text-center">
-              <Github className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">GitHub</h3>
-              <a 
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                View Projects
-              </a>
-            </CardContent>
-          </Card>
+          {/* Email Option */}
+          <a
+            href="mailto:ryoma.t.engineer@gmail.com"
+            className={`block transition-all duration-300 ${
+              hoveredCard === 'email' 
+                ? 'transform scale-105' 
+                : ''
+            }`}
+            onMouseEnter={() => setHoveredCard('email')}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
+            <Card className="bg-gray-800/50 backdrop-blur-sm hover:bg-accent/90 transition-all h-full">
+              <CardContent className="p-8 text-center">
+                <Mail className="w-12 h-12 mx-auto mb-6 text-accent" />
+                <h3 className="text-2xl font-bold mb-4">Send a Message</h3>
+                <p className="text-gray-300 mb-4">Direct email contact</p>
+                <p className="text-sm text-gray-400">
+                  Share your thoughts
+                  <br />
+                  Response within 24 hours
+                </p>
+              </CardContent>
+            </Card>
+          </a>
         </div>
 
-        {/* Call to Action */}
+        {/* Additional Info */}
         <div className="text-center mt-16">
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Looking forward to discussing how I can contribute to your team's success through technical expertise and cultural understanding.
+          <p className="text-white/80 max-w-2xl mx-auto">
+            Looking forward to discussing how my technical expertise can help drive your team's innovation.
           </p>
-          <button className="px-8 py-3 bg-accent text-gray-900 rounded-full font-bold hover:bg-accent/90 transition-colors">
-            Schedule a Call
-          </button>
         </div>
       </div>
     </section>
