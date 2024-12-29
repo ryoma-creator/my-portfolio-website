@@ -14,11 +14,11 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  '/medias/1month.png',
-  '/medias/2month.png',
-  '/medias/3month.png',
-  '/medias/4month.png',
-  '/medias/5month.png'
+  // '/medias/1month.png',
+  // '/medias/2month.png',
+  // '/medias/3month.png',
+  // '/medias/4month.png',
+  // '/medias/5month.png'
 ];
 
 // const images = [Picture1, Picture2, Picture3, Picture4, Picture5];

@@ -55,7 +55,7 @@ export default function AchievementList({ achievements }) {
       </div> */}
 
       {/* Monthly Progress Section */}
-      {showOverall && (
+      {/* {showOverall && ( */}
         <ScrollArea className="w-full rounded-md border border-primary bg-primary">
           <div className="flex space-x-4 p-4">
             {achievements.map((achievement, index) => (
@@ -72,7 +72,7 @@ export default function AchievementList({ achievements }) {
           </div>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
-      )}
+      {/* )} */}
     </div>
   );
 }
