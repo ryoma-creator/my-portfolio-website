@@ -1,32 +1,35 @@
 import Link from 'next/link';
 
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGlobe } from 'react-icons/fa';
+import { SiTailwindcss, SiNextdotjs, SiTypescript } from 'react-icons/si';
 
-const socials = [
-    { icon: <FaGithub />, path: 'https://github.com/ryoma-creator?tab=repositories'},
-    { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/ryoma-taguchi-b32024283/?trk=opento_sprofile_pfeditor'},
-    { icon: <FaYoutube />, path: ''},
-    { icon: <FaTwitter />, path: ''},
-    { icon: <FaEnvelope />, path: 'mailto:barcelona.fc.111326@example.com' },
+const skills = [
+    { icon: <FaReact />, path: '', name: 'React' },
+    { icon: <FaHtml5 />, path: '', name: 'HTML' },
+    { icon: <FaCss3Alt />, path: '', name: 'CSS' },
+    { icon: <FaJs />, path: '', name: 'JavaScript' },
+    { icon: <FaNodeJs />, path: '', name: 'Node.js' },
+    { icon: <SiNextdotjs />, path: '', name: 'Next.js' },
+    { icon: <SiTailwindcss />, path: '', name: 'Tailwind CSS' },
+    { icon: <SiTypescript />, path: '', name: 'TypeScript' },
+    { icon: <FaGlobe />, path: '', name: 'Logical Thinking' }, // For global or logical thinking
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
-        {socials.map((social, index)=>{
-            return (
-                <Link 
-                    key={index} 
-                    href={social.path} 
-                    className={iconStyles}
-                    target={social.path ? "_blank" : undefined} 
-                    rel={social.path ? "noopener noreferrer" : undefined}                    
-                >
-                    {social.icon}
-                </Link>
-            );
-        })}
-
+        {skills.map((skill, index) => (
+            <Link 
+                key={index} 
+                href={skill.path} 
+                className={iconStyles}
+                title={skill.name} // Adds tooltip with the skill name
+                target={skill.path ? "_blank" : undefined} 
+                rel={skill.path ? "noopener noreferrer" : undefined}
+            >
+                {skill.icon}
+            </Link>
+        ))}
     </div>
   );
 };

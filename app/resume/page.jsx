@@ -461,6 +461,7 @@ export default function Resume() {
 
                   
             {/* education */}
+            {/* career */}
             <TabsContent value='education' className='w-full'>
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{education.title}</h3>

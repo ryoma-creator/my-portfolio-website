@@ -3,6 +3,8 @@
 
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 import { useEffect, useState } from 'react';
+import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
+
 
 const challenges = [
     {
@@ -45,8 +47,27 @@ export default function Problems() {
     }, []);
 
     return (
-        // containerクラスを追加して中央揃え
+
+
+
         <section className='min-h-[80vh] py-12'>
+
+      {/* 巨大な背景テキスト */}
+      <GsapAnimatedElement variant="blurIn" duration={2} delay={0.2}>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+          <div 
+            className="text-[20vw] font-extrabold text-white/10 text-outline opacity-10"
+            style={{
+              textStroke: '3px rgba(255, 255, 255, 0.2)',
+              WebkitTextStroke: '3px rgba(255, 255, 255, 0.2)'
+            }}
+          >
+            PROBLEM
+          </div>
+        </div>
+      </GsapAnimatedElement>
+
+
           <div className="container mx-auto px-4 max-w-[1400px]"> {/* コンテナ追加 */}
             {/* Main Challenge - 中央揃えの修正 */}
             <section className='min-h-[300px] grid place-items-center bg-transparent py-24'>

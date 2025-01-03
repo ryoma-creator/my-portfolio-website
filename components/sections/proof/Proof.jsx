@@ -2,39 +2,91 @@
 
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { ChevronDown } from 'lucide-react';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 import CareerDetail from './CareerDetail';
 import AchievementList from '@/components/AchievementList';
 import { achievements } from '@/components/scroll/HorizontalScrollText/achievements';
 
+import ProjectShowcase from './ProjectShowcase/ProjectShowcase';
+
 export default function Proof() {
   const [activeTab, setActiveTab] = useState('technical');
-  const [isTimelineExpanded, setIsTimelineExpanded] = useState(false);
 
   const proofSections = {
     technical: [
       {
-        title: "Frontend Development Projects",
+        title: "技術力と創造性",
         approach: [
-          "Implemented responsive web applications",
-          "Developed reusable component libraries",
-          "Applied modern development practices"
-        ],
-        results: [
-          "5+ React/Next.js projects completed",
-          "Optimized performance metrics",
-          "Clean, maintainable codebase"
+          "フルスタックな開発スキルの習得",
+          "UIUXを重視した機能実装",
+          "最新技術トレンドのキャッチアップ"
         ],
         skills: [
-          "React/Next.js expertise",
-          "Modern CSS frameworks",
-          "Performance optimization"
+          "React/Next.js",
+          "モダンな開発手法",
+          "パフォーマンス最適化"
         ],
-        impact: "Delivered high-quality projects that improved user experience and team productivity"
+        impact: "5つの実践的なポートフォリオプロジェクトを完遂"
+      },
+      {
+        type: 'custom',    // カスタムコンポーネント用
+        title: "Learning Journey",
+        description: "My continuous learning and growth in web development",
+        component: () => <AchievementList achievements={achievements} />
+      },
+      {
+        type: 'custom',
+        title: "Project Portfolio",
+        component: () => <ProjectShowcase />
       }
     ],
-    // 他のセクションは省略
+      analytical: [
+        {
+          title: "データ駆動型の業務改善",
+          approach: [
+            "タスクの複雑性と工数の定量的分析",
+            "チームメンバーのスキル評価と最適なリソース配分",
+            "プロジェクトのボトルネック特定と解決"
+          ],
+          skills: [
+            "パフォーマンス分析",
+            "リソース最適化",
+            "プロジェクト分析"
+          ],
+          impact: "プロジェクト遅延を解消し、効率的なチーム編成を実現"
+        },
+        {
+          title: "学習効率の最適化手法",
+          approach: [
+            "個人の学習パターン分析による効率化",
+            "複雑な技術知識の体系化と教育方法の確立",
+            "短期間での技術習得プログラムの設計"
+          ],
+          skills: [
+            "学習プロセス設計",
+            "知識体系化能力",
+            "教育効率化"
+          ],
+          impact: "3ヶ月の習得期間を1ヶ月に短縮し、即戦力人材を育成"
+        }
+      ],
+      global: [
+        {
+          title: "グローバルプロジェクト管理",
+          approach: [
+            "異文化チームでの技術導入プロジェクトのリード",
+            "国際間の業務プロセス統合と標準化",
+            "クロスボーダーな問題解決体制の構築"
+          ],
+          skills: [
+            "国際プロジェクト管理",
+            "プロセス統合能力",
+            "グローバルコミュニケーション"
+          ],
+          impact: "複数国を跨ぐシステム導入を成功させ、運用基盤を確立"
+        }
+    ],
+
   };
 
   return (
@@ -79,47 +131,13 @@ export default function Proof() {
 
       {/* コンテンツエリア */}
       <div className="max-w-5xl mx-auto space-y-8">
-        {/* メインの実績表示 */}
         {proofSections[activeTab].map((detail, index) => (
           <CareerDetail
             key={index}
             {...detail}
+            component={detail.type === 'custom' ? detail.component : undefined}
           />
         ))}
-
-        {/* Learning Timeline - Technical タブでのみ表示 */}
-        {activeTab === 'technical' && (
-          <Card className="bg-gray-800/50 backdrop-blur-sm border-gray-700">
-            <CardContent className="p-6">
-              <div className="flex justify-between items-center mb-6">
-                <GsapAnimatedText 
-                  text="Learning Journey"
-                  variant="blurIn"
-                  duration={1.5}
-                  className="text-2xl font-bold"
-                />
-                <button
-                  onClick={() => setIsTimelineExpanded(!isTimelineExpanded)}
-                  className="text-accent flex items-center gap-2"
-                >
-                  <ChevronDown className={`transform transition-transform ${
-                    isTimelineExpanded ? 'rotate-180' : ''
-                  }`} />
-                </button>
-              </div>
-
-              <div className={`transition-all duration-300 ${
-                isTimelineExpanded 
-                  ? 'max-h-[600px] opacity-100' 
-                  : 'max-h-0 opacity-0 overflow-hidden'
-              }`}>
-                <div className="bg-gray-900/30 rounded-xl p-6">
-                  <AchievementList achievements={achievements} />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        )}
       </div>
     </section>
   );

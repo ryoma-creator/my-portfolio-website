@@ -10,21 +10,30 @@ import Footer from "@/components/sections/Footer";
 
 import Spacing from "@/components/layout/Spacing";
 
+import BackgroundGradient from "@/components/ui/BackgroundGradient";
+
+
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Spacing />
-      <Problems />
-      <Spacing />
+      <BackgroundGradient
+      startColor="transparent"
+      endColor="accent"   // または具体的なカラーコード
+      >
+          <Spacing />
+
+        <Problems />
+        <Spacing />
+        </BackgroundGradient>
       <Solutions />
-      <Spacing />
+        <Spacing />
       <Proof />
-      <Spacing />
+        <Spacing />
       <Contact />
-      <Spacing />
+        <Spacing />
       <Storytelling />
-      <Spacing />
+        <Spacing />
       <Footer />
     </>
   );

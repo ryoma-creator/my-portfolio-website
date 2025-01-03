@@ -15,8 +15,11 @@ import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
 // import Storytelling from '@/components/storytelling/Storytelling';
 
-import { Card, CardContent } from '@/components/ui/card';
-import { Globe, Code, Puzzle, ArrowRight, Users, Brain } from 'lucide-react';
+
+import SkillMarquee from './SkillMarquee';
+
+// components/sections/hero/Hero.jsx
+import SkillMarqueeCards from './SkillMarqueeCards';
 
 
 export default function Hero() {
@@ -35,7 +38,8 @@ export default function Hero() {
             {/* text */}
             <div className='text-center xl:text-left'>
               <GsapAnimatedText 
-                text="Global Mindset × Tech Expertise" 
+                // text="Global Mindset × Tech Expertise" 
+                text="Logic × Tech × Global Experience"
                 variant="perspectiveTilt" 
                 duration={1.5} 
                 stagger={0.05}
@@ -129,6 +133,15 @@ export default function Hero() {
         >
           <Stats/>
         </GsapAnimatedElement> */}
+
+
+      <SkillMarquee speed={40} />
+
+            {/* スキルカードのMarquee */}
+            <div className="absolute bottom-0 w-full">
+        <SkillMarqueeCards />
+      </div>
+
       </section>
 
 

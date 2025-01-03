@@ -1,0 +1,44 @@
+// components/sections/storytelling/solutions.module.scss
+.container {
+    margin-top: 0vh;
+    min-height: 100vh;
+    background-color: primary;
+    
+    .body {
+      margin-left: 5vw;
+      h1 {
+        margin: 0px;
+        margin-top: 10px;
+        font-size: 4vw;
+        line-height: 4vw;
+        text-transform: uppercase;
+      }
+    }
+    
+    .images {
+      display: flex;
+      width: 50%;
+      justify-content: flex-start;
+      position: relative;
+      margin-top: 5vh;
+      
+      .imageContainer {
+        position: absolute;
+        img {
+          object-fit: cover;
+        }
+        &:nth-of-type(1) {
+          height: 50vh;
+          width: 40vh;
+          z-index: 1;
+        }
+        &:nth-of-type(2) {
+          left: 25vw;
+          top: 15vh;
+          height: 35vh;
+          width: 25vh;
+          z-index: 2;
+        }
+      }
+    }
+  }

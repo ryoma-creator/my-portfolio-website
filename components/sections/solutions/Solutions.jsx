@@ -1,87 +1,147 @@
-// components/sections/solutions/Solutions.jsx
 'use client'
 
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
+import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
 const solutions = [
   {
-    title: "Cultural Bridge",
-    description: "Experience in 3+ countries' development cultures",
-    icon: "🌏",
-    stats: "2000+ global interactions"
+    title: "Systematic Thinking",
+    description: "Transform complex challenges into structured solutions through data-driven analysis.",
+    bgImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368943/law_wputac.jpg",
+    bgColor: "bg-green-50",
+    textColor: "text-[#2B4A32]"
   },
   {
-    title: "Tech Expertise",
-    description: "Modern frontend stack with proven projects",
-    icon: "💻",
-    stats: "5+ React/Next.js projects"
+    title: "Problem Solver",
+    description: "Optimize processes and resolve technical challenges efficiently.",
+    bgImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416132/accenture_yvo1ec.jpg",
+    bgColor: "bg-purple-50",
+    textColor: "text-[#450E3A]"
   },
   {
-    title: "Fast Learner",
-    description: "Rapid skill acquisition and adaptation",
-    icon: "🚀",
-    stats: "900+ learning hours"
+    title: "Global Bridge",
+    description: "Connect diverse teams and enhance cross-cultural collaboration.",
+    bgImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/IPC_gtotjt.webp",
+    bgColor: "bg-blue-50",
+    textColor: "text-[#1B214B]"
+  },
+  {
+    title: "Technical Expert",
+    description: "Build modern web applications with focus on user experience.",
+    bgImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg",
+    bgColor: "bg-indigo-50",
+    textColor: "text-[#2B1C4F]"
   }
 ];
 
 export default function Solutions() {
-  return (
-    <section className='min-h-[90vh] w-full py-16 bg-transparent'>
-      {/* Main Solution Message */}
-      <div className="text-center mb-24">
-        <GsapAnimatedText 
-        //   text="Bridging the Gap to Your Success"
-        // "Solutions That Bridge Cultures"
-        // "Global Tech Solutions"
-        // "Bridging Tech & Culture" （現在の最適解）
-        //   text="Your Global Tech Partner"
-          text="Bridging Tech & Culture"
-          variant="blurIn" 
-          duration={1.5}
-          scrollTrigger={true}
-          className="text-5xl md:text-7xl font-bold mb-6 text-white"
-        />
-        <GsapAnimatedText 
-          text="Combining global experience with technical expertise"
-          variant="blurIn" 
-          duration={1.5}
-          delay={0.3}
-          scrollTrigger={true}
-          className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto"
-        />
-      </div>
+  const cardsRef = useRef([]);
 
-      {/* Solutions Grid */}
-      <div className="w-full max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-        {solutions.map((solution, index) => (
-          <div key={index} className="group hover:translate-y-[-10px] transition-all duration-300">
-            <div className="bg-gray-800/50 p-12 rounded-xl min-h-[350px] flex flex-col relative overflow-hidden">
-              <div className="text-6xl mb-6">{solution.icon}</div>
-              <GsapAnimatedText 
-                text={solution.title}
-                variant="blurIn"
-                duration={1.5}
-                delay={index * 0.3}
-                scrollTrigger={true}
-                className="text-3xl font-bold mb-4"
-              />
-              <GsapAnimatedText 
-                text={solution.description}
-                variant="blurIn"
-                duration={1.5}
-                delay={index * 0.3 + 0.2}
-                scrollTrigger={true}
-                className="text-xl text-gray-300 mb-6"
-              />
-              <div className="mt-auto">
-                <span className="text-sm text-accent">{solution.stats}</span>
-              </div>
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
+  useEffect(() => {
+    // カードのアニメーション
+    cardsRef.current.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          x: -50,
+          scale: 0.8
+        },
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 0.8,
+          delay: 0.2 + index * 0.3,
+          ease: "elastic.out(1, 0.5)",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+  }, []);
+
+  return (
+    <div className="overflow-hidden">
+
+      {/* 巨大な背景テキスト */}
+      <GsapAnimatedElement variant="blurIn" duration={2} delay={0.2}>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+          <div 
+            className="text-[20vw] font-extrabold text-white/10 text-outline opacity-10"
+            style={{
+              textStroke: '3px rgba(255, 255, 255, 0.2)',
+              WebkitTextStroke: '3px rgba(255, 255, 255, 0.2)'
+            }}
+          >
+            SOLUTIONS
           </div>
-        ))}
+        </div>
+      </GsapAnimatedElement>
+
+      <div className="px-4">
+        {/* タイトルセクション */}
+        <div className="text-center mb-16">
+          <GsapAnimatedText
+            text="Solutions for global tech challenges"
+            variant="elastic"
+            duration={1}
+            scrollTrigger={true}
+            className="h1 font-bold mb-6"
+          />
+          <GsapAnimatedText
+            text="4 key strengths to solve complex problems in modern development teams"
+            variant="elastic"
+            duration={1}
+            delay={0.5}
+            scrollTrigger={true}
+            className="text-responsive-md text-gray-600"
+          />
+        </div>
+
+        {/* カードグリッド */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {solutions.map((solution, index) => (
+            <div
+              key={index}
+              ref={el => cardsRef.current[index] = el}
+              className={`rounded-3xl overflow-hidden ${solution.bgColor} flex flex-col transform transition-transform hover:scale-105`}
+            >
+              <div className="relative">
+                <img
+                  src={solution.bgImage}
+                  alt={solution.title}
+                  className="w-full aspect-square object-cover"
+                />
+              </div>
+              <div className="p-8 text-center">
+                <GsapAnimatedText
+                  text={solution.title}
+                  variant="elastic"
+                  duration={0.8}
+                  delay={0.3 * index}
+                  scrollTrigger={true}
+                  className={`text-responsive-md font-bold mb-3 ${solution.textColor}`}
+                />
+                <GsapAnimatedText
+                  text={solution.description}
+                  variant="fadeIn"
+                  duration={0.8}
+                  delay={0.4 + 0.3 * index}
+                  scrollTrigger={true}
+                  className={`${solution.textColor}/80 text-responsive-sm`}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
