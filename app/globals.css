@@ -52,6 +52,17 @@
   border-color: #10b981;
 }
 
+
+/* globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
+/* スクロールのオフセットを調整（必要に応じて） */
+section {
+  scroll-margin-top: 80px;
+}
+
 /* body{
   background-color: #CCCCCC;
   margin: 0px;

@@ -32,11 +32,6 @@ export default function Hero() {
     {/* <Storytelling/> */}
 
       <section className='h-full'>
-
-            {/* スキルカードのMarquee */}
-            <div className="absolute top-0 w-full">
-               <ReverseSkillMarqueeCards/>
-            </div>
         
         {/* no need mx-auto since you use container */}
         <div className='container h-full text-shadow-neumorphism'>

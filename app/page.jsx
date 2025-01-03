@@ -8,6 +8,7 @@ import Solutions from "@/components/sections/solutions/Solutions";
 import Proof from "@/components/sections/proof/Proof";
 import Contact from "@/components/sections/contact/Contact";
 import Footer from "@/components/sections/Footer";
+import Spacing from '@/components/layout/Spacing';
 
 import PageIndicator from "@/components/ui/PageIndicator";
 import BackgroundGradient from '@/components/ui/BackgroundGradient';
@@ -18,51 +19,44 @@ export default function HomePage() {
     { id: 'problems', name: 'Problems' },
     { id: 'solutions', name: 'Solutions' },
     { id: 'proof', name: 'Proof' },
-    { id: 'contact', name: 'Contact' }
+    { id: 'contact', name: 'Contact' },
   ];
 
   return (
-    <main className="relative">
-      {/* ページインジケーター */}
+    <>
       <PageIndicator sections={sections} />
-
-      {/* Hero セクション */}
-      <section id="hero" className="min-h-screen">
+      
+      <section id="hero">
         <Hero />
       </section>
-
-      {/* Problems セクション - 背景グラデーション */}
-      <section id="problems" className="min-h-screen py-20">
-        <BackgroundGradient
-          startColor="transparent"
-          endColor="var(--accent-color)"
-        >
+      
+      <BackgroundGradient
+        startColor="transparent"
+        endColor="var(--accent-color)"
+      >
+        <Spacing />
+        <section id="problems">
           <Problems />
-        </BackgroundGradient>
-      </section>
+        </section>
+        <Spacing />
+      </BackgroundGradient>
 
-      {/* Solutions セクション */}
-      <section id="solutions" className="min-h-screen py-20">
-        <BackgroundGradient
-          startColor="var(--accent-color)"
-          endColor="white"
-        >
-          <Solutions />
-        </BackgroundGradient>
+      <section id="solutions">
+        <Solutions />
       </section>
+      <Spacing />
 
-      {/* Proof セクション */}
-      <section id="proof" className="min-h-screen py-20">
+      <section id="proof">
         <Proof />
       </section>
+      <Spacing />
 
-      {/* Contact セクション */}
-      <section id="contact" className="min-h-screen py-20">
+      <section id="contact">
         <Contact />
       </section>
+      <Spacing />
 
-      {/* Footer */}
       <Footer />
-    </main>
+    </>
   );
 }
