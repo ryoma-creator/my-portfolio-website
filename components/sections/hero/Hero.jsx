@@ -21,6 +21,8 @@ import SkillMarquee from './SkillMarquee';
 // components/sections/hero/Hero.jsx
 import SkillMarqueeCards from './SkillMarqueeCards';
 
+import ReverseSkillMarqueeCards from './ReverseSkillMarqueeCards';
+
 
 export default function Hero() {
   return (
@@ -30,6 +32,12 @@ export default function Hero() {
     {/* <Storytelling/> */}
 
       <section className='h-full'>
+
+            {/* スキルカードのMarquee */}
+            <div className="absolute top-0 w-full">
+               <ReverseSkillMarqueeCards/>
+            </div>
+        
         {/* no need mx-auto since you use container */}
         <div className='container h-full text-shadow-neumorphism'>
           <div className='flex flex-col xl:flex-row items-center justify-between
@@ -139,8 +147,8 @@ export default function Hero() {
 
             {/* スキルカードのMarquee */}
             <div className="absolute bottom-0 w-full">
-        <SkillMarqueeCards />
-      </div>
+               <SkillMarqueeCards />
+            </div>
 
       </section>
 

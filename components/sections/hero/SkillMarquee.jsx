@@ -7,7 +7,6 @@ export default function SkillMarquee({
   speed = 50,
   direction = 'left',
 }) {
-  // コンポーネント内でスキルデータを管理
   const skillRows = [
     // 1行目: テクニカルスキル
     [
@@ -17,20 +16,7 @@ export default function SkillMarquee({
       { text: "Tailwind CSS", color: "text-teal-500" },
       { text: "Node.js", color: "text-green-500" },
     ],
-    // 2行目: ソフトスキル＆ビジネススキル
-    [
-      { text: "Global Communication", color: "text-purple-500" },
-      { text: "Problem Solving", color: "text-red-500" },
-      { text: "Team Leadership", color: "text-amber-500" },
-      { text: "Project Management", color: "text-indigo-500" },
-    ],
-    // 3行目: 専門分野
-    [
-      { text: "Performance Optimization", color: "text-rose-500" },
-      { text: "Cross-Cultural Collaboration", color: "text-blue-500" },
-      { text: "Technical Architecture", color: "text-emerald-500" },
-      { text: "Code Quality", color: "text-orange-500" },
-    ]
+    // その他の行も同様
   ];
 
   return (
@@ -41,17 +27,22 @@ export default function SkillMarquee({
           speed={speed}
           direction={rowIndex % 2 === 0 ? direction : (direction === 'left' ? 'right' : 'left')}
           gradient={false}
-          className="py-4 bg-gray-900/20"
+          className="py-4 bg-primary"
         >
           {skills.map((skill, index) => (
             <div 
               key={index} 
               className={`
                 mx-8 px-6 py-2 
-                text-responsive-md font-bold 
-                ${skill.color}
+                text-responsive-md font-extrabold
                 transition-all duration-300 hover:scale-110
               `}
+              style={{
+                color: 'rgba(255, 255, 255, 0.03)',  // テキストを半透明に
+                textStroke: '1px rgba(255, 255, 255, 0.2)',
+                WebkitTextStroke: '1px rgba(255, 255, 255, 0.2)',
+                textShadow: '0 0 30px rgba(255, 255, 255, 0.1)'
+              }}
             >
               {skill.text}
             </div>

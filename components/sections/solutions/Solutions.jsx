@@ -68,11 +68,11 @@ export default function Solutions() {
   }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div className="min-h-[80vh] py-12">
 
       {/* 巨大な背景テキスト */}
       <GsapAnimatedElement variant="blurIn" duration={2} delay={0.2}>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+        <div className="aabsolute inset-0 flex items-center justify-center pointer-events-none select-none">
           <div 
             className="text-[20vw] font-extrabold text-white/10 text-outline opacity-10"
             style={{
@@ -80,14 +80,14 @@ export default function Solutions() {
               WebkitTextStroke: '3px rgba(255, 255, 255, 0.2)'
             }}
           >
-            SOLUTIONS
+            SOLUTION
           </div>
         </div>
       </GsapAnimatedElement>
 
-      <div className="px-4">
+      <div className="px-4 container  mx-auto max-w-[1400px]">
         {/* タイトルセクション */}
-        <div className="text-center mb-16">
+        <div className="min-h-[300px] grid place-items-center bg-transparent py-24">
           <GsapAnimatedText
             text="Solutions for global tech challenges"
             variant="elastic"
