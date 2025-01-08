@@ -16,12 +16,12 @@ import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 // import Storytelling from '@/components/storytelling/Storytelling';
 
 
-import SkillMarquee from './SkillMarquee';
+// import SkillMarquee from './SkillMarquee';
 
 // components/sections/hero/Hero.jsx
-import SkillMarqueeCards from './SkillMarqueeCards';
+// import SkillMarqueeCards from './SkillMarqueeCards';
 
-import ReverseSkillMarqueeCards from './ReverseSkillMarqueeCards';
+// import ReverseSkillMarqueeCards from './ReverseSkillMarqueeCards';
 
 
 export default function Hero() {
@@ -137,13 +137,13 @@ export default function Hero() {
           <Stats/>
         </GsapAnimatedElement> */}
 
-
-      <SkillMarquee speed={40} />
+{/* 
+      <SkillMarquee speed={40} /> */}
 
             {/* スキルカードのMarquee */}
-            <div className="absolute bottom-0 w-full">
+            {/* <div className="absolute bottom-0 w-full">
                <SkillMarqueeCards />
-            </div>
+            </div> */}
 
       </section>
 
