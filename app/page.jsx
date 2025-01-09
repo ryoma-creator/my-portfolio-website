@@ -20,8 +20,8 @@ export default function HomePage() {
       <Hero />
       <Spacing />
       <Strengths />
-      <Spacing />
-      <ImpactVideo />
+      {/* <Spacing />
+      <ImpactVideo /> */}
       <Spacing />
       <DetailedStrengths />
       <Spacing />

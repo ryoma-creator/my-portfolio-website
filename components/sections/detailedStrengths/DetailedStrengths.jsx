@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { Parallax } from 'react-parallax';
 
 export default function DetailedStrengths() {
   const experiences = [
@@ -79,15 +80,17 @@ export default function DetailedStrengths() {
                 </button>
               </div>
 
-              {/* イメージ */}
+              {/* イメージ（パララックス効果付き） */}
               <div className="w-full lg:w-1/2">
-                <div className="aspect-[16/9] overflow-hidden rounded-lg">
-                  <img 
-                    src={exp.image}
-                    alt={exp.title}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
+                <Parallax
+                  bgImage={exp.image}
+                  strength={200}
+                  className="aspect-[16/9] overflow-hidden rounded-lg"
+                >
+                  <div style={{ height: '400px' }}>
+                    <div className="w-full h-full transition-transform duration-700 hover:scale-105" />
+                  </div>
+                </Parallax>
               </div>
             </div>
           </div>
