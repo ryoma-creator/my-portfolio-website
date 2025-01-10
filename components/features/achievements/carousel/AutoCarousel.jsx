@@ -8,20 +8,16 @@ const AutoCarousel = ({ achievements }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const containerRef = useRef(null);
   const [position, setPosition] = useState(0);
-  const [noTransition, setNoTransition] = useState(false);
   const CARD_WIDTH = 720;
   const GAP_WIDTH = 16;
   
-  // クローン用の配列を作成（前後に1つずつ追加）
-  const extendedAchievements = [
-    achievements[achievements.length - 1],
-    ...achievements,
-    achievements[0]
-  ];
-
-  // 初期位置を設定（最初の要素の位置）
+  // 3セット分の配列を作成（前中後）
+  const tripleAchievements = [...achievements, ...achievements, ...achievements];
+  const singleSetWidth = achievements.length * (CARD_WIDTH + GAP_WIDTH);
+  
+  // 最初は真ん中のセットが見えるようにポジションを設定
   useEffect(() => {
-    setPosition(CARD_WIDTH + GAP_WIDTH);
+    setPosition(singleSetWidth);
   }, []);
 
   useEffect(() => {
@@ -39,13 +35,10 @@ const AutoCarousel = ({ achievements }) => {
 
       setPosition((prevPosition) => {
         let newPosition = prevPosition + speed * delta;
-        const maxScroll = (achievements.length + 1) * (CARD_WIDTH + GAP_WIDTH);
         
-        // 最後のクローンまで来たら、アニメーションなしで最初に戻る
-        if (newPosition >= maxScroll) {
-          setNoTransition(true);
-          setTimeout(() => setNoTransition(false), 0);
-          return CARD_WIDTH + GAP_WIDTH;
+        // 2セット目が終わったら1セット目の位置に瞬間移動
+        if (newPosition >= singleSetWidth * 2) {
+          newPosition = singleSetWidth;
         }
         
         return newPosition;
@@ -69,18 +62,13 @@ const AutoCarousel = ({ achievements }) => {
   const moveCarousel = (direction) => {
     setIsPlaying(false);
     setPosition(prev => {
-      const newPosition = prev + (direction === 'next' ? CARD_WIDTH + GAP_WIDTH : -(CARD_WIDTH + GAP_WIDTH));
+      let newPosition = prev + (direction === 'next' ? CARD_WIDTH + GAP_WIDTH : -(CARD_WIDTH + GAP_WIDTH));
       
-      // 端に到達した場合の処理
-      if (direction === 'next' && newPosition >= (achievements.length + 1) * (CARD_WIDTH + GAP_WIDTH)) {
-        setNoTransition(true);
-        setTimeout(() => setNoTransition(false), 0);
-        return CARD_WIDTH + GAP_WIDTH;
-      }
-      if (direction === 'prev' && newPosition <= 0) {
-        setNoTransition(true);
-        setTimeout(() => setNoTransition(false), 0);
-        return achievements.length * (CARD_WIDTH + GAP_WIDTH);
+      // 範囲外に出たら適切なセットの位置に移動
+      if (newPosition < singleSetWidth) {
+        newPosition = singleSetWidth * 2 - (singleSetWidth - newPosition);
+      } else if (newPosition >= singleSetWidth * 2) {
+        newPosition = singleSetWidth + (newPosition - singleSetWidth * 2);
       }
       
       return newPosition;
@@ -95,12 +83,12 @@ const AutoCarousel = ({ achievements }) => {
           className="flex gap-4"
           style={{
             transform: `translateX(-${position}px)`,
-            transition: noTransition ? 'none' : 'transform 0.3s ease-out',
+            transition: 'transform 0.3s ease-out',
           }}
         >
-          {extendedAchievements.map((achievement, index) => (
+          {tripleAchievements.map((achievement, index) => (
             <AchievementCard
-              key={index}
+              key={`${index}-${achievement.id}`}
               achievement={achievement}
               techStack={achievement.techStack}
               index={index}

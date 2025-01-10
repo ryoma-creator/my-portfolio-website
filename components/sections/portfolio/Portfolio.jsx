@@ -30,7 +30,7 @@ const Portfolio = () => {
   const [showTimeline, setShowTimeline] = useState(false);
 
   return (
-    <div className="relative min-h-screen w-full bg-primary py-32">
+    <div className="relative min-h-screen w-full py-32">
       {/* Main Project Introduction */}
       {activeProject.isMainProject && (
         <div className="container mx-auto text-center mb-24 px-4">

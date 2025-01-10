@@ -30,42 +30,7 @@ export default function Strengths() {
 
   return (
     <section className='min-h-[80vh] py-12 relative'>
-      {/* 巨大な背景テキスト */}
-      <GsapAnimatedElement variant="blurIn" duration={2} delay={0.2}>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <div 
-            className="text-[20vw] font-extrabold text-white/10 text-outline opacity-10"
-            style={{
-              textStroke: '3px rgba(255, 255, 255, 0.2)',
-              WebkitTextStroke: '3px rgba(255, 255, 255, 0.2)'
-            }}
-          >
-            STRENGTHS
-          </div>
-        </div>
-      </GsapAnimatedElement>
 
-      <div className="container mx-auto px-4">
-        {/* タイトルセクション */}
-  {/* タイトルセクション */}
-  <div className="text-center mb-16">
-    <div className="flex flex-col items-center gap-6">
-      <GsapAnimatedText 
-        text="Core"
-        variant="perspectiveTilt" 
-        duration={1.5}
-        scrollTrigger={true}
-        className="text-5xl md:text-7xl font-bold text-white"
-      />
-      <GsapAnimatedText 
-        text="Strengths"
-        variant="perspectiveTilt" 
-        duration={1.5}
-        scrollTrigger={true}
-        className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-500 to-pink-500"
-      />
-    </div>
-  </div>
       {/* メインコンテンツ */}
   {/* メインコンテンツ - サイドの余白を増やし、最大幅を調整 */}
   <div className="container mx-auto px-16 max-w-[1600px]"> {/* px-4から px-16 に変更 */}
@@ -105,7 +70,6 @@ export default function Strengths() {
     </div>
   </div>
 
-  </div>
     </section>
   );
 }
