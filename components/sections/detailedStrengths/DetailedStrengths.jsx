@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Parallax } from 'react-parallax';
+import Link from 'next/link'; 
 
 export default function DetailedStrengths() {
   const experiences = [
@@ -14,6 +15,7 @@ export default function DetailedStrengths() {
         "Structured analytical approach"
       ],
       action: "Learn more",
+      path: "/strengths/analytics",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368943/law_wputac.jpg"
     },
     {
@@ -24,6 +26,7 @@ export default function DetailedStrengths() {
         "Cross-cultural communication"
       ],
       action: "Learn more",
+            path: "/strengths/analytics",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416132/accenture_yvo1ec.jpg"
     },
     {
@@ -34,6 +37,7 @@ export default function DetailedStrengths() {
         "Responsive web applications"
       ],
       action: "Learn more",
+      path: "/strengths/analytics",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
     },
     {
@@ -44,6 +48,7 @@ export default function DetailedStrengths() {
         "Continuous improvement mindset"
       ],
       action: "Learn more",
+      path: "/strengths/analytics",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734419563/uparrow_s4upbg.jpg"
     }
   ];
@@ -75,9 +80,28 @@ export default function DetailedStrengths() {
                     </li>
                   ))}
                 </ul>
-                <button className="px-6 py-3 bg-accent rounded-full text-sm hover:bg-accent/80 transition-colors">
-                  {exp.action}
-                </button>
+                <Link href={exp.path}>
+  <motion.button
+    className="group px-6 py-3 bg-accent rounded-full text-sm hover:bg-accent/80 transition-all duration-300 flex items-center gap-2"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <span>{exp.action}</span>
+    <svg 
+      className="w-4 h-4 transform transition-transform group-hover:translate-x-1" 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor"
+    >
+      <path 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        strokeWidth={2} 
+        d="M14 5l7 7m0 0l-7 7m7-7H3" 
+      />
+    </svg>
+  </motion.button>
+</Link>
               </div>
 
               {/* イメージ（パララックス効果付き） */}
