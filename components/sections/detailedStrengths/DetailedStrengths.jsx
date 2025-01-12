@@ -26,7 +26,7 @@ export default function DetailedStrengths() {
         "Cross-cultural communication"
       ],
       action: "Learn more",
-            path: "/strengths/analytics",
+            path: "/strengths/bilingual",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416132/accenture_yvo1ec.jpg"
     },
     {
@@ -37,7 +37,7 @@ export default function DetailedStrengths() {
         "Responsive web applications"
       ],
       action: "Learn more",
-      path: "/strengths/analytics",
+      path: "/strengths/development",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
     },
     {
@@ -48,7 +48,7 @@ export default function DetailedStrengths() {
         "Continuous improvement mindset"
       ],
       action: "Learn more",
-      path: "/strengths/analytics",
+      path: "/strengths/growth",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734419563/uparrow_s4upbg.jpg"
     }
   ];

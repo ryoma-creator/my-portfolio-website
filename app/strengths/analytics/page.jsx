@@ -3,10 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import SectionWrapper from '@/components/sections/common/SectionWrapper';
-import IntroSection from '@/components/sections/analytics/IntroSection';
-import BackgroundSection from '@/components/sections/analytics/BackgroundSection';
-import ApproachSection from '@/components/sections/analytics/ApproachSection';
-import ResultsSection from '@/components/sections/analytics/ResultsSection';
+import IntroSection from '@/components/sections/layouts/strengths/IntroSection';
+import BackgroundSection from '@/components/sections/layouts/strengths/BackgroundSection';
+import ApproachSection from '@/components/sections/layouts/strengths/ApproachSection';
+import ResultsSection from '@/components/sections/layouts/strengths/ResultsSection';
+import { analyticsData } from '@/components/sections/data/strengths/analytics';
 
 export default function AnalyticsPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,19 +50,19 @@ export default function AnalyticsPage() {
 
       <main>
         <SectionWrapper variant="gradient">
-          <IntroSection />
+          <IntroSection {...analyticsData.intro} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient2">
-          <BackgroundSection />
+          <BackgroundSection {...analyticsData.background} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient">
-          <ApproachSection />
+          <ApproachSection {...analyticsData.approach} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient2">
-          <ResultsSection />
+          <ResultsSection {...analyticsData.results} />
         </SectionWrapper>
       </main>
 
