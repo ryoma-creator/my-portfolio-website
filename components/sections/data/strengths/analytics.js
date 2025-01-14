@@ -1,11 +1,17 @@
 export const analyticsData = {
+
+  header: {  // 別キーとして定義
+    topText: "ANALYTICAL STRENGTH",
+    title: "Analytics",
+    subtitle: "Transform complex data into clear solutions",
+    backgroundImage: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
+  },
     intro: {
       subtitle: "MY PHILOSOPHY",
       title: "Analytical Thinking in Modern Development",
       description: "In today's rapidly evolving tech landscape, many developers focus solely on implementation without proper analysis. Through rigorous legal philosophy training and practical experience, I've developed a systematic approach that transforms complex challenges into measurable solutions. This unique perspective allows me to bridge the gap between theoretical understanding and practical application.",
       videoSrc: "https://res.cloudinary.com/da3abynbu/video/upload/v1736499132/samples/dance-2.mp4"
     },
-    
     background: {
       mainTitle: "How Analytical Thinking Transforms Complex Challenges into Measurable Success",
       mainDescription: "Through intensive training in Japan's top-tier legal philosophy program, I developed a unique approach to problem-solving that combines rigorous data analysis with strategic thinking. This methodology has consistently produced remarkable results across various fields, from achieving \"impossible\" educational goals to optimizing business processes. My approach is founded on two years of intensive study, involving 10+ hours daily of analytical training, resulting in a systematic method that transforms complex challenges into measurable outcomes.",
@@ -80,31 +86,26 @@ export const analyticsData = {
       ],
       featuredItems: [
         {
-          title: "Systematic Development",
-          subtitle: "Logical Approach to Development",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
-        },
-        {
           title: "Problem Solving",
           subtitle: "Data-Driven Solutions",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg"
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg",
+          link: "/strengths/bilingual"
         },
         {
           title: "Growth Enhancement",
           subtitle: "Team-wide Development",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
-        },
-        {
-          title: "Process Optimization",
-          subtitle: "Efficient Development Process",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/cld-sample.jpg"
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg",
+          link: "/strengths/growth"
         },
         {
           title: "Innovation Focus",
           subtitle: "Revolutionary Solutions",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/smile.jpg"
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/smile.jpg",
+          link: "/strengths/development"
         }
       ],
       contactMessage: "Let's create better user experiences together by leveraging analytical thinking and logical approaches."
     }
   };
+
+  

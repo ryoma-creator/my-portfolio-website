@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ContactCTA from '../../common/ContactCTA';
+import DiscoverSection from '../../common/DiscoverSection';
 
 export default function ResultsSection({
   sectionTitle,
@@ -60,9 +61,9 @@ export default function ResultsSection({
         </div>
 
         {/* Featured Items (Trapezoid Layout) */}
-        <div className="my-32">
+        {/* <div className="my-32"> */}
           {/* Top Row - 2 items */}
-          <div className="flex justify-center gap-8 mb-16">
+          {/* <div className="flex justify-center gap-8 mb-16">
             {featuredItems.slice(0, 2).map((item, index) => (
               <motion.div
                 key={`top-${index}`}
@@ -84,10 +85,10 @@ export default function ResultsSection({
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
           {/* Bottom Row - 3 items */}
-          <div className="flex justify-center gap-8">
+          {/* <div className="flex justify-center gap-8">
             {featuredItems.slice(2).map((item, index) => (
               <motion.div
                 key={`bottom-${index}`}
@@ -109,8 +110,13 @@ export default function ResultsSection({
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
+
+        <div>
+          <DiscoverSection items={featuredItems} />
+        </div>         
+
 
         {/* Contact CTA */}
         <ContactCTA description={contactMessage} />

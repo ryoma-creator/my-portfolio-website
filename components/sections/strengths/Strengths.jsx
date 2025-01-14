@@ -33,17 +33,17 @@ export default function Strengths() {
 
       {/* メインコンテンツ */}
   {/* メインコンテンツ - サイドの余白を増やし、最大幅を調整 */}
-  <div className="container mx-auto px-16 max-w-[1600px]"> {/* px-4から px-16 に変更 */}
+  <div className="container mx-auto px-16"> {/* px-4から px-16 に変更 */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-24"> {/* gap-4から gap-8 に変更 */}
       {strengths.map((strength, index) => (
         <div 
           key={index}
-          className="group relative aspect-square overflow-hidden rounded-lg hover:z-10"
+          className="group relative w-72 h-72 aspect-square overflow-hidden rounded-lg hover:z-10"
         >
           <img 
             src={strength.image} 
             alt={strength.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-72 h-72 object-cover transition-transform duration-500 group-hover:scale-110"
           />
 {/* オーバーレイとテキストコンテナ */}
 <div className="absolute inset-0 bg-black/50 flex flex-col justify-end">
