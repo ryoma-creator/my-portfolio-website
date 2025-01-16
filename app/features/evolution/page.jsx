@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useState, useEffect } from 'react';
@@ -7,12 +8,9 @@ import IntroSection from '@/components/sections/layouts/strengths/IntroSection';
 import BackgroundSection from '@/components/sections/layouts/strengths/BackgroundSection';
 import ApproachSection from '@/components/sections/layouts/strengths/ApproachSection';
 import ResultsSection from '@/components/sections/layouts/strengths/ResultsSection';
-import { analyticsData } from '@/components/sections/data/strengths/analytics';
+import { evolutionData } from '@/components/sections/data/features/evolution';
 
-
-import PageHeader from '@/components/sections/common/PageHeader';
-
-export default function AnalyticsPage() {
+export default function EvolutionPage() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,7 +24,7 @@ export default function AnalyticsPage() {
 
   return (
     <>
-      {/* 固定ナビゲーション */}
+      {/* バックナビゲーション */}
       <nav className={`fixed top-6 left-6 z-50 transition-all duration-300 ${
         isScrolled ? 'opacity-100' : 'opacity-60 hover:opacity-100'
       }`}>
@@ -52,29 +50,24 @@ export default function AnalyticsPage() {
       </nav>
 
       <main>
-
-       <SectionWrapper variant="gradient2">
-       <PageHeader {...analyticsData.header} />
-        </SectionWrapper>
-
         <SectionWrapper variant="gradient">
-        <IntroSection {...analyticsData.intro} />
+          <IntroSection {...evolutionData.intro} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient2">
-          <BackgroundSection {...analyticsData.background} />
+          <BackgroundSection {...evolutionData.background} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient">
-          <ApproachSection {...analyticsData.approach} />
+          <ApproachSection {...evolutionData.approach} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient2">
-          <ResultsSection {...analyticsData.results} />
+          <ResultsSection {...evolutionData.results} />
         </SectionWrapper>
       </main>
 
-      {/* フローティングボタン（モバイル向け） */}
+      {/* モバイル用トップスクロールボタン */}
       <button 
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-6 right-6 p-4 bg-accent rounded-full shadow-lg hover:bg-accent/80 transition-all md:hidden"

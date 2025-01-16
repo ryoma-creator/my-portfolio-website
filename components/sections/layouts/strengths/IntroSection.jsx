@@ -6,7 +6,7 @@ export default function IntroSection({ subtitle, title, description, videoSrc })
   return (
     <>
       {/* Small subtitle */}
-      <div className="text-center mb-4">
+      <div className="text-center mb-4 pt-24">
         <span className="text-sm uppercase tracking-wider text-white/60">
           {subtitle}
         </span>

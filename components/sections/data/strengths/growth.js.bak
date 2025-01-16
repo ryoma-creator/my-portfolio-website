@@ -67,30 +67,6 @@ export const growthData = {
           description: "Completed multiple projects applying learned concepts, demonstrating practical understanding and growth.",
           image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736499137/samples/project-growth.jpg"
         }
-      ],
-      discover: {
-        title: "Explore Other Strengths",
-        items: [
-          {
-            title: "Development",
-            subtitle: "Modern Web Technologies",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coding.jpg",
-            link: "/strengths/development"
-          },
-          {
-            title: "Bilingual",
-            subtitle: "Cross-Cultural Communication",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/samples/global.jpg",
-            link: "/strengths/bilingual"
-          },
-          {
-            title: "Growth",
-            subtitle: "Continuous Learning & Adaptation",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/growth.jpg",
-            link: "/strengths/growth"
-          }
       ]
-    },
-      contactMessage: "Let's create better user experiences together by leveraging analytical thinking and logical approaches."
     }
   };

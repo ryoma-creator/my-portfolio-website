@@ -1,8 +1,7 @@
 // components/sections/Strengths.jsx
 'use client'
 
-import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
-import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
+import Link from 'next/link';
 
 export default function Strengths() {
   const strengths = [
@@ -10,66 +9,60 @@ export default function Strengths() {
       title: "Development",
       description: "Modern web development expertise",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/IPC_gtotjt.webp",
+      link: "/strengths/development",
     },
     {
       title: "Analytics",
       description: "Logical thinking & data-driven solutions",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368943/law_wputac.jpg",
+      link: "/strengths/analytics",
     },
     {
       title: "Bilingual",
       description: "Native Japanese + Business English",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416132/accenture_yvo1ec.jpg",
+      link: "/strengths/bilingual",
     },
     {
       title: "Growth",
       description: "Continuous learning & adaptation",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/IPC_gtotjt.webp",
+      link: "/strengths/growth",
     }
   ];
 
   return (
     <section className='min-h-[80vh] py-12 relative'>
-
-      {/* メインコンテンツ */}
-  {/* メインコンテンツ - サイドの余白を増やし、最大幅を調整 */}
-  <div className="container mx-auto px-16"> {/* px-4から px-16 に変更 */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-24"> {/* gap-4から gap-8 に変更 */}
-      {strengths.map((strength, index) => (
-        <div 
-          key={index}
-          className="group relative w-72 h-72 aspect-square overflow-hidden rounded-lg hover:z-10"
-        >
-          <img 
-            src={strength.image} 
-            alt={strength.title}
-            className="w-72 h-72 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-{/* オーバーレイとテキストコンテナ */}
-<div className="absolute inset-0 bg-black/50 flex flex-col justify-end">
-  {/* テキストコンテナ - 下部に配置 */}
-  <div className="absolute bottom-0 left-0 right-0 pb-6"> {/* 下部固定 */}
-    {/* タイトル */}
-    <h3 className="text-2xl font-bold text-white text-center mb-2">
-      {strength.title}
-    </h3>
-    
-    {/* 説明文 - 下から現れる */}
-    <div className="overflow-hidden">
-      <p className="text-white/80 text-base px-6 text-center
-        transform translate-y-full
-        transition-all duration-300 ease-in-out
-        group-hover:translate-y-0">
-        {strength.description}
-      </p>
-    </div>
-  </div>
-</div>
+      <div className="container mx-auto px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-24">
+          {strengths.map((strength, index) => (
+            <Link href={strength.link} key={index}>
+              <div className="group relative w-72 h-72 aspect-square overflow-hidden rounded-lg hover:z-10">
+                <img
+                  src={strength.image}
+                  alt={strength.title}
+                  className="w-72 h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end">
+                  <div className="absolute bottom-0 left-0 right-0 pb-6">
+                    <h3 className="text-2xl font-bold text-white text-center mb-2">
+                      {strength.title}
+                    </h3>
+                    <div className="overflow-hidden">
+                      <p className="text-white/80 text-base px-6 text-center
+                        transform translate-y-full
+                        transition-all duration-300 ease-in-out
+                        group-hover:translate-y-0">
+                        {strength.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-
+      </div>
     </section>
   );
 }

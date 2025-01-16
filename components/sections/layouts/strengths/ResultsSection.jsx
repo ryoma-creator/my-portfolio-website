@@ -5,13 +5,16 @@ import { motion } from 'framer-motion';
 import ContactCTA from '../../common/ContactCTA';
 import DiscoverSection from '../../common/DiscoverSection';
 
+
 export default function ResultsSection({
   sectionTitle,
   sectionSubtitle,
   mainResults,
-  featuredItems,
-  contactMessage
+  discover, 
+  contactMessage,
 }) {
+  console.log('ResultsSection props:', { discover });
+
   return (
     <div className="py-24 bg-black">
       <div className="container mx-auto px-4">
@@ -113,9 +116,12 @@ export default function ResultsSection({
           </div> */}
         {/* </div> */}
 
-        <div>
-          <DiscoverSection items={featuredItems} />
-        </div>         
+        {discover?.title && discover?.items && (
+        <DiscoverSection 
+          title={discover.title}
+          items={discover.items} 
+        />
+      )}
 
 
         {/* Contact CTA */}

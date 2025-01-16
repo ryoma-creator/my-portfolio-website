@@ -84,26 +84,29 @@ export const analyticsData = {
           image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
         }
       ],
-      featuredItems: [
-        {
-          title: "Problem Solving",
-          subtitle: "Data-Driven Solutions",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg",
-          link: "/strengths/bilingual"
-        },
-        {
-          title: "Growth Enhancement",
-          subtitle: "Team-wide Development",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg",
-          link: "/strengths/growth"
-        },
-        {
-          title: "Innovation Focus",
-          subtitle: "Revolutionary Solutions",
-          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/smile.jpg",
-          link: "/strengths/development"
-        }
-      ],
+      discover: {
+        title: "Explore Other Strengths",
+        items: [
+          {
+            title: "Development",
+            subtitle: "Modern Web Technologies",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coding.jpg",
+            link: "/strengths/development"
+          },
+          {
+            title: "Bilingual",
+            subtitle: "Cross-Cultural Communication",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/samples/global.jpg",
+            link: "/strengths/bilingual"
+          },
+          {
+            title: "Growth",
+            subtitle: "Continuous Learning & Adaptation",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/growth.jpg",
+            link: "/strengths/growth"
+          }
+      ]
+    },
       contactMessage: "Let's create better user experiences together by leveraging analytical thinking and logical approaches."
     }
   };

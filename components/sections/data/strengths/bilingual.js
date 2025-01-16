@@ -1,4 +1,10 @@
 export const bilingualData = {
+  header: {
+    topText: "GLOBAL COMMUNICATION",
+    title: "Bilingual",
+    subtitle: "Bridging cultures through effective communication",
+    backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736499137/samples/global.jpg"
+  },
     intro: {
       subtitle: "MY PHILOSOPHY",
       title: "Beyond Language: Cultural Bridge in Development",
@@ -78,33 +84,29 @@ export const bilingualData = {
           image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659341/girl-with-long-hair-drinks-coffee-table-cafe-makes-some-notes_grzbom.jpg"
         } 
       ],
-      featuredItems: [
-        {
-          title: "Cross-Cultural Excellence",
-          subtitle: "Building Bridges Across Teams", 
-          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659724/young-beautiful-stylish-woman-resort-hotel-room-sitting-table-wearing-trendy-dress-safari-style-straw-hat-smiling-happy-summer-vacation-bohemian-outfit-beach-bag-sunglasses-legs-sitting-alone-one-female-elegant_hstech.jpg"
-        },
-        {
-          title: "Global Leadership",
-          subtitle: "Managing Diverse Teams",
-          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659597/people-library-reading-learning-from-books-lg_bcpos3.jpg" 
-        },
-        {
-          title: "Cultural Intelligence", 
-          subtitle: "Beyond Language Skills",
-          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659483/young-people-using-african-american-sustainable-mobility_vsuvv4.jpg"
-        },
-        {
-          title: "Process Innovation",
-          subtitle: "Cross-Cultural Solutions",
-          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659343/healthy-yogurt-dessert-with-granola-fresh-cut-kiwi-tall-glasses_ohvqil.jpg"
-        },
-        {  
-          title: "Knowledge Transfer",
-          subtitle: "Global Best Practices",
-          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659341/girl-with-long-hair-drinks-coffee-table-cafe-makes-some-notes_grzbom.jpg"
-        }
-      ],
-      contactMessage: "Let's create innovative solutions that transcend cultural boundaries and enhance global team dynamics."
-    }
-  };
+      discover: {
+        title: "Explore Other Strengths",
+        items: [
+          {
+            title: "Development",
+            subtitle: "Modern Web Technologies",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coding.jpg",
+            link: "/strengths/development"
+          },
+          {
+            title: "Bilingual",
+            subtitle: "Cross-Cultural Communication",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/samples/global.jpg",
+            link: "/strengths/bilingual"
+          },
+          {
+            title: "Growth",
+            subtitle: "Continuous Learning & Adaptation",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/growth.jpg",
+            link: "/strengths/growth"
+          }
+        ]
+},
+  contactMessage: "Let's create better user experiences together by leveraging analytical thinking and logical approaches."
+}
+};

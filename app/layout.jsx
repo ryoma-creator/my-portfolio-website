@@ -1,5 +1,7 @@
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from '@/components/contexts/ThemeContext';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 // components
 import Header from '@/components/Header';
@@ -10,7 +12,7 @@ const jetBrains_Mono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
   variable: '--font-jetBrainsMono'
- });
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,18 +23,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={jetBrains_Mono.variable}>
-      <Header/>
-      {/* <StairTransition/> */}
-      {/* <PageTransition> */}
-        {children}
-      {/* </PageTransition> */}
+        <ThemeProvider>
+          <Header/>
+          {/* <StairTransition/> */}
+          {/* <PageTransition> */}
+            {children}
+          {/* </PageTransition> */}
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );
 }
-
-// Using var(--font-jetBrains_Mono)
-// Why Use var():
-// var(--font-jetBrains_Mono) retrieves the value of the custom property 
-// --font-jetBrains_Mono.
-// It allows you to define the font in one place and use it throughout your CSS.

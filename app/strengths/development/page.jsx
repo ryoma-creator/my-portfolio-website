@@ -1,22 +1,30 @@
+// app/strengths/development/page.jsx
 'use client'
 
 import SectionWrapper from '@/components/sections/common/SectionWrapper';
-import SectionHeader from '@/components/sections/common/SectionHeader';
+import IntroSection from '@/components/sections/layouts/strengths/IntroSection';
+import BackgroundSection from '@/components/sections/layouts/strengths/BackgroundSection';
+import ApproachSection from '@/components/sections/layouts/strengths/ApproachSection';
+import ResultsSection from '@/components/sections/layouts/strengths/ResultsSection';
+import { developmentData } from '@/components/sections/data/strengths/development';
 
-export default function Page() {
+export default function DevelopmentPage() {
   return (
     <main>
-      <SectionWrapper variant="gradient" className="py-24">
-        <SectionHeader 
-          backgroundText="TITLE"
-          topText="Page"
-          bottomText="Title"
-        />
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-responsive-lg mb-8">Content</h1>
-          </div>
-        </div>
+      <SectionWrapper variant="gradient">
+        <IntroSection {...developmentData.intro} />
+      </SectionWrapper>
+
+      <SectionWrapper variant="gradient2">
+        <BackgroundSection {...developmentData.background} />
+      </SectionWrapper>
+
+      <SectionWrapper variant="gradient">
+        <ApproachSection {...developmentData.approach} />
+      </SectionWrapper>
+
+      <SectionWrapper variant="gradient2">
+        <ResultsSection {...developmentData.results} />
       </SectionWrapper>
     </main>
   );

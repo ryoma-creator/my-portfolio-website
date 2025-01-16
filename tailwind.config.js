@@ -28,6 +28,11 @@ module.exports = {
 			DEFAULT: '#00ff99',
 			hover: '#00e187',
 		  },
+			// 新しいミニマルテーマ用の色
+			minimal: {
+				primary: '#F8F9FA',
+				accent: '#E9ECEF'
+			}
 		},
 		fontFamily: {
 		  primary: ['var(--font-jetBrainsMono)'],
