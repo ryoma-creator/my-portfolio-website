@@ -6,7 +6,7 @@ export default function ApproachSection({ sectionTitle, approaches }) {
   return (
     <div className="py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-4xl font-light mb-20">{sectionTitle}</h2>
+        <h2 className="text-center text-4xl font-light mb-20 text-gray-900">{sectionTitle}</h2>
         
         {/* 上段2つ */}
         <div className="flex justify-center gap-8 mb-16">
@@ -27,13 +27,13 @@ export default function ApproachSection({ sectionTitle, approaches }) {
               </div>
               
               <div>
-                <h3 className="text-2xl font-light mb-2">
+                <h3 className="text-2xl font-light mb-2 text-gray-900">
                   {approach.title}
                 </h3>
-                <p className="text-lg text-white/60 mb-4">
+                <p className="text-lg text-gray-500 mb-4">
                   {approach.subtitle}
                 </p>
-                <p className="text-base text-white/80 leading-relaxed">
+                <p className="text-base text-gray-600 leading-relaxed">
                   {approach.description}
                 </p>
               </div>
@@ -60,13 +60,13 @@ export default function ApproachSection({ sectionTitle, approaches }) {
               </div>
               
               <div>
-                <h3 className="text-2xl font-light mb-2">
+                <h3 className="text-2xl font-light mb-2 text-gray-900">
                   {approach.title}
                 </h3>
-                <p className="text-lg text-white/60 mb-4">
+                <p className="text-lg text-gray-500 mb-4">
                   {approach.subtitle}
                 </p>
-                <p className="text-base text-white/80 leading-relaxed">
+                <p className="text-base text-gray-600 leading-relaxed">
                   {approach.description}
                 </p>
               </div>

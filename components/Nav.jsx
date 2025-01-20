@@ -32,37 +32,6 @@ const Nav = () => {
                     </Link>
                 );
             })}
-            <style jsx global>{`
-                .nav-gradient-text {
-                    background: linear-gradient(
-                        to right,
-                        #00ff99,
-                        #00ffcc,
-                        #00ffdd,
-                        #00ffcc,
-                        #00ff99
-                    );
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    color: transparent;
-                    background-size: 200% auto;
-                }
-
-                .nav-gradient-line {
-                    background-size: 200% auto;
-                    animation: gradientMove 3s linear infinite;
-                }
-
-                .group:hover .nav-gradient-text {
-                    animation: gradientMove 3s linear infinite;
-                }
-
-                @keyframes gradientMove {
-                    0% { background-position: 0% 50%; }
-                    50% { background-position: 100% 50%; }
-                    100% { background-position: 0% 50%; }
-                }
-            `}</style>
         </nav>
     );
 };

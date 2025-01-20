@@ -94,10 +94,10 @@ export const bilingualData = {
             link: "/strengths/development"
           },
           {
-            title: "Bilingual",
-            subtitle: "Cross-Cultural Communication",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/samples/global.jpg",
-            link: "/strengths/bilingual"
+            title: "Analytics",
+            subtitle: "Data-Driven Solutions",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
+            link: "/strengths/analytics"
           },
           {
             title: "Growth",

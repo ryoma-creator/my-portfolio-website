@@ -84,11 +84,11 @@ export const growthData = {
             link: "/strengths/bilingual"
           },
           {
-            title: "Growth",
-            subtitle: "Continuous Learning & Adaptation",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/growth.jpg",
-            link: "/strengths/growth"
-          }
+            title: "Analytics",
+            subtitle: "Data-Driven Solutions",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
+            link: "/strengths/analytics"
+          },
       ]
     },
       contactMessage: "Let's create better user experiences together by leveraging analytical thinking and logical approaches."

@@ -1,6 +1,5 @@
 'use client'
 
-import { useTheme } from '@/components/contexts/ThemeContext';
 import Hero from "@/components/sections/hero/Hero";
 import Strengths from '@/components/sections/strengths/Strengths';
 import FeaturedSections from '@/components/sections/featuredSections/FeaturedSections';
@@ -11,46 +10,46 @@ import SectionWrapper from '@/components/sections/common/SectionWrapper';
 import { achievements } from '@/components/features/achievements/data/achievements';
 import AutoCarousel from '@/components/features/achievements/carousel/AutoCarousel';
 import Portfolio from '@/components/sections/portfolio/Portfolio';
-import ThemeToggle from '@/components/ui/ThemeToggle';
+import Concept from '@/components/sections/layouts/common/concept/Concept';
 
 export default function HomePage() {
-  const { theme } = useTheme();
-
   return (
-    <main className={theme === 'modern' ? 'bg-black text-white' : 'bg-white text-black'}>
-      <SectionWrapper variant="gradient" className="py-12">
+    <main>
+      <SectionWrapper variant="gradient" >
         <Hero />
       </SectionWrapper>
       
-      <SectionWrapper variant="gradient2" className="py-12">
+      <SectionWrapper variant="light" >
         <Strengths />
       </SectionWrapper>
+
+      <SectionWrapper variant="light" >
+        <Concept />
+      </SectionWrapper>
       
-      <SectionWrapper variant="gradient" className="py-12">
+      <SectionWrapper variant="light" >
         <FeaturedSections />
       </SectionWrapper>
       
-      <SectionWrapper variant="gradient2" className="py-12">
+      <SectionWrapper variant="dark" >
         <Portfolio />
       </SectionWrapper>
       
-      <SectionWrapper variant="gradient" className="py-12">
+      <SectionWrapper variant="dark" >
         <AutoCarousel achievements={achievements} />
       </SectionWrapper>
       
-      <SectionWrapper variant="gradient2" className="py-12">
+      <SectionWrapper variant="dark" >
         <Contact />
       </SectionWrapper>
       
-      <SectionWrapper variant="gradient" className="py-12">
+      <SectionWrapper variant="dark" >
         <Storytelling />
       </SectionWrapper>
       
-      <SectionWrapper variant="gradient2" className="py-12">
+      <SectionWrapper variant="dark" >
         <Footer />
       </SectionWrapper>
-
-      <ThemeToggle />
     </main>
   );
 }

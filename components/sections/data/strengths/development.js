@@ -1,73 +1,138 @@
 export const developmentData = {
     header: {
-      topText: "MODERN DEVELOPMENT",
-      title: "Development Journey",
-      subtitle: "From Internet Basics to Advanced Frontend Architecture",
-      backgroundImage: "your-image-url"
+      topText: "DEVELOPMENT EXPERTISE",
+      title: "Development",
+      subtitle: "Creating modern web experiences with cutting-edge technologies",
+      backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
     },
-    
     intro: {
-      subtitle: "MY JOURNEY",
-      title: "Rapid Evolution in Frontend Development",
-      description: "Starting from the fundamentals of how the internet works in March 2024, I've rapidly evolved into creating sophisticated web applications. Through the globally respected Odin Project curriculum, official React documentation, and continuous project iterations, I've built a comprehensive understanding of modern web development in just 10 months.",
-      videoSrc: "your-video-url"
+      subtitle: "MY APPROACH",
+      title: "Modern Frontend Development",
+      description: "In today's rapidly evolving tech landscape, I focus on creating efficient, scalable, and user-centric web applications. Starting from scratch in 2024, I've developed a comprehensive understanding of modern web development through systematic learning and practical application.",
+      videoSrc: "https://res.cloudinary.com/da3abynbu/video/upload/v1736499132/samples/dance-2.mp4"
     },
   
     background: {
-      mainTitle: "Systematic Learning Approach",
-      mainDescription: "My development journey began with The Odin Project, chosen for its proven track record and community recognition. This foundation provided me with both theoretical knowledge and practical skills, setting the stage for advanced frontend development.",
+      mainTitle: "Technical Excellence Through Continuous Learning",
+      mainDescription: "My development journey combines structured learning with hands-on experience. From mastering core web technologies to implementing complex frontend architectures, each step has been carefully planned and executed. This systematic approach has led to the successful completion of multiple projects, each incorporating increasingly sophisticated technologies and methodologies.",
       
-      columnTitle: "Three-Phase Evolution",
-      columnDescription: "1. Mastering fundamentals through The Odin Project (3 months)\n2. Deep dive into React through official documentation\n3. Continuous portfolio enhancement with five major iterations",
+      columnTitle: "Core Technical Skills",
+      columnDescription: "Focusing on modern frontend technologies while maintaining a full-stack perspective. Every project is an opportunity to deepen technical knowledge and improve implementation quality.",
       
-      imageSrc: "your-image-url",
-      imageAlt: "Development Journey Visualization",
+      imageSrc: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg",
+      imageAlt: "Development Process",
       
-      impactText: "Discover how this systematic approach translates into real-world applications"
+      impactText: "Explore how technical expertise transforms into real-world applications"
     },
   
     approach: {
-      sectionTitle: "Technical Focus Areas",
+      sectionTitle: "Technical Expertise",
       approaches: [
         {
-          title: "Modern Frontend Stack",
-          subtitle: "React & Next.js",
-          description: "Evolved from basic HTML/CSS to mastering React and Next.js, focusing on creating responsive and performant web applications.",
-          image: "your-frontend-image"
+          title: "Frontend Frameworks",
+          subtitle: "React & Next.js Mastery",
+          description: "Specialized in React.js and Next.js, creating responsive and performant web applications. Implemented modern features including server-side rendering and optimized routing.",
+          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
         },
         {
-          title: "UI/UX Excellence",
-          subtitle: "Animation & Interaction",
-          description: "Implemented sophisticated animations and interactions using Framer Motion and GSAP, constantly refining user experience through multiple iterations.",
-          image: "your-uiux-image"
+          title: "UI Development",
+          subtitle: "Modern Styling Solutions",
+          description: "Expert in Tailwind CSS and modern CSS practices, creating responsive and maintainable user interfaces with a focus on performance and aesthetics.",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
         },
         {
-          title: "Continuous Improvement",
-          subtitle: "Iterative Development",
-          description: "Demonstrated commitment to excellence through five major portfolio iterations, each addressing specific enhancement areas and incorporating new technologies.",
-          image: "your-iteration-image"
+          title: "Animation & Interaction",
+          subtitle: "Enhanced User Experience",
+          description: "Proficient in Framer Motion and GSAP, creating smooth animations and interactive elements that enhance user engagement while maintaining performance.",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg"
+        },
+        {
+          title: "Backend Integration",
+          subtitle: "Full Stack Capability",
+          description: "Experience with Node.js, Express, and API integration, ensuring seamless data flow and robust application architecture.",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
+        },
+        {
+          title: "Development Workflow",
+          subtitle: "Professional Practices",
+          description: "Proficient in Git version control, deployment strategies, and modern development workflows, ensuring efficient and maintainable code bases.",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/cld-sample.jpg"
         }
       ]
     },
   
     results: {
-      sectionTitle: "Key Achievements",
-      sectionSubtitle: "From Concept to Implementation",
+      sectionTitle: "DEVELOPMENT IMPACT",
+      sectionSubtitle: "From Concept to Production",
       mainResults: [
         {
-          category: "RAPID GROWTH",
-          title: "Zero to Frontend Developer",
-          description: "Progressed from understanding basic internet concepts to implementing complex frontend applications in 10 months through systematic learning and practical projects.",
-          image: "your-growth-image"
+          category: "PORTFOLIO PROJECTS",
+          title: "Real-World Applications",
+          description: "Successfully developed and deployed multiple web applications, from CRUD operations to complex e-commerce interfaces, demonstrating practical implementation of modern web technologies.",
+          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
         },
         {
-          category: "PORTFOLIO EVOLUTION",
-          title: "Five Major Iterations",
-          description: "Continuously evolved portfolio site through five significant versions, each incorporating new technologies and improved user experience based on modern web standards.",
-          image: "your-portfolio-image"
+          category: "TECHNICAL GROWTH",
+          title: "Rapid Skill Acquisition",
+          description: "Mastered modern frontend technologies in less than a year through systematic learning and practical application, demonstrating strong learning ability and technical adaptability.",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
+        },
+        {
+          category: "FUTURE FOCUS",
+          title: "Continuous Innovation",
+          description: "Committed to staying current with emerging technologies and best practices, ensuring the delivery of modern and efficient web solutions.",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
         }
-      ]
+      ],
+      discover: {
+        title: "Explore Other Strengths",
+        items: [
+          {
+            title: "Analytics",
+            subtitle: "Data-Driven Solutions",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
+            link: "/strengths/analytics"
+          },
+          {
+            title: "Bilingual",
+            subtitle: "Cross-Cultural Communication",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg",
+            link: "/strengths/bilingual"
+          },
+          {
+            title: "Growth",
+            subtitle: "Continuous Learning",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg",
+            link: "/strengths/growth"
+          }
+        ]
+      },
+      contactMessage: "Let's create exceptional web experiences together using modern technologies and best practices."
     },
-    
-    contactMessage: "Let's explore how we can create exceptional web experiences together through continuous learning and innovation."
-}
+    skills: {// developmentDataに追加
+        title: "Technical Stack",
+        description: "Core technologies and tools I work with",
+        categories: [
+          {
+            name: "Frontend",
+            items: ["React.js", "Next.js", "JavaScript (ES6+)", "HTML5/CSS3"]
+          },
+          {
+            name: "Styling",
+            items: ["Tailwind CSS", "CSS Modules", "Responsive Design"]
+          },
+          {
+            name: "Animation",
+            items: ["Framer Motion", "GSAP", "CSS Animations"]
+          },
+          {
+            name: "Backend",
+            items: ["Node.js", "Express", "RESTful APIs"]
+          },
+          {
+            name: "Tools",
+            items: ["Git", "VS Code", "Chrome DevTools"]
+          }
+        ]
+      }
+  };

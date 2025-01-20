@@ -32,13 +32,61 @@
   
 }
 
+@layer components {
+  .accent-gradient {
+    @apply bg-gradient-to-r from-[#CCF8FF] to-[#EF96C5] animate-gradient-x;
+  }
+
+  .gradient-accent {
+    @apply relative overflow-hidden;
+    background: linear-gradient(
+      to right,
+      rgba(204, 248, 255, 0.8),
+      rgba(239, 150, 197, 0.8)
+    );
+    backdrop-filter: blur(5px);
+  }
+
+  .glassmorphism {
+    @apply backdrop-blur-md bg-white/20 border border-white/20;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  }
+}
+
+@layer utilities {
+  @keyframes gradient-x {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes gradient-xy {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .animate-gradient-x {
+    background-size: 200% auto;
+    animation: gradient-x 3s linear infinite;
+  }
+
+  .animate-gradient-xy {
+    background-size: 200% 200%;
+    animation: gradient-xy 15s ease infinite;
+  }
+}
+
 
 .text-outline {
   -webkit-text-stroke: 1px white;
 }
 
-.text-outline-hover {
+/* .text-outline-hover {
   -webkit-text-stroke: 1px #00ff99;
+} */
+
+.text-outline-hover {
+  -webkit-text-stroke: 1px  #1a1a1a/50;
 }
 
 /* globals.css または該当するスタイルファイル */
@@ -61,6 +109,27 @@ html {
 /* スクロールのオフセットを調整（必要に応じて） */
 section {
   scroll-margin-top: 80px;
+}
+
+/* グラデーションのエフェクト用 */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+
+/* globals.css に追加 */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-x {
+  background-size: 200% auto;
+  animation: gradient 3s linear infinite;
 }
 
 /* body{

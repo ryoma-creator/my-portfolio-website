@@ -7,17 +7,17 @@ export default function IntroSection({ subtitle, title, description, videoSrc })
     <>
       {/* Small subtitle */}
       <div className="text-center mb-4 pt-24">
-        <span className="text-sm uppercase tracking-wider text-white/60">
+        <span className="text-sm uppercase tracking-wider text-gray-500">
           {subtitle}
         </span>
       </div>
 
       {/* Main title and description */}
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-light mb-8">
+        <h1 className="text-4xl md:text-5xl font-light mb-8 text-gray-900">
           {title}
         </h1>
-        <p className="text-lg text-white/80 leading-relaxed">
+        <p className="text-lg text-gray-600 leading-relaxed">
           {description}
         </p>
       </div>

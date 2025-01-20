@@ -54,7 +54,7 @@ export default function EvolutionPage() {
           <IntroSection {...evolutionData.intro} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">  {/* gradient2 から light に変更 */}
           <BackgroundSection {...evolutionData.background} />
         </SectionWrapper>
 
@@ -62,10 +62,10 @@ export default function EvolutionPage() {
           <ApproachSection {...evolutionData.approach} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">  {/* gradient2 から light に変更 */}
           <ResultsSection {...evolutionData.results} />
         </SectionWrapper>
-      </main>
+</main>
 
       {/* モバイル用トップスクロールボタン */}
       <button 

@@ -9,7 +9,7 @@ export const evolutionData = {
     intro: {
       subtitle: "MY JOURNEY",
       title: "Dedication to Continuous Improvement",
-      description: "継続的に根気強く、時に燃え尽きるくらい進化させ続けたポートフォリオ制作。1日10時間以上の時間を2024年8月から現在まで費やし、コーディングだけでなく、UI/UX、アニメーション、最新トレンドの研究など、多角的なアプローチで改善を重ねてきました。",
+      description: "継続的に根気強く、時に燃え尽きるくらい進化させ続けたポートフォリオ制作。1日10時間以上の時間を2024年2月から現在まで費やし、コーディングだけでなく、UI/UX、アニメーション、最新トレンドの研究など、多角的なアプローチで改善を重ねてきました。",
       videoSrc: "https://res.cloudinary.com/da3abynbu/video/upload/v1736499132/samples/dance-2.mp4"
     },
     background: {
@@ -79,6 +79,29 @@ export const evolutionData = {
           image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
         }
       ],
+      discover: {
+        title: "Explore Other Strengths",
+        items: [
+          {
+            title: "Development",
+            subtitle: "Modern Web Technologies",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coding.jpg",
+            link: "/strengths/development"
+          },
+          {
+            title: "Analytics",
+            subtitle: "Data-Driven Solutions",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
+            link: "/strengths/analytics"
+          },
+          {
+            title: "Bilingual",
+            subtitle: "Cross-Cultural Communication",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/samples/global.jpg",
+            link: "/strengths/bilingual"
+          },
+        ]
+},
       contactMessage: "常に進化し続けるポートフォリオサイト。さらなる改善と成長への旅は続きます。"
     }
   };

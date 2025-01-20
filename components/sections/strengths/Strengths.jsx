@@ -1,4 +1,3 @@
-// components/sections/Strengths.jsx
 'use client'
 
 import Link from 'next/link';
@@ -38,18 +37,23 @@ export default function Strengths() {
           {strengths.map((strength, index) => (
             <Link href={strength.link} key={index}>
               <div className="group relative w-72 h-72 aspect-square overflow-hidden rounded-lg hover:z-10">
+                {/* 画像 */}
                 <img
                   src={strength.image}
                   alt={strength.title}
                   className="w-72 h-72 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end">
-                  <div className="absolute bottom-0 left-0 right-0 pb-6">
+                {/* グラデーションオーバーレイ */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#CCF8FF]/40 via-[#EF96C5]/40 to-[#CCF8FF]/40 
+                  mix-blend-overlay group-hover:opacity-70 transition-opacity duration-300" />
+                {/* コンテンツオーバーレイ */}
+                <div className="absolute inset-0 flex flex-col justify-end">
+                  <div className="absolute bottom-0 left-0 right-0 pb-6 backdrop-blur-sm bg-gradient-to-t from-black/30 to-transparent">
                     <h3 className="text-2xl font-bold text-white text-center mb-2">
                       {strength.title}
                     </h3>
                     <div className="overflow-hidden">
-                      <p className="text-white/80 text-base px-6 text-center
+                      <p className="text-white/90 text-base px-6 text-center
                         transform translate-y-full
                         transition-all duration-300 ease-in-out
                         group-hover:translate-y-0">

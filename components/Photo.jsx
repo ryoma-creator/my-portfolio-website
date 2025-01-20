@@ -25,7 +25,7 @@ const Photo = () => {
             className='w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]
              mix-blend-lighten absolute'>
                 <Image 
-                    src="https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368954/pexels-lum3n-44775-406014_obbkzk.jpg"
+                    src=""
                     priority
                     quality={75}
                     fill
@@ -55,7 +55,7 @@ const Photo = () => {
                     cx='253'
                     cy='253'
                     r='250'
-                    stroke='#00ff99'
+                    stroke='url(#gradientStroke)'  // グラデーションを適用
                     strokeWidth='4'
                     strokeLinecap='round'
                     strokeLinejoin='round'

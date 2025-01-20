@@ -4,29 +4,30 @@ import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Parallax } from 'react-parallax';
 import Link from 'next/link'; 
+import { Button } from '@/components/ui/button';
 
 export default function FeaturedSections() {
   const sections = [
     {
-      category: "TECHNICAL EVOLUTION",
+      category: "1 YEAR OF DEDICATION",  // 1年間の取り組みを強調
       title: "Portfolio Journey",
       points: [
-        "5-phase development process",
-        "Modern UI/UX implementation"
+        "From zero to 5 major iterations",  // 進化の過程を明確に
+        "Growth through continuous improvement"
       ],
-      action: "View Evolution",
-      path: "/features/evolution",  // パスを/features/evolutionに修正
+      action: "See Evolution",
+      path: "/features/evolution",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
     },
     {
-      category: "DEVELOPMENT IMPACT",
-      title: "Core Projects", 
+      category: "SELF-TAUGHT DEVELOPER 2024",  // 独学の期間を明示
+      title: "Learning & Growth Journey", 
       points: [
-        "From CRUD to E-commerce",
-        "Real-world problem solving"
+        "Systematic learning from scratch",  // ゼロからの学習を強調
+        "Optimized learning methods"
       ],
-      action: "View Projects",
-      path: "/features/projects",  // こちらも/features/projectsに修正
+      action: "Explore Journey",
+      path: "/features/learning-journey",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368943/law_wputac.jpg"
     }
   ];
@@ -59,27 +60,30 @@ export default function FeaturedSections() {
                  ))}
                </ul>
                <Link href={section.path}>
-                 <motion.button
-                   className="mt-4 group px-6 py-3 bg-accent rounded-full text-sm hover:bg-accent/80 transition-all duration-300 flex items-center gap-2"
-                   whileHover={{ scale: 1.05 }}
-                   whileTap={{ scale: 0.95 }}
-                 >
-                   <span>{section.action}</span>
-                   <svg 
-                     className="w-4 h-4 transform transition-transform group-hover:translate-x-1" 
-                     fill="none" 
-                     viewBox="0 0 24 24" 
-                     stroke="currentColor"
-                   >
-                     <path 
-                       strokeLinecap="round" 
-                       strokeLinejoin="round" 
-                       strokeWidth={2} 
-                       d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                     />
-                   </svg>
-                 </motion.button>
-               </Link>
+          <Button
+            variant='outline'
+            className='relative group overflow-hidden rounded-full'
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF]  
+              animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="relative text-gray-800 group-hover:text-white flex items-center gap-2">
+              {section.action}
+              <svg 
+                className="w-4 h-4 transform transition-transform group-hover:translate-x-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                />
+              </svg>
+            </span>
+          </Button>
+        </Link>
              </div>
 
              {/* イメージセクション */}
