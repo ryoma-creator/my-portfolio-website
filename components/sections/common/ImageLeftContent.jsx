@@ -40,20 +40,3 @@ export default function ImageLeftContent({
   );
 }
 
-// 使用例：
-/*
-// 例：ヘッドフォン商品紹介
-<ImageLeftContent
-  image="/images/headphone-copper.jpg"
-  category="Premium Headphones"
-  title="BEOPLAY H100"
-  description="Ultimate over-ear headphones with exceptional sound quality and comfort."
-/>
-
-<ImageRightContent
-  image="/images/headphone-black.jpg"
-  category="Wireless Headphones"
-  title="BEOPLAY H95"
-  description="Premium over-ear headphones with outstanding noise cancellation."
-/>
-*/

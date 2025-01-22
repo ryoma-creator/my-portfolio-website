@@ -76,7 +76,25 @@ const AutoCarousel = ({ achievements }) => {
   };
 
   return (
-    <div className="w-full relative pt-4 pb-16">
+    <div className="w-full relative pt-12 pb-24 ">
+      {/* Header Section */}
+      <div className="container mx-auto text-center mb-8 px-4">
+        <span className="text-white/40 uppercase tracking-wider text-xs mb-3 block">
+          Progress
+        </span>
+        <h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-3xl md:text-4xl font-light text-center mb-3"
+        >
+          Learning Journey
+        </h2>
+        <p className="text-white/60 text-sm font-light max-w-xl mx-auto leading-relaxed tracking-wide">
+          Monthly documentation of growth and achievements throughout the year
+        </p>
+      </div>
+
       <div className="overflow-hidden px-4">
         <div
           ref={containerRef}
@@ -96,31 +114,34 @@ const AutoCarousel = ({ achievements }) => {
           ))}
         </div>
       </div>
-
-      <div className="absolute bottom-4 right-4 flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full p-2 z-10">
+  
+      <div className="absolute bottom-12 right-5 flex items-center gap-3">
         <button
           onClick={() => moveCarousel('prev')}
-          className="p-2 rounded-full hover:bg-accent/20 transition-colors"
+          className="p-1 rounded-full hover:bg-white/10 transition-colors"
           aria-label="Previous"
         >
-          <ChevronLeft className="w-6 h-6 text-accent" />
+          <ChevronLeft className="w-3 h-3 text-white/80" />
         </button>
+        
+        {/* メインの再生/一時停止ボタン */}
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="p-2 rounded-full hover:bg-accent/20 transition-colors"
+          className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition-all duration-300"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
           {isPlaying ? 
-            <Pause className="w-6 h-6 text-accent" /> : 
-            <Play className="w-6 h-6 text-accent" />
+            <Pause className="w-4 h-4 text-white/80" /> : 
+            <Play className="w-4 h-4 text-white/80 translate-x-[1px]" />
           }
         </button>
+
         <button
           onClick={() => moveCarousel('next')}
-          className="p-2 rounded-full hover:bg-accent/20 transition-colors"
+          className="p-1 rounded-full hover:bg-white/10 transition-colors"
           aria-label="Next"
         >
-          <ChevronRight className="w-6 h-6 text-accent" />
+          <ChevronRight className="w-3 h-3 text-white/80" />
         </button>
       </div>
     </div>

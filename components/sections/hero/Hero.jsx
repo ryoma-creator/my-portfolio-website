@@ -10,33 +10,23 @@ import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
 export default function Hero() {
   return (
-    <section className='relative min-h-screen bg-white overflow-hidden'>
+    <section className='relative h-[90vh] bg-white overflow-hidden'>
       {/* Animated Gradient Background */}
-      {/* <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
-          bg-gradient-to-r from-blue-400/40 via-pink-300-400/40 to-red-400-400/40 
-          blur-3xl transform rotate-12 animate-gradient-xy" />
-        <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full 
-          bg-gradient-to-r from-teal-400/40 via-blue-400/40 to-indigo-400/40 
-          blur-3xl transform -rotate-12 animate-gradient-xy" />
-      </div> */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
           bg-gradient-to-r from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF]  
-          // 爽やかな水色からソフトなピンクへ
           blur-3xl transform rotate-12 animate-gradient-xy" />
         <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full 
              bg-gradient-to-r from-teal-400/40 via-blue-400/40 to-indigo-400/40 
-          // 逆方向のグラデーション
           blur-3xl transform -rotate-12 animate-gradient-xy" />
       </div>
 
       <div className='container h-full relative z-10'>
-        <div className='flex flex-col xl:flex-row items-center justify-between
-        xl:pt-8 xl:pb-24'>
+        <div className='flex flex-col xl:flex-row items-center justify-center h-full
+          gap-8 py-12 md:py-16 xl:py-0'>
           
           {/* text */}
-          <div className='text-center xl:text-left'>
+          <div className='text-center xl:text-left flex-1'>
             <div className="gradient-text-wrapper">
               <GsapAnimatedText 
                 text="Logic × Tech × Global Experience"
@@ -72,26 +62,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* <div className='max-w-[500px] mb-9 text-gray-600'>
-              <ReactTyped 
-                strings={[
-                  'Cross-cultural understanding × Technical skills',
-                  'Data analysis × Problem-solving',
-                  'Learning ability × Adaptability',
-                  'Fast-learning developer with global mindset',
-                  'Bringing fresh perspective to development',
-                  'Connecting East and West through code',
-                  '900+ hours of focused learning',
-                  '2000+ global interactions',
-                  '5+ React/Next.js projects completed'
-                ]}
-                typeSpeed={75} 
-                backSpeed={30} 
-                loop
-                className='pb-4'
-              />
-            </div> */}
-
             {/* btn and socials */}
             <div className='flex flex-col xl:flex-row items-center gap-8'>
               <GsapAnimatedElement
@@ -104,7 +74,7 @@ export default function Hero() {
                   size='lg'
                   className='relative group overflow-hidden rounded-full'
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r  from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF]  
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF]  
                     animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <span className="relative text-gray-800 group-hover:text-white">Contact Me</span>
                   <FiDownload className='text-xl relative text-gray-800 group-hover:text-white'/>
@@ -132,7 +102,7 @@ export default function Hero() {
             variant="fadeIn"
             duration={1}
             delay={0.5}
-            className='order-1 xl:order-none'
+            className='order-1 xl:order-none flex-1 flex justify-center items-center'
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-violet-400/30 to-purple-400/30 
@@ -142,6 +112,7 @@ export default function Hero() {
           </GsapAnimatedElement>
         </div>
       </div>
+
 
       <style jsx global>{`
         .gradient-text-wrapper {

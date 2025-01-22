@@ -28,29 +28,6 @@ const TimelineEntry = ({ date, title, content, isLatest = false }) => (
 const DesignTimeline = ({ isVisible, onToggle }) => {
   return (
     <div className="mt-8 max-w-4xl mx-auto">
-      {/* View/Hide Toggle */}
-      <div className="text-center mb-8">
-        <span className="text-sm text-white/60">
-          {isVisible ? 'Hide' : 'View'} Timeline
-        </span>
-        <h4 className="text-2xl font-light text-white mt-2">
-          Design Journey
-        </h4>
-        <button
-          onClick={onToggle}
-          className="mt-2 group flex items-center gap-2 mx-auto"
-        >
-          <svg 
-            className={`w-4 h-4 transition-transform duration-300 ${isVisible ? 'rotate-180' : ''}`}
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-      </div>
-
       <AnimatePresence>
         {isVisible && (
           <motion.div

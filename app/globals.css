@@ -2,23 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap'); */
-
 @layer base {
-  /* .font-primary {
-    font-family: var(--font-jetBrainsMono);
-  } */
-  /* .bg-primary {
-    background-color: #1c1c22
-  } */
-  /*🔺原因は不明だが、tailwind.config,jsだけでなく、
-  globals.css上にも、customで作ったものを@layser base上で
-  提示しないと、表示されなくたった。➡️ tailwind.configで、正しくネストされてない部分があった。
-  ➡️6時間以上失った。➡️以前、extendのプロパティがthemeの中で正しくネストされていませんでした。正しい構文では、extendはthemeオブジェクト内に配置する必要があります。
-  ➡️最終的に疲れ果てている時は、Aiに聞いた後、コピペで試すしかない。肉眼で見るのが難しいので*/
-  
   body {
     @apply font-primary bg-primary text-white leading-loose;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  section {
+    scroll-margin-top: 80px;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -29,7 +21,6 @@
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
-  
 }
 
 @layer components {
@@ -50,6 +41,12 @@
   .glassmorphism {
     @apply backdrop-blur-md bg-white/20 border border-white/20;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  }
+
+  .custom-tabs [data-state="active"] {
+    background-color: #1a1a1a;
+    color: #10b981;
+    border-color: #10b981;
   }
 }
 
@@ -74,111 +71,16 @@
     background-size: 200% 200%;
     animation: gradient-xy 15s ease infinite;
   }
-}
 
-
-.text-outline {
-  -webkit-text-stroke: 1px white;
-}
-
-/* .text-outline-hover {
-  -webkit-text-stroke: 1px #00ff99;
-} */
-
-.text-outline-hover {
-  -webkit-text-stroke: 1px  #1a1a1a/50;
-}
-
-/* globals.css または該当するスタイルファイル */
-.scroll-area-viewport {
-  overflow: visible !important;
-}
-
-.custom-tabs [data-state="active"] {
-  background-color: #1a1a1a;
-  color: #10b981;  /* emerald-500の色 */
-  border-color: #10b981;
-}
-
-
-/* globals.css */
-html {
-  scroll-behavior: smooth;
-}
-
-/* スクロールのオフセットを調整（必要に応じて） */
-section {
-  scroll-margin-top: 80px;
-}
-
-/* グラデーションのエフェクト用 */
-.glassmorphism {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
-
-
-/* globals.css に追加 */
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-gradient-x {
-  background-size: 200% auto;
-  animation: gradient 3s linear infinite;
-}
-
-/* body{
-  background-color: #CCCCCC;
-  margin: 0px;
-  font-family: 'Regular';
-  margin-top: 30vh;
-  margin-bottom: 100vh;
-} */
-
-
-  /* li {
-    @apply px-4;
-    @apply cursor-pointer;
-  }
-  .responsive-text-size {
-    @apply text-responsive-sm md:text-responsive-md lg:text-responsive-lg;
-  }
-  .responsive-title-size {
-    @apply text-responsive-title-sm md:text-responsive-title-md lg:text-responsive-title-lg font-bold ;
-  }
- 
-  .common-screen-size{
-    @apply w-full h-screen ;
+  .text-outline {
+    -webkit-text-stroke: 1px white;
   }
 
-  .common-layout {
-    @apply max-w-[500px] md:max-w-[650px] lg:max-w-[800px] mx-auto px-8 flex flex-col justify-center h-full;
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #1a1a1a/50;
   }
 
-  .common-button-layout {
-    @apply border-green border-2 flex items-center hover:bg-[#80E080] hover:border-[#80E080] hover:text-white duration-300;
+  .scroll-area-viewport {
+    overflow: visible !important;
   }
-
-  .common-border-b{
-    @apply inline border-b-4 border-green;
-  }
-  .common-shadow {
-    @apply shadow-md shadow-[#040c16] hover:scale-110 duration-500;
-  }
-
-  .content-div {
-    @apply bg-no-repeat bg-cover bg-center h-64;
-  }
-
-  .content-div:hover {
-    background-image: linear-gradient(to right, #3b82f6, #6366f1, #8b5cf6) !important;
-} 
-}  */
-/* Importantでないと表示できないため、ここだけ別の書き方が必要であった.
-    @applyでは、!importantを使用できないため。
- */
+}

@@ -31,7 +31,7 @@ export default function HomePage() {
         <FeaturedSections />
       </SectionWrapper>
       
-      <SectionWrapper variant="dark" >
+      <SectionWrapper variant="dark" id="portfolio-section">
         <Portfolio />
       </SectionWrapper>
       

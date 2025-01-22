@@ -2,37 +2,60 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Home } from 'lucide-react';
 
 const links = [
-    { name: 'home', path: '/' },
-    { name: 'resume', path: '/resume' },
-    { name: 'work', path: '/work' },
-    { name: 'contact', path: '/contact' },
+    { 
+        name: 'home',
+        path: '/',
+        icon: Home
+    },
+    // Commented out links can be uncommented and modified later
+    // { name: 'resume', path: '/resume' },
+    // { name: 'work', path: '/work' },
+    // { name: 'contact', path: '/contact' },
 ];
 
 const Nav = () => {
     const pathname = usePathname();
     
     return (
-        <nav className='flex gap-8'>
+        <nav className="flex gap-8">
             {links.map((link, index) => {
                 const isActive = pathname === link.path;
+                const Icon = link.icon;
+                
                 return (
                     <Link
-                        href={link.path}
-                        key={index}
-                        className={`relative capitalize font-medium transition-all group
-                            ${isActive ? 'nav-gradient-text' : 'hover:nav-gradient-text'}`}
+                      href={link.path}
+                      key={index}
+                      className="relative group flex flex-col items-center"
                     >
+                      <div className={`transition-all duration-300 ${
+                        isActive ? 'text-teal-400' : 'text-gray-600 hover:text-teal-400'
+                      }`}>
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      
+                      {/* Label that appears on hover */}
+                      <span className={`absolute -bottom-5 text-xs font-light tracking-wide
+                        opacity-0 group-hover:opacity-100 transition-all duration-300
+                        ${isActive ? 'text-teal-400' : 'text-gray-600'}`}>
                         {link.name}
-                        <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#00ff99] via-[#00ffcc] to-[#00ff99] 
-                            transition-transform duration-300
-                            ${isActive ? 'nav-gradient-line' : 'scale-x-0 group-hover:scale-x-100'}`}
-                        />
+                      </span>
+          
+                      {/* Animated underline */}
+                      <div className={`absolute -bottom-1 left-1/2 w-4 h-0.5 
+                        transform -translate-x-1/2
+                        transition-all duration-300 ease-out
+                        bg-gradient-to-r from-teal-400 to-emerald-400
+                        ${isActive ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'}`}
+                      />
                     </Link>
-                );
-            })}
-        </nav>
+                  );
+                })}
+              </nav>
+          
     );
 };
 

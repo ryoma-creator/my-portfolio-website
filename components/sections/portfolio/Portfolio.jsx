@@ -3,18 +3,17 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation } from 'swiper/modules';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 
-// Import styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import './Portfolio.css';
 
-// Import project data
 import { projects } from '@/components/features/achievements/data/projects';
-
 import DesignTimeline from './components/DesignTimeline';
+
+import { Button } from '@/components/ui/button';
 
 const Portfolio = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,39 +23,30 @@ const Portfolio = () => {
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
     setActiveProject(projects[swiper.activeIndex]);
-    setShowEvolution(false);// スライド変更時にTimelineを閉じる
+    setShowEvolution(false);
   };
   
   const [showTimeline, setShowTimeline] = useState(false);
 
   return (
-    <div className="relative min-h-screen w-full py-32">
-      {/* Main Project Introduction */}
-      {activeProject.isMainProject && (
-        <div className="container mx-auto text-center mb-24 px-4">
-          <span className="text-accent uppercase tracking-widest text-sm mb-4 block">
-            Featured Work
-          </span>
-          <h2 className="text-responsive-title-lg font-light text-white mb-6">
-            Portfolio Evolution
-          </h2>
-          <p className="text-responsive-md text-white/60 max-w-2xl mx-auto leading-relaxed">
-            A continuous journey of refinement in design and development
-          </p>
-        </div>
-      )}
-
-      {/* Other Projects Section */}
-      {!activeProject.isMainProject && (
-        <div className="container mx-auto text-center mb-24 px-4">
-          <h2 className="text-responsive-title-lg font-light text-white mb-6">
-            Project Archive
-          </h2>
-          <p className="text-responsive-md text-white/60 max-w-2xl mx-auto">
-            Exploring various technologies and solutions
-          </p>
-        </div>
-      )}
+    <div id="portfolio-section" className="relative w-full py-24">
+      {/* Header Section */}
+      <div className="container mx-auto text-center mb-8 px-4">
+        <span className="text-white/40 uppercase tracking-wider text-xs mb-3 block">
+          Featured Work
+        </span>
+        <m.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-4xl md:text-5xl font-light text-center mb-4 gradient-text"
+        >
+          Portfolio
+        </m.h2>
+        <p className="text-responsive-sm text-white/60 max-w-2xl mx-auto leading-relaxed">
+          A continuous journey of refinement in design and development
+        </p>
+      </div>
 
       {/* Slider Section */}
       <div className="container mx-auto relative">
@@ -79,7 +69,7 @@ const Portfolio = () => {
           }}
           modules={[EffectCoverflow, Navigation]}
           onSlideChange={handleSlideChange}
-          className="mb-16"
+          className="mb-8"
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
@@ -88,15 +78,13 @@ const Portfolio = () => {
                   ${index === activeIndex ? 'group cursor-pointer' : 'pointer-events-none opacity-50'}`}
               >
                 {/* Project Type Badge */}
-                {project.isMainProject ? (
-                  <div className="absolute top-6 right-6 transform rotate-12 bg-accent px-4 py-2 rounded-sm z-20">
-                    <span className="text-primary font-medium text-sm tracking-wider">Main Portfolio</span>
+                {/* {project.isMainProject && (
+                  <div className="absolute top-6 right-6 transform rotate-12 py-1.5 px-3 rounded-full z-20 bg-white/5 backdrop-blur-sm border border-white/10">
+                    <span className="text-white/80 text-xs font-light tracking-wider">
+                      Portfolio
+                    </span>
                   </div>
-                ) : project.isFeatured && (
-                  <div className="absolute top-6 right-6 transform rotate-12 bg-white/20 px-4 py-2 rounded-sm z-20">
-                    <span className="text-white font-medium text-sm tracking-wider">Featured</span>
-                  </div>
-                )}
+                )} */}
 
                 <img
                   src={project.image}
@@ -156,17 +144,21 @@ const Portfolio = () => {
         </Swiper>
 
         {/* Project Details Section */}
-        <div className="text-center mt-16">
-          <h3 className="text-responsive-lg font-light text-white mb-6">
+        <div className="text-center">
+          <h3 className={`text-responsive-md font-light mb-4 ${
+            activeProject.title === "Present" 
+            ? "gradient-text" 
+            : "text-white"
+          }`}>
             {activeProject.title}
           </h3>
 
           {/* Tech Stack */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
             {activeProject.stack.map((tech, index) => (
               <span 
                 key={index} 
-                className="px-4 py-2 text-responsive-sm bg-white/5 rounded-full text-white/60"
+                className="px-3 py-1.5 text-sm bg-white/5 rounded-full text-white/60"
               >
                 {tech}
               </span>
@@ -174,17 +166,43 @@ const Portfolio = () => {
           </div>
 
           {/* Development Period */}
-          <p className="text-responsive-sm text-white/60 tracking-wider font-light">
+          <p className="text-sm text-white/60 tracking-wider font-light">
             {activeProject.period}
           </p>
 
-          {/* UI/UX Iterations for Main Project */}
-            {activeProject.isMainProject && (
-              <DesignTimeline 
-                isVisible={showTimeline}
-                onToggle={() => setShowTimeline(!showTimeline)}
-              />
-            )}
+          {/* View Timeline Button for Main Project */}
+          {activeProject.isMainProject && (
+            <button
+              onClick={() => setShowTimeline(!showTimeline)}
+              className="mt-6 h-8 px-4 text-xs font-light text-white/60 bg-white/5 rounded-full 
+                hover:text-white/80 hover:bg-white/10 transition-all duration-300 
+                flex items-center justify-center gap-2 mx-auto"
+            >
+              <span className="translate-y-[0.5px]">{showTimeline ? 'Close' : 'View Timeline'}</span>
+              <svg 
+                className={`w-3 h-3 transition-transform duration-300 
+                  ${showTimeline ? 'rotate-180' : ''}`} 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M19 9l-7 7-7-7" 
+                />
+              </svg>
+            </button>
+          )}
+
+          {/* Timeline Component */}
+          {activeProject.isMainProject && (
+            <DesignTimeline 
+              isVisible={showTimeline}
+              onToggle={() => setShowTimeline(!showTimeline)}
+            />
+          )}
         </div>
       </div>
     </div>

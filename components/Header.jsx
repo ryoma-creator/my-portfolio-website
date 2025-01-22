@@ -27,23 +27,25 @@ const Header = () => {
       fixed w-full top-0 z-50
       transition-all duration-300
       ${isScrolled 
-        ? 'py-4 bg-white/80 backdrop-blur-md shadow-lg text-gray-900' 
-        : 'py-8 bg-transparent text-white'}
+        ? 'py-4 bg-white/ backdrop-blur-md shadow-lg' 
+        : 'py-8 bg-transparent opacity-0'}
     `}>
       <div className='container mx-auto flex justify-between items-center'>
         {/* Logo */}
         <Link href='/'>
-          <h1 className='text-4xl font-semibold text-shadow-neumorphism'>
+          <h1 className={`text-4xl font-semibold text-shadow-neumorphism transition-opacity duration-300
+            ${!isScrolled && 'opacity-0'}`}>
             Ryoma<span className='text-accent'>.</span>
           </h1>
         </Link>
 
         {/* desktop nav ＆ hire me button*/}
         <div className='hidden xl:flex items-center gap-8'>
-          <Nav/>
+          <Nav isScrolled={isScrolled}/>
           <Link href='/contact'>
             <Button 
-              className='relative group overflow-hidden rounded-full'
+              className={`relative group overflow-hidden rounded-full transition-opacity duration-300
+                ${!isScrolled && 'opacity-0'}`}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF] 
                 animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -56,7 +58,7 @@ const Header = () => {
 
         {/* mobile nav */}
         <div className="xl:hidden">
-          <MobileNav />
+          <MobileNav isScrolled={isScrolled} />
         </div>
       </div>
     </header>

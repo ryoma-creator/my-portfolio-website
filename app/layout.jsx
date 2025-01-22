@@ -1,8 +1,8 @@
 
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/components/contexts/ThemeContext';
-import ThemeToggle from '@/components/ui/ThemeToggle';
+// import { ThemeProvider } from '@/components/contexts/ThemeContext';
+// import ThemeToggle from '@/components/ui/ThemeToggle';
 
 // components
 import Header from '@/components/Header';
@@ -24,14 +24,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={jetBrains_Mono.variable}>
-        <ThemeProvider>
+        {/* <ThemeProvider> */}
           <Header/>
           {/* <StairTransition/> */}
           {/* <PageTransition> */}
             {children}
           {/* </PageTransition> */}
-          <ThemeToggle />
-        </ThemeProvider>
+          {/* <ThemeToggle /> */}
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
