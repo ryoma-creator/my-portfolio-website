@@ -1,9 +1,14 @@
+// app/api/contact/route.js
+
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
+    console.log('API route started');
+    
     try {
         const body = await request.json();
         
+        // トランスポーターの設定
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             host: 'smtp.gmail.com',
@@ -15,204 +20,198 @@ export async function POST(request) {
             }
         });
 
-        // 1. 管理者への通知メール
-        await transporter.sendMail({
+        // トランスポーターの検証
+        await transporter.verify();
+        console.log('Transporter verified');
+
+        // 管理者へのメール送信
+        const adminMailResult = await transporter.sendMail({
             from: process.env.EMAIL_USER,
             replyTo: body.email,
             to: process.env.EMAIL_USER,
             subject: `New Contact from ${body.firstname}`,
             html: `
-            <div style="max-width: 600px; margin: 0 ; padding: 20px; background-color: #1c1c22; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-            <!-- ヘッダーセクション -->
-            <div style="background: linear-gradient(135deg, #1c1c22, #2a2a31); padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
-              <h1 style="color: #00ff99; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">FRONTEND DEVELOPER</h1>
-              <p style="color: #ffffff; margin-top: 10px; font-size: 18px;">Creative & Professional</p>
-            </div>
+            <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+                <div style="background: linear-gradient(135deg, #CCF8FF, #EF96C5);
+                           padding: 40px 20px; text-align: center; border-radius: 10px 10px 0 0;">
+                    <h1 style="color: #1c1c22; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">
+                        New Contact Request
+                    </h1>
+                    <p style="color: #1c1c22; margin-top: 10px; font-size: 18px;">
+                        From Portfolio Website
+                    </p>
+                </div>
                 
-            <!-- メインコンテンツ -->
-            <div style="background-color: #27272c; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-              <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Dear <span style="color: #00ff99; font-weight: bold;">${body.firstname}</span>,</p>
-                                
-              <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Thank you for reaching out to me. I have received your inquiry and will get back to you as soon as possible.</p>
-                
-              <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">While you wait, I'd like to invite you to explore more about my work and background on my portfolio website.</p>
-        
-              <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Best Regards,</p>
-                
-              <!-- プロフィールセクション -->
-              <div style="margin-top: 40px; padding: 20px; background-color: #1c1c22; border-radius: 10px; box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);">
-                <table cellpadding="0" cellspacing="0" style="width: 100%;">
-                  <tr>
-                    <td style="width: 120px; padding-right: 20px;">
-                      <img src="https://drive.google.com/uc?export=view&id=14103ptKFFUVJddnXu7REKRw0bmQkvQK6" alt="Ryoma Taguchi" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-                    </td>
-                    <td>
-                      <h2 style="margin: 0; color: #ffffff; font-size: 24px;">Ryoma Taguchi</h2>
-                      <p style="color: #00ff99; margin: 5px 0; font-family: 'Courier New', monospace; font-size: 20px;">Frontend Developer</p>
-                                                
-                      <!-- 連絡先情報 -->
-                      <div style="margin-top: 15px;">
-                        <p style="margin: 5px 0;">
-                          <img src="https://cdn-icons-png.flaticon.com/512/552/552486.png" alt="Email" style="width: 16px; vertical-align: middle; filter: invert(1);"> 
-                          <a href="mailto:${process.env.EMAIL_USER}" style="color: #ffffff; text-decoration: none; margin-left: 5px;">${process.env.EMAIL_USER}</a>
+                <div style="background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+                           padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    
+                    <!-- 問い合わせ内容 -->
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px;
+                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <h2 style="color: #1c1c22; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
+                            Contact Details
+                        </h2>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td style="padding: 10px 0; color: #666; width: 150px;">Full Name:</td>
+                                <td style="padding: 10px 0; color: #1c1c22;">
+                                    ${body.firstname} ${body.lastname}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0; color: #666;">Email:</td>
+                                <td style="padding: 10px 0; color: #1c1c22;">${body.email}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0; color: #666;">Phone:</td>
+                                <td style="padding: 10px 0; color: #1c1c22;">${body.phone || 'Not provided'}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0; color: #666;">Reason:</td>
+                                <td style="padding: 10px 0; color: #1c1c22;">${body.reason || 'Not specified'}</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- メッセージ -->
+                    <div style="background: white; padding: 20px; border-radius: 10px;
+                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <h2 style="color: #1c1c22; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
+                            Message
+                        </h2>
+                        <p style="color: #1c1c22; line-height: 1.6; white-space: pre-wrap;">
+                            ${body.message}
                         </p>
-                        <p style="margin: 5px 0;">
-                          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 16px; vertical-align: middle; filter: invert(1);">
-                          <a href="https://github.com/yourusername" style="color: #ffffff; text-decoration: none; margin-left: 5px;">GitHub Profile</a>
-                        </p>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-                
-              <!-- CTAボタン -->
-              <div style="text-align: center; margin-top: 30px;">
-                <a href="https://www.yourportfolio.com" style="display: inline-block; padding: 12px 30px; background-color: #00ff99; color: #1c1c22; text-decoration: none; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">View Portfolio</a>
-              </div>
-        
-              <!-- 問い合わせ内容の確認セクション -->
-              <div style="margin: 30px 0; padding: 20px; background-color: #1c1c22; border-radius: 10px;">
-                  <h3 style="color: #00ff99; margin: 0 0 20px 0; border-bottom: 2px solid #00ff99; padding-bottom: 10px;">Your Inquiry Details</h3>
-                  
-                  <div style="display: grid; grid-template-columns: 150px 1fr; gap: 15px;">
-                      <!-- 名前 -->
-                      <p style="color: #666; margin: 0; font-weight: bold;">Full Name:</p>
-                      <p style="color: #fff; margin: 0;">${body.firstname} ${body.lastname}</p>
-                      
-                      <!-- メール -->
-                      <p style="color: #666; margin: 0; font-weight: bold;">Email:</p>
-                      <p style="color: #fff; margin: 0;">${body.email}</p>
-                      
-                      <!-- 電話 -->
-                      <p style="color: #666; margin: 0; font-weight: bold;">Phone:</p>
-                      <p style="color: #fff; margin: 0;">${body.phone}</p>
-                      
-                      <!-- お問い合わせ理由 -->
-                      <p style="color: #666; margin: 0; font-weight: bold;">Reason:</p>
-                      <p style="color: #fff; margin: 0;">${body.reason}</p>
-                  </div>
-              
-                  <!-- メッセージは別枠で表示 -->
-                  <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
-                      <p style="color: #666; margin: 0 0 10px 0; font-weight: bold;">Message:</p>
-                      <p style="color: #fff; margin: 0; line-height: 1.6; padding: 15px; background-color: #27272c; border-radius: 8px;">${body.message}</p>
-                  </div>
-              </div>
-        
-              </div>
-                
-            <!-- フッター -->
-            <div style="text-align: center; padding: 20px; color: #ffffff; font-size: 12px;">
-              <p style="margin: 0;">&copy; 2024 Ryoma Taguchi. All rights reserved.</p>
+                    </div>
+                </div>
             </div>
-          </div>
             `
         });
+        console.log('Admin mail sent:', adminMailResult.messageId);
 
-        // 2. 問い合わせ者への自動返信
-await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: body.email,
-    subject: 'Thank you for your contact',
-    html: `
-    <div style="max-width: 600px; margin: 0 ; padding: 20px; background-color: #1c1c22; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <!-- ヘッダーセクション -->
-    <div style="background: linear-gradient(135deg, #1c1c22, #2a2a31); padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
-      <h1 style="color: #00ff99; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">FRONTEND DEVELOPER</h1>
-      <p style="color: #ffffff; margin-top: 10px; font-size: 18px;">Creative & Professional</p>
-    </div>
-        
-    <!-- メインコンテンツ -->
-    <div style="background-color: #27272c; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-      <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Dear <span style="color: #00ff99; font-weight: bold;">${body.firstname}</span>,</p>
-                        
-      <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Thank you for reaching out to me. I have received your inquiry and will get back to you as soon as possible.</p>
-        
-      <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">While you wait, I'd like to invite you to explore more about my work and background on my portfolio website.</p>
+        // 自動返信メール
+        const autoReplyResult = await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: body.email,
+            subject: 'Thank you for reaching out! 🌟',
+            html: `
+            <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+                <!-- ヘッダー -->
+                <div style="background: linear-gradient(135deg, #CCF8FF, #EF96C5);
+                           padding: 40px 20px; text-align: center; border-radius: 10px 10px 0 0;
+                           position: relative; overflow: hidden;">
+                    <h1 style="color: #1c1c22; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">
+                        Thank You for Your Message!
+                    </h1>
+                    <p style="color: #1c1c22; margin-top: 10px; font-size: 18px;">
+                        We've received your inquiry
+                    </p>
+                </div>
+                
+                <!-- メインコンテンツ -->
+                <div style="background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+                           padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    
+                    <!-- 挨拶文 -->
+                    <div style="text-align: left; margin-bottom: 30px;">
+                        <p style="color: #1c1c22; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                            Dear ${body.firstname},
+                        </p>
+                        <p style="color: #1c1c22; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                            Thank you for reaching out! I've received your message and will get back to you as soon as possible.
+                            Usually, I respond within 24-48 hours.
+                        </p>
+                        ${body.reason === 'job-opportunity' ? `
+                        <p style="color: #1c1c22; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                            Since you're interested in job opportunities, you might want to schedule a quick video call:
+                            <a href="https://calendly.com/ryoma-t-engineer/30min" 
+                               style="color: #EF96C5; text-decoration: none; font-weight: bold;">
+                                Schedule a 30-min call
+                            </a>
+                        </p>
+                        ` : ''}
+                    </div>
 
-      <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Best Regards,</p>
-        
-      <!-- プロフィールセクション -->
-      <div style="margin-top: 40px; padding: 20px; background-color: #1c1c22; border-radius: 10px; box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);">
-        <table cellpadding="0" cellspacing="0" style="width: 100%;">
-          <tr>
-            <td style="width: 120px; padding-right: 20px;">
-              <img src="https://drive.google.com/uc?export=view&id=14103ptKFFUVJddnXu7REKRw0bmQkvQK6" alt="Ryoma Taguchi" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-            </td>
-            <td>
-              <h2 style="margin: 0; color: #ffffff; font-size: 24px;">Ryoma Taguchi</h2>
-              <p style="color: #00ff99; margin: 5px 0; font-family: 'Courier New', monospace; font-size: 20px;">Frontend Developer</p>
-                                        
-              <!-- 連絡先情報 -->
-              <div style="margin-top: 15px;">
-                <p style="margin: 5px 0;">
-                  <img src="https://cdn-icons-png.flaticon.com/512/552/552486.png" alt="Email" style="width: 16px; vertical-align: middle; filter: invert(1);"> 
-                  <a href="mailto:${process.env.EMAIL_USER}" style="color: #ffffff; text-decoration: none; margin-left: 5px;">${process.env.EMAIL_USER}</a>
-                </p>
-                <p style="margin: 5px 0;">
-                  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 16px; vertical-align: middle; filter: invert(1);">
-                  <a href="https://github.com/yourusername" style="color: #ffffff; text-decoration: none; margin-left: 5px;">GitHub Profile</a>
-                </p>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-        
-      <!-- CTAボタン -->
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="https://www.yourportfolio.com" style="display: inline-block; padding: 12px 30px; background-color: #00ff99; color: #1c1c22; text-decoration: none; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">View Portfolio</a>
-      </div>
+                    <!-- 問い合わせ内容の確認 -->
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px;
+                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <h2 style="color: #1c1c22; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
+                            Your Message Details
+                        </h2>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td style="padding: 10px 0; color: #666; width: 150px;">Name:</td>
+                                <td style="padding: 10px 0; color: #1c1c22;">
+                                    ${body.firstname} ${body.lastname}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0; color: #666;">Reason:</td>
+                                <td style="padding: 10px 0; color: #1c1c22;">${body.reason || 'Not specified'}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0; color: #666;">Message:</td>
+                                <td style="padding: 10px 0; color: #1c1c22;">
+                                    ${body.message}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
-      <!-- 問い合わせ内容の確認セクション -->
-      <div style="margin: 30px 0; padding: 20px; background-color: #1c1c22; border-radius: 10px;">
-          <h3 style="color: #00ff99; margin: 0 0 20px 0; border-bottom: 2px solid #00ff99; padding-bottom: 10px;">Your Inquiry Details</h3>
-          
-          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 15px;">
-              <!-- 名前 -->
-              <p style="color: #666; margin: 0; font-weight: bold;">Full Name:</p>
-              <p style="color: #fff; margin: 0;">${body.firstname} ${body.lastname}</p>
-              
-              <!-- メール -->
-              <p style="color: #666; margin: 0; font-weight: bold;">Email:</p>
-              <p style="color: #fff; margin: 0;">${body.email}</p>
-              
-              <!-- 電話 -->
-              <p style="color: #666; margin: 0; font-weight: bold;">Phone:</p>
-              <p style="color: #fff; margin: 0;">${body.phone}</p>
-              
-              <!-- お問い合わせ理由 -->
-              <p style="color: #666; margin: 0; font-weight: bold;">Reason:</p>
-              <p style="color: #fff; margin: 0;">${body.reason}</p>
-          </div>
-      
-          <!-- メッセージは別枠で表示 -->
-          <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
-              <p style="color: #666; margin: 0 0 10px 0; font-weight: bold;">Message:</p>
-              <p style="color: #fff; margin: 0; line-height: 1.6; padding: 15px; background-color: #27272c; border-radius: 8px;">${body.message}</p>
-          </div>
-      </div>
+                    <!-- CTAボタン -->
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <a href="https://your-portfolio-url.com" 
+                           style="display: inline-block; padding: 12px 30px;
+                                  background: linear-gradient(135deg, #CCF8FF, #EF96C5);
+                                  color: #1c1c22; text-decoration: none; border-radius: 25px;
+                                  font-weight: bold; margin: 10px;">
+                            View My Portfolio
+                        </a>
+                        <a href="https://calendly.com/ryoma-t-engineer/30min" 
+                           style="display: inline-block; padding: 12px 30px;
+                                  background: linear-gradient(135deg, #EF96C5, #CCF8FF);
+                                  color: #1c1c22; text-decoration: none; border-radius: 25px;
+                                  font-weight: bold; margin: 10px;">
+                            Schedule a Call
+                        </a>
+                    </div>
 
-      </div>
-        
-    <!-- フッター -->
-    <div style="text-align: center; padding: 20px; color: #ffffff; font-size: 12px;">
-      <p style="margin: 0;">&copy; 2024 Ryoma Taguchi. All rights reserved.</p>
-    </div>
-  </div>
-    `
-});
+                    <!-- フッター -->
+                    <div style="text-align: center; margin-top: 30px; padding-top: 20px;
+                                border-top: 1px solid #eee;">
+                        <p style="color: #666; font-size: 12px;">
+                            &copy; 2024 Ryoma Taguchi. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            `
+        });
+        console.log('Auto reply sent:', autoReplyResult.messageId);
 
-        return Response.json({ message: 'Sent successfully' });
+        // 成功レスポンスを返す
+        return new Response(JSON.stringify({ 
+            message: 'Sent successfully',
+            adminMailId: adminMailResult.messageId,
+            autoReplyId: autoReplyResult.messageId
+        }), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
 
     } catch (error) {
-        console.error('Error:', error);
-        return Response.json({ error: error.message }, { status: 500 });
+        // エラーログの出力と詳細なエラーレスポンスの返却
+        console.error('Error details:', error);
+        return new Response(JSON.stringify({ 
+            error: error.message,
+            stack: error.stack 
+        }), {
+            status: 500,
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
     }
 }
-
-
-// primary: '#1c1c22',
-// accent: {
-// DEFAULT: '#00ff99',

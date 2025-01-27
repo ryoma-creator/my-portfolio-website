@@ -47,7 +47,7 @@ export default function Storytelling() {
   return (
  
 <>
-      <div className="bg-transparent">
+      <div className="bg-black">
         <Contact />
       </div>
 
