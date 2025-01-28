@@ -27,7 +27,7 @@ export default function ApproachSection({ sectionTitle, approaches }) {
               </div>
               
               <div>
-                <h3 className="text-2xl font-light mb-2 text-gray-900">
+                <h3 className="text-2xl font-light mb-2 text-text-primary">
                   {approach.title}
                 </h3>
                 <p className="text-lg text-gray-500 mb-4">

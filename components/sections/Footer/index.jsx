@@ -11,28 +11,33 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-800/50 backdrop-blur-sm border-gray-700 h-[50vh] relative flex flex-col justify-end pb-8">
-      <motion.button
+    <footer className="bg-text-primary backdrop-blur-sm border-text-secondary h-[50vh] relative flex flex-col justify-end pb-8">
+      {/* Back to Top ボタン */}
+      <button
         onClick={scrollToTop}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
         className="absolute top-1/4 left-1/2 transform -translate-x-1/2
-                   w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm
-                   flex items-center justify-center group
-                   border border-white/20 hover:border-white/40
-                   transition-all duration-300"
+                w-12 h-12 flex items-center justify-center group
+                bg-transparent transition-all duration-300"
       >
-        <div className="flex flex-col items-center">
-          <ArrowUp className="w-6 h-6 text-white group-hover:text-accent" />
-          <span className="absolute -bottom-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+        {/* グラデーション背景 - ホバー時のみ表示 */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
+          animate-gradient-x opacity-0 group-hover:opacity-100 rounded-full
+          transition-all duration-300" 
+        />
+        
+        {/* アイコンとテキスト */}
+        <div className="relative z-10 flex flex-col items-center">
+          <ArrowUp className="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300" />
+          <span className="absolute -bottom-8 text-white opacity-0 group-hover:opacity-100 
+            transition-opacity duration-300 whitespace-nowrap">
             Back to Top
           </span>
         </div>
-      </motion.button>
+      </button>
 
       <div className="text-center">
         <p className="text-white/60 text-sm">
-          © 2024 Ryoma Taguchi | Frontend Engineer
+          © 2024-2025 Ryoma Taguchi | Frontend Engineer
         </p>
       </div>
     </footer>

@@ -31,19 +31,40 @@ module.exports = {
 		colors: {
 			primary: '#1c1c22',
 			accent: {
-			  DEFAULT: 'transparent',  // ピンク系に変更
+			  DEFAULT: 'transparent',
 			  gradient: {
 				from: '#CCF8FF',
 				to: '#EF96C5'
 			  },
-			  hover: '#CCF8FF',    // ホバー時は水色に
+			  hover: '#CCF8FF',
 			},
-			// 新しいミニマルテーマ用の色
+			text: {
+			  primary: 'rgb(55 65 81)',    // メインテキスト (gray-700)
+			  secondary: 'rgb(107 114 128)', // サブテキスト、薄い文字 (gray-600)
+			  tertiary: 'rgb(156 163 175)',  // さらに薄い文字 (gray-500)
+			  // 必要に応じて追加
+			  muted: 'rgb(209 213 219)',     // プレースホルダーなど (gray-400)
+			  dark: {
+				primary: '#FFFFFF',                    // white (900相当)
+				secondary: 'rgba(255, 255, 255, 0.6)', // gray-300相当 - 現在の0.7から0.6に調整
+				tertiary: 'rgba(255, 255, 255, 0.4)',  // gray-200相当 - 現在の0.5から0.4に調整
+				muted: 'rgba(255, 255, 255, 0.2)'      // gray-100相当 - 現在の0.3から0.2に調整
+			  }
+			},
 			minimal: {
-				primary: '#F8F9FA',
-				accent: '#E9ECEF'
-			}
-		},
+			  primary: '#F8F9FA',
+			  accent: '#E9ECEF'
+			},
+			brand: {
+			  pink: '#EF96C5',
+			  blue: '#CCF8FF',
+			},
+			gradient: {
+			  from: '#CCF8FF',
+			  via: '#EF96C5',
+			  to: '#CCF8FF'
+			},
+		  },
 		fontFamily: {
 		  primary: ['var(--font-jetBrainsMono)'],
 		},

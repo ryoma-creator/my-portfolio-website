@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function DiscoverSection({ title = "What else you might discover?", items }) {
   return (
     <section className="py-20">
-      <h2 className="text-responsive-lg text-center mb-16">{title}</h2>
+      <h2 className="text-text-dark-primary text-responsive-lg text-center mb-16">{title}</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1200px] mx-auto px-4">
         {items.slice(0, 3).map((item, index) => (
@@ -26,10 +26,10 @@ export default function DiscoverSection({ title = "What else you might discover?
               </div>
               
               <div className="text-center">
-                <h3 className="text-responsive-md mb-2">
+                <h3 className="text-responsive-md mb-2 text-text-dark-primary">
                   {item.title}
                 </h3>
-                <p className="text-responsive-sm text-gray-600">
+                <p className="text-responsive-sm text-text-dark-secondary">
                   {item.subtitle}
                 </p>
               </div>

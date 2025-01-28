@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast, Toaster } from 'react-hot-toast';
 import Confetti from 'react-confetti';
+import { X } from 'lucide-react';
 
 // 連絡先情報の定義
 const contactInfo = [
@@ -113,7 +114,7 @@ export default function Contact() {
     <>
       <button 
         onClick={() => setOpen(true)}
-        className="fixed bottom-8 right-8 bg-gradient-to-r from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF] 
+        className="fixed bottom-8 right-8 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
           p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
       >
         <FaEnvelope className="w-6 h-6 text-white" />
@@ -134,27 +135,44 @@ export default function Contact() {
     setOpen(true);
   }
 }}>
-        <DialogContent className="w-[95%] max-w-[1200px] h-[90vh]">
+        <DialogContent className="w-[95%] max-w-[1200px] h-[90vh] flex flex-col bg-white px-[4%]">
             {/* カスタム閉じるボタンを追加 */}
-  <button
-    onClick={() => setOpen(false)}
-    className="absolute top-6 right-6 z-[9999] w-10 h-10 flex items-center justify-center
-             bg-gradient-to-r from-[#CCF8FF] to-[#EF96C5] hover:from-[#EF96C5] hover:to-[#CCF8FF]
-             rounded-full transition-all duration-300 shadow-lg cursor-pointer"
-  >
-    <span className="text-white text-2xl">×</span>
-  </button>
-          <DialogTitle className="text-2xl font-bold text-center">
-            Contact Me
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-6 right-6 z-[9999] w-10 h-10 
+                      flex items-center justify-center group
+                      transition-all duration-300"
+            >
+              {/* グラデーションの背景 - ホバー時のみ表示 */}
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
+                animate-gradient-x opacity-0 group-hover:opacity-100 
+                group-hover:scale-110 rounded-full
+                transition-all duration-300" 
+              />
+              
+              {/* Xアイコン */}
+              <X className="w-6 h-6 text-gray-400 group-hover:text-white 
+                relative z-10 transition-colors duration-300
+                group-hover:scale-110" 
+              />
+            </button>
+
+
+    {/* 上部スペース */}
+    <div className="h-[5%]" />
+
+          <DialogTitle className="text-6xl font-bold text-center text-text-primary">
+            Get in Touch
           </DialogTitle>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 mt-8">
-            {/* 左カラム：フォーム */}
-            <div className="order-2 xl:order-1">
-              <h3 className="text-xl font-bold mb-4">Send a Message</h3>
+          {/* 全体を中央揃えにしていく */}
+          <div className="flex-1 flex items-center justify-center overflow-y-auto gap-16 px-2">
+            {/* 右カラム：フォーム */}
+            <div className="order-2 xl:order-2 xl:w-[54%]">
+              {/* <h3 className="text-xl font-bold mb-4">Send a Message</h3>
               <p className="text-gray-600 mb-6">
                 Let's discuss your project or collaboration opportunities.
-              </p>
+              </p> */}
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input 
@@ -164,15 +182,16 @@ export default function Contact() {
                     value={formData.firstname}
                     onChange={handleChange}
                     required
-                    className="bg-white/50 border-gray-200 focus:border-[#EF96C5]"
+                    className="bg-white/50 border-gray-200 focus:border-brand-pink"
                   />
                   <Input 
                     type="text"
                     name="lastname"
-                    placeholder="Last Name"
+                    placeholder="Last Name *"
                     value={formData.lastname}
                     onChange={handleChange}
-                    className="bg-white/50 border-gray-200 focus:border-[#EF96C5]"
+                    required
+                    className="bg-white/50 border-gray-200 focus:border-brand-pink"
                   />
                   <Input 
                     type="email"
@@ -181,7 +200,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-white/50 border-gray-200 focus:border-[#EF96C5]"
+                    className="bg-white/50 border-gray-200 focus:border-brand-pink"
                   />
                   <Input 
                     type="tel"
@@ -189,7 +208,7 @@ export default function Contact() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-white/50 border-gray-200 focus:border-[#EF96C5]"
+                    className="bg-white/50 border-gray-200 focus:border-brand-pink"
                   />
                 </div>
 
@@ -202,14 +221,14 @@ export default function Contact() {
                   }}
                   value={formData.reason}
                 >
-                  <SelectTrigger className="bg-white/50 border-gray-200 focus:border-[#EF96C5]">
+                  <SelectTrigger className="bg-white/50 border-gray-200 focus:border-brand-pink">
                     <SelectValue placeholder="Reason for Contact" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
                       <SelectItem value="job-opportunity">Job Opportunity</SelectItem>
                       <SelectItem value="project-inquiry">Project Inquiry</SelectItem>
-                      <SelectItem value="collaboration">Collaboration</SelectItem>
+                      <SelectItem value="collaboration">Video Call</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectGroup>
                   </SelectContent>
@@ -221,7 +240,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your Message *"
                   required
-                  className="h-[200px] bg-white/50 border-gray-200 focus:border-[#EF96C5]"
+                  className="h-[200px] bg-white/50 border-gray-200 focus:border-brand-pink"
                 />
 
                 <Button 
@@ -229,37 +248,36 @@ export default function Contact() {
                   className="relative w-full group overflow-hidden rounded-full"
                   disabled={isSubmitting}
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-r from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF] 
+                  <div className={`absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
                     animate-gradient-x transition-opacity duration-300
                     ${isSubmitting ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-                  <div className={`absolute inset-0 bg-gradient-to-r from-[#EF96C5] via-[#CCF8FF] to-[#EF96C5] 
+                  <div className={`absolute inset-0 bg-gradient-to-r from-brand-pink via-brand-blue to-brand-pink 
                     animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300
                     ${isSubmitting ? 'opacity-100' : ''}`} />
                   <span className={`relative font-medium
-                    ${isSubmitting ? 'text-white' : 'text-gray-800 group-hover:text-white'}`}>
+                    ${isSubmitting ? 'text-white' : 'text-text-primary group-hover:text-white'}`}>
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </span>
                 </Button>
               </form>
             </div>
 
-            {/* 右カラム：連絡先情報 */}
-            <div className="order-1 xl:order-2">
-              <h3 className="text-xl font-bold mb-4">Get in Touch</h3>
-              <p className="text-gray-600 mb-6">
-                I'm always interested in new projects and collaborations.
-                Choose your preferred way to connect with me.
-              </p>
-              <div className="space-y-6">
+            {/* 連絡先情報（左側） */}
+            <div className="order-1 xl:order-1 w-[46%] ">
+              {/* <h3 className="text-xl font-bold mb-4">Get in Touch</h3> */}
+              {/* <p className="text-2xl font-light text-gray-800 mb-12 leading-relaxed">
+                  Ready to bring your<br />vision to life
+              </p> */}
+              <div className="space-y-8">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#CCF8FF] to-[#EF96C5] 
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-brand-blue to-brand-pink 
                       rounded-lg flex items-center justify-center">
                       <div className="text-2xl text-white">{item.icon}</div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900">{item.title}</h4>
-                      <p className="text-gray-600">{item.description}</p>
+                      <h4 className="font-medium text-text-primary">{item.title}</h4>
+                      <p className="text-text-secondary">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -269,6 +287,10 @@ export default function Contact() {
 
           {showConfetti && <Confetti />}
           <Toaster position="top-center" />
+
+    {/* 下部スペース */}
+    <div className="h-[2%]" />
+
         </DialogContent>
       </Dialog>
     </>

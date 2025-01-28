@@ -34,10 +34,10 @@ export async function POST(request) {
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
                 <div style="background: linear-gradient(135deg, #CCF8FF, #EF96C5);
                            padding: 40px 20px; text-align: center; border-radius: 10px 10px 0 0;">
-                    <h1 style="color: #1c1c22; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">
+                    <h1 style="color:  #374151; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">
                         New Contact Request
                     </h1>
-                    <p style="color: #1c1c22; margin-top: 10px; font-size: 18px;">
+                    <p style="color:  #374151; margin-top: 10px; font-size: 18px;">
                         From Portfolio Website
                     </p>
                 </div>
@@ -48,27 +48,27 @@ export async function POST(request) {
                     <!-- 問い合わせ内容 -->
                     <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px;
                                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
-                        <h2 style="color: #1c1c22; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
+                        <h2 style="color:  #374151; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
                             Contact Details
                         </h2>
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr>
                                 <td style="padding: 10px 0; color: #666; width: 150px;">Full Name:</td>
-                                <td style="padding: 10px 0; color: #1c1c22;">
+                                <td style="padding: 10px 0; color:  #374151;">
                                     ${body.firstname} ${body.lastname}
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 10px 0; color: #666;">Email:</td>
-                                <td style="padding: 10px 0; color: #1c1c22;">${body.email}</td>
+                                <td style="padding: 10px 0; color:  #374151;">${body.email}</td>
                             </tr>
                             <tr>
                                 <td style="padding: 10px 0; color: #666;">Phone:</td>
-                                <td style="padding: 10px 0; color: #1c1c22;">${body.phone || 'Not provided'}</td>
+                                <td style="padding: 10px 0; color:  #374151;">${body.phone || 'Not provided'}</td>
                             </tr>
                             <tr>
                                 <td style="padding: 10px 0; color: #666;">Reason:</td>
-                                <td style="padding: 10px 0; color: #1c1c22;">${body.reason || 'Not specified'}</td>
+                                <td style="padding: 10px 0; color:  #374151;">${body.reason || 'Not specified'}</td>
                             </tr>
                         </table>
                     </div>
@@ -76,10 +76,10 @@ export async function POST(request) {
                     <!-- メッセージ -->
                     <div style="background: white; padding: 20px; border-radius: 10px;
                                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
-                        <h2 style="color: #1c1c22; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
+                        <h2 style="color:  #374151; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
                             Message
                         </h2>
-                        <p style="color: #1c1c22; line-height: 1.6; white-space: pre-wrap;">
+                        <p style="color:  #374151; line-height: 1.6; white-space: pre-wrap;">
                             ${body.message}
                         </p>
                     </div>
@@ -100,10 +100,10 @@ export async function POST(request) {
                 <div style="background: linear-gradient(135deg, #CCF8FF, #EF96C5);
                            padding: 40px 20px; text-align: center; border-radius: 10px 10px 0 0;
                            position: relative; overflow: hidden;">
-                    <h1 style="color: #1c1c22; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">
+                    <h1 style="color:  #374151; font-size: 32px; margin: 0; font-family: 'Arial', sans-serif;">
                         Thank You for Your Message!
                     </h1>
-                    <p style="color: #1c1c22; margin-top: 10px; font-size: 18px;">
+                    <p style="color:  #374151; margin-top: 10px; font-size: 18px;">
                         We've received your inquiry
                     </p>
                 </div>
@@ -114,15 +114,15 @@ export async function POST(request) {
                     
                     <!-- 挨拶文 -->
                     <div style="text-align: left; margin-bottom: 30px;">
-                        <p style="color: #1c1c22; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                        <p style="color:  #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                             Dear ${body.firstname},
                         </p>
-                        <p style="color: #1c1c22; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                        <p style="color:  #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                             Thank you for reaching out! I've received your message and will get back to you as soon as possible.
                             Usually, I respond within 24-48 hours.
                         </p>
                         ${body.reason === 'job-opportunity' ? `
-                        <p style="color: #1c1c22; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                        <p style="color:  #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                             Since you're interested in job opportunities, you might want to schedule a quick video call:
                             <a href="https://calendly.com/ryoma-t-engineer/30min" 
                                style="color: #EF96C5; text-decoration: none; font-weight: bold;">
@@ -135,23 +135,23 @@ export async function POST(request) {
                     <!-- 問い合わせ内容の確認 -->
                     <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px;
                                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
-                        <h2 style="color: #1c1c22; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
+                        <h2 style="color:  #374151; border-bottom: 2px solid #EF96C5; padding-bottom: 10px;">
                             Your Message Details
                         </h2>
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr>
                                 <td style="padding: 10px 0; color: #666; width: 150px;">Name:</td>
-                                <td style="padding: 10px 0; color: #1c1c22;">
+                                <td style="padding: 10px 0; color:  #374151;">
                                     ${body.firstname} ${body.lastname}
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 10px 0; color: #666;">Reason:</td>
-                                <td style="padding: 10px 0; color: #1c1c22;">${body.reason || 'Not specified'}</td>
+                                <td style="padding: 10px 0; color:  #374151;">${body.reason || 'Not specified'}</td>
                             </tr>
                             <tr>
                                 <td style="padding: 10px 0; color: #666;">Message:</td>
-                                <td style="padding: 10px 0; color: #1c1c22;">
+                                <td style="padding: 10px 0; color:  #374151;">
                                     ${body.message}
                                 </td>
                             </tr>
@@ -163,14 +163,14 @@ export async function POST(request) {
                         <a href="https://your-portfolio-url.com" 
                            style="display: inline-block; padding: 12px 30px;
                                   background: linear-gradient(135deg, #CCF8FF, #EF96C5);
-                                  color: #1c1c22; text-decoration: none; border-radius: 25px;
+                                  color:  #374151; text-decoration: none; border-radius: 25px;
                                   font-weight: bold; margin: 10px;">
                             View My Portfolio
                         </a>
                         <a href="https://calendly.com/ryoma-t-engineer/30min" 
                            style="display: inline-block; padding: 12px 30px;
                                   background: linear-gradient(135deg, #EF96C5, #CCF8FF);
-                                  color: #1c1c22; text-decoration: none; border-radius: 25px;
+                                  color:  #374151; text-decoration: none; border-radius: 25px;
                                   font-weight: bold; margin: 10px;">
                             Schedule a Call
                         </a>

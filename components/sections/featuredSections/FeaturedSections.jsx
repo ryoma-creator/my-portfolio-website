@@ -46,15 +46,15 @@ export default function FeaturedSections() {
            <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
              {/* テキストセクション */}
              <div className="w-full lg:w-1/2 flex flex-col items-center text-center space-y-8 px-16">
-               <span className="text-sm uppercase tracking-wider text-gray-400">
+               <span className="text-sm uppercase tracking-wider text-text-muted">
                  {section.category}
                </span>
-               <h2 className="text-4xl font-normal">
+               <h2 className="text-4xl font-normal text-text-primary">
                  {section.title}
                </h2>
                <ul className="space-y-4 max-w-sm">
                  {section.points.map((point, i) => (
-                   <li key={i} className="text-lg text-gray-600">
+                   <li key={i} className="text-lg text-text-tertiary">
                      {point}
                    </li>
                  ))}
@@ -64,9 +64,9 @@ export default function FeaturedSections() {
             variant='outline'
             className='relative group overflow-hidden rounded-full'
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#CCF8FF] via-[#EF96C5] to-[#CCF8FF]  
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
               animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative text-gray-800 group-hover:text-white flex items-center gap-2">
+            <span className="relative text-text-primary group-hover:text-white flex items-center gap-2">
               {section.action}
               <svg 
                 className="w-4 h-4 transform transition-transform group-hover:translate-x-1" 

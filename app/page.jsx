@@ -19,7 +19,7 @@ export default function HomePage() {
         <Hero />
       </SectionWrapper>
       
-      {/* <SectionWrapper variant="light" >
+      <SectionWrapper variant="light" >
         <Strengths />
       </SectionWrapper>
 
@@ -37,7 +37,7 @@ export default function HomePage() {
       
       <SectionWrapper variant="light" >
         <AutoCarousel achievements={achievements} />
-      </SectionWrapper> */}
+      </SectionWrapper>
       
       <SectionWrapper variant="dark" >
         <Contact />
@@ -45,11 +45,11 @@ export default function HomePage() {
       
       {/* <SectionWrapper variant="dark" >
         <Storytelling />
-      </SectionWrapper>
+      </SectionWrapper> */}
       
       <SectionWrapper variant="dark" >
         <Footer />
-      </SectionWrapper> */}
+      </SectionWrapper>
     </main>
   );
 }

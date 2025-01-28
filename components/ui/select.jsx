@@ -10,15 +10,22 @@ const SelectGroup = SelectPrimitive.Group
 
 const SelectValue = SelectPrimitive.Value
 
+// 選択後のアイテム
 const SelectTrigger = React.forwardRef(({ className, children, ...props }, ref) => (
   <SelectPrimitive.Trigger
     ref={ref}
-    className={cn(
-     `h-[48px] w-full flex items-center justify-between rounded-[8px] 
-     outline-none border border-white/10 bg-primary px-4 py-5 text-base
-     text-white/60 placeholder:text-white/10 focus:border-accent
-     focus:text-accent`
-    )}
+// select.jsxのSelectTriggerで
+className={cn(
+  `h-[48px] w-full flex items-center justify-between rounded-[8px] 
+   outline-none border px-4 py-5 text-base
+   bg-text-primary text-white 
+   hover:from-brand-pink hover:to-accent-hover  
+   hover:text-white
+   focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20
+   hover:border-brand-pink
+   transition-all duration-300`
+
+)}
     {...props}>
     {children}
     <SelectPrimitive.Icon asChild>
@@ -59,8 +66,11 @@ const SelectContent = React.forwardRef(({ className, children, position = "poppe
         data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 
         data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 
         data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2
-        bg-primary border-white/10 dark:bg-slate-950 
-        `,
+        bg-text-primary border-white/10 dark:bg-text-primary
+     
+        focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20
+        hover:border-brand-pink
+       `,
         position === "popper" &&
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
         className
@@ -91,16 +101,21 @@ const SelectItem = React.forwardRef(({ className, children, ...props }, ref) => 
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      `relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none 
-      focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50
-      focus:bg-accent focus:text-primary
-      `,
+      `relative flex w-full cursor-pointer select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm
+      bg-text-primary  
+      text-white  
+      hover:bg-gradient-to-r hover:from-accent-hover/20 hover:to-brand-pink/90
+      focus:bg-gradient-to-r focus:from-accent-hover/30 focus:to-brand-pink/95
+      data-[disabled]:pointer-events-none data-[disabled]:opacity-95
+     `,
       className
     )}
     {...props}>
+
+      {/* チェックマーク */}
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
+        <Check className="h-4 w-4 text-brand-pink" />
       </SelectPrimitive.ItemIndicator>
     </span>
 

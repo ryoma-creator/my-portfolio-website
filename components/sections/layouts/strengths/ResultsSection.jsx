@@ -20,10 +20,10 @@ export default function ResultsSection({
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-24">
-          <h2 className="text-sm uppercase tracking-wider text-white/60 mb-4">
+          <h2 className="text-sm uppercase tracking-wider text-text-dark-tertiary mb-4">
             {sectionTitle}
           </h2>
-          <p className="text-2xl font-light">
+          <p className="text-2xl font-light text-text-dark-primary">
             {sectionSubtitle}
           </p>
         </div>
@@ -48,13 +48,13 @@ export default function ResultsSection({
                 </div>
                 
                 <div>
-                  <span className="text-sm uppercase tracking-wider text-white/60 mb-4 block">
+                  <span className="text-sm uppercase tracking-wider text-text-dark-tertiary mb-4 block">
                     {item.category}
                   </span>
-                  <h3 className="text-3xl font-light mb-6">
+                  <h3 className="text-3xl font-light mb-6 text-text-dark-primary">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-white/80 leading-relaxed">
+                  <p className="text-lg text-text-dark-secondary leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -84,7 +84,7 @@ export default function ResultsSection({
                 </div>
                 <div>
                   <h3 className="text-2xl font-light mb-2">{item.title}</h3>
-                  <p className="text-lg text-white/60">{item.subtitle}</p>
+                  <p className="text-lg text-white">{item.subtitle}</p>
                 </div>
               </motion.div>
             ))}
@@ -109,7 +109,7 @@ export default function ResultsSection({
                 </div>
                 <div>
                   <h3 className="text-2xl font-light mb-2">{item.title}</h3>
-                  <p className="text-lg text-white/60">{item.subtitle}</p>
+                  <p className="text-lg text-white">{item.subtitle}</p>
                 </div>
               </motion.div>
             ))}
