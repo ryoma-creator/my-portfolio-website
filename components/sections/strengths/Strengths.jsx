@@ -31,17 +31,17 @@ export default function Strengths() {
   ];
 
   return (
-    <section className='min-h-[80vh] py-12 relative'>
-      <div className="container mx-auto px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-24">
+    <section className='min-h-[80vh] py-[96px] relative'>
+      <div className="container mx-auto px-16 flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[45px] ">
           {strengths.map((strength, index) => (
             <Link href={strength.link} key={index}>
-              <div className="group relative w-72 h-72 aspect-square overflow-hidden rounded-lg hover:z-10">
+              <div className="group relative w-[246.25px] h-[246.25px] aspect-square overflow-hidden rounded-lg hover:z-10">
                 {/* 画像 */}
                 <img
                   src={strength.image}
                   alt={strength.title}
-                  className="w-72 h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-[246.25px] h-[246.25px] object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* グラデーションオーバーレイ */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#CCF8FF]/40 via-[#EF96C5]/40 to-[#CCF8FF]/40 

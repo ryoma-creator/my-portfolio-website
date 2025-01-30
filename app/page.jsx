@@ -12,7 +12,24 @@ import AutoCarousel from '@/components/features/achievements/carousel/AutoCarous
 import Portfolio from '@/components/sections/portfolio/Portfolio';
 import Concept from '@/components/sections/layouts/common/concept/Concept';
 
+// import DiscoverSection from "@/components/sections/common/DiscoverSection";
+import ContactCTA from "@/components/common/ContactCTA";
+
+import { homeData } from "@/components/sections/data/home/contactDiscover";
+
+
+// test
+import SkillMatrix from "@/components/sections/layouts/strengths/SkillMatrix";
+import { developmentData } from "@/components/sections/data/strengths/development";
+
+
 export default function HomePage() {
+  // homeDataから必要なデータを取り出す(contactと、discover用に。)
+  const { discover, contactMessage } = homeData;
+
+
+  const { skills } = developmentData;
+
   return (
     <main>
       <SectionWrapper variant="gradient" >
@@ -23,7 +40,7 @@ export default function HomePage() {
         <Strengths />
       </SectionWrapper>
 
-      <SectionWrapper variant="light" >
+      {/* <SectionWrapper variant="light" >
         <Concept />
       </SectionWrapper>
       
@@ -41,11 +58,23 @@ export default function HomePage() {
       
       <SectionWrapper variant="dark" >
         <Contact />
-      </SectionWrapper>
+      </SectionWrapper> */}
       
       {/* <SectionWrapper variant="dark" >
         <Storytelling />
       </SectionWrapper> */}
+      
+      <SectionWrapper variant="gradient" >
+        <SkillMatrix 
+          categories={skills.categories}
+          title={skills.title}
+          description={skills.description}
+        />
+      </SectionWrapper>
+
+      <SectionWrapper variant="dark">
+        <ContactCTA description={contactMessage} />
+      </SectionWrapper>
       
       <SectionWrapper variant="dark" >
         <Footer />

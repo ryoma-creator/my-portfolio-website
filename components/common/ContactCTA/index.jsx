@@ -1,34 +1,54 @@
+'use client'
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useState } from 'react';
+import ContactModal from './Modal';
+import ContactForm from './form';
 
 const ContactCTA = ({ 
   title = "Let's Create Together",
-  description,  // 必須パラメータに変更
+  description,
   buttonText = "Contact Me"
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="text-center max-w-2xl mx-auto pt-24"
+      className="text-center max-w-2xl mx-auto py-16"
     >
-      <div className="mb-8">
-        <svg className="w-12 h-12 mx-auto mb-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-        <h2 className="text-2xl font-light mb-4">{title}</h2>
-        <p className="text-white/80 mb-8">
-          {description}
-        </p>
-        <Link href="/contact">
-          <button className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-colors">
+      <div className="">
+        {/* SVGは変更なし */}
+        <h2 className="text-2xl font-light mb-4 text-text-dark-primary">{title}</h2>
+        <p className="text-text-secondary mb-8">{description}</p>
+
+        {/* ボタンのスタイリングを変更 */}
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="relative px-8 py-3 rounded-full group overflow-hidden border border-white
+          hover:border-transparent transition-all duration-300
+          "
+        >
+          {/* グラデーション背景（ホバー時に表示） */}
+          <div className="absolute inset-0  animate-gradient-x bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
+            opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          />
+          {/* ボタンテキスト */}
+          <span className="relative z-10 text-text-dark-primary group-hover:text-white 
+            transition-colors duration-300"
+          >
             {buttonText}
-          </button>
-        </Link>
+          </span>
+        </button>
       </div>
+
+      {/* モーダル */}
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ContactForm />
+      </ContactModal>
     </motion.div>
   );
 };

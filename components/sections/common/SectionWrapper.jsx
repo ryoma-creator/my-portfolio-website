@@ -46,10 +46,8 @@ export default function SectionWrapper({
     ),
     dark: (
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
-          bg-gradient-to-r from-brand-blue/10 via-brand-pink/10 to-brand-blue/10  
-          blur-3xl transform rotate-12 animate-gradient-xy" />
-      </div>
+      <div className="absolute inset-0 bg-black" />
+    </div>
     ),
     light: null,
     accent: (

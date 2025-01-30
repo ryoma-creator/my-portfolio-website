@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 import { ReactTyped } from 'react-typed';
@@ -8,13 +9,20 @@ import Photo from '@/components/Photo';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
+import ContactModal from '@/components/common/ContactCTA/Modal';
+import ContactForm from '@/components/common/ContactCTA/form';
+
 export default function Hero() {
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
+    <>
     <section className='relative h-[90vh] bg-white overflow-hidden'>
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
-          bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
+          bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue
           blur-3xl transform rotate-12 animate-gradient-xy" />
         <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full 
              bg-gradient-to-r from-teal-400/40 via-blue-400/40 to-indigo-400/40 
@@ -34,7 +42,7 @@ export default function Hero() {
                 duration={1.5} 
                 stagger={0.05}
                 scrollTrigger={true}
-                className="text-xl relative z-10 text-text-secondary"
+                className="text-xl relative z-10 text-gray-700"
               />
             </div>
             
@@ -46,7 +54,7 @@ export default function Hero() {
                   duration={1.5} 
                   stagger={0.05}
                   scrollTrigger={true}
-                  className="text-text-primary font-semibold" 
+                  className="text-gray-900 font-semibold" 
                 />
               </div>
               <br />
@@ -57,7 +65,7 @@ export default function Hero() {
                   duration={2} 
                   stagger={0.05}
                   scrollTrigger={true}
-                  className="text-text-primary font-semibold" 
+                  className="text-gray-900 font-semibold" 
                 />
               </div>
             </div>
@@ -73,11 +81,12 @@ export default function Hero() {
                   variant='outline'
                   size='lg'
                   className='relative group overflow-hidden rounded-full'
+                  onClick={() => setIsModalOpen(true)}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue
                     animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative text-text-primary group-hover:text-white">Contact Me</span>
-                  <FiDownload className='text-xl relative text-text-primary group-hover:text-white'/>
+                  <span className="relative text-gray-800 group-hover:text-white">Contact Me</span>
+                  <FiDownload className='text-xl relative text-gray-800 group-hover:text-white'/>
                 </Button>
               </GsapAnimatedElement>
               <GsapAnimatedElement
@@ -89,7 +98,7 @@ export default function Hero() {
                 <Social 
                   containerStyles='flex gap-6' 
                   iconStyles='w-9 h-9 border border-gray-200 rounded-full
-                  flex items-center justify-center text-text-secondary
+                  flex items-center justify-center text-gray-600
                   hover:border-violet-400 hover:text-violet-500 
                   hover:transition-all duration-500 hover:translate-y-[-5px]'
                 />
@@ -191,5 +200,14 @@ export default function Hero() {
   }
       `}</style>
     </section>
+
+      {/* モーダル */}
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)}
+      >
+        <ContactForm />
+      </ContactModal>
+    </>
   );
 }
