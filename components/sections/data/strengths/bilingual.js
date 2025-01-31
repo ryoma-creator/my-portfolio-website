@@ -90,7 +90,7 @@ export const bilingualData = {
           {
             title: "Development",
             subtitle: "Modern Web Technologies",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coding.jpg",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg",
             link: "/strengths/development"
           },
           {
@@ -102,7 +102,7 @@ export const bilingualData = {
           {
             title: "Growth",
             subtitle: "Continuous Learning & Adaptation",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/growth.jpg",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
             link: "/strengths/growth"
           }
         ]

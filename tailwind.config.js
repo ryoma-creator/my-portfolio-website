@@ -15,9 +15,6 @@ module.exports = {
 		  "2xl": "1400px",
 		},
 	  },
-	  safelist: [
-		'xl-scale-90',  
-	],
 	  screens: { 
 		sm: '640px',
 		md: '768px',

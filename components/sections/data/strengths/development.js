@@ -26,7 +26,7 @@ export const developmentData = {
     },
   
     approach: {
-      sectionTitle: "Technical Expertise",
+      sectionTitle: "Skill Details",
       approaches: [
         {
           title: "Frontend Frameworks",
@@ -112,6 +112,8 @@ export const developmentData = {
     skills: {// developmentDataに追加
         title: "Technical Stack",
         description: "Core technologies and tools I work with",
+        imageSrc: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg", // 追加
+        imageAlt: "Development Skills", // 追加
         categories: [
           {
             name: "Frontend",
@@ -127,7 +129,7 @@ export const developmentData = {
           },
           {
             name: "Backend",
-            items: ["Node.js", "Express", "RESTful APIs"]
+            items: ["Node.js", "Express", "SQL", "RESTful APIs"]
           },
           {
             name: "Tools",

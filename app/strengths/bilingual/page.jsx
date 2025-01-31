@@ -9,6 +9,7 @@ import ApproachSection from '@/components/sections/layouts/strengths/ApproachSec
 import ResultsSection from '@/components/sections/layouts/strengths/ResultsSection';
 import { bilingualData } from '@/components/sections/data/strengths/bilingual';
 
+
 export default function BilingualPage() {
   const [isScrolled, setIsScrolled] = useState(false);
 

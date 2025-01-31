@@ -90,19 +90,19 @@ export const analyticsData = {
           {
             title: "Development",
             subtitle: "Modern Web Technologies",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coding.jpg",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg",
             link: "/strengths/development"
           },
           {
             title: "Bilingual",
             subtitle: "Cross-Cultural Communication",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/samples/global.jpg",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg",
             link: "/strengths/bilingual"
           },
           {
             title: "Growth",
             subtitle: "Continuous Learning & Adaptation",
-            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499135/samples/growth.jpg",
+            image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
             link: "/strengths/growth"
           }
       ]

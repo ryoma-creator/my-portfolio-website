@@ -53,60 +53,62 @@ const Nav = () => {
                     const isActive = pathname === link.path;
                     const Icon = link.icon;
                     
-                    return (
+                    return link.isSpecial ? (
+                        // Contact ボタン
                         <button
                             key={index}
-                            onClick={() => {
-                                if (link.path === '#') {
-                                    setIsModalOpen(true);
-                                }
-                            }}
+                            onClick={() => setIsModalOpen(true)}
                             className="relative group flex flex-col items-center"
                         >
-                            <div className={`
-                                transition-all duration-300
-                                ${link.isSpecial 
-                                    ? 'relative p-2 rounded-full overflow-hidden' 
-                                    : 'p-2'}
-                                ${isActive 
-                                  ? 'text-brand-pink' // ⇦ transform -translate-y-1  // 上移動を有効にする場合: transform -translate-y-1 加えて
-                                  : 'text-text-secondary'}
-                            `}>
-                                {/* Gradient background for Contact icon */}
-                                {link.isSpecial && (
-                                    <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
-                                        opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                                )}
+                            <div className="relative p-2 rounded-full overflow-hidden transition-all duration-300 text-text-secondary">
+                                {/* メールアイコン専用のグラデーション効果 */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
+                                    opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                                 
-                                <Icon className={`
-                                    w-5 h-5
-                                    ${link.isSpecial ? 'group-hover:animate-bounce' : 'group-hover:scale-110 transition-transform'}
-                                `} />
+                                <Icon className="w-5 h-5 relative z-10 group-hover:animate-bounce text-text-secondary group-hover:text-brand-pink" />
                             </div>
                             
                             {/* Tooltip */}
-                            <span className={`
-                                absolute -bottom-3 text-xs font-light tracking-wide
+                            <span className="absolute -bottom-3 text-xs font-light tracking-wide
                                 opacity-0 group-hover:opacity-100 
                                 transition-all duration-300
-                                ${isActive ? 'text-brand-pink' : 'text-text-secondary'}
-                            `}>
+                                text-text-secondary"
+                            >
                                 {link.name}
                             </span>
-          
-                            {/* Animated underline */}
+                        </button>
+                    ) : (
+                        // Home リンク
+                        <Link
+                            key={index}
+                            href={link.path}
+                            className="relative group flex flex-col items-center"
+                        >
+                            <div className="p-2 transition-all duration-300 text-text-secondary">
+                                <Icon className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
+                            </div>
+                            
+                            {/* Tooltip */}
+                            <span className="absolute -bottom-3 text-xs font-light tracking-wide
+                                opacity-0 group-hover:opacity-100 
+                                transition-all duration-300
+                                text-text-secondary"
+                            >
+                                {link.name}
+                            </span>
+
+                            {/* Animated underline - 一時的に無効化
                             <div className={`
-                                absolute -bottom-[2px] left-1/2 w-4 h-0.5 
+                                absolute -bottom-[1px] left-1/2 w-4 h-0.5 
                                 transform -translate-x-1/2
                                 transition-all duration-300 ease-out
-                                ${link.isSpecial 
-                                    ? 'bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue' 
-                                    : 'bg-gradient-to-r from-brand-blue to-brand-pink'}
+                                bg-gradient-to-r from-brand-blue to-brand-pink
                                 ${isActive 
                                     ? 'opacity-100 scale-x-100' 
                                     : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'}
                             `} />
-                        </button>
+                            */}
+                        </Link>
                     );
                 })}
             </nav>

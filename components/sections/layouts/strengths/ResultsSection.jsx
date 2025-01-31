@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ContactCTA from '../../common/ContactCTA';
 import DiscoverSection from '../../common/DiscoverSection';
-
+import ContactCTA from '@/components/common/ContactCTA';
+import Footer from '../../Footer';
 
 export default function ResultsSection({
   sectionTitle,
@@ -126,6 +126,9 @@ export default function ResultsSection({
 
         {/* Contact CTA */}
         <ContactCTA description={contactMessage} />
+
+        <Footer />
+
       </div>
     </div>
   );

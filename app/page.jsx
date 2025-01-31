@@ -19,7 +19,11 @@ import { homeData } from "@/components/sections/data/home/contactDiscover";
 
 
 // test
-import SkillMatrix from "@/components/sections/layouts/strengths/SkillMatrix";
+import IntroSection from "@/components/sections/layouts/strengths/IntroSection";
+import SkillShowcase from "@/components/sections/layouts/strengths/SkillLayouts/SkillShowcase";
+import ResultsSection from "@/components/sections/layouts/strengths/ResultsSection";
+
+// import SkillMatrix from "@/components/sections/layouts/strengths/SkillMatrix";
 import { developmentData } from "@/components/sections/data/strengths/development";
 
 
@@ -35,12 +39,37 @@ export default function HomePage() {
       <SectionWrapper variant="gradient" >
         <Hero />
       </SectionWrapper>
+
+{/* text */}
+{/* <SectionWrapper variant="gradient">
+        <IntroSection {...developmentData.intro} />
+      </SectionWrapper> */}
+
+      {/* SkillShowcaseを追加 */}
+      {/* <SectionWrapper variant="gradient">
+        <SkillShowcase skills={developmentData.skills} />
+      </SectionWrapper> */}
+
+      {/* <SectionWrapper variant="gradient">
+        <BackgroundSection {...developmentData.background} />
+      </SectionWrapper> */}
+      
+
+      {/* <SectionWrapper variant="gradient">
+        <ApproachSection {...developmentData.approach} />
+      </SectionWrapper>
+
+      <SectionWrapper variant="gradient2">
+        <ResultsSection {...developmentData.results} />
+      </SectionWrapper> */}
+{/* test */}
+
       
       <SectionWrapper variant="light" >
         <Strengths />
       </SectionWrapper>
 
-      {/* <SectionWrapper variant="light" >
+      <SectionWrapper variant="light" >
         <Concept />
       </SectionWrapper>
       
@@ -56,29 +85,33 @@ export default function HomePage() {
         <AutoCarousel achievements={achievements} />
       </SectionWrapper>
       
-      <SectionWrapper variant="dark" >
+      {/* <SectionWrapper variant="dark" >
         <Contact />
-      </SectionWrapper> */}
+      </SectionWrapper>  */}
       
       {/* <SectionWrapper variant="dark" >
         <Storytelling />
       </SectionWrapper> */}
       
-      <SectionWrapper variant="gradient" >
+      {/* <SectionWrapper variant="gradient" >
         <SkillMatrix 
           categories={skills.categories}
           title={skills.title}
           description={skills.description}
         />
-      </SectionWrapper>
+      </SectionWrapper> */}
 
+      <SectionWrapper variant="gradient2">
+        <ResultsSection {...developmentData.results} />
+      </SectionWrapper> 
+{/* 
       <SectionWrapper variant="dark">
         <ContactCTA description={contactMessage} />
       </SectionWrapper>
       
       <SectionWrapper variant="dark" >
         <Footer />
-      </SectionWrapper>
+      </SectionWrapper> */}
     </main>
   );
 }

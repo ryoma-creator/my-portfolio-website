@@ -10,6 +10,7 @@ export default function SectionWrapper({
   // バリアントごとのスタイル設定
   const variants = {
     gradient: `relative overflow-hidden bg-white text-text-primary`, 
+    gradient2: `relative overflow-hidden bg-white text-text-primary`,
     dark: `relative overflow-hidden bg-text-primary text-white`,
     light: `relative overflow-hidden bg-white text-text-primary`,
     accent: `relative overflow-hidden bg-text-primary text-white`

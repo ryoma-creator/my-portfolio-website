@@ -16,29 +16,31 @@ export default function BackgroundSection({
       <div className="container mx-auto px-4">
         {/* 上部の大きなタイトルと説明文 */}
         <div className="max-w-4xl mx-auto mb-32 text-center">
-          <h2 className="text-4xl font-light mb-8 text-gray-900">
+          <h2 className="text-4xl font-light mb-8 text-text-primary">
             {mainTitle}
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-text-secondary leading-relaxed">
             {mainDescription}
           </p>
         </div>
 
         {/* 2カラムレイアウト */}
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-16 items-center px-2">
           {/* 左側テキストエリア */}
-          <div className="w-full lg:w-1/3 lg:self-center">
+          <div className="w-full lg:w-1/3 lg:self-center pl-3">
             <div className="max-w-[400px]">
-              <h3 className="text-2xl font-light mb-4 text-gray-900">
+              <h3 className="text-2xl font-light mb-4 text-text-primary">
                 {columnTitle}
               </h3>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
+              <p className="text-base text-text-secondary leading-relaxed mb-6">
                 {columnDescription}
               </p>
-              <button className="px-4 py-2 border border-gray-300 rounded-full text-sm 
-                text-gray-700 hover:bg-gray-100 transition-colors">
+
+              {/* 別ページ作成後に表示 */}
+              {/* <button className="px-4 py-2 border border-text-secondary rounded-full text-sm 
+                text-text-secondary hover:bg-text-secondary/5 transition-colors">
                 Read more
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -61,7 +63,7 @@ export default function BackgroundSection({
 
         {/* Impact Areas への導入 */}
         <div className="max-w-2xl mx-auto mt-32 text-center">
-          <p className="text-xl text-gray-500 italic">
+          <p className="text-xl text-text-tertiary italic">
             {impactText}
           </p>
         </div>
