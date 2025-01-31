@@ -1,0 +1,114 @@
+; 日本語ver
+export const learningJourneyData = {
+  header: {
+    topText: "LEARNING & GROWTH",
+    title: "Beyond Technical Skills",
+    subtitle: "How systematic learning transforms into business value",
+    backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
+  },
+
+  intro: {
+    subtitle: "PROFESSIONAL GROWTH",
+    title: "Systematic Approach to Learning",
+    description: "技術習得だけでなく、1年間の集中的な学習を通じて、ビジネス価値を生み出すための体系的なアプローチを確立。この経験は、今後のプロジェクト管理や効率的なチーム開発に直接活かせます。",
+    videoSrc: "https://res.cloudinary.com/dnm2fyhwt/video/upload/v1737026574/light_leaf_book_.mp4_ckjb7g.mp4"
+  },
+
+  background: {
+    mainTitle: "Business-Oriented Learning",
+    mainDescription: "独学の過程で培った、効率的な問題解決能力と時間管理スキル。これらは、実務における迅速な課題対応と、プロジェクトの効率的な推進に直結します。",
+    
+    columnTitle: "Practical Benefits",
+    columnDescription: "自己管理能力と継続的な改善プロセスの確立は、チーム開発における信頼性の高いメンバーシップを約束します。",
+    
+    imageSrc: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1737026232/smoothie_green_lemon_w7kz63.jpg",
+    imageAlt: "Systematic Learning Process",
+    
+    impactText: "See how systematic learning translates to business value"
+  },
+
+  approach: {
+    sectionTitle: "Business Applications",
+    approaches: [
+      {
+        title: "Problem-Solving Excellence",
+        subtitle: "Efficient Solutions",
+        description: "複雑な課題を系統的に分解し、効率的に解決する能力を開発。この手法は、実務での問題解決とプロジェクト推進に直接活用できます。",
+        image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
+      },
+      {
+        title: "Time Management",
+        subtitle: "Project Efficiency",
+        description: "厳格な時間管理と優先順位付けのシステムを確立。これにより、締切厳守とクオリティの両立を実現します。",
+        image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
+      },
+      {
+        title: "Continuous Integration",
+        subtitle: "Rapid Learning",
+        description: "新技術の迅速な習得と実装のプロセスを確立。ビジネス環境の急速な変化に対応できる適応力を備えています。",
+        image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg"
+      },
+      {
+        title: "Quality Assurance",
+        subtitle: "Systematic Testing",
+        description: "徹底的なテストと改善の習慣により、高品質なアウトプットを継続的に提供する体制を構築。",
+        image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
+      },
+      {
+        title: "Team Collaboration",
+        subtitle: "Effective Communication",
+        description: "独学での経験を活かし、効果的な質問と情報共有の手法を確立。チーム開発での円滑なコミュニケーションを実現します。",
+        image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/cld-sample.jpg"
+      }
+    ]
+  },
+
+  results: {
+    sectionTitle: "BUSINESS IMPACT",
+    sectionSubtitle: "Transforming Learning into Value",
+    mainResults: [
+      {
+        category: "PROJECT MANAGEMENT",
+        title: "Efficient Delivery",
+        description: "体系的な学習方法と時間管理スキルにより、複雑なプロジェクトでも確実な成果を提供。チームの信頼できるメンバーとして貢献します。",
+        image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
+      },
+      {
+        category: "ADAPTABILITY",
+        title: "Rapid Integration",
+        description: "新しい技術やプロジェクトへの迅速な適応力。1年間の集中的な学習で証明された、効率的な知識吸収と実装能力を提供します。",
+        image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
+      },
+      {
+        category: "TEAM VALUE",
+        title: "Reliable Partnership",
+        description: "自己管理能力と継続的な改善への取り組みにより、チームの生産性向上に貢献。信頼できるパートナーとして機能します。",
+        image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
+      }
+    ],
+    discover: {
+      title: "Explore Other Strengths",
+      items: [
+        {
+          title: "Technical Skills",
+          subtitle: "Development Expertise",
+          image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg",
+          link: "/features/evolution"
+        },
+        {
+          title: "Analytics",
+          subtitle: "Problem Solving",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
+          link: "/strengths/analytics"
+        },
+        {
+          title: "Growth Mindset",
+          subtitle: "Continuous Learning",
+          image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg",
+          link: "/strengths/growth"
+        }
+      ]
+    },
+    contactMessage: "効率的な学習と実装の手法で、プロジェクトの成功に貢献します。"
+  }
+};
