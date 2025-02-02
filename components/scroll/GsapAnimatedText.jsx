@@ -140,7 +140,11 @@ const GsapAnimatedText = ({
     if (typeof window !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
       
-      const chars = textRef.current.children;
+      // 文字要素の取得方法を修正
+      const element = textRef.current;
+      if (!element) return;
+
+      const chars = element.querySelectorAll('span');
       
       const animation = gsap.fromTo(chars, 
         variants[variant].initial,
@@ -150,10 +154,9 @@ const GsapAnimatedText = ({
           stagger: { each: stagger },
           ease,
           scrollTrigger: scrollTrigger ? {
-            trigger: textRef.current,
+            trigger: element,
             start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
+            toggleActions: 'play none none none'
           } : null
         }
       );
@@ -172,6 +175,44 @@ const GsapAnimatedText = ({
         </span>
       ))}
     </span>
+
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     gsap.registerPlugin(ScrollTrigger);
+      
+  //     const chars = textRef.current.children;
+      
+  //     const animation = gsap.fromTo(chars, 
+  //       variants[variant].initial,
+  //       {
+  //         ...variants[variant].animate,
+  //         duration,
+  //         stagger: { each: stagger },
+  //         ease,
+  //         scrollTrigger: scrollTrigger ? {
+  //           trigger: textRef.current,
+  //           start: 'top 80%',
+  //           end: 'bottom 20%',
+  //           toggleActions: 'play none none none'  // reverseをnoneに変更
+  //         } : null
+  //       }
+  //     );
+  //     // toggleActions🔺 none noneというのは、scroll時に、再び現れるかどうか。ここで操作。
+
+  //     return () => {
+  //       if (animation) animation.kill();
+  //     };
+  //   }
+  // }, [variant, duration, stagger, ease, scrollTrigger]);
+
+  // return (
+  //   <span ref={textRef} className={`inline-block ${className}`}>
+  //     {text.split('').map((char, index) => (
+  //       <span key={index} className="inline-block">
+  //         {char === ' ' ? '\u00A0' : char}
+  //       </span>
+  //     ))}
+  //   </span>
   );
 };
 

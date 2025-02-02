@@ -21,6 +21,11 @@ module.exports = {
 		lg: '960px',
 		xl: '1200px',
 	  },
+	//   spacing: {
+	// 	'subtitle-to-title': '0.5rem',    // サブタイトルからメインタイトルまでの距離 (mb-2)
+	// 	'title-to-content': '2rem',       // メインタイトルから次のコンテンツまでの距離 (mb-8)
+	// 	'section-gap': '6rem',            // セクション間の距離 (py-[96px])
+	//   },
 	  extend: {
 		// colors: {
 		//   primary: '#1c1c22',

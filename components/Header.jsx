@@ -26,7 +26,7 @@ const Header = () => {
       fixed w-full top-0 z-50
       transition-all duration-300
       ${isScrolled 
-        ? 'py-8 bg-white/80 backdrop-blur-md shadow-lg' 
+        ? 'py-8 bg-white backdrop-blur-md shadow-lg' 
         : 'py-8 bg-transparent opacity-0'}
     `}>
       <div className='container mx-auto flex justify-between items-center px-8'>

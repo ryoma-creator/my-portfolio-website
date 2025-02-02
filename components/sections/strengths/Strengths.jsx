@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link';
+import { SectionContainer, SectionTitle, SectionSubtitle } from '../layouts/common/section';
 
 export default function Strengths() {
   const strengths = [
@@ -31,17 +32,15 @@ export default function Strengths() {
   ];
 
   return (
-    <section className='min-h-[80vh] py-[96px] relative'>
-      {/* test */}
-      <div className="text-center mb-20">
-  <h2 className="text-4xl font-light mb-4">
-    Choose your area of interest
-  </h2>
-  <p className="text-lg text-text-secondary">
-    Explore each section to learn more about my expertise and experience
-  </p>
-</div>
-{/*  */}
+    <SectionContainer>
+
+      {/* サブタイトル */}
+      <SectionSubtitle>EXPLORE MY EXPERTISE</SectionSubtitle>
+
+      {/* メインタイトル */}
+      <SectionTitle>Choose your area of interest</SectionTitle>
+
+
       <div className="container mx-auto px-16 flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[45px] ">
           {strengths.map((strength, index) => (
@@ -77,6 +76,6 @@ export default function Strengths() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }
