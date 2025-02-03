@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { Parallax } from 'react-parallax';
 import Link from 'next/link'; 
 import { Button } from '@/components/ui/button';
-import { SectionContainer, SectionTitle, SectionSubtitle }  from '../layouts/common/section';
+import { SectionContainer, SectionGroup,SectionTitle, SectionSubtitle, SectionSentence, SectionButton}  from '../layouts/common/section';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 
 export default function FeaturedSections() {
@@ -38,64 +38,35 @@ export default function FeaturedSections() {
   // index % 2 === 0は偶数番目のセクションかどうかをチェックします
   // 偶数の場合: テキストが左、画像が右
   return (
-    <SectionContainer>
-      {sections.map((section, index) => (
-        <div key={index} className="mb-32">
-          <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
-            {/* テキストセクション */}
-            <div className="w-full lg:w-1/2 flex flex-col items-center text-center space-y-4">
-              {/* セクションのヘッダー部分 */}
-              <div className="space-y-4">
-                <SectionSubtitle>{section.category}</SectionSubtitle>
-                <SectionTitle>{section.title}</SectionTitle>
-              </div>
-              
-              {/* ポイントリスト */}
-              <ul className=" max-w-sm">
-                {section.points.map((point, i) => (
-                  <li key={i}>
-                    <GsapAnimatedText 
-                      text={point}
-                      variant="blurIn"
-                      duration={0.8}
-                      delay={0.2 * i}
-                      scrollTrigger={{
-                        once: true,
-                        start: "top 80%"
-                      }}
-                      className="text-h3 text-text-tertiary"
-                    />
-                  </li>
-                ))}
-              </ul>
-
-              {/* アクションボタン */}
-              <Link href={section.path}>
-                <Button
-                  variant='outline'
-                  className='relative group overflow-hidden rounded-full'
+    <SectionContainer className="px-16"> {/* コンテナにパディングを追加 */}
+    {sections.map((section, index) => (
+      <div key={index} className="mb-32">
+        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
+          <div className="w-full lg:w-1/2"> {/* 幅の制御を追加 */}
+            <SectionGroup
+              subtitle={section.category}
+              title={section.title}
+              align="center"
+              className="px-16" 
+            >
+            <div className="space-y-2 text-center w-full"> {/* gap-8ではなく、space-y-2で適度な間隔に */}
+              {section.points.map((point, i) => (
+                <SectionSentence 
+                  key={i}
+                  className="block" 
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
-                    animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative text-text-primary group-hover:text-white flex items-center gap-2">
-                    {section.action}
-                    <svg 
-                      className="w-4 h-4 transform transition-transform group-hover:translate-x-1" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                      />
-                    </svg>
-                  </span>
-                </Button>
-              </Link>
+                  {point}
+                </SectionSentence>
+              ))}
             </div>
+               <SectionButton
+                href={section.path}
+                variant="outline"
+              >
+                {section.action}
+              </SectionButton>
+            </SectionGroup>
+          </div>
 
             {/* イメージセクション */}
             <div className="w-full lg:w-1/2">

@@ -33,6 +33,17 @@ module.exports = {
 		// 	DEFAULT: '#00ff99',
 		// 	hover: '#00e187',
 		//   },
+		lineHeight: {
+			DEFAULT: '1.25',  // leading-tightと同じ
+		  },
+		  spacing: {
+			// カスタムのスペーシング値
+		  },
+		letterSpacing: {
+		'tightest': '-0.1em',        // かなり狭い
+		'super-tight': '-0.15em',    // さらに狭い
+		'ultra-tight': '-0.2em',     // 極端に狭い
+		},
 		colors: {
 			primary: '#1c1c22',
 			accent: {

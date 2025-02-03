@@ -14,7 +14,7 @@ const buttonVariants = cva(
 
   `inline-flex items-center justify-center whitespace-nowrap rounded-full
   text-base font-semibold ring-offset-white transition-colors
-  shadow-neumorphism hover:shadow-neumorphism-hover
+  shadow-neumorphism hover:shadow-neumorphism-hover [word-spacing:-0.15em]
   `,
   {
     variants: {

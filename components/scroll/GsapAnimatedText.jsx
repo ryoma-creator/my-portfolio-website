@@ -17,6 +17,9 @@ const GsapAnimatedText = ({
 }) => {
   const textRef = useRef(null);
 
+    // textが文字列でない場合の処理を追加
+    const processedText = String(text || ''); // 文字列に変換
+
   const variants = {
     default: {
       initial: { opacity: 0, y: 50 },
@@ -166,10 +169,11 @@ const GsapAnimatedText = ({
       };
     }
   }, [variant, duration, stagger, ease, scrollTrigger]);
+  
 
   return (
     <span ref={textRef} className={`inline-block ${className}`}>
-      {text.split('').map((char, index) => (
+      {processedText.split('').map((char, index) => (
         <span key={index} className="inline-block">
           {char === ' ' ? '\u00A0' : char}
         </span>
