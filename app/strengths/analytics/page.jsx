@@ -52,9 +52,8 @@ export default function AnalyticsPage() {
       </nav>
 
       <main>
-
-       <SectionWrapper variant="gradient2">
-       <PageHeader {...analyticsData.header} />
+       <SectionWrapper variant="gradient">
+        <PageHeader {...analyticsData.header} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient">

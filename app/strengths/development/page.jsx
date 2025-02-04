@@ -2,6 +2,7 @@
 'use client'
 
 import SectionWrapper from '@/components/sections/common/SectionWrapper';
+import PageHeader from '@/components/sections/common/PageHeader';
 import IntroSection from '@/components/sections/layouts/strengths/IntroSection';
 import BackgroundSection from '@/components/sections/layouts/strengths/BackgroundSection';
 import ApproachSection from '@/components/sections/layouts/strengths/ApproachSection';
@@ -19,6 +20,9 @@ import { developmentData } from '@/components/sections/data/strengths/developmen
 export default function DevelopmentPage() {
   return (
     <main>
+        <SectionWrapper variant="gradient">
+          <PageHeader {...developmentData.header} />
+        </SectionWrapper>
       <SectionWrapper variant="gradient">
         <IntroSection {...developmentData.intro} />
       </SectionWrapper>

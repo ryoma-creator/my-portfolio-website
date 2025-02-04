@@ -100,7 +100,7 @@ export const developmentData = {
             link: "/strengths/bilingual"
           },
           {
-            title: "Growth",
+            title: "Mindset",
             subtitle: "Continuous Learning",
             image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg",
             link: "/strengths/growth"

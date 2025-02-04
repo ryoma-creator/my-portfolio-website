@@ -15,6 +15,8 @@ import DesignTimeline from './components/DesignTimeline';
 
 import { Button } from '@/components/ui/button';
 
+import { SectionGroup,SectionContainer,SectionSentence,SectionTitle,SectionSubtitle } from '../layouts/common/section';
+
 const Portfolio = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeProject, setActiveProject] = useState(projects[0]);
@@ -29,24 +31,15 @@ const Portfolio = () => {
   const [showTimeline, setShowTimeline] = useState(false);
 
   return (
-    <div id="portfolio-section" className="relative w-full py-24">
+    <div id="portfolio-section" className="relative w-full">
       {/* Header Section */}
-      <div className="container mx-auto text-center mb-8 px-4">
-        <span className="text-white/40 uppercase tracking-wider text-xs mb-3 block">
-          Featured Work
-        </span>
-        <m.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-light text-center mb-4 gradient-text"
-        >
-          Portfolio
-        </m.h2>
-        <p className="text-responsive-sm text-white/60 max-w-2xl mx-auto leading-relaxed">
-          A continuous journey of refinement in design and development
-        </p>
-      </div>
+  {/* ヘッダーセクション - SectionGroupを使用 */}
+  <SectionContainer>
+  <SectionGroup
+      subtitle="Featured Work"
+      title="Portfolio"
+      sentence="A continuous journey of refinement in design and development"
+    >
 
       {/* Slider Section */}
       <div className="container mx-auto relative">
@@ -205,6 +198,8 @@ const Portfolio = () => {
           )}
         </div>
       </div>
+      </SectionGroup>
+      </SectionContainer>
     </div>
   );
 };

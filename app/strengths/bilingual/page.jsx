@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import PageHeader from '@/components/sections/common/PageHeader';
 import SectionWrapper from '@/components/sections/common/SectionWrapper';
 import IntroSection from '@/components/sections/layouts/strengths/IntroSection';
 import BackgroundSection from '@/components/sections/layouts/strengths/BackgroundSection';
@@ -50,6 +51,9 @@ export default function BilingualPage() {
       </nav>
 
       <main>
+        <SectionWrapper variant="gradient">
+          <PageHeader {...bilingualData.header} />
+        </SectionWrapper>
         <SectionWrapper variant="gradient">
           <IntroSection {...bilingualData.intro} />
         </SectionWrapper>

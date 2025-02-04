@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 import AchievementCard from './AchievementCard';
+import { SectionGroup, SectionContainer,SectionTitle,SectionSubtitle,SectionSentence } from '@/components/sections/layouts/common/section';
 
 const AutoCarousel = ({ achievements }) => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -78,22 +79,12 @@ const AutoCarousel = ({ achievements }) => {
   return (
     <div className="w-full relative pt-12 pb-24 ">
       {/* Header Section */}
-      <div className="container mx-auto text-center mb-8 px-4">
-        <span className="text-white/40 uppercase tracking-wider text-xs mb-3 block">
-          Progress
-        </span>
-        <h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-3xl md:text-4xl font-light text-center mb-3"
-        >
-          Learning Journey
-        </h2>
-        <p className="text-white/60 text-sm font-light max-w-xl mx-auto leading-relaxed tracking-wide">
-          Monthly documentation of growth and achievements throughout the year
-        </p>
-      </div>
+      <SectionContainer>
+        <SectionGroup
+          subtitle="Progress"
+          title="Learning Journey"
+          sentence="Monthly documentation of growth and achievements throughout the year"
+          >
 
       <div className="overflow-hidden px-4">
         <div
@@ -115,35 +106,39 @@ const AutoCarousel = ({ achievements }) => {
         </div>
       </div>
   
-      <div className="absolute bottom-12 right-5 flex items-center gap-3">
-        <button
-          onClick={() => moveCarousel('prev')}
-          className="p-1 rounded-full hover:bg-white/10 transition-colors"
-          aria-label="Previous"
-        >
-          <ChevronLeft className="w-3 h-3 text-white/80" />
-        </button>
-        
-        {/* メインの再生/一時停止ボタン */}
-        <button
-          onClick={() => setIsPlaying(!isPlaying)}
-          className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition-all duration-300"
-          aria-label={isPlaying ? 'Pause' : 'Play'}
-        >
-          {isPlaying ? 
-            <Pause className="w-4 h-4 text-white/80" /> : 
-            <Play className="w-4 h-4 text-white/80 translate-x-[1px]" />
-          }
-        </button>
+        {/* コントロールボタン部分の改善 */}
+        <div className="absolute bottom-12 right-5 flex items-center gap-3">
+          <button
+            onClick={() => moveCarousel('prev')}
+            className="p-1.5 rounded-full bg-text-secondary hover:bg-text-tertiary transition-colors"
+            aria-label="Previous"
+          >
+            <ChevronLeft className="w-4 h-4 text-text-primary" /> {/* サイズと色を調整 */}
+          </button>
+          
+          {/* メインの再生/一時停止ボタン */}
+          <button
+            onClick={() => setIsPlaying(!isPlaying)}
+            className="w-12 h-12 rounded-full bg-text-secondary border border-textbg-text-primary flex items-center justify-center
+            hover:bg-text-tertiary transition-all duration-300"
+            aria-label={isPlaying ? 'Pause' : 'Play'}
+          >
+            {isPlaying ? 
+              <Pause className="w-5 h-5 text-text-primary" /> : 
+              <Play className="w-5 h-5 text-text-primary translate-x-[1px]" />
+            }
+          </button>
 
-        <button
-          onClick={() => moveCarousel('next')}
-          className="p-1 rounded-full hover:bg-white/10 transition-colors"
-          aria-label="Next"
-        >
-          <ChevronRight className="w-3 h-3 text-white/80" />
-        </button>
-      </div>
+          <button
+            onClick={() => moveCarousel('next')}
+            className="p-1.5 rounded-full bg-text-secondary hover:bg-text-tertiary transition-colors"
+            aria-label="Next"
+          >
+            <ChevronRight className="w-4 h-4 text-text-primary" />
+          </button>
+        </div>
+        </SectionGroup>
+      </SectionContainer>
     </div>
   );
 };

@@ -18,7 +18,7 @@
   ➡️最終的に疲れ果てている時は、Aiに聞いた後、コピペで試すしかない。肉眼で見るのが難しいので*/
   
   body {
-    @apply font-primary bg-primary text-white [line-height:0.9] tracking-tightest [word-spacing:-0.15em];
+    @apply font-primary bg-primary text-white [line-height:0.9] tracking-tightest [word-spacing:-0.1em];
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -31,12 +31,12 @@
   }
     /* 文章要素の基本設定 */
     p, li, div ,span ,button, .button {
-      @apply [line-height:0.9] tracking-tightest [word-spacing:-0.15em];
+      @apply [line-height:0.9] tracking-tightest [word-spacing:-0.1em];
     }
   
     /* 見出し要素の設定 */
     h1, h2, h3, h4, h5, h6 {
-      @apply [line-height:0.9] font-semibold tracking-tightest [word-spacing:-0.15em];
+      @apply [line-height:0.9] font-semibold tracking-tightest [word-spacing:-0.1em];
     }
   
 }

@@ -25,9 +25,9 @@ export default function BackgroundSection({
         </div>
 
         {/* 2カラムレイアウト */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center px-2">
+        <div className="flex flex-col lg:flex-row gap-16 items-center px-2 container">
           {/* 左側テキストエリア */}
-          <div className="w-full lg:w-1/3 lg:self-center pl-3">
+          <div className="w-full lg:w-1/3 lg:self-center container">
             <div className="max-w-[400px]">
               <h3 className="text-2xl font-light mb-4 text-text-primary">
                 {columnTitle}

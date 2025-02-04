@@ -100,7 +100,7 @@ export const analyticsData = {
             link: "/strengths/bilingual"
           },
           {
-            title: "Growth",
+            title: "Mindset",
             subtitle: "Continuous Learning & Adaptation",
             image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg",
             link: "/strengths/growth"
