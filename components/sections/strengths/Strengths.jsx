@@ -31,6 +31,7 @@ export default function Strengths() {
       description: "Continuous learning & adaptation",
       image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659597/people-library-reading-learning-from-books-lg_bcpos3.jpg",
       link: "/strengths/growth",
+      // https://res.cloudinary.com/dnm2fyhwt/video/upload/v1738646732/journey_map_wpiz2z.mp4
     }
   ];
 

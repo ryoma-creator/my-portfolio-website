@@ -1,3 +1,5 @@
+'use client'
+
 // AchievementList/index.jsx
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -29,7 +31,7 @@ export default function AchievementList({ achievements }) {
           {['Foundational Web Development', 'React & Modern Frameworks', 'Advanced Animation & UI', 'Full-Stack Integration'].map((highlight, index) => (
             <span 
               key={index} 
-              className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm"
+              className="px-3 py-1 bg-brandtext-brand-pink/20 text-brand-pink rounded-full text-sm"
             >
               {highlight}
             </span>
@@ -38,7 +40,7 @@ export default function AchievementList({ achievements }) {
 
         <button
           onClick={() => setShowOverall(!showOverall)}
-          className="mt-6 flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+          className="mt-6 flex items-center gap-2 text-brand-pink hover:text-emerald-300 transition-colors"
         >
           {showOverall ? (
             <>
@@ -56,7 +58,7 @@ export default function AchievementList({ achievements }) {
 
       {/* Monthly Progress Section */}
       {/* {showOverall && ( */}
-        <ScrollArea className="w-full rounded-md border border-primary bg-primary">
+        <ScrollArea className="w-full rounded-md border border-white bg-white">
           <div className="flex space-x-4 p-4">
             {achievements.map((achievement, index) => (
               <AchievementCard
@@ -131,7 +133,7 @@ const AchievementCard = React.memo(({
           {/* 上部コンテンツ */}
           <div>
             <div className="">
-              <span className="text-emerald-500 text-sm">{achievement.period}</span>
+              <span className="text-brand-pink text-sm">{achievement.period}</span>
             </div>
             <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">{achievement.title}</h3>
             <p className="text-gray-400 text-sm  line-clamp-2">
@@ -145,7 +147,7 @@ const AchievementCard = React.memo(({
               {techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full"
+                  className="px-2 py-1 bg-brand-pink/20 text-white text-xs rounded-full"
                 >
                   {tech}
                 </span>
@@ -157,7 +159,7 @@ const AchievementCard = React.memo(({
           <div>
             <button
               onClick={onToggleExpand}
-              className="text-emerald-400 hover:text-emerald-300 text-sm flex items-center gap-2 "
+              className="text-white hover:text-brand-pink text-sm flex items-center gap-2 "
             >
               {isExpanded ? (
                 <>
@@ -184,7 +186,7 @@ const AchievementCard = React.memo(({
                 <div key={i} className="flex items-start gap-3">
                   <div className="mt-1.5">
                     <svg
-                      className="w-4 h-4 text-emerald-500"
+                      className="w-4 h-4 text-brand-pink"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -205,7 +207,7 @@ const AchievementCard = React.memo(({
             {/* Key Achievement Section */}
             <div className="mt-6 pt-4 border-t border-white/10">
               <div className="text-center">
-                <span className="text-emerald-400 text-sm flex items-center justify-center gap-2">
+                <span className="text-brand-pink text-sm flex items-center justify-center gap-2">
                   <Award className="w-4 h-4" />
                   Key Achievement
                 </span>
@@ -250,7 +252,7 @@ AchievementCard.displayName = "AchievementCard";
 //             <div key={i} className="flex items-start gap-3">
 //               <div className="mt-1.5">
 //                 <svg 
-//                   className="w-4 h-4 text-emerald-500" 
+//                   className="w-4 h-4 text-brand-pink" 
 //                   fill="none" 
 //                   viewBox="0 0 24 24" 
 //                   stroke="currentColor"

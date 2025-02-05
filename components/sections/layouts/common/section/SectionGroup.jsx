@@ -9,6 +9,7 @@ export const SectionGroup = ({
   title,
   sentence,
   children,
+  animate = true,  
   
   // 全体のスタイル設定
   align = 'center',
@@ -21,21 +22,21 @@ export const SectionGroup = ({
   // 各要素のアニメーション設定
   subtitleAnimation = {
     variant: "fadeIn",
-    duration: 0.8,
-    delay: 0.2,
-    stagger: 0.02
+    duration: 0.4,  // 0.8から0.4に短縮
+    delay: 0.1,     // 0.2から0.1に短縮
+    stagger: 0.01   // 0.02から0.01に短縮
   },
   titleAnimation = {
     variant: "blurIn",
-    duration: 1,
-    delay: 0.3,
-    stagger: 0.03
+    duration: 0.5,  // 1から0.5に短縮
+    delay: 0.15,    // 0.3から0.15に短縮
+    stagger: 0.02   // 0.03から0.02に短縮
   },
   sentenceAnimation = {
     variant: "fadeIn",
-    duration: 0.8,
-    delay: 0.4,
-    stagger: 0.02
+    duration: 0.4,  // 0.8から0.4に短縮
+    delay: 0.2,     // 0.4から0.2に短縮
+    stagger: 0.01   // 0.02から0.01に短縮
   },
 
   // ボタン設定（オプショナル）
@@ -50,7 +51,8 @@ export const SectionGroup = ({
     animation: {        // アニメーション設定
       variant: "scaleUp",
       duration: 0.5,
-      delay: 0.2
+      delay: 0.2,
+      
     }
   }
 }) => {
@@ -61,7 +63,9 @@ export const SectionGroup = ({
           align={align}
           textColor={textColor}
           lineHeight={lineHeight}
+          fontSize={fontSize}  // 同じfontSizeを使用
           animation={subtitleAnimation}
+          animate={animate}  // 追加
         >
           {subtitle}
         </SectionSubtitle>
@@ -72,7 +76,9 @@ export const SectionGroup = ({
           align={align}
           textColor={textColor}
           lineHeight={lineHeight}
+          fontSize={fontSize}  // 同じfontSizeを使用
           animation={titleAnimation}
+          animate={animate}  // 追加
         >
           {title}
         </SectionTitle>
@@ -85,6 +91,7 @@ export const SectionGroup = ({
           fontSize={fontSize}
           lineHeight={lineHeight}
           animation={sentenceAnimation}
+          animate={animate}  // 追加
         >
           {sentence}
         </SectionSentence>

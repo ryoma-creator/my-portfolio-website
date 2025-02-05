@@ -1,11 +1,10 @@
 export const learningJourneyData = {
   header: {
-    topText: "LEARNING & GROWTH",
-    title: "Beyond Technical Skills",
+    topText: "SYSTEMATIC GROWTH",
+    title: "Learning & Growth Journey",
     subtitle: "How systematic learning transforms into business value",
-    backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
+    backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733319937/cld-sample-2.jpg"
   },
-
   intro: {
     subtitle: "PROFESSIONAL GROWTH",
     title: "Systematic Approach to Learning",

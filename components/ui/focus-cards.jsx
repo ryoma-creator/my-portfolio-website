@@ -35,16 +35,16 @@ const Card = React.memo(({
     
     {/* Content */}
     <div className="relative z-10">  {/* z-10 で背景画像の上に表示 */}
-      <span className='text-accent'>{item.duration}</span>
+      <span className='text-brand-pink'>{item.duration}</span>
       <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>
         {item.degree}
       </h3>
       <div className='flex items-center'>
-        <span className='w-[6px] h-[6px] rounded-full bg-accent mx-1'></span>
-        <p className='text-white/60'>{item.institution}</p>
+        <span className='w-[6px] h-[6px] rounded-full bg-brand-pink mx-1'></span>
+        <p className='text-white'>{item.institution}</p>
       </div>
       {item.url && (
-        <a href={item.url} className="text-accent text-sm hover:underline mt-2">
+        <a href={item.url} className="text-brand-pink text-sm hover:underline mt-2">
           Learn more →
         </a>
       )}
@@ -97,7 +97,7 @@ export default FocusCards;
         flex flex-col justify-center items-center lg:items-start
         gap-1'
       >
-        <span className='text-accent'>{item.duration}</span>
+        <span className='text-brand-pink'>{item.duration}</span>
         <h3 className='text-xl max-w-[260px] min-h-[60px]
         text-center lg:text-left'>
           {item.degree}
@@ -105,7 +105,7 @@ export default FocusCards;
         <div className='flex items-center '> */}
           {/* dot */}
 //           <span className='w-[6px] h-[6px] rounded-full
-//           bg-accent mx-1'></span>
+//           bg-brand-pink mx-1'></span>
 //           <p className='text-white/60'>{item.institution}</p>
 //         </div>
 //       </li>

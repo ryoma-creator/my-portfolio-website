@@ -6,19 +6,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 // 個別のタイムラインエントリーコンポーネント
 const TimelineEntry = ({ date, title, content, isLatest = false }) => (
   <div className="mb-12">
-    <span className={`text-sm ${isLatest ? 'text-accent' : 'text-white/40'}`}>
+    <span className={`text-sm ${isLatest ? 'text-brand-pink' : 'text-text-tertiary'} inline-block`}>
       {date}
     </span>
-        <div className="mt-4 bg-white/5 p-6
-        rounded-[32px]          // 左上と右下の大きな丸み
-        rounded-tr-[8px]        // 右上の小さな丸み
-        rounded-bl-[8px]        // 左下の小さな丸み
-        transform hover:scale-[1.02] transition-transform duration-300"
->
-      <h5 className="text-white/80 font-medium mb-3 text-lg">
+    <div className="mt-4 p-6
+      bg-white/10 dark:bg-white/5    // 薄い白の背景
+      backdrop-blur-sm                // ぼかし効果
+      border border-white/10         // 薄い境界線
+      rounded-[32px]
+      rounded-tr-[8px]
+      rounded-bl-[8px]
+      transform hover:scale-[1.02] 
+      transition-transform duration-300
+      shadow-[0_4px_24px_-1px_rgba(0,0,0,0.1)]  // 微妙な影
+    "
+    >
+      <h5 className="text-text-secondary font-medium mb-3 text-lg">
         {title}
       </h5>
-      <p className="text-white/60 text-left leading-relaxed">
+      <p className="text-text-tertiary text-left leading-relaxed">
         {content}
       </p>
     </div>
@@ -36,7 +42,7 @@ const DesignTimeline = ({ isVisible, onToggle }) => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="relative pl-8 border-l border-white/10 space-y-8">
+            <div className="relative pl-8 border-l border-text-tertiary space-y-8">
               {/* 現在：2025年1月 */}
               <TimelineEntry 
                 date="Present - January 2025"

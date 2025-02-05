@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { FiDownload } from 'react-icons/fi';
+import { FiMail} from 'react-icons/fi';
 import { ReactTyped } from 'react-typed';
 import Social from '@/components/Social';
 import Photo from '@/components/Photo';
@@ -29,7 +29,7 @@ export default function Hero() {
           blur-3xl transform -rotate-12 animate-gradient-xy" />
       </div>
 
-      <div className='container h-full relative z-10'>
+      <div className='container h-full relative z-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-[88px]'>
         <div className='flex flex-col xl:flex-row items-center justify-center h-full
           gap-8 py-12 md:py-16 xl:py-0'>
           
@@ -46,7 +46,7 @@ export default function Hero() {
               />
             </div>
             
-            <div className='h1 mb-6'>
+            <div className='text-[72px] leading-tight font-semibold mb-6'>
               <div className="gradient-text-wrapper">
                 <GsapAnimatedText 
                   text="Bridging" 
@@ -86,7 +86,7 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue
                     animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <span className="relative text-gray-800 group-hover:text-white">Contact Me</span>
-                  <FiDownload className='text-xl relative text-gray-800 group-hover:text-white'/>
+                  <FiMail className='text-xl relative text-gray-800 group-hover:text-white ml-2'/>
                 </Button>
               </GsapAnimatedElement>
               <GsapAnimatedElement
@@ -116,7 +116,7 @@ export default function Hero() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-violet-400/30 to-purple-400/30 
                 blur-2xl rounded-full transform scale-150 animate-gradient-xy" />
-              <Photo />
+              {/* <Photo /> */}
             </div>
           </GsapAnimatedElement>
         </div>

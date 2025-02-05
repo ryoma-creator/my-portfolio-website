@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 import AchievementCard from './AchievementCard';
-import { SectionGroup, SectionContainer,SectionTitle,SectionSubtitle,SectionSentence } from '@/components/sections/layouts/common/section';
+import { SectionGroup, SectionContainer } from '@/components/sections/layouts/common/section';
 
 const AutoCarousel = ({ achievements }) => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -84,6 +84,7 @@ const AutoCarousel = ({ achievements }) => {
           subtitle="Progress"
           title="Learning Journey"
           sentence="Monthly documentation of growth and achievements throughout the year"
+          animate={false} // アニメーションを無効化
           >
 
       <div className="overflow-hidden px-4">
@@ -110,7 +111,7 @@ const AutoCarousel = ({ achievements }) => {
         <div className="absolute bottom-12 right-5 flex items-center gap-3">
           <button
             onClick={() => moveCarousel('prev')}
-            className="p-1.5 rounded-full bg-text-secondary hover:bg-text-tertiary transition-colors"
+            className="p-1.5 rounded-full bg-transparent hover:bg-transparent transition-colors"
             aria-label="Previous"
           >
             <ChevronLeft className="w-4 h-4 text-text-primary" /> {/* サイズと色を調整 */}
@@ -119,8 +120,8 @@ const AutoCarousel = ({ achievements }) => {
           {/* メインの再生/一時停止ボタン */}
           <button
             onClick={() => setIsPlaying(!isPlaying)}
-            className="w-12 h-12 rounded-full bg-text-secondary border border-textbg-text-primary flex items-center justify-center
-            hover:bg-text-tertiary transition-all duration-300"
+            className="w-12 h-12 rounded-full bg-transparent border border-text bg-text-primary flex items-center justify-center
+            hover:bg-transparent transition-all duration-300"
             aria-label={isPlaying ? 'Pause' : 'Play'}
           >
             {isPlaying ? 
@@ -131,7 +132,7 @@ const AutoCarousel = ({ achievements }) => {
 
           <button
             onClick={() => moveCarousel('next')}
-            className="p-1.5 rounded-full bg-text-secondary hover:bg-text-tertiary transition-colors"
+            className="p-1.5 rounded-full bg-transparent hover:bg-transparent transition-colors"
             aria-label="Next"
           >
             <ChevronRight className="w-4 h-4 text-text-primary" />

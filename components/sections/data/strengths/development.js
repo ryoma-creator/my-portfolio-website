@@ -107,7 +107,7 @@ export const developmentData = {
           }
         ]
       },
-      contactMessage: "Let's create exceptional web experiences together using modern technologies and best practices."
+      contactMessage: "Building tomorrow's web experiences."
     },
     skills: {// developmentDataに追加
         title: "Technical Stack",

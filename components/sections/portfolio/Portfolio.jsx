@@ -15,7 +15,7 @@ import DesignTimeline from './components/DesignTimeline';
 
 import { Button } from '@/components/ui/button';
 
-import { SectionGroup,SectionContainer,SectionSentence,SectionTitle,SectionSubtitle } from '../layouts/common/section';
+import { SectionGroup,SectionContainer } from '../layouts/common/section';
 
 const Portfolio = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -141,7 +141,7 @@ const Portfolio = () => {
           <h3 className={`text-responsive-md font-light mb-4 ${
             activeProject.title === "Present" 
             ? "gradient-text" 
-            : "text-white"
+            : "text-text-secondary"
           }`}>
             {activeProject.title}
           </h3>
@@ -151,7 +151,7 @@ const Portfolio = () => {
             {activeProject.stack.map((tech, index) => (
               <span 
                 key={index} 
-                className="px-3 py-1.5 text-sm bg-white/5 rounded-full text-white/60"
+                className="px-3 py-1.5 text-sm bg-white/5 rounded-full text-text-secondary"
               >
                 {tech}
               </span>
@@ -159,7 +159,7 @@ const Portfolio = () => {
           </div>
 
           {/* Development Period */}
-          <p className="text-sm text-white/60 tracking-wider font-light">
+          <p className="text-sm text-text-secondary tracking-wider font-light">
             {activeProject.period}
           </p>
 
@@ -167,8 +167,8 @@ const Portfolio = () => {
           {activeProject.isMainProject && (
             <button
               onClick={() => setShowTimeline(!showTimeline)}
-              className="mt-6 h-8 px-4 text-xs font-light text-white/60 bg-white/5 rounded-full 
-                hover:text-white/80 hover:bg-white/10 transition-all duration-300 
+              className="mt-6 h-8 px-4 text-xs font-light text-text-secondary bg-white/5 rounded-full 
+                hover:text-text-tertiary hover:bg-white/10 transition-all duration-300 
                 flex items-center justify-center gap-2 mx-auto"
             >
               <span className="translate-y-[0.5px]">{showTimeline ? 'Close' : 'View Timeline'}</span>

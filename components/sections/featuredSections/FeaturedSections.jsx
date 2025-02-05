@@ -40,7 +40,7 @@ export default function FeaturedSections() {
   return (
     <SectionContainer className="px-16"> {/* コンテナにパディングを追加 */}
     {sections.map((section, index) => (
-      <div key={index} className="mb-32">
+       <div key={index} className={`${index === 0 ? '' : 'mt-32'}`}>  {/* 2番目のセクションにのみmt-32を適用 */}
         <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
           <div className="w-full lg:w-1/2"> {/* 幅の制御を追加 */}
             <SectionGroup

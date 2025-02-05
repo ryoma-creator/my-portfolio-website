@@ -12,7 +12,7 @@ const skills = [
     { icon: <SiNextdotjs />, path: '', name: 'Next.js' },
     { icon: <SiTailwindcss />, path: '', name: 'Tailwind CSS' },
     { icon: <SiTypescript />, path: '', name: 'TypeScript' },
-    { icon: <FaGlobe />, path: '', name: 'Logical Thinking' }, // For global or logical thinking
+    // { icon: <FaGlobe />, path: '', name: 'Logical Thinking' }, // For global or logical thinking
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {

@@ -26,7 +26,7 @@ const AchievementCard = ({ achievement, techStack, index }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href="/learningJoerney" className="block">
+      <Link href="/learningJourney" className="block">
         <div className="relative rounded-lg overflow-hidden cursor-pointer">
           {/* 画像部分 */}
           <div className="relative h-[320px]"> {/* 高さも調整 */}
@@ -59,8 +59,14 @@ const AchievementCard = ({ achievement, techStack, index }) => {
             {isHovered && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <button
-                  className="px-8 py-4 bg-accent text-white rounded-full
-                    hover:bg-black transition-colors text-lg font-semibold"
+                  className="px-8 py-4 
+                    bg-white/10 backdrop-blur-sm 
+                    border border-white/20
+                    text-white rounded-full
+                    hover:bg-white/15 
+                    transition-all duration-300
+                    shadow-[0_4px_24px_-1px_rgba(0,0,0,0.1)]
+                    text-lg font-semibold"
                 >
                   Read the Journey
                 </button>
