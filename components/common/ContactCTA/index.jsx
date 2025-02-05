@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import ContactModal from './Modal';
-import ContactForm from './form';
+import ContactForm from './Form';
 
 const ContactCTA = ({ 
   title = "Let's Create Together",

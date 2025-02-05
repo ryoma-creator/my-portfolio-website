@@ -12,7 +12,7 @@ export const projects = [
     image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368949/portfoliowebsite_eiuwcq.png',
     period: 'September 2024 - Present',
     live: 'https://portfolio-website-example.vercel.app',
-    github: 'https://github.com/username/portfolio-website',
+    github: 'https://github.com/ryoma-creator/portfolio-3',
     isFeatured: true,
     isMainProject: true,
     uiUxIterations: [

@@ -6,7 +6,7 @@ import { Home, Mail, Briefcase, User, Newspaper, Code } from 'lucide-react';
 import { useState } from 'react';
 
 import ContactModal from '@/components/common/ContactCTA/Modal';
-import ContactForm from '@/components/common/ContactCTA/form';
+import ContactForm from './common/ContactCTA/Form';
 
 const links = [
     { 

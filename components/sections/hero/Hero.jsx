@@ -10,7 +10,7 @@ import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 
 import ContactModal from '@/components/common/ContactCTA/Modal';
-import ContactForm from '@/components/common/ContactCTA/form';
+import ContactForm from '@/components/common/ContactCTA/Form';
 
 export default function Hero() {
   
