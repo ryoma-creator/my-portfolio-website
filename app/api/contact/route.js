@@ -132,7 +132,7 @@ export async function POST(request) {
                         ` : ''}
                         <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                             Best regards,<br>
-                            Ryoma Taguchi
+                            Ryoma
                         </p>
                     </div>
 
