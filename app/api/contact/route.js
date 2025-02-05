@@ -112,29 +112,32 @@ export async function POST(request) {
                 <div style="background: linear-gradient(to bottom, #ffffff, #f8f9fa);
                            padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                     
-                    <!-- 挨拶文 -->
-                    <div style="text-align: left; margin-bottom: 30px;">
-                        <p style="color:  #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                            Dear ${body.firstname},
-                        </p>
-                        <p style="color:  #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                            Thank you for reaching out! I've received your message and will get back to you as soon as possible.
-                            Usually, I respond within 24-48 hours.
-                        </p>
-                        ${body.reason === 'job-opportunity' ? `
-                        <p style="color:  #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                            Since you're interested in job opportunities, you might want to schedule a quick video call:
-                            <a href="https://calendly.com/ryoma-t-engineer/30min" 
-                               style="color: #EF96C5; text-decoration: none; font-weight: bold;">
-                                Schedule a 30-min call
-                            </a>
-                        </p>
-                        ` : ''}
-                        <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                            Best regards,<br>
-                            Ryoma
-                        </p>
-                    </div>
+                           <!-- 挨拶文 -->
+                           <div style="text-align: left; margin-bottom: 30px;">
+                               <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                                   Dear ${body.firstname},
+                               </p>
+                               <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                                   Thank you for reaching out! I've received your message and will get back to you as soon as possible.
+                                   Usually, I respond within 24-48 hours.
+                               </p>
+                               ${body.reason === 'job-opportunity' ? `
+                               <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                                   Since you're interested in job opportunities, you might want to schedule a quick video call:
+                                   <a href="https://calendly.com/ryoma-t-engineer/30min" 
+                                      style="color: #EF96C5; text-decoration: none; font-weight: bold;">
+                                       Schedule a 30-min call
+                                   </a>
+                               </p>
+                               ` : ''}
+                               <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 40px;">
+                                   <!-- 本文最後のマージンを40pxに増やして、署名との間にスペースを作る -->
+                               </p>
+                               <p style="color: #374151; font-size: 16px; line-height: 1.6;">
+                                   Best regards,<br>
+                                   Ryoma
+                               </p>
+                           </div>
 
                     <!-- 問い合わせ内容の確認 -->
                     <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px;
