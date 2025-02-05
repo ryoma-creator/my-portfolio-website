@@ -53,7 +53,7 @@ export default function Strengths() {
                 src={strength.image}
                 alt={strength.title}
                 className="w-full h-full object-cover transition-transform duration-700 ease-out
-                  group-hover:scale-130"
+                  group-hover:scale-125"
               />
               
               {/* サイトのカラースキームに合わせたフィルター */}

@@ -130,6 +130,10 @@ export async function POST(request) {
                             </a>
                         </p>
                         ` : ''}
+                        <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                            Best regards,<br>
+                            Ryoma Taguchi
+                        </p>
                     </div>
 
                     <!-- 問い合わせ内容の確認 -->
@@ -174,13 +178,6 @@ export async function POST(request) {
                                   font-weight: bold; margin: 10px;">
                             Schedule a Call
                         </a>
-                    </div>
-
-                    <div style="text-align: left; margin-top: 30px; padding-top: 20px;">
-                        <p style="color: #374151; margin-bottom: 20px; font-size: 16px;">
-                            Best regards,<br>
-                            Ryoma Taguchi
-                        </p>
                     </div>
 
                     <!-- フッター -->
