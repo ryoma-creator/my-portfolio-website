@@ -35,7 +35,7 @@ export const SectionSubtitle = ({
         stagger={animation.stagger}
         scrollTrigger={{
           once: true,
-          start: "top 95%", // 画面の下から80%の位置でトリガー（より早くトリガーされる）
+          start: "top 100%", // 画面の下から80%の位置でトリガー（より早くトリガーされる）
         }}
         className={`text-sm uppercase tracking-wider ${fontSize} ${align === 'left' ? 'text-left' : 'text-center'} ${textColor}`}
       />

@@ -35,7 +35,7 @@ export const SectionSentence = ({
                 stagger={animation.stagger}
                 scrollTrigger={{
                     once: true,
-                    start: "top 95%", // 画面の下から80%の位置でトリガー（より早くトリガーされる）
+                    start: "top 100%", // 画面の下から80%の位置でトリガー（より早くトリガーされる）
                 }}
                 className={`block ${fontSize} ${textColor} ${align === 'left' ? 'text-left' : 'text-center'} [line-height:1.15] whitespace-pre-wrap`}
             />
