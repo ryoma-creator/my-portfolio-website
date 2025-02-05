@@ -104,7 +104,7 @@ export async function POST(request) {
                         Thank You for Your Message!
                     </h1>
                     <p style="color:  #374151; margin-top: 10px; font-size: 18px;">
-                        We've received your inquiry
+                        I've received your inquiry
                     </p>
                 </div>
                 
@@ -176,11 +176,10 @@ export async function POST(request) {
                         </a>
                     </div>
 
-                    <div style="text-align: left; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                        <p style="color: #374151; margin-bottom: 20px;">
+                    <div style="text-align: left; margin-top: 30px; padding-top: 20px;">
+                        <p style="color: #374151; margin-bottom: 20px; font-size: 16px;">
                             Best regards,<br>
-                            Ryoma Taguchi<br>
-                            Portfolio Developer
+                            Ryoma Taguchi
                         </p>
                     </div>
 
