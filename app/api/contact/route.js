@@ -160,7 +160,7 @@ export async function POST(request) {
 
                     <!-- CTAボタン -->
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://your-portfolio-url.com" 
+                        <a href="https://my-portfolio-website-lake.vercel.app"
                            style="display: inline-block; padding: 12px 30px;
                                   background: linear-gradient(135deg, #CCF8FF, #EF96C5);
                                   color:  #374151; text-decoration: none; border-radius: 25px;
