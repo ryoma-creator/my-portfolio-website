@@ -27,7 +27,7 @@ export default function AnalyticsPage() {
   return (
     <>
       {/* 固定ナビゲーション */}
-      <nav className={`fixed top-6 left-6 z-50 transition-all duration-300 ${
+      {/* <nav className={`fixed top-6 left-6 z-50 transition-all duration-300 ${
         isScrolled ? 'opacity-100' : 'opacity-60 hover:opacity-100'
       }`}>
         <Link 
@@ -49,7 +49,7 @@ export default function AnalyticsPage() {
           </svg>
           <span>Back to Home</span>
         </Link>
-      </nav>
+      </nav> */}
 
       <main>
        <SectionWrapper variant="gradient">
@@ -57,7 +57,7 @@ export default function AnalyticsPage() {
         </SectionWrapper>
 
         <SectionWrapper variant="gradient">
-        <IntroSection {...analyticsData.intro} />
+           <IntroSection {...analyticsData.intro} />
         </SectionWrapper>
 
         <SectionWrapper variant="gradient2">

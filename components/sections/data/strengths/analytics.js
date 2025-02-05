@@ -107,7 +107,7 @@ export const analyticsData = {
           }
       ]
     },
-      contactMessage: "Let's create better user experiences together by leveraging analytical thinking and logical approaches."
+      contactMessage: "Let's enhance experiences through data-driven insights."
     }
   };
 

@@ -3,7 +3,7 @@ export const bilingualData = {
     topText: "GLOBAL COMMUNICATION",
     title: "Bilingual",
     subtitle: "Bridging cultures through effective communication",
-    backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736499137/samples/global.jpg"
+    backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1736659483/young-people-using-african-american-sustainable-mobility_vsuvv4.jpg"
   },
     intro: {
       subtitle: "MY PHILOSOPHY",
@@ -107,6 +107,6 @@ export const bilingualData = {
           }
         ]
 },
-  contactMessage: "Let's create better user experiences together by leveraging analytical thinking and logical approaches."
+      contactMessage: "Let's bridge cultures through technology."
 }
 };

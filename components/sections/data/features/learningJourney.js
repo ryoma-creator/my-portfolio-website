@@ -107,6 +107,6 @@ export const learningJourneyData = {
         }
       ]
     },
-    contactMessage: "Contributing to project success through efficient learning and implementation methodologies."
+    contactMessage: "Learning and implementing for success."
   }
 };

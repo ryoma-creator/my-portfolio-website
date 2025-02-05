@@ -102,6 +102,6 @@ export const evolutionData = {
         }
       ]
     },
-    contactMessage: "A continuously evolving portfolio site. The journey of improvement and growth continues."
+    contactMessage: "Growing and evolving with each project."
   }
 };

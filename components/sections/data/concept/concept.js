@@ -1,12 +1,11 @@
 // data/myStory/index.js
 export const myStoryData = {
   header: {
-    topText: "MY STORY",
-    title: "Creative Journey",
-    subtitle: "From Early Passion to Digital Creation",
+    topText: "Ryoma Taguchi", // 名前を配置
+    title: "MY STORY",
+    subtitle: "情熱からデジタル創造への軌跡",
     backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
   },
-
   intro: {
     subtitle: "THE ESSENCE",
     title: "Pursuing a Passion",

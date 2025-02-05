@@ -25,7 +25,7 @@ export default function EvolutionPage() {
   return (
     <>
       {/* バックナビゲーション */}
-      <nav className={`fixed top-6 left-6 z-50 transition-all duration-300 ${
+      {/* <nav className={`fixed top-6 left-6 z-50 transition-all duration-300 ${
         isScrolled ? 'opacity-100' : 'opacity-60 hover:opacity-100'
       }`}>
         <Link 
@@ -47,7 +47,7 @@ export default function EvolutionPage() {
           </svg>
           <span>Back to Home</span>
         </Link>
-      </nav>
+      </nav> */}
 
       <main>
         <SectionWrapper variant="gradient">
