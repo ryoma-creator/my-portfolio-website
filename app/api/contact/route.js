@@ -176,6 +176,14 @@ export async function POST(request) {
                         </a>
                     </div>
 
+                    <div style="text-align: left; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                        <p style="color: #374151; margin-bottom: 20px;">
+                            Best regards,<br>
+                            Ryoma Taguchi<br>
+                            Portfolio Developer
+                        </p>
+                    </div>
+
                     <!-- フッター -->
                     <div style="text-align: center; margin-top: 30px; padding-top: 20px;
                                 border-top: 1px solid #eee;">
