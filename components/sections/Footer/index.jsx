@@ -37,7 +37,7 @@ const Footer = () => {
 
       <div className="text-center">
         <p className="text-white/60 text-sm">
-          © 2024-2025 Ryoma Taguchi | Frontend Engineer
+        © 2024-{new Date().getFullYear()} Ryoma Taguchi | Frontend Engineer
         </p>
       </div>
     </footer>
