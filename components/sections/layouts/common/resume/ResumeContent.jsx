@@ -6,11 +6,12 @@ import {
   FaGlobe, 
   FaCode,
   FaLinkedin,
+  FaGithub,
   FaLaptopCode,
   FaCrown,
   FaStar,
   FaCheckCircle,
-  FaGlobeAsia
+  FaGlobeAsia,
 } from 'react-icons/fa';
 
 const ResumeContent = () => {
@@ -37,16 +38,16 @@ const ResumeContent = () => {
           <div className="h-[65mm] flex items-center">
             {/* Profile Image and Name */}
             <div className="pl-16 flex items-center gap-6">
-              <div className="w-32 h-32 rounded-full overflow-hidden
+              <div className="w-40 h-40 rounded-full overflow-hidden
                 border-[6px] border-white shadow-xl">
                 <img 
-                  src="/path-to-your-photo.jpg" 
+                  src="https://res.cloudinary.com/dptxzcxot/image/upload/v1740218108/PROFILE_PIC_ORIGINAL__pnllgi.png" 
                   alt="Ryoma Taguchi"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <h1 className="text-6Zxl font-bold text-text-primary">
+                <h1 className="text-6xl font-bold text-text-primary">
                   Ryoma Taguchi
                 </h1>
                 <p className="text-xl text-text-secondary mt-1">
@@ -66,22 +67,30 @@ const ResumeContent = () => {
                   Contact
                   <div className="absolute -bottom-1 left-0 w-24 h-1 bg-gradient-to-r from-brand-blue to-brand-pink" />
                 </h2>
-                <div className="mt-4 space-y-2 text-xs">
+                <div className="mt-4 space-y-2">  
                   <div className="flex items-center gap-2">
-                    <FaEnvelope className="text-brand-pink text-sm flex-shrink-0" />
-                    <span className="text-text-secondary">ryoma.t.engineer@gmail.com</span>
+                    <FaEnvelope className="text-brand-pink text-sm" />
+                    <span className="text-xs text-text-secondary">ryoma.t.engineer@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaGlobe className="text-brand-pink text-sm flex-shrink-0" />
-                    <span className="text-text-secondary">Based in Japan</span>
+                    <FaLaptopCode className="text-brand-pink text-sm" />
+                    <span className="text-xs text-text-secondary">Available for Remote Work</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaLaptopCode className="text-brand-pink text-sm flex-shrink-0" />
-                    <span className="text-text-secondary">Available for Remote Work</span>
+                    <FaGlobe className="text-brand-pink text-sm" />
+                    <span className="text-xs text-text-secondary">Based in Japan</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaCode className="text-brand-pink text-sm flex-shrink-0" />
-                    <span className="text-text-secondary">Portfolio: my-portfolio-website-lake.vercel.app</span>
+                    <FaCode className="text-brand-pink text-sm" />
+                    <span className="text-xs text-text-secondary">Portfolio: my-portfolio-website-lake.vercel.app</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <FaGithub className="text-brand-pink text-sm" />
+                    <span className="text-xs text-text-secondary">GitHub: ryoma-creator</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <FaLinkedin className="text-brand-pink text-sm" />
+                    <span className="text-xs text-text-secondary">LinkedIn: Ryoma Taguchi</span>
                   </div>
                 </div>
               </div>
@@ -154,11 +163,11 @@ const ResumeContent = () => {
                     <span className="text-xs text-text-secondary">English</span>
                     <div className="flex items-center gap-1">
                       <div className="flex">
-                        <FaStar className="text-xs" style={{color: "#8AEEFF"}} />
-                        <FaStar className="text-xs" style={{color: "#8AEEFF"}} />
-                        <FaStar className="text-xs" style={{color: "#8AEEFF"}} />
+                        <FaStar className="text-xs" style={{color: "#65D5FF"}} />
+                        <FaStar className="text-xs" style={{color: "#65D5FF"}} />
+                        <FaStar className="text-xs" style={{color: "#65D5FF"}} />
                       </div>
-                      <span className="text-xs text-text-secondary">Business Proficiency</span>
+                      <span className="text-xs text-text-secondary">Business</span>
                     </div>
                   </div>
                 </div>
@@ -265,15 +274,15 @@ const ResumeContent = () => {
                     <p className="text-xs text-text-tertiary">Various Institutions | 2017 - Present</p>
                     <div className="flex flex-wrap mt-2 gap-2">
                       <div className="text-xs text-text-secondary bg-gray-50 px-2 py-1 rounded-full flex items-center">
-                        <span style={{color: "#8AEEFF"}} className="mr-1"><FaGlobeAsia className="text-xs" /></span>
+                        <span style={{color: "#65D5FF"}} className="mr-1"><FaGlobeAsia className="text-xs" /></span>
                         <span>Study Abroad: Denmark IPC (2017)</span>
                       </div>
                       <div className="text-xs text-text-secondary bg-gray-50 px-2 py-1 rounded-full flex items-center">
-                        <span style={{color: "#8AEEFF"}} className="mr-1"><FaGlobeAsia className="text-xs" /></span>
+                        <span style={{color: "#65D5FF"}} className="mr-1"><FaGlobeAsia className="text-xs" /></span>
                         <span>Cross-cultural Program: Philippines GITC (2018)</span>
                       </div>
                       <div className="text-xs text-text-secondary bg-gray-50 px-2 py-1 rounded-full flex items-center">
-                        <span style={{color: "#8AEEFF"}} className="mr-1"><FaGlobeAsia className="text-xs" /></span>
+                        <span style={{color: "#65D5FF"}} className="mr-1"><FaGlobeAsia className="text-xs" /></span>
                         <span>Extensive Language Practice (3000+ sessions, 2012-Present)</span>
                       </div>
                     </div>
