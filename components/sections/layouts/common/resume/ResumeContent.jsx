@@ -16,7 +16,7 @@ import {
 
 const ResumeContent = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center py-8">
+    <div id="resume-content" className="min-h-screen flex items-center justify-center py-8 ">
       <div className="w-[210mm] h-[297mm] bg-white shadow-xl relative overflow-hidden">
         {/* Gradient backgrounds */}
         <div className="absolute inset-0 pointer-events-none">

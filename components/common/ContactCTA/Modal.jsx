@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 export default function ContactModal({ isOpen, onClose, children }) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-[95%] max-w-[1200px] h-[97vh] flex flex-col bg-white px-[4%]">
+      <DialogContent className="w-[95%] max-w-[1100px] h-[85vh] flex flex-col bg-white">
         <button
           onClick={onClose}
           className="absolute top-6 right-6 z-[9999] w-10 h-10 
@@ -24,15 +24,18 @@ export default function ContactModal({ isOpen, onClose, children }) {
           />
         </button>
 
-        <div className="h-[1%]" />
+        {/* <div className="h-[1%]" /> */}
+        {/* 中央揃えのためのフレックスコンテナ */}
+        <div className="flex flex-col items-center justify-center flex-1 overflow-y-auto">
+          <div className="w-full max-w-[800px]">
+            <DialogTitle className="mb-12 text-7xl font-bold text-center text-text-primary">
+              Get in Touch
+            </DialogTitle>
 
-        <DialogTitle className="text-6xl font-bold text-center text-text-primary flex items-center justify-center">
-          Get in Touch
-        </DialogTitle>
-
-        {children}
-
-        <div className="h-[1%]" />
+            {children}
+          </div>
+        </div>
+        {/* <div className="h-[1%]" /> */}
       </DialogContent>
     </Dialog>
   );

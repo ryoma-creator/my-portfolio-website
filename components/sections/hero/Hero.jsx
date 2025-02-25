@@ -12,9 +12,17 @@ import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 import ContactModal from '@/components/common/ContactCTA/Modal';
 import ContactForm from '@/components/common/ContactCTA/Form';
 
+import { FiDownload } from 'react-icons/fi';  // ダウンロードアイコン用
+import ResumeModal from '../layouts/common/resume/ResumeModal';
+
+import { jsPDF } from 'jspdf';
+
 export default function Hero() {
   
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // contact用🔻
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+
 
   return (
     <>
@@ -57,7 +65,7 @@ export default function Hero() {
                   className="text-gray-900 font-semibold" 
                 />
               </div>
-              <br />
+              {/* <br /> */}
               <div className="gradient-text-wrapper">
                 <GsapAnimatedText 
                   text="Tech & Culture" 
@@ -77,16 +85,17 @@ export default function Hero() {
                 duration={0.5}
                 delay={1.5}
               >
+                {/* CVダウンロードボタン */}
                 <Button
                   variant='outline'
                   size='lg'
                   className='relative group overflow-hidden rounded-full'
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => setIsResumeModalOpen(true)}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue
                     animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative text-gray-800 group-hover:text-white">Contact Me</span>
-                  <FiMail className='text-xl relative text-gray-800 group-hover:text-white ml-2'/>
+                  <span className="relative text-gray-800 group-hover:text-white">Download CV</span>
+                  <FiDownload className='text-xl relative text-gray-800 group-hover:text-white ml-2'/>
                 </Button>
               </GsapAnimatedElement>
               <GsapAnimatedElement
@@ -202,12 +211,17 @@ export default function Hero() {
     </section>
 
       {/* モーダル */}
-      <ContactModal 
+      {/* <ContactModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)}
       >
         <ContactForm />
-      </ContactModal>
+      </ContactModal> */}
+            {/* モーダル */}
+            <ResumeModal 
+              isOpen={isResumeModalOpen} 
+              onClose={() => setIsResumeModalOpen(false)}
+            />
     </>
   );
 }

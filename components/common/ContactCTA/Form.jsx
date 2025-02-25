@@ -107,8 +107,8 @@ export default function ContactForm() {
   return (
     <>
       {/* 全体を中央揃えにしていく */}
-      <div className="xl-scale-90 flex-1 flex flex-col xl:flex-row 
-        items-center justify-center overflow-y-auto gap-16 px-2">
+      <div className="xl-scale-90  flex flex-col xl:flex-row 
+        items-center justify-center overflow-y-auto gap-8">
         {/* 右カラム：フォーム */}
         <div className="w-full order-2 xl:order-2 xl:w-[54%]">
           <form onSubmit={handleSubmit} className="space-y-8">
@@ -202,7 +202,7 @@ export default function ContactForm() {
 
         {/* 連絡先情報（左側） */}
          {/* 連絡先情報: デフォルトで非表示、xl以上で表示 */}
-        <div className="hidden xl:block order-1 xl:order-1 w-[46%] ">
+        <div className="hidden xl:block order-1 xl:order-1 w-[46%] mb-6 xl:mb-0">
           <div className="space-y-8">
             {contactInfo.map((item, index) => (
               <div key={index} className="flex items-center gap-4">
