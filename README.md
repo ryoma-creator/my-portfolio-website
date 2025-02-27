@@ -3,11 +3,7 @@
 **Project Duration**: August 2024 - Present
 
 ## Overview
-This is a personal portfolio website built with Next.js and Tailwind CSS. 
-The site showcases my skills, experience, and growth as a developer 
-while incorporating modern UI/UX principles and interactive elements. 
-This project represents an intensive frontend development journey, featuring interactive animations, 
-responsive design, and advanced React implementations.
+This is a personal portfolio website built with Next.js and Tailwind CSS. The site showcases my skills, experience, and growth as a developer while incorporating modern UI/UX principles and interactive elements. This project represents an intensive frontend development journey, featuring interactive animations, responsive design, and advanced React implementations.
 
 ### Technical Stack
 - **Core Framework**: Next.js 14
@@ -151,11 +147,15 @@ Successfully navigated deployment obstacles:
 - Complete documentation including this README
 - Adjust visual effects and animations for optimal performance
 - Replace placeholder images with custom, brand-aligned visuals
+- Code refactoring and clean-up:
+  - Remove unnecessary comments and unused code
+  - Improve code organization and structure
+  - Implement clean code principles for better maintainability
+  - Optimize component reusability and reduce duplication
+  - Enhance code documentation with JSDoc comments
 
 ## Conclusion
-This portfolio represents not just my technical skills, but my journey of persistence, problem-solving, 
-and continuous learning. Each challenge encountered became an opportunity to grow as a developer and 
-refine my approach to creating effective digital experiences.
+This portfolio represents not just my technical skills, but my journey of persistence, problem-solving, and continuous learning. Each challenge encountered became an opportunity to grow as a developer and refine my approach to creating effective digital experiences.
 
 ---
 
