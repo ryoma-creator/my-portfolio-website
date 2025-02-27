@@ -1,23 +1,53 @@
-
-<!--2025.  -->
-
 # Portfolio Website - Frontend Development Journey
 
-**Project Duration**: September 2023 - Present
+**Project Duration**: August 2024 - Present
 
 ## Overview
 This is a personal portfolio website built with Next.js and Tailwind CSS. 
-The site showcases my skills, experience, and growth as a developer while 
-incorporating modern UI/UX principles and interactive elements. 
-This project represents an intensive frontend development journey, 
-featuring interactive animations, responsive design, and advanced React implementations.
+The site showcases my skills, experience, and growth as a developer 
+while incorporating modern UI/UX principles and interactive elements. 
+This project represents an intensive frontend development journey, featuring interactive animations, 
+responsive design, and advanced React implementations.
 
 ### Technical Stack
-- Next.js 13
-- React (Latest Features)
-- Tailwind CSS
-- Framer Motion & GSAP for advanced animations
-- Shadcn UI components
+- **Core Framework**: Next.js 14
+- **Frontend Library**: React 18
+- **Styling**: 
+  - Tailwind CSS
+  - SASS/SCSS
+  - Tailwind Merge & Animation utilities
+  
+- **Animation & Visual Effects**:
+  - Framer Motion
+  - GSAP (GreenSock Animation Platform)
+  - AOS (Animate On Scroll)
+  - React-Confetti
+  - Swiper
+  - Lottie animations
+  - TsParticles
+  - Three.js & React Three Fiber
+  - Spline Tool integration
+
+- **UI Components**:
+  - Shadcn UI (Radix UI based components)
+  - Lucide React icons
+  - React Icons
+  
+- **Functionality**:
+  - Nodemailer for email functionality
+  - PDF generation with react-pdf, jspdf, and html2pdf
+  - React Dropzone for file uploads
+  - React CountUp for numeric animations
+  - Typed text animations
+  
+- **Performance & User Experience**:
+  - Studio Freight Lenis for smooth scrolling
+  - Fullpage.js integration
+  
+- **Development Tools**:
+  - TypeScript support
+  - ESLint for code quality
+  - Next.js and React testing libraries
 
 ## Features
 
@@ -54,8 +84,7 @@ The "EXPLORE MY EXPERTISE" section features four key areas:
 ## Development Process & Challenges
 
 ### Migration and Framework Learning
-My journey began with migrating from a React-based project to Next.js completely manually. 
-This challenging process required:
+My journey began with migrating from a React-based project to Next.js completely manually. This challenging process required:
 - Troubleshooting numerous errors during the migration
 - Learning Next.js principles like server-side rendering while implementing them
 - Adapting to Tailwind CSS shortly after learning traditional CSS
@@ -81,9 +110,8 @@ After discovering the power of storytelling:
 ### Critical Technical Challenge & Recovery
 Encountered and overcame a significant technical incident that transformed my development approach:
 
-**The Repository Crisis (Nov-Dec 2023)**
-- Created over 100 files with thousands of lines of code
-- Lost three months' worth of commit history due to repository size limitations
+**The Repository Crisis (Late 2024)**
+- Lost commit history from August to November 2024 due to repository size limitations
 - Media files stored locally caused Git repository to exceed size limits
 - What initially seemed devastating became a transformative learning experience
 
@@ -126,62 +154,9 @@ Successfully navigated deployment obstacles:
 
 ## Conclusion
 This portfolio represents not just my technical skills, but my journey of persistence, problem-solving, 
-and continuous learning. Each challenge encountered became an opportunity 
-to grow as a developer and refine my approach to creating effective digital experiences.
+and continuous learning. Each challenge encountered became an opportunity to grow as a developer and 
+refine my approach to creating effective digital experiences.
 
 ---
 
 Thank you for taking the time to explore my portfolio project!
-
-
-
-
-
-
-
-<!--2024....  -->
-# Portfolio Project - Frontend Development Journey
-
-
-ryoma-t-portfolio
-
-## Project Overview
-This portfolio showcases my intensive frontend development journey, featuring interactive animations, responsive design, and advanced React implementations. Development period: September 2023 - Present.
-
-## Development Journey & Critical Learning Experience
-
-### The Challenge That Transformed My Development Approach
-During this project's development, I encountered a significant technical challenge that completely changed my perspective on professional development practices:
-
-1. **Initial Intensive Development (Sept-Nov 2023)**
-- Created 107 files with over 10,000 lines of code
-- Developed numerous custom components with complex animations
-- Implemented advanced state management and responsive layouts
-- Dedicated over 10 hours daily to development
-
-2. **Critical Technical Incident (Dec 2023)**
-A crucial mistake in Git repository management led to the loss of three months' worth of commit history. This incident, while challenging, became a transformative learning experience:
-
-#### Valuable Lessons Gained
-- Deep understanding of Git workflows and version control
-- Professional media asset management strategies
-- Repository optimization techniques
-- Importance of proper documentation and backup strategies
-
-This experience transformed me from a developer who simply writes code to one who truly understands the significance of professional development practices and proper resource management.
-
-### Technical Stack & Implementation
-- Next.js 13
-- React (Latest Features)
-- Framer Motion & GSAP for advanced animations
-- Tailwind CSS
-- Shadcn UI
-
-## Professional Growth from Challenge
-While losing commit history was initially devastating, it taught me invaluable lessons that go beyond basic development:
-- Proper Git workflow management for large-scale projects
-- Strategic handling of media assets in production environments
-- Importance of proper documentation
-- Crisis management in development scenarios
-
-This challenge ultimately strengthened my capabilities as a developer, providing real-world experience in handling and recovering from critical technical situations - a skill that's crucial in professional development environments.
