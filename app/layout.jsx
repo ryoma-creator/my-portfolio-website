@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
       <body className={jetBrains_Mono.variable}>
         {/* <ThemeProvider> */}
           <Header/>
-          {/* <StairTransition/> */}
-          {/* <PageTransition> */}
+          {/* <StairTransition/>
+          <PageTransition> */}
             {children}
           {/* </PageTransition> */}
           {/* <ThemeToggle /> */}

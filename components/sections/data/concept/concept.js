@@ -1,24 +1,24 @@
 // data/myStory/index.js
 export const myStoryData = {
   header: {
-    topText: "Ryoma Taguchi", // 名前を配置
+    topText: "Ryoma Taguchi",
     title: "MY STORY",
-    subtitle: "情熱からデジタル創造への軌跡",
+    subtitle: "From Passion to Digital Creation",
     backgroundImage: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
   },
   intro: {
     subtitle: "THE ESSENCE",
     title: "Pursuing a Passion",
-    description: "幼少期からのものづくりへの情熱が原動力となり、法学部での論理的思考力を経て、デジタルクリエイションの世界へ。",
+    description: "Driven by a lifelong passion for creating, I've journeyed from developing logical thinking skills in law school to discovering my calling in digital creation.",
     videoSrc: "https://res.cloudinary.com/dnm2fyhwt/video/upload/v1737026574/light_leaf_book_.mp4_ckjb7g.mp4"
   },
 
   background: {
     mainTitle: "The Journey",
-    mainDescription: "ものづくりへの情熱は形を変えながら、常に私の原動力でした。今、その情熱はデジタルの世界で新たな表現を見出しています。",
+    mainDescription: "My passion for creation has evolved and taken many forms, but it has always been my driving force. Today, that same passion finds new expression in the digital world.",
     
     columnTitle: "Path to Development",
-    columnDescription: "グローバルな活躍の場を求めて、世界で最も需要のあるソフトウェア開発の道を選択。1年間の集中的な学習で、5つのプロジェクトを完遂しました。",
+    columnDescription: "Seeking opportunities to make a global impact, I chose software development—one of the world's most in-demand skills. Through intensive self-study over the past year, I've successfully completed five comprehensive projects.",
     
     imageSrc: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1737026232/smoothie_green_lemon_w7kz63.jpg",
     imageAlt: "Creative Journey",
@@ -32,31 +32,31 @@ export const myStoryData = {
       {
         title: "Early Creation",
         subtitle: "Foundation",
-        description: "幼少期からのものづくりへの情熱が、デジタルクリエイションの基礎となっています。",
+        description: "My childhood passion for building and creating has become the foundation for my digital creation journey.",
         image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
       },
       {
         title: "Legal Thinking",
         subtitle: "Analytical Skills",
-        description: "法学部での学びが、複雑な問題を系統的に解決する力を育みました。",
+        description: "My legal education developed my ability to systematically analyze and solve complex problems with precision.",
         image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
       },
       {
         title: "Global Experience",
         subtitle: "Cross-cultural Skills",
-        description: "留学と外資系での経験が、国際的な開発チームでの活躍を可能にしています。",
+        description: "International study abroad experiences and working at a multinational company have prepared me to excel in diverse, global development teams.",
         image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/cup-on-a-table.jpg"
       },
       {
         title: "Technical Growth",
         subtitle: "Development Skills",
-        description: "1年間の集中的な学習で、ReactとNext.jsによる実践的なプロジェクトを完遂。",
+        description: "Through one year of intensive learning, I've successfully completed practical projects using React and Next.js, building real-world applications.",
         image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
       },
       {
         title: "Current Focus",
         subtitle: "Modern Development",
-        description: "ユーザー体験を重視した魅力的なUIの開発と、効率的なコード設計に注力しています。",
+        description: "I'm dedicated to creating engaging user experiences through thoughtful UI design and writing clean, efficient code.",
         image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/cld-sample.jpg"
       }
     ]
@@ -69,19 +69,19 @@ export const myStoryData = {
       {
         category: "CREATION",
         title: "Digital Craftsmanship",
-        description: "ものづくりの感性とテクニカルスキルを組み合わせ、魅力的なユーザー体験を創造します。",
+        description: "I combine creative intuition with technical expertise to craft compelling user experiences that truly resonate with people.",
         image: "https://res.cloudinary.com/dnm2fyhwt/image/upload/v1734416651/2150061957_bg4e9i.jpg"
       },
       {
         category: "COMMUNICATION",
         title: "Global Collaboration",
-        description: "国際的な環境での経験を活かし、多様なチームでの効果的な協働を実現します。",
+        description: "Drawing from my international experience, I excel at fostering effective collaboration within diverse, multicultural teams.",
         image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499137/samples/coffee.jpg"
       },
       {
         category: "GROWTH",
         title: "Continuous Learning",
-        description: "新しい技術への強い興味と学習意欲で、チームの技術力向上に貢献します。",
+        description: "My genuine curiosity for emerging technologies and commitment to continuous learning help drive team innovation and technical excellence.",
         image: "https://res.cloudinary.com/da3abynbu/image/upload/v1736499138/cld-sample-4.jpg"
       }
     ],
@@ -108,6 +108,6 @@ export const myStoryData = {
         }
       ]
     },
-    contactMessage: "一緒に素晴らしいものを作り上げましょう。"
+    contactMessage: "Let's build something amazing together."
   }
 };
