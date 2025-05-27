@@ -1,0 +1,28 @@
+.container {
+  height: 300vh;
+  position: relative;
+}
+.container .sticky {
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  height: 100vh;
+}
+.container .sticky .el {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .sticky .el .imageContainer {
+  position: relative;
+  width: 25vw;
+  height: 25vh;
+}
+.container .sticky .el .imageContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=styles.css.map */

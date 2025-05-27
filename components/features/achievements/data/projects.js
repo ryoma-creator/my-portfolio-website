@@ -48,8 +48,9 @@ export const projects = [
     stack: ['React', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'API'],
     image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368950/E-commerce-png_udvuqa.png',
     period: 'August 2024',
-    live: 'https://e-commerce-example.vercel.app',
-    github: 'https://github.com/username/e-commerce',
+    live: 'https://ecommerce-p66q.vercel.app/',
+    github: 'https://github.com/ryoma-creator/ecommerce',
+  
     isFeatured: false
   },
   {
@@ -59,8 +60,8 @@ export const projects = [
     stack: ['React', 'Tailwind CSS', 'OpenWeather API'],
     image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368949/wetherapp_kaw7ik.png',
     period: 'August 2024',
-    live: 'https://weather-app-example.vercel.app',
-    github: 'https://github.com/username/weather-app',
+    live: 'https://weather-app-eight-amber-29.vercel.app/',
+    github: 'https://github.com/ryoma-creator/weather-app',
     isFeatured: false
   },
   {
@@ -70,8 +71,8 @@ export const projects = [
     stack: ['React', 'CSS', 'JavaScript'],
     image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/Todo-List-App-2_iht9e2.png',
     period: 'July - August 2024',
-    live: 'https://todo-list-example.vercel.app',
-    github: 'https://github.com/username/todo-list',
+    live: 'https://todo-app-kappa-ochre.vercel.app/',
+    github: 'https://github.com/ryoma-creator/todo-app',
     isFeatured: false
   }
  ];

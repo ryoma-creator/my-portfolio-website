@@ -1,4 +1,4 @@
-            要約のところ。
+要約のところ。
 
           <p className="text-text-secondary leading-relaxed">
             Frontend Developer combining unique backgrounds in law and international business. 
@@ -6,3 +6,9 @@
             Passionate about creating intuitive user experiences through modern web technologies.
           </p>
 
+
+アピールの数字のところ
+Portfolio Optimization
+• Reduced asset loading time by 80% through Cloudinary implementation
+• Conducted extensive UI/UX research across major React library implementations
+• Rebuilt portfolio 5+ times for optimal user experience

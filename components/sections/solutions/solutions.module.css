@@ -1,0 +1,41 @@
+.container {
+  margin-top: 0vh;
+  min-height: 100vh;
+  background-color: primary;
+}
+.container .body {
+  margin-left: 5vw;
+}
+.container .body h1 {
+  margin: 0px;
+  margin-top: 10px;
+  font-size: 4vw;
+  line-height: 4vw;
+  text-transform: uppercase;
+}
+.container .images {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 5vh;
+}
+.container .images .imageContainer {
+  position: absolute;
+}
+.container .images .imageContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .images .imageContainer:nth-of-type(1) {
+  height: 50vh;
+  width: 40vh;
+  z-index: 1;
+}
+.container .images .imageContainer:nth-of-type(2) {
+  left: 25vw;
+  top: 15vh;
+  height: 35vh;
+  width: 25vh;
+  z-index: 2;
+}/*# sourceMappingURL=solutions.module.css.map */
