@@ -11,7 +11,7 @@ export const projects = [
     ],
     image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368949/portfoliowebsite_eiuwcq.png',
     period: 'September 2024 - Present',
-    live: 'https://portfolio-website-example.vercel.app',
+    live: 'https://my-portfolio-website-lake.vercel.app/',
     github: 'https://github.com/ryoma-creator/portfolio-3',
     isFeatured: true,
     isMainProject: true,
@@ -22,6 +22,40 @@ export const projects = [
       'Integration of animation for enhanced engagement',
       'Focus on accessibility and responsive design'
     ]
+  },
+  {
+    title: 'E-commerce',
+    category: 'frontend',
+    section: 'other',
+    stack: ['React', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'API'],
+    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368950/E-commerce-png_udvuqa.png',
+    period: 'August 2024',
+    live: 'https://ecommerce-p66q.vercel.app/',
+    github: 'https://github.com/ryoma-creator/ecommerce',
+  
+    isFeatured: false
+  },
+  {
+    title: 'Weather App',
+    category: 'frontend',
+    section: 'other',
+    stack: ['React', 'Tailwind CSS', 'OpenWeather API'],
+    image: 'https://res.cloudinary.com/da3abynbu/image/upload/v1748927476/4093_tglnsx.jpg',
+    period: 'August 2024',
+    live: 'https://weather-app-eight-amber-29.vercel.app/',
+    github: 'https://github.com/ryoma-creator/weather-app',
+    isFeatured: false
+  },
+  {
+    title: 'Todo List',
+    category: 'frontend',
+    section: 'other',
+    stack: ['React', 'CSS', 'JavaScript'],
+    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/Todo-List-App-2_iht9e2.png',
+    period: 'July - August 2024',
+    live: 'https://todo-app-kappa-ochre.vercel.app/',
+    github: 'https://github.com/ryoma-creator/todo-app',
+    isFeatured: false
   },
   {
     title: 'Story Portfolio',
@@ -41,38 +75,4 @@ export const projects = [
     github: 'https://github.com/username/storytelling-portfolio',
     isFeatured: true
   },
-  {
-    title: 'E-commerce',
-    category: 'frontend',
-    section: 'other',
-    stack: ['React', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'API'],
-    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368950/E-commerce-png_udvuqa.png',
-    period: 'August 2024',
-    live: 'https://ecommerce-p66q.vercel.app/',
-    github: 'https://github.com/ryoma-creator/ecommerce',
-  
-    isFeatured: false
-  },
-  {
-    title: 'Weather App',
-    category: 'frontend',
-    section: 'other',
-    stack: ['React', 'Tailwind CSS', 'OpenWeather API'],
-    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368949/wetherapp_kaw7ik.png',
-    period: 'August 2024',
-    live: 'https://weather-app-eight-amber-29.vercel.app/',
-    github: 'https://github.com/ryoma-creator/weather-app',
-    isFeatured: false
-  },
-  {
-    title: 'Todo List',
-    category: 'frontend',
-    section: 'other',
-    stack: ['React', 'CSS', 'JavaScript'],
-    image: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/Todo-List-App-2_iht9e2.png',
-    period: 'July - August 2024',
-    live: 'https://todo-app-kappa-ochre.vercel.app/',
-    github: 'https://github.com/ryoma-creator/todo-app',
-    isFeatured: false
-  }
  ];
