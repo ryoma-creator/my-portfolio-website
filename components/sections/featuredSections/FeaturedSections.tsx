@@ -8,8 +8,17 @@ import { Button } from '@/components/ui/button';
 import { SectionContainer, SectionGroup,SectionTitle, SectionSubtitle, SectionSentence, SectionButton}  from '../layouts/common/section';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 
+
+interface Section {
+  category: string;
+  title: string;
+  points: string[];
+  action: string;
+  image: string;
+}
+
 export default function FeaturedSections() {
-  const sections = [
+  const sections: Section[] = [
     {
       category: "1 YEAR OF DEDICATION",  // 1年間の取り組みを強調
       title: "Portfolio Journey",
@@ -39,7 +48,7 @@ export default function FeaturedSections() {
   // 偶数の場合: テキストが左、画像が右
   return (
     <SectionContainer className="px-16"> {/* コンテナにパディングを追加 */}
-    {sections.map((section, index) => (
+    {sections.map((section: Section, index: number) => (
        <div key={index} className={`${index === 0 ? '' : 'mt-32'}`}>  {/* 2番目のセクションにのみmt-32を適用 */}
         <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
           <div className="w-full lg:w-1/2"> {/* 幅の制御を追加 */}
@@ -50,7 +59,7 @@ export default function FeaturedSections() {
               className="px-16" 
             >
             <div className="space-y-2 text-center w-full"> {/* gap-8ではなく、space-y-2で適度な間隔に */}
-              {section.points.map((point, i) => (
+              {section.points.map((point: string, i: number) => (
                 <SectionSentence 
                   key={i}
                   className="block" 
