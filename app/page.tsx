@@ -11,27 +11,25 @@ import { achievements } from '@/components/features/achievements/data/achievemen
 import AutoCarousel from '@/components/features/achievements/carousel/AutoCarousel';
 import Portfolio from '@/components/sections/portfolio/Portfolio';
 import Concept from '@/components/sections/layouts/common/concept/Concept';
-
-// import DiscoverSection from "@/components/sections/common/DiscoverSection";
 import ContactCTA from "@/components/common/ContactCTA";
-
 import { homeData } from "@/components/sections/data/home/contactDiscover";
-
-
-// test
 import IntroSection from "@/components/sections/layouts/strengths/IntroSection";
 import SkillShowcase from "@/components/sections/layouts/strengths/SkillLayouts/SkillShowcase";
 import ResultsSection from "@/components/sections/layouts/strengths/ResultsSection";
-
-// import SkillMatrix from "@/components/sections/layouts/strengths/SkillMatrix";
 import { developmentData } from "@/components/sections/data/strengths/development";
 
+interface HomeData {
+  discover: any;
+  contactMessage: string;
+}
 
-export default function HomePage() {
-  // homeDataから必要なデータを取り出す(contactと、discover用に。)
-  const { discover, contactMessage } = homeData;
+interface DevelopmentData {
+  skills: any;
+  results: any;
+}
 
-
+export default function HomePage(): JSX.Element {
+  const { discover, contactMessage }: HomeData = homeData;
   const { skills } = developmentData;
 
   return (
@@ -39,31 +37,6 @@ export default function HomePage() {
       <SectionWrapper variant="gradient" >
         <Hero />
       </SectionWrapper>
-
-{/* text */}
-{/* <SectionWrapper variant="gradient">
-        <IntroSection {...developmentData.intro} />
-      </SectionWrapper> */}
-
-      {/* SkillShowcaseを追加 */}
-      {/* <SectionWrapper variant="gradient">
-        <SkillShowcase skills={developmentData.skills} />
-      </SectionWrapper> */}
-
-      {/* <SectionWrapper variant="gradient">
-        <BackgroundSection {...developmentData.background} />
-      </SectionWrapper> */}
-      
-
-      {/* <SectionWrapper variant="gradient">
-        <ApproachSection {...developmentData.approach} />
-      </SectionWrapper>
-
-      <SectionWrapper variant="gradient2">
-        <ResultsSection {...developmentData.results} />
-      </SectionWrapper> */}
-{/* test */}
-
       
       <SectionWrapper variant="light" >
         <Strengths />
@@ -84,34 +57,10 @@ export default function HomePage() {
       <SectionWrapper variant="light" >
         <AutoCarousel achievements={achievements} />
       </SectionWrapper>
-      
-      {/* <SectionWrapper variant="dark" >
-        <Contact />
-      </SectionWrapper>  */}
-      
-      {/* <SectionWrapper variant="dark" >
-        <Storytelling />
-      </SectionWrapper> */}
-      
-      {/* <SectionWrapper variant="gradient" >
-        <SkillMatrix 
-          categories={skills.categories}
-          title={skills.title}
-          description={skills.description}
-        />
-      </SectionWrapper> */}
 
       <SectionWrapper variant="gradient2">
         <ResultsSection {...developmentData.results} />
       </SectionWrapper> 
-{/* 
-      <SectionWrapper variant="dark">
-        <ContactCTA description={contactMessage} />
-      </SectionWrapper>
-      
-      <SectionWrapper variant="dark" >
-        <Footer />
-      </SectionWrapper> */}
     </main>
   );
 }
