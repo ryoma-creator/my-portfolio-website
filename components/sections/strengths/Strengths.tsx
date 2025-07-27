@@ -6,8 +6,15 @@ import { gsap } from 'gsap';
 import { SectionContainer, SectionGroup } from '../layouts/common/section';
 import GsapAnimatedText from '@/components/scroll/GsapAnimatedText';
 
+interface Strength {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
 export default function Strengths() {
-  const strengths = [
+  const strengths: Strength[] = [
     {
       title: "Development",
       description: "Modern web development expertise",
@@ -43,7 +50,7 @@ export default function Strengths() {
       >
         <div className="container mx-auto px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[45px]">
-            {strengths.map((strength, index) => (
+            {strengths.map((strength: Strength, index: number) => (
               <Link href={strength.link} key={index}>
 
           <div className="group relative w-[246.25px] h-[246.25px] aspect-square overflow-hidden rounded-lg">
