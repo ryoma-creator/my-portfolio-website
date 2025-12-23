@@ -51,12 +51,11 @@ export default function BilingualPage() {
       </nav> */}
 
       <main>
-        <SectionWrapper variant="gradient">
-          <PageHeader {...growthData.header} />
-        </SectionWrapper>
-        <SectionWrapper variant="gradient">
+        <PageHeader {...growthData.header} />
+
+        <div className="relative w-full bg-white">
           <IntroSection {...growthData.intro} />
-        </SectionWrapper>
+        </div>
 
         <SectionWrapper variant="light">
           <BackgroundSection {...growthData.background} />  

@@ -20,12 +20,11 @@ import { developmentData } from '@/components/sections/data/strengths/developmen
 export default function DevelopmentPage() {
   return (
     <main>
-        <SectionWrapper variant="gradient">
-          <PageHeader {...developmentData.header} />
-        </SectionWrapper>
-      <SectionWrapper variant="gradient">
-        <IntroSection {...developmentData.intro} />
-      </SectionWrapper>
+        <PageHeader {...developmentData.header} />
+
+        <div className="relative w-full bg-white">
+          <IntroSection {...developmentData.intro} />
+        </div>
 
       {/* <SectionWrapper variant="gradient">
         <SkillOverview {...developmentData.skills} />
