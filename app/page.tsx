@@ -58,7 +58,7 @@ export default function HomePage(): JSX.Element {
         <AutoCarousel achievements={achievements} />
       </SectionWrapper>
 
-      <SectionWrapper variant="gradient2">
+      <SectionWrapper variant="dark">
         <ResultsSection {...developmentData.results} />
       </SectionWrapper> 
     </main>

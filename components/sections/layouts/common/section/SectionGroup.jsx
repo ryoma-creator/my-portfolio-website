@@ -57,7 +57,7 @@ export const SectionGroup = ({
   }
 }) => {
   return (
-    <div className={`flex flex-col gap-8 ${align === 'left' ? 'items-start' : 'items-center'}`}>
+    <div className={`flex flex-col gap-6 sm:gap-8 ${align === 'left' ? 'items-start' : 'items-center'}`}>
       {subtitle && (
         <SectionSubtitle 
           align={align}

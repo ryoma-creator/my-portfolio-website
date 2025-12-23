@@ -52,15 +52,13 @@ export default function AnalyticsPage() {
       </nav> */}
 
       <main>
-       <SectionWrapper variant="gradient">
         <PageHeader {...analyticsData.header} />
-        </SectionWrapper>
 
-        <SectionWrapper variant="gradient">
-           <IntroSection {...analyticsData.intro} />
-        </SectionWrapper>
+        <div className="relative w-full bg-white">
+          <IntroSection {...analyticsData.intro} />
+        </div>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">
           <BackgroundSection {...analyticsData.background} />
         </SectionWrapper>
 
@@ -68,7 +66,7 @@ export default function AnalyticsPage() {
           <ApproachSection {...analyticsData.approach} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="dark">
           <ResultsSection {...analyticsData.results} />
         </SectionWrapper>
       </main>

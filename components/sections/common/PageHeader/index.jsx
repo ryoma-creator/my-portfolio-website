@@ -17,7 +17,7 @@ const PageHeader = ({ topText, title, subtitle, backgroundImage }) => {  // back
       </div>
       
       {/* テキストコンテンツ */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4 container mx-auto">
+      <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4 sm:px-6 md:px-8 lg:px-12 container mx-auto">
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

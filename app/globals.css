@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* グローバルスタイル: はみ出し防止 */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* テキストの改行制御 */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
 /* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap'); */
 
 @layer base {
@@ -42,6 +60,101 @@
 }
 
 @layer components {
+  /* Every Layout Primitives */
+  
+  /* Stack: 縦積みレイアウト */
+  .stack {
+    display: flex;
+    flex-direction: column;
+  }
+  .stack > * + * {
+    margin-top: clamp(1rem, 3vw, 2rem);
+  }
+  
+  /* Box: 統一されたパディング */
+  .box {
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+  
+  /* Center: 中央揃え、最大幅制限 */
+  .center {
+    max-width: min(100% - clamp(1rem, 5vw, 3rem), 70ch);
+    margin-inline: auto;
+  }
+  
+  /* Cluster: 横並び、自動折り返し */
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+  }
+  
+  /* Sidebar: メイン + サイドバー */
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  .sidebar > :first-child {
+    flex-basis: 20rem;
+    flex-grow: 1;
+  }
+  .sidebar > :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 50%;
+  }
+  
+  /* Switcher: 特定幅で横並び ↔ 縦積み */
+  .switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  .switcher > * {
+    flex-grow: 1;
+    flex-basis: calc((30rem - 100%) * 999);
+  }
+  
+  /* Cover: 画面全体を覆う */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+  .cover > * {
+    margin-block: clamp(1rem, 3vw, 2rem);
+  }
+  .cover > :first-child {
+    margin-block-start: 0;
+  }
+  .cover > :last-child {
+    margin-block-end: 0;
+  }
+  
+  /* Grid: 自動列数調整 */
+  .grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  
+  /* Frame: アスペクト比維持 */
+  .frame {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  /* Reel: 横スクロール */
+  .reel {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+  }
+  
   .accent-gradient {
     @apply bg-gradient-to-r from-[#CCF8FF] to-[#EF96C5] animate-gradient-x;
   }

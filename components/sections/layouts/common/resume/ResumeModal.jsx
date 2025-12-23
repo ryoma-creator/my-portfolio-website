@@ -82,7 +82,7 @@ export default function ResumeModal({ isOpen, onClose }) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-[95%] max-w-[1200px] h-[97vh] bg-white">
+      <DialogContent className="w-[95vw] sm:w-[90vw] max-w-[1200px] h-[97vh] bg-white overflow-hidden">
         <DialogTitle className="sr-only">Resume Preview</DialogTitle>
         <DialogDescription className="sr-only">
           A preview of your resume with download option
@@ -92,14 +92,14 @@ export default function ResumeModal({ isOpen, onClose }) {
           {/* 閉じるボタン */}
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 z-50 w-10 h-10 flex items-center justify-center group"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 w-10 h-10 flex items-center justify-center group min-w-[44px] min-h-[44px]"
           >
-            <X className="w-6 h-6 text-gray-400 group-hover:text-gray-600 transition-colors" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-gray-600 transition-colors" />
           </button>
 
           {/* プレビュー用コンテンツ */}
-          <div className="flex-1 overflow-y-auto px-[4%] py-8 flex items-center justify-center">
-            <div className="w-full max-w-none flex justify-center">
+          <div className="flex-1 overflow-y-auto px-2 sm:px-4 md:px-[4%] pt-12 sm:pt-16 pb-4 flex items-start justify-center min-h-0">
+            <div className="w-full max-w-none flex justify-center my-auto">
               <ResumeContent />
             </div>
           </div>

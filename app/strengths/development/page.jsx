@@ -53,7 +53,7 @@ export default function DevelopmentPage() {
         <ApproachSection {...developmentData.approach} />
       </SectionWrapper>
 
-      <SectionWrapper variant="gradient2">
+      <SectionWrapper variant="dark">
         <ResultsSection {...developmentData.results} />
       </SectionWrapper>
     </main>

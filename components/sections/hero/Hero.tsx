@@ -26,35 +26,41 @@ export default function Hero() {
 
   return (
     <>
-    <section className='relative h-[90vh] bg-white overflow-hidden'>
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
-          bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue
-          blur-3xl transform rotate-12 animate-gradient-xy" />
-        <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full 
-             bg-gradient-to-r from-teal-400/40 via-blue-400/40 to-indigo-400/40 
-          blur-3xl transform -rotate-12 animate-gradient-xy" />
-      </div>
-
-      <div className='container h-full relative z-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-[88px]'>
-        <div className='flex flex-col xl:flex-row items-center justify-center h-full
-          gap-8 py-12 md:py-16 xl:py-0'>
+    <section className='relative overflow-hidden' style={{ 
+      overflowX: 'hidden',
+      minHeight: 'clamp(600px, 90vh, 100vh)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: 'transparent'
+    }}>
+      <div className='container relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[88px]' style={{ 
+        overflowX: 'hidden',
+        paddingBlock: 'clamp(2rem, 8vh, 4rem)'
+      }}>
+        <div className='flex flex-col xl:flex-row items-center justify-center
+          gap-6 sm:gap-8'>
           
           {/* text */}
-          <div className='text-center xl:text-left flex-1'>
-            <div className="gradient-text-wrapper">
+          <div className='text-center xl:text-left flex-1 w-full max-w-full' style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
+            <div className="gradient-text-wrapper mb-4 sm:mb-6">
               <GsapAnimatedText 
                 text="Logic × Tech × Global Experience"
                 variant="perspectiveTilt" 
                 duration={1.5} 
                 stagger={0.05}
                 scrollTrigger={true}
-                className="text-xl relative z-10 text-gray-700"
+                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl relative z-10 text-gray-700 whitespace-nowrap"
+                style={{ wordBreak: 'keep-all' }}
               />
             </div>
             
-            <div className='text-[72px] leading-tight font-semibold mb-6'>
+            <div className='font-semibold mb-6 sm:mb-8' style={{ 
+              fontSize: 'clamp(1.75rem, 5vw, 4.5rem)',
+              lineHeight: '1.1',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word'
+            }}>
               <div className="gradient-text-wrapper">
                 <GsapAnimatedText 
                   text="Bridging" 
@@ -62,10 +68,11 @@ export default function Hero() {
                   duration={1.5} 
                   stagger={0.05}
                   scrollTrigger={true}
-                  className="text-gray-900 font-semibold" 
+                  className="text-gray-900 font-semibold whitespace-nowrap" 
+                  style={{ wordBreak: 'keep-all' }}
                 />
               </div>
-              {/* <br /> */}
+              <br className="hidden sm:block" />
               <div className="gradient-text-wrapper">
                 <GsapAnimatedText 
                   text="Tech & Culture" 
@@ -73,13 +80,14 @@ export default function Hero() {
                   duration={2} 
                   stagger={0.05}
                   scrollTrigger={true}
-                  className="text-gray-900 font-semibold" 
+                  className="text-gray-900 font-semibold whitespace-nowrap" 
+                  style={{ wordBreak: 'keep-all' }}
                 />
               </div>
             </div>
 
             {/* btn and socials */}
-            <div className='flex flex-col xl:flex-row items-center gap-8'>
+            <div className='flex flex-col xl:flex-row items-center gap-6 sm:gap-8'>
               <GsapAnimatedElement
                 variant="scaleUp"
                 duration={0.5}
@@ -89,13 +97,13 @@ export default function Hero() {
                 <Button
                   variant='outline'
                   size='lg'
-                  className='relative group overflow-hidden rounded-full'
+                  className='relative group overflow-hidden rounded-full min-h-[44px] flex items-center gap-2'
                   onClick={() => setIsResumeModalOpen(true)}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue
                     animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative text-gray-800 group-hover:text-white">Download CV</span>
-                  <FiDownload className='text-xl relative text-gray-800 group-hover:text-white ml-2'/>
+                  <span className="relative z-10 text-gray-800 group-hover:text-white">Download CV</span>
+                  <FiDownload className='text-xl relative z-10 text-gray-800 group-hover:text-white flex-shrink-0'/>
                 </Button>
               </GsapAnimatedElement>
               <GsapAnimatedElement
@@ -105,8 +113,8 @@ export default function Hero() {
                 className='mb-8 xl:mb-0'
               >
                 <Social 
-                  containerStyles='flex gap-6' 
-                  iconStyles='w-9 h-9 border border-gray-200 rounded-full
+                  containerStyles='flex gap-4 sm:gap-6' 
+                  iconStyles='w-9 h-9 sm:w-10 sm:h-10 border border-gray-200 rounded-full
                   flex items-center justify-center text-gray-600
                   hover:border-violet-400 hover:text-violet-500 
                   hover:transition-all duration-500 hover:translate-y-[-5px]'
@@ -123,8 +131,6 @@ export default function Hero() {
             className='order-1 xl:order-none flex-1 flex justify-center items-center'
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-violet-400/30 to-purple-400/30 
-                blur-2xl rounded-full transform scale-150 animate-gradient-xy" />
               {/* <Photo /> */}
             </div>
           </GsapAnimatedElement>

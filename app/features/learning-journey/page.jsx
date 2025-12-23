@@ -28,7 +28,7 @@ export default function LearningJourneyPage() {
       {/* 固定ナビゲーション */}
 
       <main>
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">
           <PageHeader {...learningJourneyData.header} />
         </SectionWrapper>
 
@@ -36,7 +36,7 @@ export default function LearningJourneyPage() {
           <IntroSection {...learningJourneyData.intro} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">
           <BackgroundSection {...learningJourneyData.background} />
         </SectionWrapper>
 
@@ -44,7 +44,7 @@ export default function LearningJourneyPage() {
           <ApproachSection {...learningJourneyData.approach} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="dark">
           <ResultsSection {...learningJourneyData.results} />
         </SectionWrapper>
       </main>

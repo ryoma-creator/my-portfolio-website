@@ -62,7 +62,7 @@ export default function EvolutionPage() {
           <ApproachSection {...evolutionData.approach} />
         </SectionWrapper>
 
-        <SectionWrapper variant="light">  {/* gradient2 から light に変更 */}
+        <SectionWrapper variant="dark">
           <ResultsSection {...evolutionData.results} />
         </SectionWrapper>
 </main>

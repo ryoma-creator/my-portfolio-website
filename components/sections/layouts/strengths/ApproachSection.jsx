@@ -9,14 +9,14 @@ export default function ApproachSection({ sectionTitle, approaches }) {
         <h2 className="text-center text-4xl font-light mb-20 text-gray-900">{sectionTitle}</h2>
         
         {/* 上段2つ */}
-        <div className="flex justify-center gap-8 mb-16">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16 px-2 sm:px-4">
           {approaches.slice(0, 2).map((approach, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group w-full max-w-[500px]"
+              className="group w-full max-w-[500px] mx-auto sm:mx-0"
             >
               <div className="aspect-[16/9] mb-8 overflow-hidden rounded-lg">
                 <img 
@@ -42,14 +42,14 @@ export default function ApproachSection({ sectionTitle, approaches }) {
         </div>
 
         {/* 下段3つ */}
-        <div className="flex justify-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-2 sm:px-4 max-w-[1400px] mx-auto">
           {approaches.slice(2, 5).map((approach, index) => (
             <motion.div
               key={index + 2}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
-              className="group w-full max-w-[400px]"
+              className="group w-full max-w-[400px] mx-auto sm:mx-0"
             >
               <div className="aspect-[16/9] mb-8 overflow-hidden rounded-lg">
                 <img 

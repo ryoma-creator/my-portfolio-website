@@ -16,8 +16,8 @@ export const SectionTitle = ({
   // アニメーションなしバージョン
   if (!animate) {
     return (
-      <h2 className={`text-${align}`}>
-        <span className={`text-3xl md:text-4xl font-light ${fontSize} ${align === 'left' ? 'text-left' : 'text-center'} ${textColor}`}>
+      <h2 className={`${align === 'left' ? 'text-left' : 'text-center'} w-full`} style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
+        <span className={`text-2xl sm:text-3xl md:text-4xl font-light ${fontSize} ${align === 'left' ? 'text-left' : 'text-center'} ${textColor}`}>
           {children}
         </span>
       </h2>
@@ -26,7 +26,7 @@ export const SectionTitle = ({
 
   // アニメーション付きバージョン
   return (
-    <h2 className={`text-${align}`}>
+    <h2 className={`${align === 'left' ? 'text-left' : 'text-center'} w-full`} style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
       <GsapAnimatedText 
         text={children}
         variant={animation.variant}
@@ -37,7 +37,8 @@ export const SectionTitle = ({
           once: true,
           start: "top 100%", // 画面の下から80%の位置でトリガー（より早くトリガーされる）
         }}
-        className={`text-3xl md:text-4xl font-light ${fontSize} ${align === 'left' ? 'text-left' : 'text-center'} ${textColor}`}
+        className={`text-2xl sm:text-3xl md:text-4xl font-light ${fontSize} ${align === 'left' ? 'text-left' : 'text-center'} ${textColor}`}
+        style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}
       />
     </h2>
   );

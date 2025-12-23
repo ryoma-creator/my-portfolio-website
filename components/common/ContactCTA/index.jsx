@@ -26,23 +26,25 @@ const ContactCTA = ({
         <p className="text-text-secondary mb-8">{description}</p>
 
         {/* ボタンのスタイリングを変更 */}
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          className="relative px-8 py-3 rounded-full group overflow-hidden border border-white
-          hover:border-transparent transition-all duration-300
-          "
-        >
+        <div className="relative inline-block overflow-visible">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="relative px-8 py-3 rounded-full group overflow-hidden border border-white
+            hover:border-transparent transition-all duration-300 shadow-lg hover:shadow-xl
+            "
+          >
           {/* グラデーション背景（ホバー時に表示） */}
-          <div className="absolute inset-0  animate-gradient-x bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
+          <div className="absolute inset-0 rounded-full animate-gradient-x bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
             opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           />
           {/* ボタンテキスト */}
-          <span className="relative z-10 text-text-dark-primary group-hover:text-white 
-            transition-colors duration-300"
-          >
-            {buttonText}
-          </span>
-        </button>
+            <span className="relative z-10 text-text-dark-primary group-hover:text-white 
+              transition-colors duration-300"
+            >
+              {buttonText}
+            </span>
+          </button>
+        </div>
       </div>
 
       {/* モーダル */}

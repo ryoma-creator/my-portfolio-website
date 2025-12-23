@@ -26,23 +26,23 @@ export default function SectionWrapper({
 
   const gradients = {
     gradient: (
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
           bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
-          blur-3xl transform rotate-12 animate-gradient-xy opacity-20" />
+          blur-3xl transform rotate-12 animate-gradient-xy" />
         <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full 
           bg-gradient-to-r from-brand-pink via-brand-blue to-brand-pink  
-          blur-3xl transform -rotate-12 animate-gradient-xy opacity-20" />
+          blur-3xl transform -rotate-12 animate-gradient-xy" />
       </div>
     ),
     gradient2: (
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
           bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue  
-          blur-3xl transform rotate-12 animate-gradient-xy opacity-20" />
+          blur-3xl transform rotate-12 animate-gradient-xy" />
         <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full 
           bg-gradient-to-r from-brand-pink via-brand-blue to-brand-pink  
-          blur-3xl transform -rotate-12 animate-gradient-xy opacity-20" />
+          blur-3xl transform -rotate-12 animate-gradient-xy" />
       </div>
     ),
     dark: (
@@ -50,7 +50,16 @@ export default function SectionWrapper({
       <div className="absolute inset-0 bg-black" />
     </div>
     ),
-    light: null,
+    light: (
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full 
+          bg-gradient-to-r from-brand-blue/20 via-brand-pink/20 to-brand-blue/20  
+          blur-3xl transform rotate-12 animate-gradient-xy" />
+        <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full 
+          bg-gradient-to-r from-brand-pink/20 via-brand-blue/20 to-brand-pink/20  
+          blur-3xl transform -rotate-12 animate-gradient-xy" />
+      </div>
+    ),
     accent: (
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 
@@ -63,9 +72,9 @@ export default function SectionWrapper({
   // ContextProviderを作成して子コンポーネントにvariantを渡す
   return (
     <SectionContext.Provider value={{ variant, accentColors }}>
-      <section className={`${variants[variant]} ${className}`}>
+      <section className={`${variants[variant]} ${className} py-12 sm:py-16 md:py-20 lg:py-24`} style={{ overflowX: 'hidden' }}>
         {gradients[variant]}
-        <div className="relative z-10">
+        <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12">
           {children}
         </div>
       </section>

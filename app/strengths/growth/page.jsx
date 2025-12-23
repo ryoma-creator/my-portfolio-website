@@ -58,7 +58,7 @@ export default function BilingualPage() {
           <IntroSection {...growthData.intro} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">
           <BackgroundSection {...growthData.background} />  
         </SectionWrapper>
 
@@ -66,7 +66,7 @@ export default function BilingualPage() {
           <ApproachSection {...growthData.approach} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">  
+        <SectionWrapper variant="dark">  
           <ResultsSection {...growthData.results} />
         </SectionWrapper>
       </main>

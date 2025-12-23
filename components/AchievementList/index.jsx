@@ -1,10 +1,9 @@
 'use client'
 
 // AchievementList/index.jsx
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Award, ChevronDown, ChevronUp } from "lucide-react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import Image from "next/image";
 
 
@@ -12,69 +11,137 @@ import Image from "next/image";
 export default function AchievementList({ achievements }) {
   const [hovered, setHovered] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const scrollContainerRef = useRef(null);
+  const scrollContentRef = useRef(null);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   // 概要セクションの表示状態
   const [showOverall, setShowOverall] = useState(false);
 
-  if (!achievements) return null;
+  if (!achievements || achievements.length === 0) {
+    return (
+      <div className="w-full p-8 text-center text-gray-500">
+        No achievements to display
+      </div>
+    );
+  }
+
+  // 無限ループスクロールの実装
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    const content = scrollContentRef.current;
+    if (!container || !content || achievements.length === 0) return;
+
+    let animationId: number | null = null;
+    let scrollPosition = 0;
+    const scrollSpeed = 0.5;
+    let isPaused = false;
+
+    // カード幅を動的に計算
+    const getCardWidth = () => {
+      if (typeof window === 'undefined') return 360;
+      if (window.innerWidth < 640) return 280; // sm
+      if (window.innerWidth < 768) return 320; // md
+      return 360; // lg以上
+    };
+
+    const cardWidth = getCardWidth();
+    const gap = 16;
+    const singleSetWidth = achievements.length * (cardWidth + gap);
+
+    const scroll = () => {
+      if (!container || !content) return;
+      
+      if (!isPaused) {
+        scrollPosition += scrollSpeed;
+        
+        // 1セット分スクロールしたら、最初に戻る
+        if (scrollPosition >= singleSetWidth) {
+          scrollPosition = scrollPosition - singleSetWidth;
+        }
+        
+        container.scrollLeft = scrollPosition;
+      }
+      
+      animationId = requestAnimationFrame(scroll);
+    };
+
+    // マウス/タッチイベント
+    const handleMouseEnter = () => { isPaused = true; };
+    const handleMouseLeave = () => { 
+      // スクロール位置を調整
+      const currentScroll = container.scrollLeft;
+      const adjustedScroll = currentScroll % singleSetWidth;
+      container.scrollLeft = adjustedScroll;
+      scrollPosition = adjustedScroll;
+      isPaused = false;
+    };
+
+    const handleTouchStart = () => { isPaused = true; };
+    const handleTouchEnd = () => {
+      setTimeout(() => {
+        const currentScroll = container.scrollLeft;
+        const adjustedScroll = currentScroll % singleSetWidth;
+        container.scrollLeft = adjustedScroll;
+        scrollPosition = adjustedScroll;
+        isPaused = false;
+      }, 1000);
+    };
+
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+    container.addEventListener('touchstart', handleTouchStart, { passive: true });
+    container.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    isPaused = false;
+    animationId = requestAnimationFrame(scroll);
+
+    return () => {
+      if (animationId) cancelAnimationFrame(animationId);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+      container.removeEventListener('touchstart', handleTouchStart);
+      container.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [achievements]);
+
+  // コンテンツを2倍に複製して無限ループを実現
+  const duplicatedAchievements = [...achievements, ...achievements];
 
   return (
-    <div className="w-full max-w-[900px] space-y-6">
-      {/* Overall Summary Section */}
-      {/* <div className="p-6 bg-[#27272c] rounded-lg border border-white/10">
-        <h2 className="text-2xl font-bold text-white mb-4">Technical Evolution Path</h2>
-        <p className="text-white/80 mb-4">
-          A dedicated journey into web development, evolving from fundamentals 
-          to advanced frontend engineering since March 2024.
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {['Foundational Web Development', 'React & Modern Frameworks', 'Advanced Animation & UI', 'Full-Stack Integration'].map((highlight, index) => (
-            <span 
-              key={index} 
-              className="px-3 py-1 bg-brandtext-brand-pink/20 text-brand-pink rounded-full text-sm"
-            >
-              {highlight}
-            </span>
+    <div className="w-full max-w-[900px] space-y-6 mx-auto">
+      {/* Monthly Progress Section */}
+      <div 
+        ref={scrollContainerRef}
+        className="w-full rounded-md border border-white bg-white overflow-x-auto scroll-smooth"
+        style={{ 
+          scrollbarWidth: 'thin',
+          WebkitOverflowScrolling: 'touch',
+          overflowY: 'hidden'
+        }}
+      >
+        <div 
+          ref={scrollContentRef}
+          className="flex space-x-4 p-4"
+          style={{ 
+            width: 'max-content',
+            willChange: 'transform',
+            display: 'flex'
+          }}
+        >
+          {duplicatedAchievements.map((achievement, index) => (
+            <AchievementCard
+              key={`${achievement.period}-${index}`}
+              achievement={achievement}
+              index={index % achievements.length}
+              hovered={hovered}
+              setHovered={setHovered}
+              isExpanded={isExpanded}
+              onToggleExpand={() => setIsExpanded(!isExpanded)}
+            />
           ))}
         </div>
-
-        <button
-          onClick={() => setShowOverall(!showOverall)}
-          className="mt-6 flex items-center gap-2 text-brand-pink hover:text-emerald-300 transition-colors"
-        >
-          {showOverall ? (
-            <>
-              <ChevronUp className="w-4 h-4" />
-              <span>Hide details</span>
-            </>
-          ) : (
-            <>
-              <ChevronDown className="w-4 h-4" />
-              <span>View details</span>
-            </>
-          )}
-        </button>
-      </div> */}
-
-      {/* Monthly Progress Section */}
-      {/* {showOverall && ( */}
-        <ScrollArea className="w-full rounded-md border border-white bg-white">
-          <div className="flex space-x-4 p-4">
-            {achievements.map((achievement, index) => (
-              <AchievementCard
-                key={index}
-                achievement={achievement}
-                index={index}
-                hovered={hovered}
-                setHovered={setHovered}
-                isExpanded={isExpanded}
-                onToggleExpand={() => setIsExpanded(!isExpanded)}
-              />
-            ))}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-      {/* )} */}
+      </div>
     </div>
   );
 }
@@ -107,13 +174,15 @@ const AchievementCard = React.memo(({
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        'w-[360px] flex-shrink-0 rounded-lg bg-[#27272c]',
+        'w-[280px] sm:w-[320px] md:w-[360px] flex-shrink-0 rounded-lg bg-[#27272c]',
         'transition-all duration-300 ease-out relative overflow-hidden',
+        'max-w-full',
             // blur effect
         hovered !== null && hovered !== index && 
         "scale-[0.98]"
         // "blur-sm scale-[0.98]"
       )}
+      style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}
     >
       {/* 背景画像 */}
       {achievement.background && (

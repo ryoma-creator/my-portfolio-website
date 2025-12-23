@@ -16,8 +16,8 @@ export const SectionSentence = ({
     // animateがfalseの場合、アニメーションなしで通常のテキストを表示
     if (!animate) {
         return (
-            <div className="mb-1">
-                <p className={`block ${fontSize} ${textColor} ${align === 'left' ? 'text-left' : 'text-center'} [line-height:1.15] whitespace-pre-wrap`}>
+            <div className="mb-1 w-full" style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
+                <p className={`block text-sm sm:text-base ${fontSize} ${textColor} ${align === 'left' ? 'text-left' : 'text-center'} [line-height:1.5]`}>
                     {children}
                 </p>
             </div>
@@ -26,7 +26,7 @@ export const SectionSentence = ({
 
     // 通常のアニメーション付きバージョン
     return (
-        <div className="mb-1">
+        <div className="mb-1 w-full flex justify-center" style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
             <GsapAnimatedText 
                 text={children}
                 variant={animation.variant}
@@ -37,7 +37,8 @@ export const SectionSentence = ({
                     once: true,
                     start: "top 100%", // 画面の下から80%の位置でトリガー（より早くトリガーされる）
                 }}
-                className={`block ${fontSize} ${textColor} ${align === 'left' ? 'text-left' : 'text-center'} [line-height:1.15] whitespace-pre-wrap`}
+                className={`block text-sm sm:text-base ${fontSize} ${textColor} ${align === 'left' ? 'text-left' : 'text-center'} [line-height:1.5]`}
+                style={{ wordBreak: 'keep-all', overflowWrap: 'break-word', textAlign: align === 'left' ? 'left' : 'center' }}
             />
         </div>
     );

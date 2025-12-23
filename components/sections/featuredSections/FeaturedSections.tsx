@@ -47,16 +47,16 @@ export default function FeaturedSections() {
   // index % 2 === 0は偶数番目のセクションかどうかをチェックします
   // 偶数の場合: テキストが左、画像が右
   return (
-    <SectionContainer className="px-16"> {/* コンテナにパディングを追加 */}
+    <SectionContainer className="px-4 sm:px-8 md:px-12 lg:px-16 overflow-hidden"> {/* コンテナにパディングを追加 */}
     {sections.map((section: Section, index: number) => (
-       <div key={index} className={`${index === 0 ? '' : 'mt-32'}`}>  {/* 2番目のセクションにのみmt-32を適用 */}
-        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
-          <div className="w-full lg:w-1/2"> {/* 幅の制御を追加 */}
+       <div key={index} className={`${index === 0 ? '' : 'mt-16 sm:mt-24 md:mt-32'} w-full max-w-full overflow-hidden`}>  {/* 2番目のセクションにのみmt-32を適用 */}
+        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 sm:gap-16 md:gap-24 items-center w-full max-w-full`}>
+          <div className="w-full lg:w-1/2 max-w-full" style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}> {/* 幅の制御を追加 */}
             <SectionGroup
               subtitle={section.category}
               title={section.title}
               align="center"
-              className="px-16" 
+              className="px-4 sm:px-8 md:px-12 lg:px-16" 
             >
             <div className="space-y-2 text-center w-full"> {/* gap-8ではなく、space-y-2で適度な間隔に */}
               {section.points.map((point: string, i: number) => (
@@ -78,16 +78,26 @@ export default function FeaturedSections() {
           </div>
 
             {/* イメージセクション */}
-            <div className="w-full lg:w-1/2">
-              <Parallax
-                bgImage={section.image}
-                strength={200}
-                className="aspect-square overflow-hidden rounded-lg max-w-[500px] mx-auto"
-              >
-                <div style={{ height: '500px' }}>
-                  <div className="w-full h-full transition-transform duration-700 hover:scale-105" />
-                </div>
-              </Parallax>
+            <div className="w-full lg:w-1/2 max-w-full">
+              <div className="w-full max-w-full sm:max-w-[400px] md:max-w-[500px] mx-auto overflow-hidden rounded-lg" style={{ 
+                height: 'clamp(280px, 40vw, 500px)',
+                aspectRatio: '1 / 1'
+              }}>
+                <Parallax
+                  bgImage={section.image}
+                  strength={typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 200}
+                  className="w-full h-full"
+                  style={{ 
+                    height: '100%',
+                    minHeight: 'clamp(280px, 40vw, 500px)'
+                  }}
+                >
+                  <div className="w-full h-full transition-transform duration-700 hover:scale-105" style={{ 
+                    height: 'clamp(280px, 40vw, 500px)',
+                    minHeight: 'clamp(280px, 40vw, 500px)'
+                  }} />
+                </Parallax>
+              </div>
             </div>
           </div>
         </div>

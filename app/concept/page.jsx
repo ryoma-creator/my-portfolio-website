@@ -50,7 +50,7 @@ export default function ConceptPage() {
       </nav> */}
 
       <main>
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">
           <PageHeader {...myStoryData.header} />
         </SectionWrapper>
 
@@ -58,7 +58,7 @@ export default function ConceptPage() {
           <IntroSection {...myStoryData.intro} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="light">
           <BackgroundSection {...myStoryData.background} />
         </SectionWrapper>
 
@@ -66,7 +66,7 @@ export default function ConceptPage() {
           <ApproachSection {...myStoryData.approach} />
         </SectionWrapper>
 
-        <SectionWrapper variant="gradient2">
+        <SectionWrapper variant="dark">
           <ResultsSection {...myStoryData.results} />
         </SectionWrapper>
       </main>

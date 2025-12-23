@@ -7,21 +7,25 @@ export default function DiscoverSection({ title = "What else you might discover?
     <section className="py-20">
       <h2 className="text-text-dark-primary text-responsive-lg text-center mb-16">{title}</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1200px] mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-[1200px] mx-auto px-4 sm:px-6">
         {items.slice(0, 3).map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex flex-col"
+            className="flex flex-col w-full"
           >
-            <Link href={item.link} className="block">
-              <div className="mb-4 aspect-[3/4] w-full overflow-hidden">
+            <Link href={item.link} className="block w-full">
+              <div className="mb-4 aspect-[3/4] w-full overflow-hidden rounded-lg">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-125"
+                  onError={(e) => {
+                    console.error('Image failed to load:', item.image);
+                    e.target.style.display = 'none';
+                  }}
                 />
               </div>
               

@@ -13,7 +13,7 @@ import {
 
 const ResumeContent = () => {
   return (
-    <div id="resume-content" className="w-[210mm] h-[297mm] bg-white shadow-xl relative overflow-hidden flex flex-col">
+    <div id="resume-content" className="w-[210mm] h-[297mm] bg-white shadow-xl relative overflow-hidden flex flex-col" style={{ minHeight: '297mm', maxHeight: '297mm' }}>
       {/* Simple background */}
       <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-600 to-blue-800"></div>
 

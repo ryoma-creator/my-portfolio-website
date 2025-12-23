@@ -13,7 +13,7 @@ export default function BackgroundSection({
 }) {
   return (
     <div className="py-24">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         {/* 上部の大きなタイトルと説明文 */}
         <div className="max-w-4xl mx-auto mb-32 text-center">
           <h2 className="text-4xl font-light mb-8 text-text-primary">
@@ -25,9 +25,9 @@ export default function BackgroundSection({
         </div>
 
         {/* 2カラムレイアウト */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center px-2 container">
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* 左側テキストエリア */}
-          <div className="w-full lg:w-1/3 lg:self-center container">
+          <div className="w-full lg:w-1/3 lg:self-center">
             <div className="max-w-[400px]">
               <h3 className="text-2xl font-light mb-4 text-text-primary">
                 {columnTitle}
@@ -50,7 +50,7 @@ export default function BackgroundSection({
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="aspect-[16/9] relative rounded-lg overflow-hidden"
+              className="aspect-[16/9] relative overflow-hidden rounded-lg"
             >
               <img
                 src={imageSrc}

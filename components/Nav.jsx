@@ -69,7 +69,7 @@ const Nav = () => {
                             </div>
                             
                             {/* Tooltip */}
-                            <span className="absolute -bottom-3 text-xs font-light tracking-wide
+                            <span className="absolute -bottom-3 text-xs font-light tracking-wide whitespace-nowrap
                                 opacity-0 group-hover:opacity-100 
                                 transition-all duration-300
                                 text-text-secondary"
@@ -89,7 +89,7 @@ const Nav = () => {
                             </div>
                             
                             {/* Tooltip */}
-                            <span className="absolute -bottom-3 text-xs font-light tracking-wide
+                            <span className="absolute -bottom-3 text-xs font-light tracking-wide whitespace-nowrap
                                 opacity-0 group-hover:opacity-100 
                                 transition-all duration-300
                                 text-text-secondary"

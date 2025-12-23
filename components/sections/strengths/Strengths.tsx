@@ -48,12 +48,12 @@ export default function Strengths() {
         subtitle="EXPLORE MY EXPERTISE"
         title="Choose your area of interest"
       >
-        <div className="container mx-auto px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[45px]">
+        <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-[45px]">
             {strengths.map((strength: Strength, index: number) => (
               <Link href={strength.link} key={index}>
 
-          <div className="group relative w-[246.25px] h-[246.25px] aspect-square overflow-hidden rounded-lg">
+          <div className="group relative w-full aspect-square overflow-hidden rounded-lg max-w-[246px] mx-auto sm:max-w-none">
             {/* 画像とフィルター効果 */}
             <div className="relative w-full h-full">
               <img
@@ -84,8 +84,8 @@ export default function Strengths() {
             <div className="absolute inset-0"> 
               <div className="relative h-full">
                 {/* タイトル - translate効果を削除 */}
-                <div className="absolute bottom-6 left-0 right-0 text-center">
-                  <h3 className="text-2xl font-light text-white">
+                <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 text-center">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-light text-white">
                     {strength.title}
                   </h3>
                 </div>

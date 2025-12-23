@@ -107,12 +107,12 @@ export default function ContactForm() {
   return (
     <>
       {/* 全体を中央揃えにしていく */}
-      <div className="xl-scale-90  flex flex-col xl:flex-row 
-        items-center justify-center overflow-y-auto gap-8">
+      <div className="flex flex-col xl:flex-row 
+        items-center justify-center overflow-y-auto gap-4 sm:gap-6 md:gap-8 w-full">
         {/* 右カラム：フォーム */}
-        <div className="w-full order-2 xl:order-2 xl:w-[54%]">
-          <form onSubmit={handleSubmit} className="space-y-8">
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <div className="w-full order-2 xl:order-2 xl:w-[50%] max-w-full">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 md:space-y-8 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 w-full">
               <Input 
                 type="text"
                 name="firstname"
@@ -120,7 +120,8 @@ export default function ContactForm() {
                 value={forxlata.firstname}
                 onChange={handleChange}
                 required
-                className="bg-white/50 border-gray-200 focus:border-brand-pink"
+                className="w-full bg-white/50 border-gray-200 focus:border-brand-pink"
+                style={{ maxWidth: '100%' }}
               />
               <Input 
                 type="text"
@@ -129,7 +130,8 @@ export default function ContactForm() {
                 value={forxlata.lastname}
                 onChange={handleChange}
                 required
-                className="bg-white/50 border-gray-200 focus:border-brand-pink"
+                className="w-full bg-white/50 border-gray-200 focus:border-brand-pink"
+                style={{ maxWidth: '100%' }}
               />
               <Input 
                 type="email"
@@ -138,7 +140,8 @@ export default function ContactForm() {
                 value={forxlata.email}
                 onChange={handleChange}
                 required
-                className="bg-white/50 border-gray-200 focus:border-brand-pink"
+                className="w-full bg-white/50 border-gray-200 focus:border-brand-pink"
+                style={{ maxWidth: '100%' }}
               />
               <Input 
                 type="tel"
@@ -146,7 +149,8 @@ export default function ContactForm() {
                 placeholder="Phone Number"
                 value={forxlata.phone}
                 onChange={handleChange}
-                className="bg-white/50 border-gray-200 focus:border-brand-pink"
+                className="w-full bg-white/50 border-gray-200 focus:border-brand-pink"
+                style={{ maxWidth: '100%' }}
               />
             </div>
 
@@ -159,7 +163,7 @@ export default function ContactForm() {
               }}
               value={forxlata.reason}
             >
-              <SelectTrigger className="bg-white/50 border-gray-200 focus:border-brand-pink">
+              <SelectTrigger className="w-full bg-white/50 border-gray-200 focus:border-brand-pink" style={{ maxWidth: '100%' }}>
                 <SelectValue placeholder="Reason for Contact" />
               </SelectTrigger>
               <SelectContent>
@@ -178,22 +182,25 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Your Message *"
               required
-              className="h-[200px] bg-white/50 border-gray-200 focus:border-brand-pink"
+              className="w-full bg-white/50 border-gray-200 focus:border-brand-pink resize-none"
+              style={{ 
+                maxWidth: '100%',
+                height: 'clamp(120px, 20vh, 200px)',
+                minHeight: '120px'
+              }}
             />
 
             <Button 
               type="submit"
-              className="relative w-full group overflow-hidden rounded-full"
+              className="relative w-full group overflow-hidden rounded-full min-h-[44px] bg-white/50 border border-gray-200 hover:border-transparent shadow-none hover:shadow-lg transition-all duration-300"
               disabled={isSubmitting}
+              style={{ maxWidth: '100%' }}
             >
-              <div className={`absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
+              <div className={`absolute inset-0 rounded-full bg-gradient-to-r from-brand-blue via-brand-pink to-brand-blue 
                 animate-gradient-x transition-opacity duration-300
                 ${isSubmitting ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-              <div className={`absolute inset-0 bg-gradient-to-r from-brand-pink via-brand-blue to-brand-pink 
-                animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                ${isSubmitting ? 'opacity-100' : ''}`} />
-              <span className={`relative font-medium
-                ${isSubmitting ? 'text-white' : 'text-text-primary group-hover:text-white'}`}>
+              <span className={`relative z-10 font-medium
+                ${isSubmitting ? 'text-white' : 'text-text-primary group-hover:text-white transition-colors duration-300'}`}>
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </span>
             </Button>
@@ -202,17 +209,17 @@ export default function ContactForm() {
 
         {/* 連絡先情報（左側） */}
          {/* 連絡先情報: デフォルトで非表示、xl以上で表示 */}
-        <div className="hidden xl:block order-1 xl:order-1 w-[46%] mb-6 xl:mb-0">
-          <div className="space-y-8">
+        <div className="hidden xl:block order-1 xl:order-1 w-[45%] mb-6 xl:mb-0 max-w-full">
+          <div className="space-y-4 sm:space-y-6 md:space-y-8 w-full">
             {contactInfo.map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-brand-blue to-brand-pink 
-                  rounded-lg flex items-center justify-center">
-                  <div className="text-2xl text-white">{item.icon}</div>
+              <div key={index} className="flex items-start sm:items-center gap-3 sm:gap-4 w-full">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-brand-blue to-brand-pink 
+                  rounded-lg flex items-center justify-center min-w-[40px] min-h-[40px]">
+                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-white">{item.icon}</div>
                 </div>
-                <div>
-                  <h4 className="font-medium text-text-primary">{item.title}</h4>
-                  <p className="text-text-secondary">{item.description}</p>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-sm sm:text-base md:text-lg font-medium text-text-primary mb-1">{item.title}</h4>
+                  <p className="text-xs sm:text-sm md:text-base text-text-secondary break-words">{item.description}</p>
                 </div>
               </div>
             ))}
