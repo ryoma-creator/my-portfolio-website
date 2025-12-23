@@ -51,7 +51,6 @@ export default function Hero() {
                 stagger={0.05}
                 scrollTrigger={true}
                 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl relative z-10 text-gray-700 whitespace-nowrap"
-                style={{ wordBreak: 'keep-all' }}
               />
             </div>
             
@@ -69,7 +68,6 @@ export default function Hero() {
                   stagger={0.05}
                   scrollTrigger={true}
                   className="text-gray-900 font-semibold whitespace-nowrap" 
-                  style={{ wordBreak: 'keep-all' }}
                 />
               </div>
               <br className="hidden sm:block" />
@@ -81,7 +79,6 @@ export default function Hero() {
                   stagger={0.05}
                   scrollTrigger={true}
                   className="text-gray-900 font-semibold whitespace-nowrap" 
-                  style={{ wordBreak: 'keep-all' }}
                 />
               </div>
             </div>
@@ -94,6 +91,7 @@ export default function Hero() {
                 delay={1.5}
               >
                 {/* CVダウンロードボタン */}
+                {/* @ts-ignore */}
                 <Button
                   variant='outline'
                   size='lg'

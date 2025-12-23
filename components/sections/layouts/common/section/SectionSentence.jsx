@@ -5,6 +5,7 @@ export const SectionSentence = ({
     align = 'center', 
     textColor = 'text-text-tertiary',
     fontSize = 'text-md',
+    className = '',
     animate = true,  // 追加
     animation = {
         variant: "fadeIn",
@@ -16,7 +17,7 @@ export const SectionSentence = ({
     // animateがfalseの場合、アニメーションなしで通常のテキストを表示
     if (!animate) {
         return (
-            <div className="mb-1 w-full" style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
+            <div className={`mb-1 w-full ${className}`} style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
                 <p className={`block text-sm sm:text-base ${fontSize} ${textColor} ${align === 'left' ? 'text-left' : 'text-center'} [line-height:1.5]`}>
                     {children}
                 </p>
@@ -26,7 +27,7 @@ export const SectionSentence = ({
 
     // 通常のアニメーション付きバージョン
     return (
-        <div className="mb-1 w-full flex justify-center" style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
+        <div className={`mb-1 w-full flex justify-center ${className}`} style={{ wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
             <GsapAnimatedText 
                 text={children}
                 variant={animation.variant}

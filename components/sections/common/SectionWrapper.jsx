@@ -5,7 +5,8 @@ import React from 'react';
 export default function SectionWrapper({ 
   children, 
   variant = "gradient", 
-  className = "" 
+  className = "",
+  id = undefined
 }) {
   // バリアントごとのスタイル設定
   const variants = {
@@ -72,7 +73,7 @@ export default function SectionWrapper({
   // ContextProviderを作成して子コンポーネントにvariantを渡す
   return (
     <SectionContext.Provider value={{ variant, accentColors }}>
-      <section className={`${variants[variant]} ${className} py-12 sm:py-16 md:py-20 lg:py-24`} style={{ overflowX: 'hidden' }}>
+      <section id={id} className={`${variants[variant]} ${className} py-12 sm:py-16 md:py-20 lg:py-24`} style={{ overflowX: 'hidden' }}>
         {gradients[variant]}
         <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12">
           {children}

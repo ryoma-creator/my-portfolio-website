@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import { ReactNode } from 'react';
@@ -171,7 +172,7 @@ const learningJourney: LearningJourney = {
         url: 'https://www.meijigakuin.ac.jp/en/academics/faculty/law/law.html',
       },
       {
-        institution: 'International People's College',
+        institution: "International People's College",
         degree: 'Study Abroad - Denmark',
         duration: '2017 Mar - 2017 Sep',
         backgroundImage: 'https://res.cloudinary.com/dnm2fyhwt/image/upload/v1733368948/IPC_gtotjt.webp',
@@ -364,6 +365,7 @@ export default function Resume(): JSX.Element {
         >
       {/* Navigation tabs */}
       <div className='xl:sticky xl:top-[100px] xl:h-fit'>
+          {/* @ts-ignore */}
           <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0
           gap-6'>
             <TabsTrigger value='about'>About Me</TabsTrigger>

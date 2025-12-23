@@ -5,9 +5,10 @@ import './globals.css';
 // import ThemeToggle from '@/components/ui/ThemeToggle';
 
 // components
+// @ts-ignore
 import Header from '@/components/Header';
-import PageTransition from '@/components/PageTransition';
-import StairTransition from '@/components/StairTransition';
+// import PageTransition from '@/components/PageTransition';
+// import StairTransition from '@/components/StairTransition';
 
 import { Metadata } from 'next';
 

@@ -32,7 +32,7 @@ export default function AchievementList({ achievements }) {
     const content = scrollContentRef.current;
     if (!container || !content || achievements.length === 0) return;
 
-    let animationId: number | null = null;
+    let animationId = null;
     let scrollPosition = 0;
     const scrollSpeed = 0.5;
     let isPaused = false;

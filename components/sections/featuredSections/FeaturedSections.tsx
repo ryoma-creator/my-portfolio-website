@@ -14,6 +14,7 @@ interface Section {
   title: string;
   points: string[];
   action: string;
+  path: string;
   image: string;
 }
 

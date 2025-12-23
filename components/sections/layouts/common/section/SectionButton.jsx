@@ -6,8 +6,8 @@ import GsapAnimatedElement from '@/components/scroll/GsapAnimatedElement';
 export const SectionButton = ({ 
   children,
   href,
-  onClick,
-  icon,
+  onClick = undefined,
+  icon = undefined,
   align = 'center',
   variant = 'outline',  // shadcn/uiのデフォルトバリアントを使用
   size = 'default',     // shadcn/uiのデフォルトサイズを使用

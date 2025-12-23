@@ -7,17 +7,18 @@ export const SectionGroup = ({
   // 基本コンテンツ
   subtitle,
   title,
-  sentence,
+  sentence = undefined,
   children,
   animate = true,  
   
   // 全体のスタイル設定
   align = 'center',
-  textColor,
+  textColor = 'text-text-primary',
   lineHeight = 'leading-tight',
+  className = '',
   
   // テキストのスタイル設定
-  fontSize,
+  fontSize = 'text-4lg',
   
   // 各要素のアニメーション設定
   subtitleAnimation = {
@@ -57,7 +58,7 @@ export const SectionGroup = ({
   }
 }) => {
   return (
-    <div className={`flex flex-col gap-6 sm:gap-8 ${align === 'left' ? 'items-start' : 'items-center'}`}>
+    <div className={`flex flex-col gap-6 sm:gap-8 ${align === 'left' ? 'items-start' : 'items-center'} ${className}`}>
       {subtitle && (
         <SectionSubtitle 
           align={align}
